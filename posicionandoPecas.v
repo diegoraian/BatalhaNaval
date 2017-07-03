@@ -203,12 +203,11 @@ always @ (negedge select ) begin
 			end
 		
 		
-			if(orientacao ==  3'b100) begin //se orientação for 5 volta para o zero
-				orientacao = 1'b0;
-			end
-			else begin
-				orientacao = orientacao + 1'b1;
-			end
+//			if(orientacao ==  3'b100) begin //se orientação for 5 volta para o zero
+//				orientacao = 1'b0;
+//			end else begin
+//				orientacao = orientacao + 1'b1;
+//			end;
 			
 			
 		defineX:
