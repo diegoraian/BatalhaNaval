@@ -1,0 +1,7 @@
+*.bak
+*.bsf
+db/
+incremental_db/
+simulation/
+serv_req_info.txt
+output_files/
