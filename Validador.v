@@ -461,7 +461,7 @@ always@(enable) begin
     end
 	end else begin
 	/*
-	quando rolar um dos estados tretas(conflitos) na execulsao do jogo deve-se alterar 
+	quando acontecer um dos estados tretas(conflitos) na execulsao do jogo deve-se alterar 
 	o valor do validar para ele iniciar o modulo novamente
 	*/
 	end
