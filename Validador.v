@@ -48,8 +48,8 @@ input [3:0] y1;
 input jogador;
 input [63:0] vetor_leitura;
 
-output reg conflitoMemoria_out =1'b0;
-output reg conflitoBorda_out;
+output reg conflitoMemoria_out = 1'b0;
+output reg conflitoBorda_out   = 1'b0;
 output reg conflito;  
 output reg wrep1;
 output reg wrep2;
@@ -88,7 +88,7 @@ always@(posedge clk or posedge enable) begin
 			PORTA_AVIOES:
 			begin
 				if(direcao == 0) begin  // Se é Horizontal
-					if(x1 < 4) begin       //verificacao de borda
+					if(x1 < 5) begin       //verificacao de borda
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -120,7 +120,7 @@ always@(posedge clk or posedge enable) begin
 					end
 				end else begin            
 					
-					if(y1 < 4) begin
+					if(y1 < 5) begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -154,7 +154,7 @@ always@(posedge clk or posedge enable) begin
 			ENCOURACADO:	
 			begin 
 				if(direcao == 0) begin  // Se é Horizontal
-					if(x1 < 5) begin
+					if(x1 < 6) begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -185,7 +185,7 @@ always@(posedge clk or posedge enable) begin
 						validaMemoria = 1'b1;
 					end
 				end else begin
-					if(y1 < 5) begin
+					if(y1 < 6) begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -222,7 +222,7 @@ always@(posedge clk or posedge enable) begin
 			begin	//horizontal
 				if(direcao == 0) begin //DIREÇÃO 0 é HORIZONTAL
 					if(orientacao == 0)begin //ORIENTAÇÃO é default(aponta pra cima)
-						if(x1<6 && y1>0) begin
+						if(x1<6 && y1>1) begin
 							vetor = 46'd0;
 							x = x1;
 							y = y1;
@@ -253,7 +253,7 @@ always@(posedge clk or posedge enable) begin
 					end
 					
 					if(orientacao == 1)begin
-						if(x1<6 && y1 < 7)begin
+						if(x1<7 && y1 < 8)begin
 							vetor = 46'd0;
 							x = x1;
 							y = y1;
@@ -284,7 +284,7 @@ always@(posedge clk or posedge enable) begin
 				end
 			end else begin//vertical
 				if(orientacao == 2)begin
-					if(y1<6 && x1<7)begin
+					if(y1<7 && x1<8)begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -315,7 +315,7 @@ always@(posedge clk or posedge enable) begin
 					end
 				end
 				  if(orientacao == 3)begin
-					if(y1<6 && x1>0)begin
+					if(y1<7 && x1>1)begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -350,7 +350,7 @@ always@(posedge clk or posedge enable) begin
 		CRUZADOR:
 			begin
 				if(direcao == 0) begin  // Se é Horizontal
-					if(x1 < 7) begin
+					if(x1 < 8) begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -378,7 +378,7 @@ always@(posedge clk or posedge enable) begin
 						validaMemoria = 1'b1;
 					end
 				end else begin
-					if(y1 < 7) begin
+					if(y1 < 8) begin
 						vetor = 46'd0;
 						x = x1;
 						y = y1;
@@ -461,7 +461,7 @@ always@(enable) begin
     end
 	end else begin
 	/*
-	quando acontecer um dos estados tretas(conflitos) na execulsao do jogo deve-se alterar 
+	quando rolar um dos estados tretas(conflitos) na execulsao do jogo deve-se alterar 
 	o valor do validar para ele iniciar o modulo novamente
 	*/
 	end
