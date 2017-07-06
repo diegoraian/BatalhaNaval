@@ -15,7 +15,7 @@
 
 */
 
-module PosicionandoPecas
+module posicionandoPecas
 (
   /*
   	@param enable - Iniciar
@@ -35,7 +35,7 @@ module PosicionandoPecas
 	 @param jogador - passa o tipo da jogador a ser gravado namemoria(jogador 0(memoria 0) ou jogador 1(memoria 1))
   */
   
-  ready, valida, tipo, jogador, X1, Y1, direcao, orientacao
+  ready, valida, tipo, direcao, orientacao,  X1, Y1, jogador
   
 );
   
@@ -62,7 +62,7 @@ reg [3:0] E_F   =  4'b0000;
 parameter
   			  escolheDirecao    = 4'd1, 
           escolheOrientacao = 4'd2,
-          defineX           = 4'd3,	
+          defineX           = 4'd3,	 
           defineY				    =	4'd4,	
           verificaConflito  = 4'd5, 
           armazenaPeca      = 4'd6;
@@ -205,9 +205,10 @@ always @ (negedge select ) begin
 		
 //			if(orientacao ==  3'b100) begin //se orientação for 5 volta para o zero
 //				orientacao = 1'b0;
-//			end else begin
+//			end
+//			else begin
 //				orientacao = orientacao + 1'b1;
-//			end;
+//			end
 			
 			
 		defineX:
