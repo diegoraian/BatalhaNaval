@@ -54,7 +54,7 @@ output reg conflito;
 output reg wrep1;
 output reg wrep2;
 output reg [63:0]vetor;         //Vetor a ser armazenado na memoria  [0-2(tipo), 3-32(posições), 33-35(Peças disponiveis na embarcação) ex: Porta aviões inicia com 5 peças, caso chegue a zero todas as embarcações são destruidas.
-output reg [4:0] write_addr = 5'b11111;         //Endereco para armazenar na memoria
+output reg [4:0] write_addr = 5'b00000;         //Endereco para armazenar na memoria
 output reg [4:0] read_addr= 5'b00000 ;   // contaria as 11 posicoes verificando se ha conlfito de posições na memoria
 output reg ready;
 
@@ -66,7 +66,11 @@ reg			validaMemoria;     // quando 1 ferifica se a posição na memoria esta dis
 reg         memoriaConflito= 1'b0 ;
 reg         bordaConflito  = 1'b0 ;
 reg         auxMemo = 1'b0;
-  
+reg         auxZeraBordConflito = 1'b0;
+reg 		auxGravou = 1'b0;
+reg         auxZeraValidaMemoria = 1'b0;
+reg         init = 1'b0;
+
   
   
   
@@ -79,11 +83,20 @@ parameter PORTA_AVIOES  = 3'd0,
 or orOut(coflito, conflitoBorda_out, conflitoMemoria_out);
       
 always@(posedge clk or posedge enable) begin
-	if(enable == 1'b1) begin
+
+	if(auxZeraBordConflito == 1)begin
+		conflitoBorda_out = 0;
+	end
+
+	if(auxZeraValidaMemoria == 1 ) begin
+		validaMemoria = 0;
+	end
+
+
+	if(enable == 1'b1 && conflitoBorda_out == 0 && auxGravou == 0 && init == 1) begin
 		vetor = 64'd0;
 		validaMemoria = 0;
 		bordaConflito =1;
-		 
 		case(tipo)
 			PORTA_AVIOES:
 			begin
@@ -452,19 +465,26 @@ always@(posedge clk or posedge enable) begin
 end
 
 
-always@(enable) begin
-  if(conflitoMemoria_out == 1'b0 &&  conflitoBorda_out == 1'b0) begin
-		write_addr = write_addr + 5'd1;
+always@(posedge enable) begin
+  //if(conflitoMemoria_out == 1'b0 &&  conflitoBorda_out == 1'b0 /* && auxGravou==1'b1*/ ) begin
+	init = 1;	
     if(write_addr == 5'd11) begin
-    	write_addr = 5'd0;
-      //
+    	write_addr = 5'd0;  
     end
-	end else begin
-	/*
-	quando rolar um dos estados tretas(conflitos) na execulsao do jogo deve-se alterar 
-	o valor do validar para ele iniciar o modulo novamente
-	*/
+	//end
+	if(conflitoBorda_out) begin
+		auxZeraBordConflito = 1;
+	end 
+end
+
+
+always @(auxGravou) begin
+
+	if (auxGravou) begin
+		write_addr = write_addr + 5'd1;
+		init=0;
 	end
+
 end
 
 always@(enable or tipo or direcao or orientacao or x1 or y1 or jogador) begin
@@ -476,13 +496,18 @@ always@(enable or tipo or direcao or orientacao or x1 or y1 or jogador) begin
 end
 /* Buscar na memoria todas os vetores e verificar se a posição ja esta ocupada */
 always @(posedge clk) begin
-  
+
   if(auxMemo) begin
 		wrep1 = 0;
 		wrep2 = 0;
+		auxGravou =0;
+  end
+  if(!enable)begin
+  	conflitoMemoria_out = 0;
   end
 
   if(validaMemoria == 1'b1 && conflitoMemoria_out == 1'b0) begin
+  			auxGravou = 0;
 			case (vetor_leitura[10 -:8])
 			
 					vetor[10 -:8]:
@@ -656,19 +681,28 @@ always @(posedge clk) begin
 			read_addr = 4'd0; //vetor ja pode ser salvo na memoria
 			if(memoriaConflito == 1'b0) begin
 				//verificar em qual memoria (memoria do jogador)
+				//zero a valida memoria
+				auxZeraValidaMemoria=1;
+
 				if(jogador == 1'b0) begin	
 					wrep1 = 1'b1;          	
 				end else begin
 					wrep2 = 1'b1;
 				end
+				auxGravou = 1'b1;
 			end else begin
 						conflitoMemoria_out = 1'b1;
+						memoriaConflito = 1'b0;
 			end
 		end else begin
 			wrep1 = 1'b0;
 			wrep2 = 1'b0;
 			read_addr = read_addr + 4'd1;
 		end
+	end
+	else begin
+		//conflitoMemoria_out = 0;
+
 	end
 end
 
