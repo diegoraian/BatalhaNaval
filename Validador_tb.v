@@ -6,6 +6,9 @@ reg [2:0] orientacao;
 reg [3:0] x1;
 reg [3:0] y1;
 reg [63:0] vetor_leitura;
+reg [63:0] memoriaVectorJogadorUm[10:0]; // Memoria para jogador Um
+reg [63:0] memoriaVectorJogadorDois[10:0]; //Memoria para jogador Dois
+
 
 wire conflitoMemoria_out;
 wire conflitoBorda_out;
@@ -91,41 +94,79 @@ Validador validador(
 		y1 = 4'b1;
 		jogador = 1'b0;
 		
-		//c
-		vetor_leitura = 64'b0000000000000000001010001010100010100000100110001001000010001000;
+		
+		//vetor_leitura = 64'b0000000000000000001010001010100010100000100110001001000010001000;
+
+
+		//simulação de sisercao das 12 posicoes
+		#500 enable = 1;
+
+		
+		#500 enable = 0;
+		$display("Iserção do porta avião em 0,0"); 
+		tipo = 2'b10;	
+		direcao = 1'b0;
+		orientacao = 1'b0;
+		x1 = 4'd3;
+		y1 = 4'd3;
+		jogador = 1'b0;
+		
+		
+		//vetor_leitura = 64'b0000000000000000001010001010100010100000100110001001000010001000;
+
+		#500 enable = 1;
+
+		//simulação de sisercao das 12 posicoes
+		if (validador.auxGravou == 1) begin
+			$display("Teste essa aquiiiddddi"); 
+		end
 		
 		#100 enable = 1;
 
+		//comentea
+
 
 
 	
 	end
 	
+
+
+	/*
+	***************************************************
+	*    Always que simula a escrita na memoria       *
+	***************************************************
+	*/
 	always
-	begin 
-		#5
-		if(conflitoMemoria_out == 1) begin
-			$display("Conflito de Memoria "); 
-			
-		end
+	begin
+		#10
+		if(wrep1)
+		begin
+		 	memoriaVectorJogadorUm[write_addr] = vetor;
+		 end
 
-		if(conflitoBorda_out == 1) begin
-			$display("Conflito de Bordas "); 
-			
-		end
+		if (wrep2) begin
+		  	memoriaVectorJogadorDois[write_addr] = vetor;
+	    end 
+		
+
+	end
+
+
+	/*
+	***************************************************
+	*    Always que simula a leitura da memoria       *
+	***************************************************
+	*/
+	always
+	begin
+		#10
+		vetor_leitura = memoriaVectorJogadorUm[read_addr];
 
 	end
 	
 
 	
-	//initial
-	//begin
-	//	$display("\t\ttime,\tclk,\tenable"); 
-	//	$monitor("%d,\t%b,\t%b",$time,clk,enable); 
-	//end
-
-	//initial
-		//#100  $finish; 
-
+	
 	
 endmodule
