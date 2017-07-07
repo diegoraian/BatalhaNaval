@@ -498,12 +498,13 @@ end
 always @(posedge clk) begin
 
   if(auxMemo) begin
-		wrep1 = 0;
-		wrep2 = 0;
-		auxGravou =0;
+		wrep1 <= 0;
+		wrep2 <= 0;
+		auxGravou <=0;
   end
   if(!enable)begin
-  	conflitoMemoria_out = 0;
+  	conflitoMemoria_out <= 0;
+  	memoriaConflito <= 0;
   end
 
   if(validaMemoria == 1'b1 && conflitoMemoria_out == 1'b0) begin
