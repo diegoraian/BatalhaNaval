@@ -48,8 +48,8 @@ input [3:0] posicao_rnd;
 input [3:0] qtd_P1;
 input [3:0] qtd_P2;
 output reg  ready;
-output reg [3:0] coord_tiroX = 4'b1000;
-output reg [3:0] coord_tiroY = 4'b1000;
+output reg [3:0] coord_tiroX = 4'b0000;
+output reg [3:0] coord_tiroY = 4'b0001;
 output reg [7:0] LEDR = 8'd0;
 output reg [7:0] LEDG = 8'd0;
   
@@ -81,7 +81,8 @@ always @(posedge clk or negedge reset or negedge enable) begin
 	if (!enable) begin 
 	end else begin
     if (!reset) begin
-      E_A <= p1_atacandox;// Caso reset voltar para o estado de direção 
+		E_F <= p1_atacandox;// Caso reset voltar para o estado de direção 
+		E_A <= p1_atacandox;// Caso reset voltar para o estado de direção 
     end
     else begin
       E_A <= E_F;
@@ -363,7 +364,7 @@ always @ (negedge enter or negedge enable) begin
 			begin
 				ready = 1'b0;
 				zeravalor = zeravalor+1'b1;  
-				if( qtd_P1 == 0 ) begin //Se a qtd de embarcações de P1 forem iguais zero
+				if( qtd_P1 == 4'd0 ) begin //Se a qtd de embarcações de P1 forem iguais zero
 					E_F = p2_vencedor;
 				end else begin
 					E_F = p1_atacandox;
@@ -388,8 +389,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 		/* Escolhe a coordenada X do tiro */
 			p1_atacandox:
 		
-			if(coord_tiroX == 4'b1000) begin
-				coord_tiroX = 4'b1000; 
+			if(coord_tiroX == 4'b1001) begin
+				coord_tiroX = 4'b0001; 
 			end else begin
 				if(mode) begin			// Se PvP
 					coord_tiroX = coord_tiroX + 4'b0001;
@@ -401,8 +402,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 			/* Escolhe a coordenada Y do tiro */
 			p1_atacandoy:
 		
-			if(coord_tiroY == 4'b1000) begin
-				coord_tiroY = 4'b0000; 
+			if(coord_tiroY == 4'b1001) begin
+				coord_tiroY = 4'b0001; 
 			end else begin
 				if(mode) begin
 					coord_tiroY = coord_tiroY + 4'b0001;
@@ -414,14 +415,14 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 			/*  Incrementa para valor 'out range' as coordenadas do Tiro */
 			verificando_vidap2:
 			begin
-				coord_tiroX = 4'b1000;
-				coord_tiroY = 4'b1000;
+				coord_tiroX = 4'b0000;
+				coord_tiroY = 4'b0000;
 			end
 	 
 			/* Escolhe a coordenada X do tiro */
 			p2_atacandox:
-				if(coord_tiroX == 4'b1000) begin
-					coord_tiroX = 4'b0000; 
+				if(coord_tiroX == 4'b1001) begin
+					coord_tiroX = 4'b0001; 
 				end else begin
 					if(mode) begin
 						coord_tiroX = coord_tiroX + 4'b0001;
@@ -432,8 +433,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 	 
 			/* Escolhe a coordenada Y do tiro */
 			p2_atacandoy:
-			if(coord_tiroY == 4'b1000) begin
-				coord_tiroY = 4'b0000; 
+			if(coord_tiroY == 4'b1001) begin
+				coord_tiroY = 4'b0001; 
 			end else begin
 				if(mode) begin
 					coord_tiroY = coord_tiroY + 4'b0001;
@@ -445,8 +446,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 			/* Incrementa para valor 'out range' as coordenadas do Tiro */
 			verificando_vidap1:
 			begin
-				coord_tiroX = 4'b1000;
-				coord_tiroY = 4'b1000;
+				coord_tiroX = 4'b0000;
+				coord_tiroY = 4'b0000;
 			end
 	 
 			default:
