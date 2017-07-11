@@ -67,6 +67,7 @@ PosicionandoPecas DUT(
 
 
 		//Player UM (11 peças):
+
 		//PrimeiraPeça(Porta-Aviões)
 		// esecolhe a direção
 			//(direção 0 horizontal)
@@ -91,6 +92,8 @@ PosicionandoPecas DUT(
 		// Armazena Peça 
 			ativaEnter;
 
+
+
 		//Segunda(Encouraçado)
 		// esecolhe a direção
 			//(direção 0 horizontal)
@@ -107,6 +110,8 @@ PosicionandoPecas DUT(
 		// define Y
 			ativaSelect;
 			ativaSelect;
+			ativaSelect;
+			ativaSelect;
 			ativaEnter;
 
 		// Verifica Conflito
@@ -116,20 +121,27 @@ PosicionandoPecas DUT(
 			ativaEnter;
 
 
+
+
 		//Terceira(Hidroaviao Avião)
 		// esecolhe a direção
 			//(direção 0 horizontal)
 			ativaEnter;
 
 		// escolhe Orientação
+			ativaSelect;
 			ativaEnter;
 
 		// define X
 			ativaSelect;
 			ativaSelect;
+			ativaSelect;
+			ativaSelect;
 			ativaEnter;
 
 		// define Y
+			ativaSelect;
+			ativaSelect;
 			ativaSelect;
 			ativaSelect;
 			ativaEnter;
