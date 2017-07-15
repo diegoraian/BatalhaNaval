@@ -26,7 +26,7 @@ module Validador
 	 @param vetor_leitura - vetor de leitura da memoria para validar as pecas
 	  
   */
-  enable, tipo, direcao, orientacao, x1, y1, clk, jogador , vetor_leitura, 
+  enable, tipo, direcao, orientacao, x1, y1, jogador, clk  , vetor_leitura, 
   
   /*
   	 @param ready - passa a atribuição de volta ao módulo que o chamou

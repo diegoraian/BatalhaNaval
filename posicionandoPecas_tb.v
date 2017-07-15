@@ -54,14 +54,14 @@ PosicionandoPecas DUT(
 	begin
 
 		//inicia a 
-		#20 enable = 1;
-		#20
+		#40 enable = 1;
+		#40
 		reset =1;
-		#20
+		#40
 		reset =0;
-		#20
+		#40
 		reset =1;
-
+		#40
 		
 		// ------- Simulação Player vs Player -------
 
@@ -86,10 +86,13 @@ PosicionandoPecas DUT(
 			ativaEnter;
 
 		// Verifica Conflito
+		    conflito = 0;
 			ativaEnter;
 
 		// Armazena Peça 
 			ativaEnter;
+
+			
 
 		//Segunda(Encouraçado)
 		// esecolhe a direção
@@ -195,14 +198,16 @@ PosicionandoPecas DUT(
 	task geraPosicaoRandomico;
 	begin
 		#20
-		posicaoRandomico = $random%7
+		posicaoRandomico = $random%7;
 	end
+	endtask
 
 	task geraDirecaoRandomico;
 	begin
 		#20
-		posicaoRandomico = $random%1
+		posicaoRandomico = $random%1;
 	end
+	endtask
 	
 	
 	
