@@ -1,4 +1,4 @@
-module PosicionandoPecas_tb;
+module posicionandoPecas_tb;
 
 //input
 reg enable,clk,reset,select,enter,mode,conflito;
@@ -15,7 +15,11 @@ wire [2:0] Y1;
 wire direcao;
 wire orientacao;
 
-PosicionandoPecas DUT(
+
+integer qtNavio = 5;
+integer CoordenadaRandom;
+
+posicionandoPecas DUT(
 	//input
 	 .enable(enable),
 	 .reset(reset),
@@ -24,8 +28,6 @@ PosicionandoPecas DUT(
      .mode(mode),
      .clk(clk),
      .conflito(conflito),
-     .posicaoRandomico(posicaoRandomico),
-     .direcaoRandomico(direcaoRandomico),
 
 	 //output
 	.ready(ready), 
@@ -64,10 +66,18 @@ PosicionandoPecas DUT(
 		#40
 		
 		// ------- Simulação Player vs Player -------
-
+		/*Ordem de inserção das Peças:
+		   1-Submarino
+		   2-Cruzador
+		   3-Hidroaviao
+		   4-Encouracado
+		   5-Porta-aviões
+		 */
 
 		//Player UM (11 peças):
-		//PrimeiraPeça(Porta-Aviões)
+		//PrimeiraPeça(Submarino)
+		for(qtNavio = 0;qtNavio < 5 ;qtNavio = qtNavio +1)
+		begin
 		// esecolhe a direção
 			//(direção 0 horizontal)
 			ativaEnter;
@@ -76,13 +86,11 @@ PosicionandoPecas DUT(
 			ativaEnter;
 
 		// define X
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// define Y
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// Verifica Conflito
@@ -92,9 +100,11 @@ PosicionandoPecas DUT(
 		// Armazena Peça 
 			ativaEnter;
 
+		end
 			
-
-		//Segunda(Encouraçado)
+		for(qtNavio = 0;qtNavio < 2 ;qtNavio = qtNavio +1)
+		begin
+		//Segunda(Cruzador)
 		// esecolhe a direção
 			//(direção 0 horizontal)
 			ativaEnter;
@@ -103,13 +113,11 @@ PosicionandoPecas DUT(
 			ativaEnter;
 
 		// define X
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// define Y
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// Verifica Conflito
@@ -117,8 +125,10 @@ PosicionandoPecas DUT(
 
 		// Armazena Peça 
 			ativaEnter;
+		end
 
-
+		for(qtNavio = 0;qtNavio < 2 ;qtNavio = qtNavio +1)
+		begin
 		//Terceira(Hidroaviao Avião)
 		// esecolhe a direção
 			//(direção 0 horizontal)
@@ -128,13 +138,34 @@ PosicionandoPecas DUT(
 			ativaEnter;
 
 		// define X
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// define Y
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
+			ativaEnter;
+
+		// Verifica Conflito
+			ativaEnter;
+
+		// Armazena Peça 
+			ativaEnter;	
+		end
+
+	    //Quarta(Encouracado)
+		// esecolhe a direção
+			//(direção 0 horizontal)
+			ativaEnter;
+
+		// escolhe Orientação
+			ativaEnter;
+
+		// define X
+			ativaSelectRandomico;
+			ativaEnter;
+
+		// define Y
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// Verifica Conflito
@@ -144,27 +175,28 @@ PosicionandoPecas DUT(
 			ativaEnter;	
 
 
-	    // ------- Simulação Player vs CPU -------
 
+		//Quarta(Porta-Aviões)
 		// esecolhe a direção
 			//(direção 0 horizontal)
 			ativaEnter;
+
 		// escolhe Orientação
 			ativaEnter;
+
 		// define X
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// define Y
-			ativaSelect;
-			ativaSelect;
+			ativaSelectRandomico;
 			ativaEnter;
 
 		// Verifica Conflito
 			ativaEnter;
+
 		// Armazena Peça 
-			ativaEnter;
+			ativaEnter;	
 
 
 
@@ -194,18 +226,31 @@ PosicionandoPecas DUT(
 	end
 	endtask
 
+	task ativaSelectRandomico;
+	integer i;
+	begin
+		#10
+		CoordenadaRandom = $urandom%7;
+
+		for(i = 0; i <CoordenadaRandom ; i = i +1 )
+		begin
+			ativaSelect;
+		end
+	end
+	endtask
+
 
 	task geraPosicaoRandomico;
 	begin
 		#20
-		posicaoRandomico = $random%7;
+		posicaoRandomico = $urandom%7;
 	end
 	endtask
 
 	task geraDirecaoRandomico;
 	begin
 		#20
-		posicaoRandomico = $random%1;
+		posicaoRandomico = $urandom%1;
 	end
 	endtask
 	

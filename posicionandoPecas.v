@@ -51,10 +51,11 @@ output reg valida;
 output reg jogador = 0;
 
 
-reg [3:0] qtd_total;
-reg [2:0] qtd_tipo;
+reg [2:0] qtd_tipo = 3'b000;
 reg [3:0] E_A   =  4'b0000;
 reg [3:0] E_F   =  4'b0001;
+
+reg incrementaQtdTipo = 1'b0;
 
 /* Declara Estados */
 parameter
@@ -112,6 +113,7 @@ begin
     
     armazenaPeca:
         E_F <= escolheDirecao;
+        //incrementaQtdTipo = 1;
         //qtd_tipo = qtd_tipo + 1;
     
   endcase
@@ -171,16 +173,23 @@ begin
     verificaConflito:
     begin
         valida = 1'b1;
+        incrementaQtdTipo = 0;
     end
     
     armazenaPeca:
       begin
         valida = 1'b0;
-        qtd_tipo= qtd_tipo+1;
+        if(incrementaQtdTipo == 0) begin
+          incrementaQtdTipo = 1;
+          qtd_tipo = qtd_tipo + 1;
+        end
       end
   endcase
 
 end
+
+
+
 
 always @ (negedge select ) begin
   case (E_A)
