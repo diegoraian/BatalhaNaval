@@ -49,8 +49,8 @@ O resto das posicoes, de 48 a 64 sao vazias, com 0
 Ex.: Porta aviões inicia com 5 peças, caso chegue a zero todas as embarcações são destruidas.
 
 */
-input [64:0] memoriaP1;
-input [64:0] memoriaP2;
+input [63:0] memoriaP1;
+input [63:0] memoriaP2;
 input clk, enable; 
 input [3:0] x;
 input [3:0] y;
