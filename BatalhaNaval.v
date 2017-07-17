@@ -10,7 +10,7 @@ module BatalhaNaval(
   //Entradas     
   input on, reset, enter, select, mode, clk;
   
-  
+ /*
   wire ACERTOU_TIRO_DB;	
   wire [2:0] COORD_TIROX_DB;
   wire [2:0] COORD_TIROY_DB;
@@ -165,5 +165,6 @@ ExecutandoJogo jogo(
   .clear()
  );
   
+  */
 endmodule
 
