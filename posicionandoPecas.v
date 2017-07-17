@@ -41,8 +41,8 @@ module posicionandoPecas
   
 input enable, reset, enter, select, mode, clk, conflito;
 
-output reg [2:0] X1    =  3'b000;
-output reg [2:0] Y1    =  3'b000;
+output reg [3:0] X1    =  3'b000;
+output reg [3:0] Y1    =  3'b000;
 output reg [2:0] tipo  =  3'b000;
 output reg direcao = 1'b0;
 output reg [2:0] orientacao =3'b000;
