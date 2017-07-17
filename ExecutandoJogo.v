@@ -40,7 +40,7 @@ module ExecutandoJogo
 	 
   */
   
-	ready, coord_tiroX, coord_tiroY, LEDR, LEDG
+	ready, coord_tiroX, coord_tiroY
 );
 
 input	enable, reset, enter, select,mode, clk, acertou_tiro;
@@ -50,16 +50,14 @@ input [3:0] qtd_P2;
 output reg  ready;
 output reg [3:0] coord_tiroX = 4'b0000;
 output reg [3:0] coord_tiroY = 4'b0001;
-output reg [7:0] LEDR = 8'd0;
-output reg [7:0] LEDG = 8'd0;
   
 /* Estado dos registradores */
-  reg [3:0] E_A = 4'b0000;
-  reg [3:0] E_F = 4'b0000;
-  
-  
-  reg zeravalor;			// Usado para zerar o tiro(enable do tiro).
-  reg [32:0] led_cont;	// contador usado para alteranar o valor dos leds
+	reg [3:0] E_A = 4'b0000;
+	reg [3:0] E_F = 4'b0000;
+	reg [7:0] LEDR = 8'd0;
+	reg [7:0] LEDG = 8'd0;
+	reg zeravalor;			// Usado para zerar o tiro(enable do tiro).
+	reg [32:0] led_cont;	// contador usado para alteranar o valor dos leds
 
 /* Declara Estados */
 parameter p1_atacandox			    = 4'd0,
@@ -81,7 +79,7 @@ always @(posedge clk or negedge reset or negedge enable) begin
 	if (!enable) begin 
 	end else begin
     if (!reset) begin
-		E_F <= p1_atacandox;// Caso reset voltar para o estado de direção 
+		//E_F <= p1_atacandox;// Caso reset voltar para o estado de direção 
 		E_A <= p1_atacandox;// Caso reset voltar para o estado de direção 
     end
     else begin
