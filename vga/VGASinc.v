@@ -80,6 +80,7 @@ parameter G =   2; //Sync(H_sync)
 parameter H =  31; //BackPorch
 
 input reset, clk;
+
 output h_sync,v_sync,regiaoAtiva;
 output reg [9:0] linha = 10'b0;
 output reg [9:0] coluna = 10'b0;
@@ -91,6 +92,7 @@ wire H_localB ; //Indica se o contador Horizontal esta em B(FrontPorch)
 wire H_localC ; //Indica se o contador Horizontal esta em C(Sync(H_sync))
 wire H_localD ; //Indica se o contador Horizontal esta em D(BackPorch)
 wire h_sync_next;
+reg  h_sync_prev;
 
 wire V_localE ; //Indica se o contador Horizontal esta em A(área ativa)
 wire V_localF ; //Indica se o contador Horizontal esta em B(FrontPorch) 
@@ -154,11 +156,11 @@ end
 
 
 
-//
+//------ Sincronização da VGA ------
+//656 até 752 colunas  h_sync = 0 
 assign h_sync_next = (H_localB == 1 ) ? 1'b0: (H_localC == 1)? 1'b1: h_sync_prev ;
-
+//490 até 491 linhas  v_sync = 0
 assign v_sync_next = (V_localF == 1) ? 1'b0: (V_localG == 1)? 1'b1 : v_sync_prev;
-
 
 assign regiaoAtiva = ((coluna < A)&&(linha < E)) ? 1'b1 : 1'b0 ;
 
@@ -170,4 +172,6 @@ assign regiaoAtiva = ((coluna < A)&&(linha < E)) ? 1'b1 : 1'b0 ;
 assign h_sync = h_sync_prev ;
 assign v_sync = v_sync_prev ;
 
-endmodule	
+endmodule
+
+	
