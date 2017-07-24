@@ -50,7 +50,7 @@ input [63:0] vetor_leitura;
 
 output reg conflitoMemoria_out = 1'b0;
 output reg conflitoBorda_out   = 1'b0;
-output reg conflito;  
+output  conflito;  
 output reg wrep1;
 output reg wrep2;
 output reg [63:0]vetor;         //Vetor a ser armazenado na memoria  [0-2(tipo), 3-32(posições), 33-35(Peças disponiveis na embarcação) ex: Porta aviões inicia com 5 peças, caso chegue a zero todas as embarcações são destruidas.
@@ -80,7 +80,7 @@ parameter PORTA_AVIOES  = 3'd0,
           CRUZADOR      = 3'd3,  
           SUBMARINO     = 3'd4;
   
-or orOut(coflito, conflitoBorda_out, conflitoMemoria_out);
+//or orOut(coflito, conflitoBorda_out, conflitoMemoria_out);
       
 always@(posedge clk or posedge enable ) begin
 
@@ -480,16 +480,14 @@ always @(posedge enable or posedge auxGravou) begin
 		if(conflitoBorda_out) begin
 			auxZeraBordConflito = 1;
 		end 
-	end else begin
-		if (auxGravou) begin
+	end 
+	if (auxGravou) begin
 			write_addr = write_addr + 5'd1;
 			init=0;
 			if(write_addr == 5'd11) begin
 				write_addr = 5'd0;  
 			end
-		end	
-	
-	end
+	end	
 
 
 end
@@ -715,5 +713,10 @@ always @(posedge clk) begin
 
 	end
 end
+
+
+assign conflito = (conflitoBorda_out == 1'b1 || conflitoMemoria_out ==1'b1) ? 1'b1 :1'b0 ;
+
+
 
 endmodule
