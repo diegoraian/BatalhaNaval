@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Wed Jul 26 18:28:55 2017"
+// CREATED		"Thu Jul 27 00:57:21 2017"
 
 module VGA_pll_top(
 	reset,
@@ -25,8 +25,7 @@ module VGA_pll_top(
 	rgb_B,
 	v_sync,
 	h_sync,
-	pll_clk,
-	pin_name1
+	pll_clk
 );
 
 
@@ -38,7 +37,6 @@ output wire	rgb_B;
 output wire	v_sync;
 output wire	h_sync;
 output wire	pll_clk;
-output wire	pin_name1;
 
 wire	SYNTHESIZED_WIRE_5;
 wire	SYNTHESIZED_WIRE_2;
@@ -69,10 +67,14 @@ VGASinc	b2v_inst1(
 	defparam	b2v_inst1.TOTALLINHAS = 524;
 
 
-VGA_MapaGame	b2v_inst4(
+VGA_Submarino	b2v_inst2(
 	.clk(SYNTHESIZED_WIRE_5),
 	.areaAtiva(SYNTHESIZED_WIRE_2),
+	
 	.coluna(SYNTHESIZED_WIRE_3),
+	
+	
+	
 	.linha(SYNTHESIZED_WIRE_4),
 	.rgb_r(rgb_R),
 	.rgb_g(rgb_G),
