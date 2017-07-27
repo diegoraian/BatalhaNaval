@@ -35,12 +35,10 @@ module ExecutandoJogo
 	 @param ready - reenvia sinal para ativar o colisor para verificacao de tiro
 	 @param coord_tiroX - coordenada X do tiro
 	 @param coord_tiroY - coordenada Y do tiro 
-	 @param LEDR - vetor de leds vermelhos
-	 @param LEDG - vetor de leds verdes
-	 
+	 @param jogador - Qual jogador esta jogando 0 para P1 e 1 para P2
   */
   
-	ready, coord_tiroX, coord_tiroY
+	ready, coord_tiroX, coord_tiroY, jogador
 );
 
 input	enable, reset, enter, select,mode, clk, acertou_tiro;
@@ -48,14 +46,21 @@ input [3:0] posicao_rnd;
 input [3:0] qtd_P1;
 input [3:0] qtd_P2;
 output reg  ready;
-output reg [3:0] coord_tiroX = 4'b0000;
-output reg [3:0] coord_tiroY = 4'b0001;
-  
+output reg [3:0]	coord_tiroX = 4'b0000;
+output reg [3:0]	coord_tiroY = 4'b0001;
+output reg	jogador = 1'b0;
+
 /* Estado dos registradores */
 	reg [3:0] E_A = 4'b0000;
 	reg [3:0] E_F = 4'b0000;
+	
+/* 
+	LEDR - vetor de leds vermelhos
+	LEDG - vetor de leds verdes
+*/
 	reg [7:0] LEDR = 8'd0;
 	reg [7:0] LEDG = 8'd0;
+	
 	reg zeravalor;			// Usado para zerar o tiro(enable do tiro).
 	reg [32:0] led_cont;	// contador usado para alteranar o valor dos leds
 
@@ -91,7 +96,7 @@ end
 
   /* 
   
-  ______________________________________________________________________________________________________
+	______________________________________________________________________________________________________
   
   												ORIENTAÇÃO PROS LEDS GERAIS
 
@@ -115,13 +120,14 @@ end
 		
   */
  
+
+
 /*
+	Responsavel pelo gerenciamneto do LEDs indicativos do jogo
+	
+	LEDR - representa os leds vermelhos
 
-Define o comportamento dos LEDs
-
-LEDR - representa os leds vermelhos
-
-LEDG - representa os leds verdes
+	LEDG - representa os leds verdes
 
 */
 always @ (posedge clk or negedge enable) begin
@@ -297,6 +303,37 @@ always @ (posedge clk or negedge enable) begin
 	end
 end
   
+
+
+
+  
+/*Responsavel por mapear qual player esa jogando*/
+always @(posedge clk or negedge enable) begin
+	
+	if(!enable) begin
+		//Nao faca nada
+	end else begin
+		case(E_A)
+			
+			p1_atacandox:
+			begin
+				jogador = 1'b0;
+			end
+			
+			p2_atacandox:
+			begin
+				jogador = 1'b1;
+			end
+			
+			default:
+			begin
+				//Nao faca nada
+			end
+		endcase
+	end
+	
+end  
+/* Responsavel pelo gerencimento da transicao de estados do jogo*/
 always @ (negedge enter or negedge enable) begin
 	
 	if(!enable) begin
@@ -378,6 +415,7 @@ always @ (negedge enter or negedge enable) begin
   end
 end
 
+/* Responsavel pelo gerenciamento da selecao das coordenadas de tiro*/
 always @ (negedge select or posedge zeravalor or negedge enable or posedge mode) begin
 
 	if(!enable) begin
