@@ -5,12 +5,9 @@ module VGA_Submarino
 	areaAtiva,
 	linha,
 	coluna,
-	lineLeft,
-	lineRight,
-	colUp,
-	colDown,
+	posicoesEmbarcacao, // Para o submarino, as posicoes X e Y. Varia de 3-10 bits, 4 primeiros para X e 4 ultimos para Y, totalizando 8 bits
 	
-	//output
+	//outputs
 	rgb_r,
 	rgb_g,
 	rgb_b
@@ -20,54 +17,180 @@ module VGA_Submarino
 input clk,areaAtiva;
 input [9:0] linha;
 input [9:0] coluna;
-input [9:0]	lineLeft;
-input [9:0]	lineRight;
-input [9:0] colDown;
-input [9:0] colUp;
 
+/*Vetor de posicoes da embarcacao, armazena todas as coordenadas da embarcacao */
+input [63:0] posicoesEmbarcacao;
+
+/* Canais de Cores para VGA*/
 output rgb_r, rgb_g , rgb_b;
 
+/*Registradores Internos*/
+reg [9:0] X;										// Recebe a coordenada X do Submarino
+reg [9:0] Y;										// Recebe a coordenada Y do Submarino
+reg [9:0] borderLeft;							// limite esquerdo da imagem da peca na tela
+reg [9:0] borderDown;							// limite inferior da imagem da peca na tela
+reg [9:0] largura = 10'd54;					// Largura de uma celula da embarcacao
+reg [9:0] altura = 10'd49;						// Altura de uma celula da embarcacao
+
+/*Parametros para os valores das POSICOES em X e em Y*/
+parameter	X1 = 10'd1,
+				X2 = 10'd2,
+				X3 = 10'd3,
+				X4 = 10'd4,
+				X5 = 10'd5,
+				X6 = 10'd6,
+				X7 = 10'd7,
+				X8 = 10'd8,
+
+				Y1 = 10'd1,
+				Y2 = 10'd2,
+				Y3 = 10'd3,
+				Y4 = 10'd4,
+				Y5 = 10'd5,
+				Y6 = 10'd6,
+				Y7 = 10'd7,
+				Y8 = 10'd8;
+
+/* MAPEAMENTO JOGO->VGA */
+/*
+
+TAMANHO MAPA : 8X8
+RESOLUCAO VGA: 640X480
+LARGURA GRADE DO MAPA_VGA:(E a largura em pixel de quanto a grade do mapa na tela imprime)
+
+		** MATRIZ DE POSICOES 8x8 **
+		Y
+		8|
+		7| 
+		6|
+		5|
+		4|
+		3|
+		2|
+		1|
+		----------------------------------
+		X-> 1	2	3	 4	  5	6	 7	 8	 | Unidade
+		
+		
+		** MATRIZ EQUIVALENTE DE POSICOES 640 X 480 **
+		Y(pixels)
+		415|
+		358| 
+		301|
+		244|
+		187|
+		130|
+		 73|
+		 16|
+		-----------------------------------
+X(pixels) - -	1  2 	 2   3 	3   4 | Centena
+			 1	7	4	0 	 6	  2   8   5	| Dezena
+			 6	8	0	2	 4	  6   8   0	| Unidade
+
+			Intervalo de X = 54
+			Intervalo de Y = 49
+*/
 
 
+/* Responsavel pelo Mapeamento Jogo -> VGA */
+always @ (posedge clk) begin
+	 X = posicoesEmbarcacao[6 -:4];
+	 Y = posicoesEmbarcacao[10 -:4];
+	 
+	case(X)
+		X1:
+		begin
+			borderLeft = 10'd16;
+		end
 
-//reg [9:0]pix_x,[9:0]pix_y;
+		X2:
+		begin
+			borderLeft = 10'd78;
+		end
+		
+		X3:
+		begin
+			borderLeft = 10'd140;
+		end
+		
+		X4:
+		begin
+			borderLeft = 10'd202;
+		end
+		
+		X5:
+		begin
+			borderLeft = 10'd264;
+		end
+		
+		X6:
+		begin
+			borderLeft = 10'd326;
+		end
+		
+		X7:
+		begin
+			borderLeft = 10'd388;	
+		end
+		
+		X8:
+		begin
+			borderLeft = 10'd450;
+		end
+	endcase
+	
+	case(Y)
+		Y1:
+		begin
+			borderDown = 10'd16;
+		end
+
+		Y2:
+		begin
+			borderDown = 10'd73;
+		end
+		
+		Y3:
+		begin
+			borderDown = 10'd130;
+		end
+		
+		Y4:
+		begin
+			borderDown = 10'd187;
+		end
+		
+		Y5:
+		begin
+			borderDown = 10'd244;
+		end
+		
+		Y6:
+		begin
+			borderDown = 10'd301;
+		end
+		
+		Y7:
+		begin
+			borderDown = 10'd358;
+		end
+		
+		Y8:
+		begin
+			borderDown = 10'd415;
+		end
+	endcase
+
+end
 
 
-//reg [10:0] rom_addr;  // endereço completo a ser armazenado [10:4] char e [3:0] as linhas do caracter
-
-//reg [6:0]  char_addr; // armazena o endereço dos caracteres que sera acessado pela memoria ram.
-
-//reg [3:0]  row_addr;  // endereço correspondente a linha de representaçao do caracter   char_addr + row_add = rom_add
-
-//reg [2:0]  bit_addr;  // bit de contagem de coluna(x)
-
-//reg [7:0]  font_word; // quarda o q vem da memoria
-
-//reg [2:0]  font_rgb;	 // vetor de cores. cada bit uma cor.
-
-//reg text_on;          // indica a área para ser impresso o texto
-
-//ROM_Chars memoria_rom(.address(rom_addr), .clock(clk), .q(font_word));
-
-//assign text_on = ((linha >=224 && linha<=240) && (coluna>= 288 && coluna <=352) ) ? 1'b1:0'b0; // Primeira Linha(-> P1 x P2)
-//assign text_on = ((linha >=241 && linha<=257) && (coluna>= 232 && coluna <=248 ) ) ? 1'b1:0'b0; // Primeira Linha(-> P1 x CPU)
-
-//always @(posedge clock) begin
-//end
-
-
-
-
-					//linhas verticais do mapa
 assign rgb_b =
-
-					((linha >lineLeft && linha < lineRight)&& (coluna >colDown && coluna < colUp))? 1'b1:
+					((linha > borderLeft && linha < (borderLeft + largura))&& (coluna > borderDown && coluna < (borderDown + altura)))? 1'b1:
 					1'b0
 					;
 					
 assign rgb_r = 1'b0;
 
 assign rgb_g = 1'b0;
-
 
 endmodule
