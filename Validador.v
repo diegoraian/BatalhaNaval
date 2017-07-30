@@ -35,7 +35,7 @@ module Validador
     @param wrep2 - write enable para p2
     @param vetor - vetor de saída com a posicao das peças
     @param read_addr - endereço para armazenamento das pecas na memoria(leitura)
-    @param write_addr - endereço para armazenamento das pecas na memoria(escrita)
+    @param write_addr - endereço para salvar as pecas na memoria(escrita)
   */
   ready, conflitoMemoria_out, conflitoBorda_out, wrep1, wrep2, vetor, read_addr, write_addr, conflito
 );
