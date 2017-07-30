@@ -1,4 +1,4 @@
-module VGA_Encouracado
+module VGA_Hidroaviao
 (
 	//inputs
 	clk,
