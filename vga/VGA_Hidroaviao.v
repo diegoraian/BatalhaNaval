@@ -1,4 +1,4 @@
-module VGA_Cruzador
+module VGA_Encouracado
 (
 	//inputs
 	clk,
@@ -26,18 +26,22 @@ output rgb_r, rgb_g , rgb_b;
 
 
 /*Registradores Internos*/
-reg [9:0] XA;										// Recebe a coordenada XA do Cruzador
-reg [9:0] YA;										// Recebe a coordenada YA do Cruzador
-reg [9:0] XB;										// Recebe a coordenada XB do Cruzador
-reg [9:0] YB;										// Recebe a coordenada YB do Cruzador
+reg [9:0] XA;										// Recebe a coordenada XA do Encouracado
+reg [9:0] YA;										// Recebe a coordenada YA do Encouracado
+reg [9:0] XB;										// Recebe a coordenada XB do Encouracado
+reg [9:0] YB;										// Recebe a coordenada YB do Encouracado
+reg [9:0] XC;										// Recebe a coordenada XC do Encouracado
+reg [9:0] YC;										// Recebe a coordenada YC do Encouracado
 
 reg [9:0] borderLeftA;							// limite esquerdo da celula A da peca na tela
 reg [9:0] borderDownA;							// limite inferior da celula A da peca na tela
 reg [9:0] borderLeftB;							// limite esquerdo da celula B da peca na tela
 reg [9:0] borderDownB;							// limite inferior da celula B da peca na tela
+reg [9:0] borderLeftC;							// limite esquerdo da celula C da peca na tela
+reg [9:0] borderDownC;							// limite inferior da celula C da peca na tela
 
 reg [9:0] largura = 10'd54;					// Largura de uma celula da embarcacao
-reg [9:0] altura = 10'd49;						// Altura de uma celula da embarcacao
+reg [9:0] altura = 10'd49;					// Altura de uma celula da embarcacao
 
 /*Parametros para os valores das POSICOES em X e em Y*/
 parameter	X1 = 10'd1,
@@ -107,6 +111,9 @@ always @ (posedge clk) begin
 	 XB = posicoesEmbarcacao[14 -:4];
 	 YB = posicoesEmbarcacao[18 -:4];
 
+	 XC = posicoesEmbarcacao[22 -:4];
+	 YC = posicoesEmbarcacao[26 -:4];
+	 
 /*Primeira Coordenada X da Embarcaçao*/
 	case(XA)
 		X1:
@@ -149,10 +156,8 @@ always @ (posedge clk) begin
 			borderLeftA = 10'd450;
 		end
 	endcase
-
-	
 /*Primeira Coordenada Y da Embarcaçao*/	
-case(YA)
+	case(YA)
 		Y1:
 		begin
 			borderDownA = 10'd16;
@@ -193,8 +198,6 @@ case(YA)
 			borderDownA = 10'd415;
 		end
 	endcase
-
-
 /*Segunda Coordenada X da Embarcaçao*/
 	case(XB)
 		X1:
@@ -237,8 +240,6 @@ case(YA)
 			borderLeftB = 10'd450;
 		end
 	endcase
-	
-
 /*Segunda Coordenada Y da Embarcaçao*/
 	case(YB)
 		Y1:
@@ -281,6 +282,91 @@ case(YA)
 			borderDownB = 10'd415;
 		end
 	endcase	
+/*Terceira Coordenada X da Embarcaçao*/	
+	case(XC)
+			Y1:
+			begin
+				borderDownA = 10'd16;
+			end
+
+			Y2:
+			begin
+				borderDownA = 10'd73;
+			end
+			
+			Y3:
+			begin
+				borderDownA = 10'd130;
+			end
+			
+			Y4:
+			begin
+				borderDownA = 10'd187;
+			end
+			
+			Y5:
+			begin
+				borderDownA = 10'd244;
+			end
+			
+			Y6:
+			begin
+				borderDownA = 10'd301;
+			end
+			
+			Y7:
+			begin
+				borderDownA = 10'd358;
+			end
+			
+			Y8:
+			begin
+				borderDownA = 10'd415;
+			end
+		endcase
+/*Terceira Coordenada Y da Embarcaçao*/	
+	case(YC)
+			Y1:
+			begin
+				borderDownA = 10'd16;
+			end
+
+			Y2:
+			begin
+				borderDownA = 10'd73;
+			end
+			
+			Y3:
+			begin
+				borderDownA = 10'd130;
+			end
+			
+			Y4:
+			begin
+				borderDownA = 10'd187;
+			end
+			
+			Y5:
+			begin
+				borderDownA = 10'd244;
+			end
+			
+			Y6:
+			begin
+				borderDownA = 10'd301;
+			end
+			
+			Y7:
+			begin
+				borderDownA = 10'd358;
+			end
+			
+			Y8:
+			begin
+				borderDownA = 10'd415;
+			end
+		endcase
+
 end
 
 
@@ -299,12 +385,16 @@ end
 */
 assign rgb_b = 1'b0;
 					
-assign rgb_r =
+assign rgb_r = 
 					((linha > borderLeftA && linha < (borderLeftA + largura))&& (coluna > borderDownA && coluna < (borderDownA + altura)))? 1'b1:
 					((linha > borderLeftB && linha < (borderLeftB + largura))&& (coluna > borderDownB && coluna < (borderDownB + altura)))? 1'b1:
-					1'b0
-					;
+					((linha > borderLeftC && linha < (borderLeftC + largura))&& (coluna > borderDownC && coluna < (borderDownC + altura)))? 1'b1:
+					1'b0;
 
-assign rgb_g = 1'b0;
+assign rgb_g =
+					((linha > borderLeftA && linha < (borderLeftA + largura))&& (coluna > borderDownA && coluna < (borderDownA + altura)))? 1'b1:
+					((linha > borderLeftB && linha < (borderLeftB + largura))&& (coluna > borderDownB && coluna < (borderDownB + altura)))? 1'b1:
+					((linha > borderLeftC && linha < (borderLeftC + largura))&& (coluna > borderDownC && coluna < (borderDownC + altura)))? 1'b1:
+					1'b0;
 
 endmodule

@@ -458,6 +458,20 @@ always @ (posedge clk) begin
 		endcase
 
 end
+
+/* ESQUEMA DE CORES DAS EMBARCAÇOES*/
+/*
+ Submarino =  Verde (GREEN)
+ 
+ Cruzador = Vermelho(RED)
+ 
+ Hidroaviao = Amarelo (RED+GREEN)
+ 
+ Encouracado = Violeta(RED+BLUE)
+ 
+ Porta-avioes = Ciano(GREEN+BLUE)
+
+*/
 assign rgb_b =
 					((linha > borderLeftA && linha < (borderLeftA + largura))&& (coluna > borderDownA && coluna < (borderDownA + altura)))? 1'b1:
 					((linha > borderLeftB && linha < (borderLeftB + largura))&& (coluna > borderDownB && coluna < (borderDownB + altura)))? 1'b1:
@@ -465,8 +479,13 @@ assign rgb_b =
 					((linha > borderLeftD && linha < (borderLeftD + largura))&& (coluna > borderDownD && coluna < (borderDownD + altura)))? 1'b1:
 					1'b0;
 					
-assign rgb_r = 1'b0;
-
+assign rgb_r =
+					((linha > borderLeftA && linha < (borderLeftA + largura))&& (coluna > borderDownA && coluna < (borderDownA + altura)))? 1'b1:
+					((linha > borderLeftB && linha < (borderLeftB + largura))&& (coluna > borderDownB && coluna < (borderDownB + altura)))? 1'b1:
+					((linha > borderLeftC && linha < (borderLeftC + largura))&& (coluna > borderDownC && coluna < (borderDownC + altura)))? 1'b1:
+					((linha > borderLeftD && linha < (borderLeftD + largura))&& (coluna > borderDownD && coluna < (borderDownD + altura)))? 1'b1:
+					1'b0;
+					
 assign rgb_g = 1'b0;
 
 endmodule

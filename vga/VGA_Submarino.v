@@ -184,13 +184,25 @@ always @ (posedge clk) begin
 end
 
 
-assign rgb_b =
+/* ESQUEMA DE CORES DAS EMBARCAÇOES*/
+/*
+ Submarino =  Verde
+ 
+ Cruzador = Vermelho
+ 
+ Hidroaviao = Amarelo
+ 
+ Encouracado = Violeta
+ 
+ Porta-avioes = Ciano
+
+*/
+assign rgb_b = 1'b0;
+
+assign rgb_r = 1'b0;
+					
+assign rgb_g =
 					((linha > borderLeft && linha < (borderLeft + largura))&& (coluna > borderDown && coluna < (borderDown + altura)))? 1'b1:
 					1'b0
 					;
-					
-assign rgb_r = 1'b0;
-
-assign rgb_g = 1'b0;
-
 endmodule
