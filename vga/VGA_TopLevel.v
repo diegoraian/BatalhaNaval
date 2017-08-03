@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Tue Aug 01 15:52:40 2017"
+// CREATED		"Thu Aug  3 13:27:19 2017"
 
 module VGA_TopLevel(
 	clk,
@@ -68,7 +68,7 @@ PLL_clk	b2v_inst(
 	.c0(SYNTHESIZED_WIRE_10));
 
 
-VGA_Coordemada_Embarcacao_Teste	b2v_inst1(
+VGA_Coordenada_Embarcacao_Teste	b2v_inst1(
 	.leftArrow(leftArrow),
 	.rightArrow(rightArrow),
 	.upArrow(upArrow),
@@ -76,7 +76,7 @@ VGA_Coordemada_Embarcacao_Teste	b2v_inst1(
 	.posicoesEmbarcacao(SYNTHESIZED_WIRE_8));
 
 
-VGA_MapaGame	b2v_inst2(
+VGA_Mapa	b2v_inst2(
 	.clk(SYNTHESIZED_WIRE_10),
 	.areaAtiva(SYNTHESIZED_WIRE_11),
 	.coluna(SYNTHESIZED_WIRE_12),
