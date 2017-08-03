@@ -1,4 +1,4 @@
-module VGA_Coordemada_Embarcacao_Teste
+module VGA_Coordenada_Embarcacao_Teste
 (
 	/*
 	Objetivos: Este modulo se destina a testar os modulos de desenho de embarcacoes na VGA.
