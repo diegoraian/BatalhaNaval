@@ -2,7 +2,7 @@ module VGA_Submarino
 (
 	//inputs
 	clk,
-	readEnabled,
+	//readEnabled,
 	areaAtiva,
 	linha,
 	coluna,
@@ -15,7 +15,7 @@ module VGA_Submarino
 
 );
 
-input clk,areaAtiva,readEnabled;
+input clk,areaAtiva/*,readEnabled*/;
 input [9:0] linha;
 input [9:0] coluna;
 
@@ -92,16 +92,16 @@ X(pixels) - -	1  2 	 2   3 	3   4 | Centena
 			Intervalo de Y = 49
 */
 
-always @(posedge clk and readEnabled) begin
-	 X = posicoesEmbarcacao[6 -:4];
-	 Y = posicoesEmbarcacao[10 -:4];
-end
+//always @(posedge clk and readEnabled) begin
+
+//end
 
 
 /* Responsavel pelo Mapeamento Jogo -> VGA */
 always @ (posedge clk) begin
-
 	 
+	 X = posicoesEmbarcacao[6 -:4];
+	 Y = posicoesEmbarcacao[10 -:4];
 	case(X)
 		X1:
 		begin

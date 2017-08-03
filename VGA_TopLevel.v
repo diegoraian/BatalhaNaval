@@ -15,84 +15,86 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Mon Jul 31 20:45:30 2017"
+// CREATED		"Tue Aug 01 15:52:40 2017"
 
-module VGA_pll_top(
-	reset,
+module VGA_TopLevel(
 	clk,
+	reset,
 	leftArrow,
 	rightArrow,
 	upArrow,
 	downArrow,
-	v_sync,
 	h_sync,
-	pll_clk,
-	rgb_r,
-	rgb_g,
-	rgb_b
+	v_sync,
+	VGA_CLK,
+	rgb_r_out7,
+	rgb_g_out7,
+	rgb_b_out7,
+	rgb_b_out8,
+	rgb_g_out8,
+	rgb_r_out8
 );
 
 
-input wire	reset;
 input wire	clk;
+input wire	reset;
 input wire	leftArrow;
 input wire	rightArrow;
 input wire	upArrow;
 input wire	downArrow;
-output wire	v_sync;
 output wire	h_sync;
-output wire	pll_clk;
-output wire	rgb_r;
-output wire	rgb_g;
-output wire	rgb_b;
+output wire	v_sync;
+output wire	VGA_CLK;
+output wire	rgb_r_out7;
+output wire	rgb_g_out7;
+output wire	rgb_b_out7;
+output wire	rgb_b_out8;
+output wire	rgb_g_out8;
+output wire	rgb_r_out8;
 
-wire	SYNTHESIZED_WIRE_6;
-wire	SYNTHESIZED_WIRE_2;
-wire	[9:0] SYNTHESIZED_WIRE_3;
-wire	[9:0] SYNTHESIZED_WIRE_4;
-wire	[63:0] SYNTHESIZED_WIRE_5;
+wire	SYNTHESIZED_WIRE_10;
+wire	SYNTHESIZED_WIRE_11;
+wire	[9:0] SYNTHESIZED_WIRE_12;
+wire	[9:0] SYNTHESIZED_WIRE_13;
+wire	[63:0] SYNTHESIZED_WIRE_8;
 
-assign	pll_clk = SYNTHESIZED_WIRE_6;
+assign	VGA_CLK = SYNTHESIZED_WIRE_10;
 
 
 
 
 PLL_clk	b2v_inst(
 	.inclk0(clk),
-	.c0(SYNTHESIZED_WIRE_6));
+	.c0(SYNTHESIZED_WIRE_10));
 
 
-VGASinc	b2v_inst1(
-	.reset(reset),
-	.clk(SYNTHESIZED_WIRE_6),
-	.h_sync(h_sync),
-	.v_sync(v_sync),
-	.regiaoAtiva(SYNTHESIZED_WIRE_2),
-	.coluna(SYNTHESIZED_WIRE_3),
-	.linha(SYNTHESIZED_WIRE_4));
-	defparam	b2v_inst1.COLUNASATIVAS = 640;
-	defparam	b2v_inst1.LINHASATIVAS = 480;
-	defparam	b2v_inst1.TOTALCOLUNAS = 800;
-	defparam	b2v_inst1.TOTALLINHAS = 524;
-
-
-VGA_Teste	b2v_inst2(
+VGA_Coordemada_Embarcacao_Teste	b2v_inst1(
 	.leftArrow(leftArrow),
 	.rightArrow(rightArrow),
 	.upArrow(upArrow),
 	.downArrow(downArrow),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_5));
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_8));
+
+
+VGA_MapaGame	b2v_inst2(
+	.clk(SYNTHESIZED_WIRE_10),
+	.areaAtiva(SYNTHESIZED_WIRE_11),
+	.coluna(SYNTHESIZED_WIRE_12),
+	.linha(SYNTHESIZED_WIRE_13),
+	.rgb_r(rgb_r_out7),
+	.rgb_g(rgb_g_out7),
+	.rgb_b(rgb_b_out7));
 
 
 VGA_Submarino	b2v_inst3(
-	.clk(SYNTHESIZED_WIRE_6),
-	.areaAtiva(SYNTHESIZED_WIRE_2),
-	.coluna(SYNTHESIZED_WIRE_3),
-	.linha(SYNTHESIZED_WIRE_4),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_5),
-	.rgb_r(rgb_r),
-	.rgb_g(rgb_g),
-	.rgb_b(rgb_b));
+	.clk(SYNTHESIZED_WIRE_10),
+	.areaAtiva(SYNTHESIZED_WIRE_11),
+	.coluna(SYNTHESIZED_WIRE_12),
+	.linha(SYNTHESIZED_WIRE_13),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_8),
+	.rgb_r(rgb_r_out8),
+	.rgb_g(rgb_g_out8),
+	.rgb_b(rgb_b_out8));
 	defparam	b2v_inst3.X1 = 10'b0000000001;
 	defparam	b2v_inst3.X2 = 10'b0000000010;
 	defparam	b2v_inst3.X3 = 10'b0000000011;
@@ -109,6 +111,20 @@ VGA_Submarino	b2v_inst3(
 	defparam	b2v_inst3.Y6 = 10'b0000000110;
 	defparam	b2v_inst3.Y7 = 10'b0000000111;
 	defparam	b2v_inst3.Y8 = 10'b0000001000;
+
+
+VGASinc	b2v_vga_sinc(
+	.reset(reset),
+	.clk(SYNTHESIZED_WIRE_10),
+	.h_sync(h_sync),
+	.v_sync(v_sync),
+	.regiaoAtiva(SYNTHESIZED_WIRE_11),
+	.coluna(SYNTHESIZED_WIRE_12),
+	.linha(SYNTHESIZED_WIRE_13));
+	defparam	b2v_vga_sinc.COLUNASATIVAS = 640;
+	defparam	b2v_vga_sinc.LINHASATIVAS = 480;
+	defparam	b2v_vga_sinc.TOTALCOLUNAS = 800;
+	defparam	b2v_vga_sinc.TOTALLINHAS = 524;
 
 
 endmodule
