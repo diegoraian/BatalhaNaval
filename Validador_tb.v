@@ -23,7 +23,7 @@ wire [4:0] addr_jogadorDois;   // contaria as 11 posicoes verificando se ha conl
 wire ready;
 
 
-Validador_Novo validador(
+Validador validador(
 	//input
 	.enable(enable),
 	.tipo(tipo),
@@ -63,76 +63,6 @@ integer size = 0;
 	
 	initial
 	begin
-		/*//***** _Primeiro Teste de Bordas) *******	
-		$display("Iserção do porta avião em 7,0"); 
-		tipo = 1'b0;
-		direcao = 1'b0;
-		orientacao = 1'b0;
-		x1 = 4'd7;
-		y1 = 4'b0;
-		jogador = 1'b0;
-		
-		vetor_leitura_jogadorUm = 64'b0;
-		
-		#100 enable = 1;
-		
-		
-		//***** _Primeiro Teste de Memoria) *******
-		#200 enable = 0;
-		$display("Iserção do porta avião em 0,0"); 
-		tipo = 1'b0;
-		direcao = 1'b0;
-		orientacao = 1'b0;
-		x1 = 4'b1;
-		y1 = 4'b1;
-		jogador = 1'b0;
-		
-		vetor_leitura_jogadorUm = 64'b0;
-		
-		#500 enable = 1;
-
-		//simulando conflito de memoria com a peça anterior
-		#500 enable = 0;
-		$display("Iserção do porta avião em 0,0"); 
-		tipo = 1'b1;	
-		direcao = 1'b0;
-		orientacao = 1'b0;
-		x1 = 4'b1;
-		y1 = 4'b1;
-		jogador = 1'b0;
-		
-		
-		//vetor_leitura = 64'b0000000000000000001010001010100010100000100110001001000010001000;
-
-
-		//simulação de sisercao das 12 posicoes
-		#500 enable = 1;
-
-		
-		#500 enable = 0;
-		$display("Iserção do porta avião em 0,0"); 
-		tipo = 2'b10;	
-		direcao = 1'b0;
-		orientacao = 1'b0;
-		x1 = 4'd3;
-		y1 = 4'd3;
-		jogador = 1'b0;
-		
-		
-		//vetor_leitura = 64'b0000000000000000001010001010100010100000100110001001000010001000;
-
-		#500 enable = 1;
-
-		//simulação de sisercao das 12 posicoes
-		if (validador.auxGravou == 1) begin
-			$display("Teste essa aquiiiddddi"); 
-		end
-		
-		#100 enable = 1;
-
-		//comentea*/
-
-
 		initMemoriaRam;
 
 		//	******************************************	
@@ -151,11 +81,16 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#100
+			#200
 			enable = 1 ;
 
-			#500 enable = 0 ;
+			#1200 
+			enable = 0 ;
+
+
 		end
+		
+		#500 enable = 0 ;
 
 		//       Inserção Cruzador(Jogador Um)
 		#50 enable =0;
@@ -169,7 +104,11 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#500 enable = 1;
+			#200
+			enable = 1 ;
+
+			#1200 
+			enable = 0 ;
 		end
 
 
@@ -185,7 +124,11 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#100 enable = 1;
+			#200
+			enable = 1 ;
+
+			#1200 
+			enable = 0 ;
 		end
 
 
@@ -199,7 +142,11 @@ integer size = 0;
 
 		jogador = 1'b0;
 	
-		#100 enable = 1;
+		#200
+		enable = 1 ;
+
+		#1200 
+		enable = 0 ;
 
 		//       Inserção Porta-Aviões(Jogador Um)
 		#50 enable =0;
@@ -209,7 +156,11 @@ integer size = 0;
 		geraPosicaoRandomico;
 		jogador = 1'b0;
 	
-		#100 enable = 1;
+		#200
+		enable = 1 ;
+
+		#1200 
+		enable = 0 ;
 	
 	end
 	
@@ -254,8 +205,11 @@ integer size = 0;
 	begin
 		for(size = 0;size < 12; size = size +1)
 		begin
-			memoriaVectorJogadorUm[size] = 64'hffffffffffffffff;
-			memoriaVectorJogadorDois[size] = 64'hffffffffffffffff;
+			//memoriaVectorJogadorUm[size] = 64'hffffffffffffffff;
+			memoriaVectorJogadorUm[size] = 64'b0;
+			
+			//memoriaVectorJogadorDois[size] = 64'hffffffffffffffff;
+			memoriaVectorJogadorDois[size] = 64'b0;
 		end
 	end
 	endtask
