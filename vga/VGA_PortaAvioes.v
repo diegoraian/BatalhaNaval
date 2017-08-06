@@ -1,14 +1,27 @@
 module VGA_PortaAvioes
 
 (
-	//inputs
+	/*
+	Objetivos: Desenhar uma embarcaçao na tela
+	
+	Inputs:
+	@param clk			- clock do sistema
+	@param areaAtiva	- area ativa na tela para exibicao de video
+	@param linha		- linha da tela que sera ativada para exibicao
+	@param coluna		- coluna da tela que sera ativada para exibicao
+	@param posicoesEmbarcacao - recebe a posicao da embarcacaono mapa. Segue o padrao: Vetor_Posicoes = <Bits mais Significativos> [...] [18-:4] [14-:4] [10-:4] [6-:4] [2:0] <Bits menos Significativos>
+	*/
 	clk,
 	areaAtiva,
 	linha,
 	coluna,
-	posicoesEmbarcacao, // Para o submarino, as posicoes X e Y. Varia de 3-10 bits, 4 primeiros para X e 4 ultimos para Y, totalizando 8 bits
-	
-	//outputs
+	posicoesEmbarcacao,
+	/*
+	Outputs:
+	@param rgb_r		- canal de cor vermelho do RGB
+	@param rgb_g		- canal de cor verdedo RGB
+	@param rgb_b		- canal de cor azuldo RGB
+	*/
 	rgb_r,
 	rgb_g,
 	rgb_b
