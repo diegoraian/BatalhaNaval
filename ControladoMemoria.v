@@ -12,8 +12,8 @@ module ControladoMemoria
 	input validador_wrep1,
 	input validador_wrep2,
 	input validadoJogador,
-	input [4:0] validador_readaddr,
-	input [4:0] validador_writeaddr,
+	input [4:0] validador_addr,
+	//input [4:0] validador_writeaddr,
 	input [63:0] validador_data,
 	
 	//Input de Colisor. Faz leitura de apenas uma posição e escreve na msm posição
@@ -21,8 +21,7 @@ module ControladoMemoria
 	input colisor_wrep1,
 	input colisor_wrep2,
 	input jogadorColisor,
-	input [4:0] colisor_readaddr,
-	input [4:0] colisor_writeaddr,
+	input [4:0] colisor_addr,
 	input [63:0] colisor_data,  //clear
 
 	
@@ -259,10 +258,10 @@ begin
 			wrenP1 = validador_wrep1;
 			if(validador_wrep1)begin
 				//salvar na memoria
-				addr = validador_writeaddr;
+				addr = validador_addr;
 				data = validador_data;
 			end else begin
-				addr = validador_readaddr;
+				addr = validador_addr;
 			end
 	
 			dataReadValidador = data_memoria_jogadorUm;
@@ -274,10 +273,10 @@ begin
 			wrenP2 = validador_wrep2;
 			if(validador_wrep2)begin
 				//salvar na memoria
-				addr = validador_writeaddr;
+				addr = validador_addr;
 				data = validador_data;
 			end else begin
-				addr = validador_readaddr;
+				addr = validador_addr;
 			end
 			
 	
@@ -289,11 +288,11 @@ begin
 			wrenP1 = colisor_wrep1;
 			if(colisor_wrep1)begin
 			
-				addr = colisor_writeaddr;
+				addr = colisor_addr;
 				data = colisor_data;
 			
 			end else begin
-				addr = colisor_readaddr;
+				addr = colisor_addr;
 			
 			end
 		
@@ -305,11 +304,11 @@ begin
 			wrenP2 = colisor_wrep2;
 			if(colisor_wrep2)begin
 			
-				addr = colisor_writeaddr;
+				addr = colisor_addr;
 				data = colisor_data;
 			
 			end else begin
-				addr = colisor_readaddr;
+				addr = colisor_addr;
 			
 			end
 		
