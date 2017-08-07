@@ -1,4 +1,4 @@
-module VGA_Coordenada_Embarcacao_Teste
+module VGA_Coordenada_Embarcacao_Teste_B
 (
 	/*
 	Objetivos: Este modulo se destina a testar os modulos de desenho de embarcacoes na VGA.
@@ -29,11 +29,11 @@ output [63:0] posicoesEmbarcacao;
 
 /*Relativo ao teste de um submarino*/
 assign posicoesEmbarcacao =
-					(leftArrow == 1'b1 && rightArrow == 1'b0 && upArrow == 1'b0 && downArrow == 1'b0)? 64'b0000000000000000000000000000000000000000000000000000001010100000: // Posicao Esquerda XA = 4, YA=5
-					(leftArrow == 1'b0 && rightArrow == 1'b1 && upArrow == 1'b0 && downArrow == 1'b0)? 64'b0000000000000000000000000000000000000000000000000000001010110000: // Posicao Direita XA =6, YA=5
-					(leftArrow == 1'b0 && rightArrow == 1'b0 && upArrow == 1'b1 && downArrow == 1'b0)? 64'b0000000000000000000000000000000000000000000000000000001100101000: // Posicao Em cima XA =5, YA=6
-					(leftArrow == 1'b0 && rightArrow == 1'b0 && upArrow == 1'b0 && downArrow == 1'b1)? 64'b0000000000000000000000000000000000000000000000000000001000101000: // Posicao Em Baixo XA = 5, YA=4
-					64'b0000000000000000000000000000000000000000000000000000001010101000; // Posicao Padrao XA = 5, YA=5
+					(leftArrow == 1'b1 && rightArrow == 1'b0 && upArrow == 1'b0 && downArrow == 1'b0)? 64'b0000000000000000000000000000000000000000000000000000000100001000: // Posicao Esquerda XA = 1, YA =2
+					(leftArrow == 1'b0 && rightArrow == 1'b1 && upArrow == 1'b0 && downArrow == 1'b0)? 64'b0000000000000000000000000000000000000000000000000000000100011000: // Posicao Direita XA = 3, YA = 2
+					(leftArrow == 1'b0 && rightArrow == 1'b0 && upArrow == 1'b1 && downArrow == 1'b0)? 64'b0000000000000000000000000000000000000000000000000000000110010000: // Posicao Em cima XA = 2, YA = 3
+					(leftArrow == 1'b0 && rightArrow == 1'b0 && upArrow == 1'b0 && downArrow == 1'b1)? 64'b0000000000000000000000000000000000000000000000000000000010010000: // Posicao Em Baixo XA = 2, YA = 1
+					64'b0000000000000000000000000000000000000000000000000000000100010000; // Posicao Padrao XA = 2, YA=2
 					
 					
 endmodule

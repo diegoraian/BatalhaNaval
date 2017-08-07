@@ -218,6 +218,6 @@ assign rgb_b = 1'b0;
 assign rgb_r = 1'b0;
 					
 assign rgb_g =
-					((linha > borderLeft && linha < (borderLeft + largura))&& (coluna > borderDown && coluna < (borderDown + altura)))? 1'b1:
+					((linha > borderDown && linha < (borderDown + largura))&& (coluna > borderLeft && coluna < (borderLeft + altura)))? 1'b1:
 					1'b0;
 endmodule
