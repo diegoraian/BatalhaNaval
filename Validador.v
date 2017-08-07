@@ -10,8 +10,8 @@ module Validador
 	 input [3:0] y1, 
 	 input jogador, 
 	 input  clk  , 
-	 input [63:0] vetor_leitura_jogadorUm,
-	 input [63:0] vetor_leitura_jogadorDois, 
+	 //input [63:0] vetor_leitura_jogadorUm,
+	 input [63:0] vetor_leitura, 
 
 		
 	//
@@ -21,8 +21,8 @@ module Validador
 	 output reg wrep1,
 	 output reg wrep2,
 	 output reg [63:0] vetor,
-	 output reg [4:0] addr_jogadorUm  = 5'b00000,
-	 output reg [4:0] addr_jogadorDois  = 5'b00000,
+	 //output reg [4:0] addr_jogadorUm  = 5'b00000,
+	 output reg [4:0] addr  = 5'b00000,
     output conflito
 
 );
@@ -589,13 +589,10 @@ reg [3:0] y;
 		VerificandoMemoria:
 		
 		begin
-			if(!jogador) begin
-				addr_jogadorUm = read_addr;
-				vetor_Leitura_jogador_atual = vetor_leitura_jogadorUm;
-			end else begin
-				addr_jogadorDois = read_addr;
-				vetor_Leitura_jogador_atual = vetor_leitura_jogadorDois;	
-			end	
+			
+			addr = read_addr;
+			vetor_Leitura_jogador_atual = vetor_leitura;
+			
 		
 		
 			
@@ -1214,11 +1211,11 @@ reg [3:0] y;
 			if(!salvouMemoria)begin
 				salvouMemoria = 1'b1;
 				if(!jogador) begin
-					addr_jogadorUm = write_addr_jogadorUm;
+					addr = write_addr_jogadorUm;
 					wrep1 = 1;
 					write_addr_jogadorUm = write_addr_jogadorUm + 1'b1;
 				end else begin
-					addr_jogadorDois = write_addr_jogadorDois;
+					addr = write_addr_jogadorDois;
 					wrep2 = 1;
 					write_addr_jogadorDois = write_addr_jogadorDois +1'b1;	
 				end

@@ -5,8 +5,8 @@ reg [2:0] tipo;
 reg [2:0] orientacao;
 reg [3:0] x1;
 reg [3:0] y1;
-reg [63:0] vetor_leitura_jogadorUm;
-reg [63:0] vetor_leitura_jogadorDois;
+reg [63:0] vetor_leitura;
+//reg [63:0] vetor_leitura_jogadorDois;
 
 reg [63:0] memoriaVectorJogadorUm[10:0] ; // Memoria para jogador Um
 reg [63:0] memoriaVectorJogadorDois[10:0] ; //Memoria para jogador Dois
@@ -18,8 +18,8 @@ wire conflito;
 wire wrep1;
 wire wrep2;
 wire [63:0]vetor;        
-wire [4:0] addr_jogadorUm;         //Endereco para armazenar na memoria
-wire [4:0] addr_jogadorDois;   // contaria as 11 posicoes verificando se ha conlfito de posições na memoria
+wire [4:0] addr;         //Endereco para armazenar na memoria
+//wire [4:0] addr_jogadorDois;   // contaria as 11 posicoes verificando se ha conlfito de posições na memoria
 wire ready;
 
 
@@ -33,8 +33,8 @@ Validador validador(
 	.y1(y1),
 	.clk(clk), 
 	.jogador(jogador),
-	.vetor_leitura_jogadorUm(vetor_leitura_jogadorUm),
-	.vetor_leitura_jogadorDois(vetor_leitura_jogadorDois),
+	.vetor_leitura(vetor_leitura),
+	//.vetor_leitura_jogadorDois(vetor_leitura_jogadorDois),
 	
 	 //output
 	.ready(ready), 
@@ -43,8 +43,8 @@ Validador validador(
 	.wrep1(wrep1), 
 	.wrep2(wrep2), 
 	.vetor(vetor), 
-	.addr_jogadorUm(addr_jogadorUm), 
-	.addr_jogadorDois(addr_jogadorDois), 
+	.addr(addr), 
+	//.addr_jogadorDois(addr_jogadorDois), 
 	.conflito(conflito)
 );
 
@@ -79,7 +79,7 @@ integer size = 0;
 
 			geraPosicaoRandomico;
 
-			jogador = 1'b0;
+			jogador = 1'b1;
 		
 			#200
 			enable = 1 ;
@@ -176,11 +176,10 @@ integer size = 0;
 		#10
 		if(wrep1)
 		begin
-		 	memoriaVectorJogadorUm[addr_jogadorUm] = vetor;
+		 	memoriaVectorJogadorUm[addr] = vetor;
 		 end
-
-		if (wrep2) begin
-		  	memoriaVectorJogadorDois[addr_jogadorDois] = vetor;
+		else if (wrep2) begin
+		  	memoriaVectorJogadorDois[addr] = vetor;
 	    end 
 		
 
@@ -194,10 +193,12 @@ integer size = 0;
 	*/
 	always
 	begin
+		//faz o papel do controlador de memoria
 		#10
-		vetor_leitura_jogadorUm = memoriaVectorJogadorUm[addr_jogadorUm];
-
-		vetor_leitura_jogadorDois = memoriaVectorJogadorDois[addr_jogadorDois];
+		if(!jogador)
+			vetor_leitura = memoriaVectorJogadorUm[addr];
+		else
+			vetor_leitura = memoriaVectorJogadorDois[addr];
 
 	end
 	

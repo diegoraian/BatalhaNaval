@@ -4,7 +4,8 @@ module ControladoMemoria
 	input resetGeral,
 	
 	//Dado lido da memoria
-	input [63:0] data_memoria, //Leitura da memoria jogador 1 ou 2
+	input [63:0] data_memoria_jogadorUm, //Leitura da memoria jogador 1 ou 2
+	input [63:0] data_memoria_jogadorDois, //Leitura da memoria jogador 1 ou 2
 	
 	//Input do Validador faz leitura de toda memoria e escreve em uma posição.
 	input readyValidador,
@@ -20,8 +21,8 @@ module ControladoMemoria
 	input colisor_wrep1,
 	input colisor_wrep2,
 	input jogadorColisor,
-	input colisor_readaddr,
-	input colisor_writeaddr,
+	input [4:0] colisor_readaddr,
+	input [4:0] colisor_writeaddr,
 	input [63:0] colisor_data,  //clear
 
 	
@@ -31,7 +32,7 @@ module ControladoMemoria
 	input jogadorPontuacao,
 	
 	//Input de VGA. Só faz leitura
-	input vga_readAddr,
+	input [4:0] vga_readAddr,
 	input jogadorVGA,
 	
 
@@ -89,14 +90,14 @@ begin
 			
 				if(readyValidador)begin
 				
-					if(validadoJogador)begin
+					if(!validadoJogador)begin
 						E_F <= ValidandorPlayerUm;
 					end else begin
 						E_F <= ValidandorPlayerDois;
 					end
 					
 				end else begin
-					if(jogadorVGA)begin
+					if(!jogadorVGA)begin
 						E_F <= TransmitindoVgaPlayerUm;
 					end else begin
 						E_F <= TransmitindoVgaPlayerDois;
@@ -108,12 +109,12 @@ begin
 			ValidandorPlayerUm: begin
 			
 				if(readyValidador)begin
-					if(validadoJogador)
+					if(!validadoJogador)
 						E_F <= ValidandorPlayerUm;
 				   else 
 						E_F <= ValidandorPlayerDois;
 				end else begin
-					if(jogadorVGA)
+					if(!jogadorVGA)
 						E_F<= TransmitindoVgaPlayerUm;
 				   else 
 						E_F <= TransmitindoVgaPlayerDois;
@@ -124,12 +125,12 @@ begin
 			ValidandorPlayerDois: begin
 			
 				if(readyValidador)begin
-					if(validadoJogador)
+					if(!validadoJogador)
 						E_F <= ValidandorPlayerUm;
 					else 
 						E_F <= ValidandorPlayerDois;
 				end else begin
-					if(jogadorVGA)
+					if(!jogadorVGA)
 						E_F<= TransmitindoVgaPlayerUm;
 					else
 						E_F <= TransmitindoVgaPlayerDois;
@@ -139,12 +140,12 @@ begin
 			
 			ColidindoPlayerUm:begin
 				if(readyColisor)begin
-					if(jogadorColisor)
+					if(!jogadorColisor)
 						E_F <= ColidindoPlayerUm;
 					else 
 						E_F <= ColidindoPlayerDois;
 				end else begin
-					if(jogadorVGA)
+					if(!jogadorVGA)
 						E_F<= TransmitindoVgaPlayerUm;
 					else
 						E_F <= TransmitindoVgaPlayerDois;
@@ -157,13 +158,13 @@ begin
 			ColidindoPlayerDois: begin
 			
 				if(readyColisor)begin
-					if(jogadorColisor)
+					if(!jogadorColisor)
 						E_F <= ColidindoPlayerUm;
 					else 
 						E_F <= ColidindoPlayerDois;
 					
 				end else begin
-					if(jogadorVGA) 
+					if(!jogadorVGA) 
 						E_F<= TransmitindoVgaPlayerUm;
 					else 
 						E_F <= TransmitindoVgaPlayerDois;
@@ -183,20 +184,20 @@ begin
 			TransmitindoVgaPlayerUm: begin
 			
 				if(readyValidador)begin
-					if(validadoJogador)
+					if(!validadoJogador)
 						E_F <= ValidandorPlayerUm;
 					else
 						E_F <= ValidandorPlayerDois;
 				end else begin
 					if(readyColisor)begin
-						if(jogadorColisor)
+						if(!jogadorColisor)
 							E_F<= ColidindoPlayerUm;
 					   else
 							E_F<= ColidindoPlayerDois;
 							
 					end else begin
 						//Colocar calculando Pontuacao Tambem
-						if(jogadorVGA)
+						if(!jogadorVGA)
 							E_F <= TransmitindoVgaPlayerUm;
 						else
 							E_F <= TransmitindoVgaPlayerDois;
@@ -209,19 +210,19 @@ begin
 			TransmitindoVgaPlayerDois: begin
 			
 				if(readyValidador)begin
-					if(validadoJogador)
+					if(!validadoJogador)
 						E_F <= ValidandorPlayerUm;
 					else 
 						E_F <= ValidandorPlayerDois;
 				end else begin
 					if(readyColisor)begin
-						if(jogadorColisor)
+						if(!jogadorColisor)
 							E_F<= ColidindoPlayerUm;
 						else 
 							E_F<= ColidindoPlayerDois;	
 					end else begin
 						//Colocar calculando Pontuacao Tambem
-						if(jogadorVGA)
+						if(!jogadorVGA)
 							E_F <= TransmitindoVgaPlayerUm;
 						else
 							E_F <= TransmitindoVgaPlayerDois;
@@ -264,7 +265,7 @@ begin
 				addr = validador_readaddr;
 			end
 	
-			dataReadValidador = data_memoria;
+			dataReadValidador = data_memoria_jogadorUm;
 		
 		
 		end
@@ -280,7 +281,7 @@ begin
 			end
 			
 	
-			dataReadValidador = data_memoria;
+			dataReadValidador = data_memoria_jogadorDois;
 		
 		end
 		
@@ -296,7 +297,7 @@ begin
 			
 			end
 		
-			dataReadColisor  = data_memoria;	
+			dataReadColisor  = data_memoria_jogadorUm;	
 		
 		end
 		
@@ -312,7 +313,7 @@ begin
 			
 			end
 		
-			dataReadColisor  = data_memoria;
+			dataReadColisor  = data_memoria_jogadorDois;
 		
 		end
 		
@@ -329,7 +330,7 @@ begin
 		
 			addr = vga_readAddr;
 		
-			dataReadVGA = data_memoria;
+			dataReadVGA = data_memoria_jogadorUm;
 		
 		end
 		
@@ -338,7 +339,7 @@ begin
 			
 			addr = vga_readAddr;
 		
-			dataReadVGA = data_memoria;
+			dataReadVGA = data_memoria_jogadorDois;
 				
 		end
 		
