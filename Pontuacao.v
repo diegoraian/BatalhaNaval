@@ -43,7 +43,8 @@ output reg [4:0] addr;
 always @ (posedge clk or negedge enable) begin
 
 	if (!enable) begin
-		//Nao faca nada
+
+	//Nao faz nada
 	end else begin
 		if (addr == 5'd11) begin		// se endereco chegou ao ultimo
 			addr = 5'd0;					// zera o endereco
@@ -55,75 +56,82 @@ always @ (posedge clk or negedge enable) begin
 end
 
 /*Decrementa contador da qtd de embarcacoes*/
-always @ (enable or addr) begin
+always @ ( posedge clk ) begin
 	
-	if(enable) begin
+	// if(enable) begin
 	
         //Pontuação pra o Submarino
-        if ((addr == 5'd0) || (addr == 5'd1) || (addr == 5'd2  == addr == 5'd3)  || (addr == 5'd4)  ) begin
-            if(memoriaP1[42-:40] == 40'd0) 
+        if ((addr == 5'd0) || (addr == 5'd1) || (addr == 5'd2)  ||(addr == 5'd3)  || (addr == 5'd4)) begin
+            if (memoriaP1[42-:40] == 40'd0) begin
                 pontuacao_P1 = pontuacao_P1 + 4'd1;
-            else
+            end else begin 
                 pontuacao_P1 =  4'd0;
-
-            if(memoriaP2[42-:40] == 40'd0) 
+				end
+				
+            if (memoriaP2[42-:40] == 40'd0) begin
                 pontuacao_P2 = pontuacao_P2 + 4'd1;
-            else
+            end else begin
                 pontuacao_P2 =  4'd0;
+				end
         end
-         //Pontuação pra o Cruzador
-        if ((addr == 5'd5) || (addr == 5'd6 )) begin
-            if(memoriaP1[42-:40] == 40'd0) 
-                pontuacao_P1 = pontuacao_P1 + 4'd2;
-            else
-                pontuacao_P1 =  4'd0;
- 
-            if (memoriaP2[42-:40] == 40'd0)
-                pontuacao_P2 = pontuacao_P2 + 4'd2;
-            else
-                pontuacao_P2 =  4'd0;
-        end
-         //Pontuação pra o Hidroaviao
-        if ((addr == 5'd7) || (addr == 5'd8 )) begin
-            if(memoriaP1[42-:40] == 40'd0)
-                pontuacao_P1 = pontuacao_P1 + 4'd3;
-            else 
-                pontuacao_P1 =  4'd0;
-
-            if(memoriaP2[42-:40] == 40'd0)
-                pontuacao_P2 = pontuacao_P2 + 4'd3;
-            else 
-                pontuacao_P2 =  4'd0;
-        end
-		//Pontuação pra o Encouraçado
-        if (addr == 5'd9) begin
-            if (memoriaP1[42-:40] == 40'd0)
-                pontuacao_P1 = pontuacao_P1 + 4'd4;
-            else 
-                pontuacao_P1 =  4'd0;
-
-            if (memoriaP2[42-:40] == 40'd0)
-                pontuacao_P2 = pontuacao_P2 + 4'd4;
-            else 
-                pontuacao_P2 =  4'd0;
-        end
-        //Pontuação pra o Porta aviões
-        if (addr == 5'd9) begin
-            if(memoriaP1[42-:40] == 40'd0)
-                pontuacao_P1 = pontuacao_P1 + 4'd5;
-            else 
-                pontuacao_P1 =  4'd0;
-
-            if(memoriaP2[42-:40] == 40'd0)
-                pontuacao_P2 = pontuacao_P2 + 4'd5;
-            else    
-                pontuacao_P2 =  4'd0;
-        end
-	/* Apos enable ser desabilitado ele reseta as qtds para o valor original, no prox enable ele volta a contar*/
-	end else begin 
-		pontuacao_P1 = 4'd0;
-		pontuacao_P2 = 4'd0;
-	end
+    //      //Pontuação pra o Cruzador
+    //     if ((addr == 5'd5) || (addr == 5'd6 )) begin
+    //         if (memoriaP1[42-:40] == 40'd0) begin
+    //             pontuacao_P1 = pontuacao_P1 + 4'd2;
+    //         end else begin 
+    //             pontuacao_P1 =  4'd0;
+	// 			end
+				
+    //         if (memoriaP2[42-:40] == 40'd0) begin
+    //             pontuacao_P2 = pontuacao_P2 + 4'd2;
+    //         end else begin
+    //             pontuacao_P2 =  4'd0;
+	// 			end
+    //     end
+    //      //Pontuação pra o Hidroaviao
+    //     if ((addr == 5'd7) || (addr == 5'd8 )) begin
+    //         if(memoriaP1[42-:40] == 40'd0) begin
+    //             pontuacao_P1 = pontuacao_P1 + 4'd3;
+    //         end else begin
+    //             pontuacao_P1 =  4'd0;
+	// 			end
+    //         if(memoriaP2[42-:40] == 40'd0) begin
+    //             pontuacao_P2 = pontuacao_P2 + 4'd3;
+    //         end else begin
+    //             pontuacao_P2 =  4'd0;
+	// 			end
+    //     end
+	// 	//Pontuação pra o Encouraçado
+    //     if (addr == 5'd9) begin
+    //         if (memoriaP1[42-:40] == 40'd0) begin
+    //             pontuacao_P1 = pontuacao_P1 + 4'd4;
+    //         end else begin
+    //             pontuacao_P1 =  4'd0;
+	// 			end
+    //         if (memoriaP2[42-:40] == 40'd0) begin
+    //             pontuacao_P2 = pontuacao_P2 + 4'd4;
+    //         end else begin
+    //             pontuacao_P2 =  4'd0;
+	// 			end
+    //     end
+    //     //Pontuação pra o Porta aviões
+    //     if (addr == 5'd10) begin
+    //         if (memoriaP1[42-:40] == 40'd0) begin
+    //             pontuacao_P1 = pontuacao_P1 + 4'd5;
+    //         end else begin
+    //             pontuacao_P1 =  4'd0;
+	// 		end
+    //         if (memoriaP2[42-:40] == 40'd0) begin
+    //             pontuacao_P2 = pontuacao_P2 + 4'd5;
+    //         end else begin
+    //             pontuacao_P2 =  4'd0;
+	// 		end
+    //     end
+	// /* Apos enable ser desabilitado ele reseta as qtds para o valor original, no prox enable ele volta a contar*/
+    // end else begin 
+	// 	pontuacao_P1 = 4'd0;
+	// 	pontuacao_P2 = 4'd0;
+    // end
 end
 endmodule
 
