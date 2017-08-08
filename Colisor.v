@@ -22,7 +22,7 @@ module Colisor
 	@param jogador - Jogador que atirou
     
   */
-  enable, x, y, clk, jogador, memoriaP1, memoriaP2,
+  enable, x, y, jogador,clk, memoriaP1, memoriaP2,
   
   /*
   
