@@ -1,20 +1,10 @@
 module ControladoMemoria
 (
 	input clk,
-	input resetGeral,
-	
+
 	//Dado lido da memoria
-	input [63:0] data_memoria_jogadorUm, //Leitura da memoria jogador 1 ou 2
-	input [63:0] data_memoria_jogadorDois, //Leitura da memoria jogador 1 ou 2
-	
-	//Input do Validador faz leitura de toda memoria e escreve em uma posição.
-	input readyValidador,
-	input validador_wrep1,
-	input validador_wrep2,
-	input validadoJogador,
-	input [4:0] validador_addr,
-	//input [4:0] validador_writeaddr,
-	input [63:0] validador_data,
+	input [63:0] data_memoria_jogadorUm, //Leitura da memoria jogador 1
+	input [63:0] data_memoria_jogadorDois, //Leitura da memoria jogador 2
 	
 	//Input de Colisor. Faz leitura de apenas uma posição e escreve na msm posição
 	input readyColisor,
@@ -23,8 +13,18 @@ module ControladoMemoria
 	input jogadorColisor,
 	input [4:0] colisor_addr,
 	input [63:0] colisor_data,  //clear
-
 	
+	//Input do Validador faz leitura de toda memoria e escreve em uma posição.
+	input readyValidador,
+	input validador_wrep1,
+	input validador_wrep2,
+	input validadoJogador,
+	input [4:0] validador_addr,
+	
+	//input [4:0] validador_writeaddr
+	input [63:0] validador_data,
+	
+
 	//input de Pontuação. Só faz leitura
 	input readyCalculaPontuacao,
 	input pontuacao_readaddr,
@@ -34,10 +34,12 @@ module ControladoMemoria
 	input [4:0] vga_readAddr,
 	input jogadorVGA,
 	
-
+	//Input reset
+	input resetGeral,
+	
 	//output reg [63:0] data; // Dado q irá ser salvo na memoria do colisor e Validador
-	output reg [63:0] dataReadValidador, //data leitura do validador
 	output reg [63:0] dataReadColisor,   //data leitura do colisor
+	output reg [63:0] dataReadValidador, //data leitura do validador
 	output reg [63:0] dataReadVGA,			 //data leitura da VGA
 	output reg [63:0] data,               //conencta com a memoria a e b 
 	output reg [4:0]  addr, 				 //endereço de leitura ou escrita
