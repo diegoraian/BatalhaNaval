@@ -1,7 +1,7 @@
 module Validador
 (
 
-	//input
+	//Input
 	 input  enable, 
 	 input [2:0] tipo,
 	 input jogador,
@@ -10,19 +10,18 @@ module Validador
 	 input direcao, 
 	 input [2:0] orientacao, 
 	 input  clk  , 
-	 //input [63:0] vetor_leitura_jogadorUm,
 	 input [63:0] vetor_leitura, 
 
 		
-	//
+	//Output
 	 output ready,
 	 output reg conflitoMemoria_out = 1'b0,
 	 output reg conflitoBorda_out   = 1'b0,
 	 output reg wrep1,
 	 output reg wrep2,
 	 output reg [63:0] vetor,
-	 //output reg [4:0] addr_jogadorUm  = 5'b00000,
 	 output reg [4:0] addr  = 5'b00000,
+	 output reg jogadorOut,	// qual jogador que esta validando a pecano momento
     output conflito
 
 );
@@ -49,16 +48,16 @@ parameter PORTA_AVIOES  = 3'd4,
  reg [4:0] write_addr_jogadorUm   = 5'b00000;
  reg [4:0] write_addr_jogadorDois = 5'b00000;
  
- //registradores para verificação de confito de Borda
+ // registradores para verificação de confito de Borda
  reg bordaConflito;
  reg verificandoBordaConflito;
  
  
- //registradores para verificação de confito de Memoria
+ // registradores para verificação de confito de Memoria
  reg memoriaConflito;
  reg verificandoMemoriaConflito;
  
- //reg para indicar se ocorreu salvamento na memroia
+ // reg para indicar se ocorreu salvamento na memroia
  reg salvouMemoria;
  
  
@@ -78,14 +77,14 @@ reg [3:0] y;
  
  always@(posedge clk)
  begin
-
+	jogadorOut = jogador;
 	E_A <= E_F;
  
  end
  
  
  
- //decodificador de proximo estado
+ // Decodificador de proximo estado
  
  always@(posedge clk)
  begin
@@ -1169,10 +1168,10 @@ reg [3:0] y;
 			if(memoriaConflito) begin
 				verificandoMemoriaConflito = 1'b0;
 			end else begin
-				if(read_addr == 4'd11) begin
+				if(read_addr == 5'd11) begin
 					verificandoMemoriaConflito = 1'b0;
 				end else begin
-					read_addr = read_addr +1;
+					read_addr = read_addr + 5'd1;
 				end
 			end
 			
@@ -1241,3 +1240,4 @@ reg [3:0] y;
 
 			 
  endmodule
+ 
