@@ -1238,6 +1238,8 @@ reg [3:0] y;
  
  assign conflito = (conflitoBorda_out == 1'b1 || conflitoMemoria_out ==1'b1) ? 1'b1 :1'b0 ;
 
+
+ assign  ready  = (wrep1 == 1 || wrep2 == 1 )? 1'b1 : 1'b0  ;
 			 
  endmodule
  
