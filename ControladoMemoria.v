@@ -13,6 +13,11 @@ module ControladoMemoria
 	input jogadorColisor,
 	input [4:0] colisor_addr,
 	input [63:0] colisor_data,  //clear
+
+	//input de Pontuação. Só faz leitura
+	input readyCalculaPontuacao,
+	input pontuacao_readaddr,
+	input jogadorPontuacao,
 	
 	//Input do Validador faz leitura de toda memoria e escreve em uma posição.
 	input readyValidador,
@@ -23,12 +28,6 @@ module ControladoMemoria
 	
 	//input [4:0] validador_writeaddr
 	input [63:0] validador_data,
-	
-
-	//input de Pontuação. Só faz leitura
-	input readyCalculaPontuacao,
-	input pontuacao_readaddr,
-	input jogadorPontuacao,
 	
 	//Input de VGA. Só faz leitura
 	input [4:0] vga_readAddr,
