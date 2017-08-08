@@ -23,11 +23,9 @@ module ControladoMemoria
 	input readyValidador,
 	input validador_wrep1,
 	input validador_wrep2,
-	input validadoJogador,
-	input [4:0] validador_addr,
-	
-	//input [4:0] validador_writeaddr
 	input [63:0] validador_data,
+	input [4:0] validador_addr,
+	input validadorJogador,
 	
 	//Input de VGA. Só faz leitura
 	input [4:0] vga_readAddr,
@@ -90,7 +88,7 @@ begin
 			
 				if(readyValidador)begin
 				
-					if(!validadoJogador)begin
+					if(!validadorJogador)begin
 						E_F <= ValidandorPlayerUm;
 					end else begin
 						E_F <= ValidandorPlayerDois;
@@ -109,7 +107,7 @@ begin
 			ValidandorPlayerUm: begin
 			
 				if(readyValidador)begin
-					if(!validadoJogador)
+					if(!validadorJogador)
 						E_F <= ValidandorPlayerUm;
 				   else 
 						E_F <= ValidandorPlayerDois;
@@ -125,7 +123,7 @@ begin
 			ValidandorPlayerDois: begin
 			
 				if(readyValidador)begin
-					if(!validadoJogador)
+					if(!validadorJogador)
 						E_F <= ValidandorPlayerUm;
 					else 
 						E_F <= ValidandorPlayerDois;
@@ -184,7 +182,7 @@ begin
 			TransmitindoVgaPlayerUm: begin
 			
 				if(readyValidador)begin
-					if(!validadoJogador)
+					if(!validadorJogador)
 						E_F <= ValidandorPlayerUm;
 					else
 						E_F <= ValidandorPlayerDois;
@@ -210,7 +208,7 @@ begin
 			TransmitindoVgaPlayerDois: begin
 			
 				if(readyValidador)begin
-					if(!validadoJogador)
+					if(!validadorJogador)
 						E_F <= ValidandorPlayerUm;
 					else 
 						E_F <= ValidandorPlayerDois;
