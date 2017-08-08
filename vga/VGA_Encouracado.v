@@ -486,17 +486,17 @@ end
 
 */
 assign rgb_b =
-					((linha > borderLeftA && linha < (borderLeftA + largura))&& (coluna > borderDownA && coluna < (borderDownA + altura)))? 1'b1:
-					((linha > borderLeftB && linha < (borderLeftB + largura))&& (coluna > borderDownB && coluna < (borderDownB + altura)))? 1'b1:
-					((linha > borderLeftC && linha < (borderLeftC + largura))&& (coluna > borderDownC && coluna < (borderDownC + altura)))? 1'b1:
-					((linha > borderLeftD && linha < (borderLeftD + largura))&& (coluna > borderDownD && coluna < (borderDownD + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
+					((linha > borderDownC && linha < (borderDownC + largura))&& (coluna > borderLeftC && coluna < (borderLeftC + altura)))? 1'b1:
+					((linha > borderDownD && linha < (borderDownD + largura))&& (coluna > borderLeftD && coluna < (borderLeftD + altura)))? 1'b1:
 					1'b0;
 					
 assign rgb_r =
-					((linha > borderLeftA && linha < (borderLeftA + largura))&& (coluna > borderDownA && coluna < (borderDownA + altura)))? 1'b1:
-					((linha > borderLeftB && linha < (borderLeftB + largura))&& (coluna > borderDownB && coluna < (borderDownB + altura)))? 1'b1:
-					((linha > borderLeftC && linha < (borderLeftC + largura))&& (coluna > borderDownC && coluna < (borderDownC + altura)))? 1'b1:
-					((linha > borderLeftD && linha < (borderLeftD + largura))&& (coluna > borderDownD && coluna < (borderDownD + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
+					((linha > borderDownC && linha < (borderDownC + largura))&& (coluna > borderLeftC && coluna < (borderLeftC + altura)))? 1'b1:
+					((linha > borderDownD && linha < (borderDownD + largura))&& (coluna > borderLeftD && coluna < (borderLeftD + altura)))? 1'b1:
 					1'b0;
 					
 assign rgb_g = 1'b0;
