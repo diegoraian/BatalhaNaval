@@ -35,12 +35,10 @@ module ExecutandoJogo
 	 @param ready - reenvia sinal para ativar o colisor para verificacao de tiro
 	 @param coord_tiroX - coordenada X do tiro
 	 @param coord_tiroY - coordenada Y do tiro 
-	 @param LEDR - vetor de leds vermelhos
-	 @param LEDG - vetor de leds verdes
-	 
+	 @param jogador - Qual jogador esta jogando 0 para P1 e 1 para P2
   */
   
-	ready, coord_tiroX, coord_tiroY, LEDR, LEDG
+	ready, coord_tiroX, coord_tiroY, jogador
 );
 
 input	enable, reset, enter, select,mode, clk, acertou_tiro;
@@ -48,18 +46,23 @@ input [3:0] posicao_rnd;
 input [3:0] qtd_P1;
 input [3:0] qtd_P2;
 output reg  ready;
-output reg [3:0] coord_tiroX = 4'b1000;
-output reg [3:0] coord_tiroY = 4'b1000;
-output reg [7:0] LEDR = 8'd0;
-output reg [7:0] LEDG = 8'd0;
-  
+output reg [3:0]	coord_tiroX = 4'b0000;
+output reg [3:0]	coord_tiroY = 4'b0001;
+output reg	jogador = 1'b0;
+
 /* Estado dos registradores */
-  reg [3:0] E_A = 4'b0000;
-  reg [3:0] E_F = 4'b0000;
-  
-  
-  reg zeravalor;			// Usado para zerar o tiro(enable do tiro).
-  reg [32:0] led_cont;	// contador usado para alteranar o valor dos leds
+	reg [3:0] E_A = 4'b0000;
+	reg [3:0] E_F = 4'b0000;
+	
+/* 
+	LEDR - vetor de leds vermelhos
+	LEDG - vetor de leds verdes
+*/
+	reg [7:0] LEDR = 8'd0;
+	reg [7:0] LEDG = 8'd0;
+	
+	reg zeravalor;			// Usado para zerar o tiro(enable do tiro).
+	reg [32:0] led_cont;	// contador usado para alteranar o valor dos leds
 
 /* Declara Estados */
 parameter p1_atacandox			    = 4'd0,
@@ -81,7 +84,8 @@ always @(posedge clk or negedge reset or negedge enable) begin
 	if (!enable) begin 
 	end else begin
     if (!reset) begin
-      E_A <= p1_atacandox;// Caso reset voltar para o estado de direção 
+		//E_F <= p1_atacandox;// Caso reset voltar para o estado de direção 
+		E_A <= p1_atacandox;// Caso reset voltar para o estado de direção 
     end
     else begin
       E_A <= E_F;
@@ -92,7 +96,7 @@ end
 
   /* 
   
-  ______________________________________________________________________________________________________
+	______________________________________________________________________________________________________
   
   												ORIENTAÇÃO PROS LEDS GERAIS
 
@@ -116,13 +120,14 @@ end
 		
   */
  
+
+
 /*
+	Responsavel pelo gerenciamneto do LEDs indicativos do jogo
+	
+	LEDR - representa os leds vermelhos
 
-Define o comportamento dos LEDs
-
-LEDR - representa os leds vermelhos
-
-LEDG - representa os leds verdes
+	LEDG - representa os leds verdes
 
 */
 always @ (posedge clk or negedge enable) begin
@@ -298,6 +303,37 @@ always @ (posedge clk or negedge enable) begin
 	end
 end
   
+
+
+
+  
+/*Responsavel por mapear qual player esa jogando*/
+always @(posedge clk or negedge enable) begin
+	
+	if(!enable) begin
+		//Nao faca nada
+	end else begin
+		case(E_A)
+			
+			p1_atacandox:
+			begin
+				jogador = 1'b0;
+			end
+			
+			p2_atacandox:
+			begin
+				jogador = 1'b1;
+			end
+			
+			default:
+			begin
+				//Nao faca nada
+			end
+		endcase
+	end
+	
+end  
+/* Responsavel pelo gerencimento da transicao de estados do jogo*/
 always @ (negedge enter or negedge enable) begin
 	
 	if(!enable) begin
@@ -363,7 +399,7 @@ always @ (negedge enter or negedge enable) begin
 			begin
 				ready = 1'b0;
 				zeravalor = zeravalor+1'b1;  
-				if( qtd_P1 == 0 ) begin //Se a qtd de embarcações de P1 forem iguais zero
+				if( qtd_P1 == 4'd0 ) begin //Se a qtd de embarcações de P1 forem iguais zero
 					E_F = p2_vencedor;
 				end else begin
 					E_F = p1_atacandox;
@@ -379,6 +415,7 @@ always @ (negedge enter or negedge enable) begin
   end
 end
 
+/* Responsavel pelo gerenciamento da selecao das coordenadas de tiro*/
 always @ (negedge select or posedge zeravalor or negedge enable or posedge mode) begin
 
 	if(!enable) begin
@@ -388,8 +425,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 		/* Escolhe a coordenada X do tiro */
 			p1_atacandox:
 		
-			if(coord_tiroX == 4'b1000) begin
-				coord_tiroX = 4'b1000; 
+			if(coord_tiroX == 4'b1001) begin
+				coord_tiroX = 4'b0001; 
 			end else begin
 				if(mode) begin			// Se PvP
 					coord_tiroX = coord_tiroX + 4'b0001;
@@ -401,8 +438,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 			/* Escolhe a coordenada Y do tiro */
 			p1_atacandoy:
 		
-			if(coord_tiroY == 4'b1000) begin
-				coord_tiroY = 4'b0000; 
+			if(coord_tiroY == 4'b1001) begin
+				coord_tiroY = 4'b0001; 
 			end else begin
 				if(mode) begin
 					coord_tiroY = coord_tiroY + 4'b0001;
@@ -414,14 +451,14 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 			/*  Incrementa para valor 'out range' as coordenadas do Tiro */
 			verificando_vidap2:
 			begin
-				coord_tiroX = 4'b1000;
-				coord_tiroY = 4'b1000;
+				coord_tiroX = 4'b0000;
+				coord_tiroY = 4'b0000;
 			end
 	 
 			/* Escolhe a coordenada X do tiro */
 			p2_atacandox:
-				if(coord_tiroX == 4'b1000) begin
-					coord_tiroX = 4'b0000; 
+				if(coord_tiroX == 4'b1001) begin
+					coord_tiroX = 4'b0001; 
 				end else begin
 					if(mode) begin
 						coord_tiroX = coord_tiroX + 4'b0001;
@@ -432,8 +469,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 	 
 			/* Escolhe a coordenada Y do tiro */
 			p2_atacandoy:
-			if(coord_tiroY == 4'b1000) begin
-				coord_tiroY = 4'b0000; 
+			if(coord_tiroY == 4'b1001) begin
+				coord_tiroY = 4'b0001; 
 			end else begin
 				if(mode) begin
 					coord_tiroY = coord_tiroY + 4'b0001;
@@ -445,8 +482,8 @@ always @ (negedge select or posedge zeravalor or negedge enable or posedge mode)
 			/* Incrementa para valor 'out range' as coordenadas do Tiro */
 			verificando_vidap1:
 			begin
-				coord_tiroX = 4'b1000;
-				coord_tiroY = 4'b1000;
+				coord_tiroX = 4'b0000;
+				coord_tiroY = 4'b0000;
 			end
 	 
 			default:

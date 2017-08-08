@@ -26,7 +26,7 @@ module Validador
 	 @param vetor_leitura - vetor de leitura da memoria para validar as pecas
 	  
   */
-  enable, tipo, direcao, orientacao, x1, y1, clk, jogador , vetor_leitura, 
+  enable, tipo, direcao, orientacao, x1, y1, jogador, clk  , vetor_leitura, 
   
   /*
   	 @param ready - passa a atribuição de volta ao módulo que o chamou
@@ -48,13 +48,13 @@ input [3:0] y1;
 input jogador;
 input [63:0] vetor_leitura;
 
-output reg conflitoMemoria_out =1'b0;
-output reg conflitoBorda_out;
-output reg conflito;  
+output reg conflitoMemoria_out = 1'b0;
+output reg conflitoBorda_out   = 1'b0;
+output  conflito;  
 output reg wrep1;
 output reg wrep2;
 output reg [63:0]vetor;         //Vetor a ser armazenado na memoria  [0-2(tipo), 3-32(posições), 33-35(Peças disponiveis na embarcação) ex: Porta aviões inicia com 5 peças, caso chegue a zero todas as embarcações são destruidas.
-output reg [4:0] write_addr = 5'b11111;         //Endereco para armazenar na memoria
+output reg [4:0] write_addr = 5'b00000;         //Endereco para armazenar na memoria
 output reg [4:0] read_addr= 5'b00000 ;   // contaria as 11 posicoes verificando se ha conlfito de posições na memoria
 output reg ready;
 
@@ -66,7 +66,11 @@ reg			validaMemoria;     // quando 1 ferifica se a posição na memoria esta dis
 reg         memoriaConflito= 1'b0 ;
 reg         bordaConflito  = 1'b0 ;
 reg         auxMemo = 1'b0;
-  
+reg         auxZeraBordConflito = 1'b0;
+reg 		auxGravou = 1'b0;
+reg         auxZeraValidaMemoria = 1'b0;
+reg         init = 1'b0;
+
   
   
   
@@ -76,153 +80,217 @@ parameter PORTA_AVIOES  = 3'd0,
           CRUZADOR      = 3'd3,  
           SUBMARINO     = 3'd4;
   
-or orOut(coflito, conflitoBorda_out, conflitoMemoria_out);
+//or orOut(coflito, conflitoBorda_out, conflitoMemoria_out);
       
-always@(posedge clk or posedge enable) begin
+always@(posedge clk or posedge enable ) begin
+
+
 	if(enable == 1'b1) begin
-		vetor = 64'd0;
-		validaMemoria = 0;
-		bordaConflito =1;
-		 
-		case(tipo)
-			PORTA_AVIOES:
-			begin
-				if(direcao == 0) begin  // Se é Horizontal
-					if(x1 < 4) begin       //verificacao de borda
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
+		if (conflitoBorda_out == 0 && auxGravou == 0 && init == 1) begin
+			vetor = 64'd0;
+			validaMemoria = 0;
+			bordaConflito =1;
+			case(tipo)
+				PORTA_AVIOES:
+				begin
+					if(direcao == 0) begin  // Se é Horizontal
+						if(x1 < 5) begin       //verificacao de borda
+							vetor = 46'd0;
+							x = x1;
+							y = y1;
 
 
-						vetor[2 -: 3] = PORTA_AVIOES;
+							vetor[2 -: 3] = PORTA_AVIOES;
 
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
+							vetor[6 -: 4]  = x;
+							vetor[10 -: 4] = y;
 
-						vetor[14 -: 4] = x + 4'd1;
-						vetor[18 -: 4] = y;
+							vetor[14 -: 4] = x + 4'd1;
+							vetor[18 -: 4] = y;
 
-						vetor[22 -: 4]  = x + 4'd2;
-						vetor[26 -: 4]  = y;
-
-
-						vetor[30 -: 4]  = x + 4'd3;
-						vetor[34 -: 4]  = y;
-
-						vetor[38 -: 4]  = x + 4'd4;
-						vetor[42 -: 4]  = y;
-
-						vetor [46-:4] = 4'd5;
+							vetor[22 -: 4]  = x + 4'd2;
+							vetor[26 -: 4]  = y;
 
 
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1;
-					end
-				end else begin            
-					
-					if(y1 < 4) begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
+							vetor[30 -: 4]  = x + 4'd3;
+							vetor[34 -: 4]  = y;
 
-						vetor[2 -: 3] = PORTA_AVIOES;
+							vetor[38 -: 4]  = x + 4'd4;
+							vetor[42 -: 4]  = y;
 
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
-
-						vetor[14 -: 4] = x;
-						vetor[18 -: 4] = y+ 4'd1;
-
-						vetor[22 -: 4]  = x;
-						vetor[26 -: 4]  = y + 4'd2;
+							vetor [46-:4] = 4'd5;
 
 
-						vetor[30 -: 4]  = x;
-						vetor[34 -: 4]  = y + 4'd3;
-
-						vetor[38 -: 4]  = x;
-						vetor[42 -: 4]  = y + 4'd4;
-
-						vetor [46-:4] = 4'd5;
-
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1;
-					end
-				end
-			end
-			
-			ENCOURACADO:	
-			begin 
-				if(direcao == 0) begin  // Se é Horizontal
-					if(x1 < 5) begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
-
-						vetor[2 -: 3] = ENCOURACADO;
-
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
-
-						vetor[14 -: 4] = x + 4'd1;
-						vetor[18 -: 4] = y;
-
-						vetor[22 -: 4]  = x + 4'd2;
-						vetor[26 -: 4]  = y;
-
-
-						vetor[30 -: 4]  = x + 4'd3;
-						vetor[34 -: 4]  = y;
-
-						//Posicções vazias  
-						vetor[38 -: 4]  = 4'd0;
-						vetor[42 -: 4]  = 4'd0;
-					
-						//Posicao do Tipo de Embarcacao
-						vetor [46-:4] = 4'd4;
-          
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1;
-					end
-				end else begin
-					if(y1 < 5) begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
-
-						vetor[2 -: 3] = ENCOURACADO;
-
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
-					
-						vetor[14 -: 4] = x;
-						vetor[18 -: 4] = y+ 4'd1;
-
-						vetor[22 -: 4]  = x;
-						vetor[26 -: 4]  = y + 4'd2;
-
-
-						vetor[30 -: 4]  = x;
-						vetor[34 -: 4]  = y + 4'd3;
-
-						//Posicções vazias  
-						vetor[38 -: 4]  = 4'd0;
-						vetor[42 -: 4]  = 4'd0;
+							bordaConflito = 1'b0;
+							validaMemoria = 1'b1;
+						end
+					end else begin            
 						
-						//Posicao do Tipo de Embarcacao
-						vetor [46-:4] = 4'd4;
-					
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1;
+						if(y1 < 5) begin
+							vetor = 46'd0;
+							x = x1;
+							y = y1;
+
+							vetor[2 -: 3] = PORTA_AVIOES;
+
+							vetor[6 -: 4]  = x;
+							vetor[10 -: 4] = y;
+
+							vetor[14 -: 4] = x;
+							vetor[18 -: 4] = y+ 4'd1;
+
+							vetor[22 -: 4]  = x;
+							vetor[26 -: 4]  = y + 4'd2;
+
+
+							vetor[30 -: 4]  = x;
+							vetor[34 -: 4]  = y + 4'd3;
+
+							vetor[38 -: 4]  = x;
+							vetor[42 -: 4]  = y + 4'd4;
+
+							vetor [46-:4] = 4'd5;
+
+							bordaConflito = 1'b0;
+							validaMemoria = 1'b1;
+						end
 					end
 				end
-			end
 				
-			HIDROAVIAO:
-			begin	//horizontal
-				if(direcao == 0) begin //DIREÇÃO 0 é HORIZONTAL
-					if(orientacao == 0)begin //ORIENTAÇÃO é default(aponta pra cima)
-						if(x1<6 && y1>0) begin
+				ENCOURACADO:	
+				begin 
+					if(direcao == 0) begin  // Se é Horizontal
+						if(x1 < 6) begin
+							vetor = 46'd0;
+							x = x1;
+							y = y1;
+
+							vetor[2 -: 3] = ENCOURACADO;
+
+							vetor[6 -: 4]  = x;
+							vetor[10 -: 4] = y;
+
+							vetor[14 -: 4] = x + 4'd1;
+							vetor[18 -: 4] = y;
+
+							vetor[22 -: 4]  = x + 4'd2;
+							vetor[26 -: 4]  = y;
+
+
+							vetor[30 -: 4]  = x + 4'd3;
+							vetor[34 -: 4]  = y;
+
+							//Posicções vazias  
+							vetor[38 -: 4]  = 4'd0;
+							vetor[42 -: 4]  = 4'd0;
+						
+							//Posicao do Tipo de Embarcacao
+							vetor [46-:4] = 4'd4;
+				 
+							bordaConflito = 1'b0;
+							validaMemoria = 1'b1;
+						end
+					end else begin
+						if(y1 < 6) begin
+							vetor = 46'd0;
+							x = x1;
+							y = y1;
+
+							vetor[2 -: 3] = ENCOURACADO;
+
+							vetor[6 -: 4]  = x;
+							vetor[10 -: 4] = y;
+						
+							vetor[14 -: 4] = x;
+							vetor[18 -: 4] = y+ 4'd1;
+
+							vetor[22 -: 4]  = x;
+							vetor[26 -: 4]  = y + 4'd2;
+
+
+							vetor[30 -: 4]  = x;
+							vetor[34 -: 4]  = y + 4'd3;
+
+							//Posicções vazias  
+							vetor[38 -: 4]  = 4'd0;
+							vetor[42 -: 4]  = 4'd0;
+							
+							//Posicao do Tipo de Embarcacao
+							vetor [46-:4] = 4'd4;
+						
+							bordaConflito = 1'b0;
+							validaMemoria = 1'b1;
+						end
+					end
+				end
+					
+				HIDROAVIAO:
+				begin	//horizontal
+					if(direcao == 0) begin //DIREÇÃO 0 é HORIZONTAL
+						if(orientacao == 0)begin //ORIENTAÇÃO é default(aponta pra cima)
+							if(x1<6 && y1>1) begin
+								vetor = 46'd0;
+								x = x1;
+								y = y1;
+
+								vetor[2 -: 3] = HIDROAVIAO;
+
+								vetor[6 -: 4]  = x;
+								vetor[10 -: 4] = y;
+
+								vetor[14 -: 4] = x + 4'd1;
+								vetor[18 -: 4] = y + 4'd1;
+
+								vetor[22 -: 4]  = x +4'd2;
+								vetor[26 -: 4]  = y;
+								
+								//Posicoes vazias
+								vetor[30 -: 4]  = 4'd0;
+								vetor[34 -: 4]  = 4'd0;
+								vetor[38 -: 4]  = 4'd0;
+								vetor[42 -: 4]  = 4'd0;
+								
+								//Posicao do Tipo de Embarcacao
+								vetor [46-:4] = 3'd3;
+						 
+								bordaConflito = 1'b0;
+								validaMemoria = 1'b1;
+							end
+						end
+						
+						if(orientacao == 1)begin
+							if(x1<7 && y1 < 8)begin
+								vetor = 46'd0;
+								x = x1;
+								y = y1;
+
+								vetor[2 -: 3] = HIDROAVIAO;
+
+								vetor[6 -: 4]  = x;
+								vetor[10 -: 4] = y;
+
+								vetor[14 -: 4] = x + 4'd1;
+								vetor[18 -: 4] = y - 4'd1;
+
+								vetor[22 -: 4]  = x + 4'd2;
+								vetor[26 -: 4]  = y;
+
+								//Posicções vazias
+								vetor[30 -: 4]  = 4'd0;
+								vetor[34 -: 4]  = 4'd0;
+								vetor[38 -: 4]  = 4'd0;
+								vetor[42 -: 4]  = 4'd0;
+						 
+								//Posicao do Tipo de Embarcacao
+								vetor [46-:4] = 4'd3;
+						 
+								bordaConflito = 1'b0;
+								validaMemoria = 1'b1;	
+						end
+					end
+				end else begin//vertical
+					if(orientacao == 2)begin
+						if(y1<7 && x1<8)begin
 							vetor = 46'd0;
 							x = x1;
 							y = y1;
@@ -235,236 +303,193 @@ always@(posedge clk or posedge enable) begin
 							vetor[14 -: 4] = x + 4'd1;
 							vetor[18 -: 4] = y + 4'd1;
 
-							vetor[22 -: 4]  = x +4'd2;
-							vetor[26 -: 4]  = y;
-							
+							vetor[22 -: 4]  = x;
+							vetor[26 -: 4]  = y + 4'd2;
+
 							//Posicoes vazias
 							vetor[30 -: 4]  = 4'd0;
 							vetor[34 -: 4]  = 4'd0;
 							vetor[38 -: 4]  = 4'd0;
 							vetor[42 -: 4]  = 4'd0;
+						 
 							
 							//Posicao do Tipo de Embarcacao
-							vetor [46-:4] = 3'd3;
-					 
-							bordaConflito = 1'b0;
+							vetor [46-:4] = 4'd3;
+						 
+							bordaConflito =1'b0;
 							validaMemoria = 1'b1;
 						end
 					end
-					
-					if(orientacao == 1)begin
-						if(x1<6 && y1 < 7)begin
+					  if(orientacao == 3)begin
+						if(y1<7 && x1>1)begin
 							vetor = 46'd0;
 							x = x1;
 							y = y1;
 
 							vetor[2 -: 3] = HIDROAVIAO;
 
-							vetor[6 -: 4]  = x;
-							vetor[10 -: 4] = y;
+							vetor[6 -: 4]  = x; //3
+							vetor[10 -: 4] = y; //3
 
-							vetor[14 -: 4] = x + 4'd1;
-							vetor[18 -: 4] = y - 4'd1;
+							vetor[14 -: 4] = x - 4'd1; //2
+							vetor[18 -: 4] = y + 4'd1; //4
 
-							vetor[22 -: 4]  = x + 4'd2;
-							vetor[26 -: 4]  = y;
+							vetor[22 -: 4]  = x ; //3
+							vetor[26 -: 4]  = y + 4'd2; //5
 
-							//Posicções vazias
+							//Posições vazias
 							vetor[30 -: 4]  = 4'd0;
 							vetor[34 -: 4]  = 4'd0;
 							vetor[38 -: 4]  = 4'd0;
 							vetor[42 -: 4]  = 4'd0;
-					 
-					 		//Posicao do Tipo de Embarcacao
+						 
+							//Posicao do Tipo de Embarcacao
 							vetor [46-:4] = 4'd3;
-					 
+						 
 							bordaConflito = 1'b0;
-							validaMemoria = 1'b1;	
-					end
-				end
-			end else begin//vertical
-				if(orientacao == 2)begin
-					if(y1<6 && x1<7)begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
-
-						vetor[2 -: 3] = HIDROAVIAO;
-
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
-
-						vetor[14 -: 4] = x + 4'd1;
-						vetor[18 -: 4] = y + 4'd1;
-
-						vetor[22 -: 4]  = x;
-						vetor[26 -: 4]  = y + 4'd2;
-
-						//Posicoes vazias
-						vetor[30 -: 4]  = 4'd0;
-						vetor[34 -: 4]  = 4'd0;
-						vetor[38 -: 4]  = 4'd0;
-						vetor[42 -: 4]  = 4'd0;
-					 
-					 	
-						//Posicao do Tipo de Embarcacao
-						vetor [46-:4] = 4'd3;
-					 
-						bordaConflito =1'b0;
-						validaMemoria = 1'b1;
-					end
-				end
-				  if(orientacao == 3)begin
-					if(y1<6 && x1>0)begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
-
-						vetor[2 -: 3] = HIDROAVIAO;
-
-						vetor[6 -: 4]  = x; //3
-						vetor[10 -: 4] = y; //3
-
-						vetor[14 -: 4] = x - 4'd1; //2
-						vetor[18 -: 4] = y + 4'd1; //4
-
-						vetor[22 -: 4]  = x ; //3
-						vetor[26 -: 4]  = y + 4'd2; //5
-
-						//Posições vazias
-						vetor[30 -: 4]  = 4'd0;
-						vetor[34 -: 4]  = 4'd0;
-						vetor[38 -: 4]  = 4'd0;
-						vetor[42 -: 4]  = 4'd0;
-					 
-						//Posicao do Tipo de Embarcacao
-						vetor [46-:4] = 4'd3;
-					 
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1; 
+							validaMemoria = 1'b1; 
+						end
 					end
 				end
 			end
-		end
-			 
-		CRUZADOR:
-			begin
-				if(direcao == 0) begin  // Se é Horizontal
-					if(x1 < 7) begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
-
-						vetor[2 -: 3] = CRUZADOR;
-
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
-
-						vetor[14 -: 4] = x + 4'd1;
-						vetor[18 -: 4] = y;
-
-						//Posicoes 	Vazias    
-						vetor[22 -: 4]  =  4'd0;
-						vetor[26 -: 4]  =  4'd0;
-						vetor[30 -: 4]  =  4'd0;
-						vetor[34 -: 4]  =  4'd0;
-						vetor[38 -: 4]  =  4'd0;
-						vetor[42 -: 4]  =  4'd0;
-						
-						//Posicao do Tipo de Embarcacao
-						vetor [46-:4] = 4'd2;
-						
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1;
-					end
-				end else begin
-					if(y1 < 7) begin
-						vetor = 46'd0;
-						x = x1;
-						y = y1;
-
-						vetor[2 -: 3] = CRUZADOR;
-
-						vetor[6 -: 4]  = x;
-						vetor[10 -: 4] = y;
-						
-						vetor[14 -: 4] = x;
-						vetor[18 -: 4] = y+ 4'd1;
-             
-						//Posicoes vazias
-						vetor[22 -: 4]  =  4'd0;
-						vetor[26 -: 4]  =  4'd0;
-						vetor[30 -: 4]  =  4'd0;
-						vetor[34 -: 4]  =  4'd0;
-						vetor[38 -: 4]  =  4'd0;
-						vetor[42 -: 4]  =  4'd0;
-						
-						//Posicao do Tipo de Embarcacao
-						vetor [46-:4] = 4'd2;
-						
-						bordaConflito = 1'b0;
-						validaMemoria = 1'b1;
-					end
-				end
-			end
-			
-			SUBMARINO:
-			begin
-				vetor = 46'd0;
-				x = x1;
-				y = y1;
-				  
-				vetor[2 -: 3] = SUBMARINO;
-					 
-				vetor[6 -: 4]  = x;
-				vetor[10 -: 4] = y;
-				
-				//Posições Vazias    
-				vetor[14 -: 4] =   4'd0;
-				vetor[18 -: 4] =   4'd0;
-						  
-				vetor[22 -: 4]  =  4'd0;
-				vetor[26 -: 4]  =  4'd0;
-						  
-				vetor[30 -: 4]  =  4'd0;
-				vetor[34 -: 4]  =  4'd0;
-						  
-				vetor[38 -: 4]  =  4'd0;
-				vetor[42 -: 4]  =  4'd0;
 				 
-				vetor [46-:4] = 4'd1;
-				  
-				bordaConflito = 1'b0;
-				validaMemoria = 1'b1;
-				  
-			 end
-			 
-			 default:
-			 begin
-			 end
+			CRUZADOR:
+				begin
+					if(direcao == 0) begin  // Se é Horizontal
+						if(x1 < 8) begin
+							vetor = 46'd0;
+							x = x1;
+							y = y1;
 
-		  endcase
+							vetor[2 -: 3] = CRUZADOR;
+
+							vetor[6 -: 4]  = x;
+							vetor[10 -: 4] = y;
+
+							vetor[14 -: 4] = x + 4'd1;
+							vetor[18 -: 4] = y;
+
+							//Posicoes 	Vazias    
+							vetor[22 -: 4]  =  4'd0;
+							vetor[26 -: 4]  =  4'd0;
+							vetor[30 -: 4]  =  4'd0;
+							vetor[34 -: 4]  =  4'd0;
+							vetor[38 -: 4]  =  4'd0;
+							vetor[42 -: 4]  =  4'd0;
+							
+							//Posicao do Tipo de Embarcacao
+							vetor [46-:4] = 4'd2;
+							
+							bordaConflito = 1'b0;
+							validaMemoria = 1'b1;
+						end
+					end else begin
+						if(y1 < 8) begin
+							vetor = 46'd0;
+							x = x1;
+							y = y1;
+
+							vetor[2 -: 3] = CRUZADOR;
+
+							vetor[6 -: 4]  = x;
+							vetor[10 -: 4] = y;
+							
+							vetor[14 -: 4] = x;
+							vetor[18 -: 4] = y+ 4'd1;
+					 
+							//Posicoes vazias
+							vetor[22 -: 4]  =  4'd0;
+							vetor[26 -: 4]  =  4'd0;
+							vetor[30 -: 4]  =  4'd0;
+							vetor[34 -: 4]  =  4'd0;
+							vetor[38 -: 4]  =  4'd0;
+							vetor[42 -: 4]  =  4'd0;
+							
+							//Posicao do Tipo de Embarcacao
+							vetor [46-:4] = 4'd2;
+							
+							bordaConflito = 1'b0;
+							validaMemoria = 1'b1;
+						end
+					end
+				end
+				
+				SUBMARINO:
+				begin
+					vetor = 46'd0;
+					x = x1;
+					y = y1;
+					  
+					vetor[2 -: 3] = SUBMARINO;
+						 
+					vetor[6 -: 4]  = x;
+					vetor[10 -: 4] = y;
+					
+					//Posições Vazias    
+					vetor[14 -: 4] =   4'd0;
+					vetor[18 -: 4] =   4'd0;
+							  
+					vetor[22 -: 4]  =  4'd0;
+					vetor[26 -: 4]  =  4'd0;
+							  
+					vetor[30 -: 4]  =  4'd0;
+					vetor[34 -: 4]  =  4'd0;
+							  
+					vetor[38 -: 4]  =  4'd0;
+					vetor[42 -: 4]  =  4'd0;
+					 
+					vetor [46-:4] = 4'd1;
+					  
+					bordaConflito = 1'b0;
+					validaMemoria = 1'b1;
+					  
+				 end
+				 
+				 default:
+				 begin
+				 end
+
+			  endcase
+		  end
+			  
 
 		if(bordaConflito == 1'b1) begin
 			conflitoBorda_out = 1'b1;// acende o led de conflito de bordar
 		end
+		
+	end else begin
+	
+		if(auxZeraBordConflito)begin
+			conflitoBorda_out <= 1'b0;
+		end
+
+		if(auxZeraValidaMemoria) begin
+			validaMemoria <= 1'b0;
+		end
+	
+	
 	end
+	
+	
 end
 
 
-always@(enable) begin
-  if(conflitoMemoria_out == 1'b0 &&  conflitoBorda_out == 1'b0) begin
-		write_addr = write_addr + 5'd1;
-    if(write_addr == 5'd11) begin
-    	write_addr = 5'd0;
-      //
-    end
-	end else begin
-	/*
-	quando acontecer um dos estados tretas(conflitos) na execulsao do jogo deve-se alterar 
-	o valor do validar para ele iniciar o modulo novamente
-	*/
-	end
+always @(posedge enable or posedge auxGravou) begin
+	if(enable) begin
+		init =1;
+		if(conflitoBorda_out) begin
+			auxZeraBordConflito = 1;
+		end 
+	end 
+	if (auxGravou) begin
+			write_addr = write_addr + 5'd1;
+			init=0;
+			if(write_addr == 5'd11) begin
+				write_addr = 5'd0;  
+			end
+	end	
+
+
 end
 
 always@(enable or tipo or direcao or orientacao or x1 or y1 or jogador) begin
@@ -474,15 +499,23 @@ always@(enable or tipo or direcao or orientacao or x1 or y1 or jogador) begin
     auxMemo = 0;
   end
 end
+
+
 /* Buscar na memoria todas os vetores e verificar se a posição ja esta ocupada */
 always @(posedge clk) begin
-  
+
   if(auxMemo) begin
-		wrep1 = 0;
-		wrep2 = 0;
+		wrep1 <= 0;
+		wrep2 <= 0;
+		auxGravou <=0;
+  end
+  if(!enable)begin
+  	conflitoMemoria_out <= 0;
+  	memoriaConflito <= 0;
   end
 
   if(validaMemoria == 1'b1 && conflitoMemoria_out == 1'b0) begin
+  			auxGravou <= 0;
 			case (vetor_leitura[10 -:8])
 			
 					vetor[10 -:8]:
@@ -656,20 +689,34 @@ always @(posedge clk) begin
 			read_addr = 4'd0; //vetor ja pode ser salvo na memoria
 			if(memoriaConflito == 1'b0) begin
 				//verificar em qual memoria (memoria do jogador)
+				//zero a valida memoria
+				auxZeraValidaMemoria<=1;
+
 				if(jogador == 1'b0) begin	
-					wrep1 = 1'b1;          	
+					wrep1 <= 1'b1;          	
 				end else begin
-					wrep2 = 1'b1;
+					wrep2 <= 1'b1;
 				end
+				auxGravou <= 1'b1;
 			end else begin
-						conflitoMemoria_out = 1'b1;
+						conflitoMemoria_out <= 1'b1;
+						memoriaConflito <= 1'b0;
 			end
 		end else begin
-			wrep1 = 1'b0;
-			wrep2 = 1'b0;
+			wrep1 <= 1'b0;
+			wrep2 <= 1'b0;
 			read_addr = read_addr + 4'd1;
 		end
 	end
+	else begin
+		//conflitoMemoria_out = 0;
+
+	end
 end
+
+
+assign conflito = (conflitoBorda_out == 1'b1 || conflitoMemoria_out ==1'b1) ? 1'b1 :1'b0 ;
+
+
 
 endmodule

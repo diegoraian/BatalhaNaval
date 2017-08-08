@@ -1,8 +1,9 @@
 module Random (
     input clock,
     input reset,
-    output [2:0] rnd_posicao_orientacao,
-	 output reg rnd_direcao = 1'b0
+	 output reg rnd_direcao = 1'b0,
+	 output [3:0] rnd_posicao,
+	 output [2:0] rnd_orientacao
     );
  
 
@@ -48,8 +49,7 @@ begin
 end
  
  
-assign rnd_posicao_orientacao = random_done;
-
+assign rnd_orientacao = random_done;
 
 always@(posedge clock)
 begin
