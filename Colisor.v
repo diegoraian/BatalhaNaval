@@ -19,10 +19,10 @@ module Colisor
    @param y   - coordenad y do tiro
    @param memoriaP1 - vetor de coordenadas lido da memoria do player 1
 	@param memoriaP2 - vetor de coordenadas lido da memoria do player 2
-	@param jogador - Jogador que atirou
+	@param jogadorAtirador - Jogador que atirou
     
   */
-  enable, x, y, jogador,clk, memoriaP1, memoriaP2,
+  enable, x, y, jogadorAtirador,clk, memoriaP1, memoriaP2,
   
   /*
   
@@ -32,9 +32,10 @@ module Colisor
 	@param wrep2 - write enable player 2
 	@param addr - endereço para ler na memoria
 	@param clear - vetor que ira substituir por zero um endereco ja atingido em memoriaP1 ou  memoriaP2
+	@param jogadorAlvo - indica qual jogador foi o alvo dodo tiro
 	 
   */
-  ready, hit, wrep1, wrep2, tiro, addr, clear
+  ready, hit, wrep1, wrep2, jogadorAlvo, addr, clear, tiro 
 );
 
 
@@ -46,17 +47,19 @@ O resto das posicoes, de 48 a 64 sao vazias, com 0
 Ex.: Porta aviões inicia com 5 peças, caso chegue a zero todas as embarcações são destruidas.
 
 */
-input [63:0] memoriaP1;
-input [63:0] memoriaP2;
-input clk, enable; 
+input enable; 
 input [3:0] x;
 input [3:0] y;
-input jogador;
+input jogadorAtirador;
+input clk;
+input [63:0] memoriaP1;
+input [63:0] memoriaP2;
 
 output reg ready;
 output reg hit;
 output reg wrep1;
 output reg wrep2;
+output reg jogadorAlvo;
 output reg [4:0] addr;
 output reg [63:0] clear;
 
@@ -64,6 +67,8 @@ output reg [63:0] clear;
 output reg [7:0] tiro;	// Nao ha sentido no mesmo ser um output, no entanto, como um registrador apenas, ocorre um erro de "memoria insuficiente"
 
 always @ (posedge clk or negedge enable) begin		
+	
+	jogadorAlvo = !jogadorAtirador;	// Negando JogadorAtirador , obtem-se o jogador alvo
 	
 	if (enable == 0) begin
 		addr = 5'd0;
@@ -76,7 +81,7 @@ always @ (posedge clk or negedge enable) begin
 		end
 
 		if(hit == 1'b1) begin
-			if(jogador == 0) begin
+			if(jogadorAlvo == 0) begin
 				wrep1 = 1'b1;				// habilita a escrita na memoria
 			end else begin
 				wrep2 = 1'b1;				// habilita a escrita na memoria
@@ -102,7 +107,7 @@ always @(enable or addr) begin
 		tiro[3 -:4] = x;
 		tiro[6 -:4] = y;
 		
-		if(jogador == 0) begin						// Se for o player 1
+		if(jogadorAlvo == 0) begin						// Se for o player 1
 			clear[63:0] = memoriaP1[63:0];		//Copia para o clear o valor da memoria
 			case (tiro[7 -:8])
 			
@@ -142,7 +147,7 @@ always @(enable or addr) begin
 				end
 			endcase
 			
-		end else if(jogador == 1) begin			// Se for o player 2
+		end else if(jogadorAlvo == 1) begin			// Se for o player 2
 			clear[63:0] = memoriaP2[63:0];		//Copia para o clear o valor da memoria
 			case (tiro[7 -:8])
 			
