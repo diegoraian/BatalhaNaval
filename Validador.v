@@ -3,12 +3,12 @@ module Validador
 
 	//input
 	 input  enable, 
-	 input [2:0] tipo, 
-	 input direcao, 
-	 input [2:0] orientacao, 
+	 input [2:0] tipo,
+	 input jogador,
 	 input [3:0] x1, 
 	 input [3:0] y1, 
-	 input jogador, 
+	 input direcao, 
+	 input [2:0] orientacao, 
 	 input  clk  , 
 	 //input [63:0] vetor_leitura_jogadorUm,
 	 input [63:0] vetor_leitura, 
