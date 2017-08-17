@@ -18,7 +18,7 @@
 		Sync(V_sync):   2.(G)
 		BackPorch:     31.(H)
 		-------------------
-	total(Pixels):   524.
+	total(linhas):   524.
 	
 	
 	

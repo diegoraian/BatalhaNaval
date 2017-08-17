@@ -1,3 +1,27 @@
+/*
+		Detalhes da implementação:
+
+		Para pontuação:
+		-- O controlador de memoria tem que permancer nesse estado por um periodo minimo de 12 
+		ciclos de clock. Para então assim poder acessar toda informação disponivel na memoria.
+
+		Para VGA:
+		-- O controlador da VGA deve permanecer nesse estado por um periodo minimo de (800(pixels horizontais) 
+		x 524(linhas verticais)
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
 module ControladoMemoria
 (
 	input clk,
