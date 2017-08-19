@@ -48,7 +48,7 @@ posicionandoPecas DUT(
 			reset = 0;
 			enter = 1;
 			select = 1;
-			forever #10 clk = !clk;
+			forever #25 clk = !clk;
 	end
 	
 	
@@ -208,9 +208,9 @@ posicionandoPecas DUT(
 	begin
 		#20
 		enter = 1;
-		#20
+		#200
 		enter = 0;
-		#20
+		#200
 		enter = 1;
 	end
 	endtask
@@ -219,9 +219,9 @@ posicionandoPecas DUT(
 	begin
 		#20
 		select = 1;
-		#20
+		#200
 		select = 0;
-		#20
+		#200
 		select = 1;
 	end
 	endtask
