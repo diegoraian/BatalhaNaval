@@ -6,15 +6,9 @@ module Debouncer
 );
 
 
-
 reg PB_sync;
 reg PB_sync_compare;
 reg [3:0] count= 1'b0;
-
-//always @(posedge clk ) PB_sync <= psh_btn;
-
-//always @(posedge clk ) PB_sync_compare <= PB_sync;
-
 
 always @(posedge clk) begin
 
