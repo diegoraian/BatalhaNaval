@@ -39,8 +39,8 @@ module ControladoMemoria
 	input [63:0] colisor_data,  //clear
 
 	//input de Pontuação. Só faz leitura
-	input readyCalculaPontuacao,
-	input pontuacao_readaddr,
+	input readyPontuacao,
+	input [4:0] pontuacao_addr,
 	input jogadorPontuacao,
 	
 	//Input do Validador faz leitura de toda memoria e escreve em uma posição.
@@ -58,7 +58,7 @@ module ControladoMemoria
 	//Input reset
 	input resetGeral,
 	
-	//output reg [63:0] data; // Dado q irá ser salvo na memoria do colisor e Validador
+	output reg [63:0] dataReadPontuacao,		// data leitura da Pontuacao
 	output reg [63:0] dataReadColisor,   //data leitura do colisor
 	output reg [63:0] dataReadValidador, //data leitura do validador
 	output reg [63:0] dataReadVGA,			 //data leitura da VGA
