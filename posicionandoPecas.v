@@ -28,14 +28,14 @@ module posicionandoPecas
   
   enable, reset, enter, select, mode, clk, conflito,
   
-  /* 
+  /*
    @param readsy   - dá o sinal de start game para o ExecutandoJogo
    @param valida  - responsável por ativar o validador para verificação
    @param tipo    - passa o tipo da embarcaãço a ser gravado ao validador
    @param jogador - passa o tipo da jogador a ser gravado namemoria(jogador 0(memoria 0) ou jogador 1(memoria 1))
   */
   
-  ready, valida, tipo, jogador, X1, Y1, direcao, orientacao
+  ready, valida, tipo, jogador, X1, Y1, direcao, orientacao,estado1,estado2,estado3,estado4,estado5,estado6
   
 );
   
@@ -48,7 +48,13 @@ output reg direcao = 1'b0;
 output reg [2:0] orientacao =3'b000;
 output reg ready;
 output reg valida;
-output reg jogador = 0;
+output reg jogador = 1'b0;
+output reg estado1 = 1'b0;
+output reg estado2 = 1'b0;
+output reg estado3 = 1'b0;
+output reg estado4 = 1'b0;
+output reg estado5 = 1'b0;
+output reg estado6 = 1'b0;
 
 
 reg [2:0] qtd_tipo = 3'b000;
@@ -92,27 +98,66 @@ begin
   
   case (E_A)
     
-    escolheDirecao: //escolher a direção(Vertical ou horizontal
+    escolheDirecao: 
+	 begin //escolher a direção(Vertical ou horizontal
         E_F = escolheOrientacao;
-      
-    escolheOrientacao:
+		  estado1 = 1'b1;
+		  estado2 = 1'b0;
+		  estado3 = 1'b0;
+		  estado4 = 1'b0;
+		  estado5 = 1'b0;
+		  estado6 = 1'b0;
+	end		
+    escolheOrientacao: 
+	 begin
         E_F = defineX;
-  
-    defineX:
+			estado1 = 1'b0;
+			estado2 = 1'b1;
+			estado3 = 1'b0;
+			estado4 = 1'b0;
+			estado5 = 1'b0;
+			estado6 = 1'b0;
+		end
+    defineX:			begin
         E_F = defineY;
-      
-    defineY:
+			estado1 = 1'b0;
+			estado2 = 1'b0;
+			estado3 = 1'b1;
+			estado4 = 1'b0;
+			estado5 = 1'b0;
+			estado6 = 1'b0;
+		end
+    defineY:  begin
         E_F <= verificaConflito;
-          
-    verificaConflito:
+			estado1 = 1'b0;
+			estado2 = 1'b0;
+			estado3 = 1'b0;
+			estado4 = 1'b1;
+			estado5 = 1'b0;
+			estado6 = 1'b0;
+			end               
+    verificaConflito: begin
       if(conflito == 0) begin
         E_F <= armazenaPeca; 
       end else begin
         E_F <= defineX;
-      end
-    
-    armazenaPeca:
+      end;
+			estado1 = 1'b0;
+			estado2 = 1'b0;
+			estado3 = 1'b0;
+			estado4 = 1'b0;
+			estado5 = 1'b1;
+			estado6 = 1'b0;
+end			
+    armazenaPeca: begin
         E_F <= escolheDirecao;
+			estado1 = 1'b0;
+			estado2 = 1'b0;
+			estado3 = 1'b0;
+			estado4 = 1'b0;
+			estado5 = 1'b0;
+			estado6 = 1'b1;
+end			
         //incrementaQtdTipo = 1;
         //qtd_tipo = qtd_tipo + 1;
     
