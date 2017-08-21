@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Sat Aug 19 21:42:10 2017"
+// CREATED		"Mon Aug 21 01:50:06 2017"
 
 module BatalhaNavalDefinitivo(
 	clk,
@@ -50,58 +50,82 @@ output wire	rgb_b;
 output wire	H_SYNC;
 output wire	V_SYNC;
 
-wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_163;
-wire	[63:0] SYNTHESIZED_WIRE_164;
-wire	[3:0] SYNTHESIZED_WIRE_4;
-wire	[3:0] SYNTHESIZED_WIRE_5;
-wire	SYNTHESIZED_WIRE_165;
-wire	SYNTHESIZED_WIRE_7;
-wire	[3:0] SYNTHESIZED_WIRE_8;
-wire	[3:0] SYNTHESIZED_WIRE_9;
-wire	SYNTHESIZED_WIRE_166;
-wire	SYNTHESIZED_WIRE_11;
+wire	SYNTHESIZED_WIRE_164;
+wire	[9:0] SYNTHESIZED_WIRE_165;
+wire	[9:0] SYNTHESIZED_WIRE_166;
+wire	[63:0] SYNTHESIZED_WIRE_4;
+wire	[63:0] SYNTHESIZED_WIRE_9;
+wire	[63:0] SYNTHESIZED_WIRE_14;
+wire	[63:0] SYNTHESIZED_WIRE_19;
+wire	[63:0] SYNTHESIZED_WIRE_24;
+wire	SYNTHESIZED_WIRE_25;
 wire	SYNTHESIZED_WIRE_167;
-wire	SYNTHESIZED_WIRE_168;
+wire	[63:0] SYNTHESIZED_WIRE_168;
+wire	[3:0] SYNTHESIZED_WIRE_29;
+wire	[3:0] SYNTHESIZED_WIRE_30;
 wire	SYNTHESIZED_WIRE_169;
-wire	[9:0] SYNTHESIZED_WIRE_170;
-wire	[9:0] SYNTHESIZED_WIRE_171;
-wire	[63:0] SYNTHESIZED_WIRE_21;
-wire	SYNTHESIZED_WIRE_22;
+wire	SYNTHESIZED_WIRE_32;
+wire	[3:0] SYNTHESIZED_WIRE_33;
+wire	[3:0] SYNTHESIZED_WIRE_34;
+wire	SYNTHESIZED_WIRE_170;
+wire	SYNTHESIZED_WIRE_36;
+wire	SYNTHESIZED_WIRE_171;
+wire	SYNTHESIZED_WIRE_42;
 wire	SYNTHESIZED_WIRE_172;
 wire	SYNTHESIZED_WIRE_173;
-wire	SYNTHESIZED_WIRE_26;
-wire	[63:0] SYNTHESIZED_WIRE_28;
+wire	SYNTHESIZED_WIRE_46;
+wire	[63:0] SYNTHESIZED_WIRE_48;
 wire	SYNTHESIZED_WIRE_174;
 wire	SYNTHESIZED_WIRE_175;
-wire	SYNTHESIZED_WIRE_31;
-wire	SYNTHESIZED_WIRE_33;
-wire	[63:0] SYNTHESIZED_WIRE_38;
-wire	[63:0] SYNTHESIZED_WIRE_43;
-wire	[63:0] SYNTHESIZED_WIRE_48;
-wire	[63:0] SYNTHESIZED_WIRE_53;
-wire	[63:0] SYNTHESIZED_WIRE_58;
-wire	[63:0] SYNTHESIZED_WIRE_63;
+wire	SYNTHESIZED_WIRE_51;
+wire	SYNTHESIZED_WIRE_53;
+wire	SYNTHESIZED_WIRE_55;
+wire	SYNTHESIZED_WIRE_56;
+wire	SYNTHESIZED_WIRE_57;
+wire	SYNTHESIZED_WIRE_59;
+wire	SYNTHESIZED_WIRE_61;
+wire	SYNTHESIZED_WIRE_62;
+wire	SYNTHESIZED_WIRE_63;
+wire	SYNTHESIZED_WIRE_64;
+wire	[4:0] SYNTHESIZED_WIRE_65;
+wire	[63:0] SYNTHESIZED_WIRE_66;
+wire	[63:0] SYNTHESIZED_WIRE_67;
 wire	[63:0] SYNTHESIZED_WIRE_68;
-wire	[63:0] SYNTHESIZED_WIRE_73;
-wire	[63:0] SYNTHESIZED_WIRE_78;
+wire	[4:0] SYNTHESIZED_WIRE_69;
+wire	[4:0] SYNTHESIZED_WIRE_70;
+wire	[63:0] SYNTHESIZED_WIRE_71;
+wire	[4:0] SYNTHESIZED_WIRE_72;
+wire	SYNTHESIZED_WIRE_73;
+wire	SYNTHESIZED_WIRE_74;
+wire	SYNTHESIZED_WIRE_75;
+wire	SYNTHESIZED_WIRE_76;
+wire	SYNTHESIZED_WIRE_77;
+wire	SYNTHESIZED_WIRE_78;
+wire	SYNTHESIZED_WIRE_79;
 wire	SYNTHESIZED_WIRE_80;
 wire	SYNTHESIZED_WIRE_81;
 wire	SYNTHESIZED_WIRE_82;
+wire	SYNTHESIZED_WIRE_83;
 wire	SYNTHESIZED_WIRE_84;
+wire	SYNTHESIZED_WIRE_85;
 wire	SYNTHESIZED_WIRE_86;
 wire	SYNTHESIZED_WIRE_87;
 wire	SYNTHESIZED_WIRE_88;
 wire	SYNTHESIZED_WIRE_89;
-wire	[4:0] SYNTHESIZED_WIRE_90;
-wire	[63:0] SYNTHESIZED_WIRE_91;
-wire	[63:0] SYNTHESIZED_WIRE_92;
-wire	[63:0] SYNTHESIZED_WIRE_93;
-wire	[4:0] SYNTHESIZED_WIRE_94;
-wire	[4:0] SYNTHESIZED_WIRE_95;
-wire	[63:0] SYNTHESIZED_WIRE_96;
-wire	[4:0] SYNTHESIZED_WIRE_97;
-wire	[63:0] SYNTHESIZED_WIRE_102;
+wire	SYNTHESIZED_WIRE_90;
+wire	SYNTHESIZED_WIRE_91;
+wire	SYNTHESIZED_WIRE_92;
+wire	SYNTHESIZED_WIRE_93;
+wire	SYNTHESIZED_WIRE_94;
+wire	SYNTHESIZED_WIRE_95;
+wire	SYNTHESIZED_WIRE_96;
+wire	SYNTHESIZED_WIRE_97;
+wire	SYNTHESIZED_WIRE_98;
+wire	SYNTHESIZED_WIRE_99;
+wire	SYNTHESIZED_WIRE_100;
+wire	SYNTHESIZED_WIRE_101;
+wire	SYNTHESIZED_WIRE_102;
 wire	SYNTHESIZED_WIRE_103;
 wire	SYNTHESIZED_WIRE_104;
 wire	SYNTHESIZED_WIRE_105;
@@ -109,90 +133,201 @@ wire	SYNTHESIZED_WIRE_106;
 wire	SYNTHESIZED_WIRE_107;
 wire	SYNTHESIZED_WIRE_108;
 wire	SYNTHESIZED_WIRE_109;
-wire	SYNTHESIZED_WIRE_110;
+wire	SYNTHESIZED_WIRE_176;
 wire	SYNTHESIZED_WIRE_111;
-wire	SYNTHESIZED_WIRE_112;
-wire	SYNTHESIZED_WIRE_113;
-wire	SYNTHESIZED_WIRE_114;
-wire	SYNTHESIZED_WIRE_115;
-wire	SYNTHESIZED_WIRE_116;
-wire	SYNTHESIZED_WIRE_117;
-wire	SYNTHESIZED_WIRE_118;
-wire	SYNTHESIZED_WIRE_119;
-wire	SYNTHESIZED_WIRE_120;
-wire	SYNTHESIZED_WIRE_121;
+wire	[2:0] SYNTHESIZED_WIRE_112;
+wire	[2:0] SYNTHESIZED_WIRE_113;
+wire	[63:0] SYNTHESIZED_WIRE_114;
+wire	[3:0] SYNTHESIZED_WIRE_115;
+wire	[3:0] SYNTHESIZED_WIRE_116;
+wire	[63:0] SYNTHESIZED_WIRE_121;
 wire	SYNTHESIZED_WIRE_122;
-wire	SYNTHESIZED_WIRE_123;
-wire	SYNTHESIZED_WIRE_124;
 wire	SYNTHESIZED_WIRE_125;
 wire	SYNTHESIZED_WIRE_126;
 wire	SYNTHESIZED_WIRE_127;
-wire	SYNTHESIZED_WIRE_128;
-wire	SYNTHESIZED_WIRE_129;
-wire	SYNTHESIZED_WIRE_130;
-wire	SYNTHESIZED_WIRE_131;
-wire	SYNTHESIZED_WIRE_132;
-wire	SYNTHESIZED_WIRE_133;
-wire	SYNTHESIZED_WIRE_134;
-wire	SYNTHESIZED_WIRE_135;
-wire	SYNTHESIZED_WIRE_136;
-wire	SYNTHESIZED_WIRE_137;
-wire	SYNTHESIZED_WIRE_138;
-wire	SYNTHESIZED_WIRE_139;
-wire	SYNTHESIZED_WIRE_176;
-wire	SYNTHESIZED_WIRE_141;
-wire	[2:0] SYNTHESIZED_WIRE_142;
-wire	[2:0] SYNTHESIZED_WIRE_143;
-wire	[63:0] SYNTHESIZED_WIRE_144;
-wire	[3:0] SYNTHESIZED_WIRE_145;
-wire	[3:0] SYNTHESIZED_WIRE_146;
-wire	[63:0] SYNTHESIZED_WIRE_151;
-wire	SYNTHESIZED_WIRE_152;
-wire	SYNTHESIZED_WIRE_155;
-wire	SYNTHESIZED_WIRE_156;
-wire	SYNTHESIZED_WIRE_157;
 wire	[4:0] SYNTHESIZED_WIRE_177;
 wire	[63:0] SYNTHESIZED_WIRE_178;
-wire	SYNTHESIZED_WIRE_160;
+wire	SYNTHESIZED_WIRE_130;
+wire	[63:0] SYNTHESIZED_WIRE_137;
+wire	[63:0] SYNTHESIZED_WIRE_142;
+wire	[63:0] SYNTHESIZED_WIRE_147;
+wire	[63:0] SYNTHESIZED_WIRE_152;
+wire	[63:0] SYNTHESIZED_WIRE_157;
+wire	[63:0] SYNTHESIZED_WIRE_162;
 
-assign	VGA_CLK = SYNTHESIZED_WIRE_168;
+assign	VGA_CLK = SYNTHESIZED_WIRE_163;
 
 
+
+
+VGA_Cruzador	b2v_cruzador1(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_4),
+	.rgb_r(SYNTHESIZED_WIRE_76),
+	.rgb_g(SYNTHESIZED_WIRE_88),
+	.rgb_b(SYNTHESIZED_WIRE_100));
+	defparam	b2v_cruzador1.X1 = 10'b0000000001;
+	defparam	b2v_cruzador1.X2 = 10'b0000000010;
+	defparam	b2v_cruzador1.X3 = 10'b0000000011;
+	defparam	b2v_cruzador1.X4 = 10'b0000000100;
+	defparam	b2v_cruzador1.X5 = 10'b0000000101;
+	defparam	b2v_cruzador1.X6 = 10'b0000000110;
+	defparam	b2v_cruzador1.X7 = 10'b0000000111;
+	defparam	b2v_cruzador1.X8 = 10'b0000001000;
+	defparam	b2v_cruzador1.Y1 = 10'b0000000001;
+	defparam	b2v_cruzador1.Y2 = 10'b0000000010;
+	defparam	b2v_cruzador1.Y3 = 10'b0000000011;
+	defparam	b2v_cruzador1.Y4 = 10'b0000000100;
+	defparam	b2v_cruzador1.Y5 = 10'b0000000101;
+	defparam	b2v_cruzador1.Y6 = 10'b0000000110;
+	defparam	b2v_cruzador1.Y7 = 10'b0000000111;
+	defparam	b2v_cruzador1.Y8 = 10'b0000001000;
+
+
+VGA_Cruzador	b2v_cruzador2(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_9),
+	.rgb_r(SYNTHESIZED_WIRE_80),
+	.rgb_g(SYNTHESIZED_WIRE_92),
+	.rgb_b(SYNTHESIZED_WIRE_104));
+	defparam	b2v_cruzador2.X1 = 10'b0000000001;
+	defparam	b2v_cruzador2.X2 = 10'b0000000010;
+	defparam	b2v_cruzador2.X3 = 10'b0000000011;
+	defparam	b2v_cruzador2.X4 = 10'b0000000100;
+	defparam	b2v_cruzador2.X5 = 10'b0000000101;
+	defparam	b2v_cruzador2.X6 = 10'b0000000110;
+	defparam	b2v_cruzador2.X7 = 10'b0000000111;
+	defparam	b2v_cruzador2.X8 = 10'b0000001000;
+	defparam	b2v_cruzador2.Y1 = 10'b0000000001;
+	defparam	b2v_cruzador2.Y2 = 10'b0000000010;
+	defparam	b2v_cruzador2.Y3 = 10'b0000000011;
+	defparam	b2v_cruzador2.Y4 = 10'b0000000100;
+	defparam	b2v_cruzador2.Y5 = 10'b0000000101;
+	defparam	b2v_cruzador2.Y6 = 10'b0000000110;
+	defparam	b2v_cruzador2.Y7 = 10'b0000000111;
+	defparam	b2v_cruzador2.Y8 = 10'b0000001000;
+
+
+VGA_Encouracado	b2v_encouracado1(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_14),
+	.rgb_r(SYNTHESIZED_WIRE_83),
+	.rgb_g(SYNTHESIZED_WIRE_95),
+	.rgb_b(SYNTHESIZED_WIRE_107));
+	defparam	b2v_encouracado1.X1 = 10'b0000000001;
+	defparam	b2v_encouracado1.X2 = 10'b0000000010;
+	defparam	b2v_encouracado1.X3 = 10'b0000000011;
+	defparam	b2v_encouracado1.X4 = 10'b0000000100;
+	defparam	b2v_encouracado1.X5 = 10'b0000000101;
+	defparam	b2v_encouracado1.X6 = 10'b0000000110;
+	defparam	b2v_encouracado1.X7 = 10'b0000000111;
+	defparam	b2v_encouracado1.X8 = 10'b0000001000;
+	defparam	b2v_encouracado1.Y1 = 10'b0000000001;
+	defparam	b2v_encouracado1.Y2 = 10'b0000000010;
+	defparam	b2v_encouracado1.Y3 = 10'b0000000011;
+	defparam	b2v_encouracado1.Y4 = 10'b0000000100;
+	defparam	b2v_encouracado1.Y5 = 10'b0000000101;
+	defparam	b2v_encouracado1.Y6 = 10'b0000000110;
+	defparam	b2v_encouracado1.Y7 = 10'b0000000111;
+	defparam	b2v_encouracado1.Y8 = 10'b0000001000;
+
+
+VGA_Hidroaviao	b2v_hidroaviao(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_19),
+	.rgb_r(SYNTHESIZED_WIRE_79),
+	.rgb_g(SYNTHESIZED_WIRE_91),
+	.rgb_b(SYNTHESIZED_WIRE_103));
+	defparam	b2v_hidroaviao.X1 = 10'b0000000001;
+	defparam	b2v_hidroaviao.X2 = 10'b0000000010;
+	defparam	b2v_hidroaviao.X3 = 10'b0000000011;
+	defparam	b2v_hidroaviao.X4 = 10'b0000000100;
+	defparam	b2v_hidroaviao.X5 = 10'b0000000101;
+	defparam	b2v_hidroaviao.X6 = 10'b0000000110;
+	defparam	b2v_hidroaviao.X7 = 10'b0000000111;
+	defparam	b2v_hidroaviao.X8 = 10'b0000001000;
+	defparam	b2v_hidroaviao.Y1 = 10'b0000000001;
+	defparam	b2v_hidroaviao.Y2 = 10'b0000000010;
+	defparam	b2v_hidroaviao.Y3 = 10'b0000000011;
+	defparam	b2v_hidroaviao.Y4 = 10'b0000000100;
+	defparam	b2v_hidroaviao.Y5 = 10'b0000000101;
+	defparam	b2v_hidroaviao.Y6 = 10'b0000000110;
+	defparam	b2v_hidroaviao.Y7 = 10'b0000000111;
+	defparam	b2v_hidroaviao.Y8 = 10'b0000001000;
+
+
+VGA_Hidroaviao	b2v_hidroaviao2(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_24),
+	.rgb_r(SYNTHESIZED_WIRE_81),
+	.rgb_g(SYNTHESIZED_WIRE_93),
+	.rgb_b(SYNTHESIZED_WIRE_105));
+	defparam	b2v_hidroaviao2.X1 = 10'b0000000001;
+	defparam	b2v_hidroaviao2.X2 = 10'b0000000010;
+	defparam	b2v_hidroaviao2.X3 = 10'b0000000011;
+	defparam	b2v_hidroaviao2.X4 = 10'b0000000100;
+	defparam	b2v_hidroaviao2.X5 = 10'b0000000101;
+	defparam	b2v_hidroaviao2.X6 = 10'b0000000110;
+	defparam	b2v_hidroaviao2.X7 = 10'b0000000111;
+	defparam	b2v_hidroaviao2.X8 = 10'b0000001000;
+	defparam	b2v_hidroaviao2.Y1 = 10'b0000000001;
+	defparam	b2v_hidroaviao2.Y2 = 10'b0000000010;
+	defparam	b2v_hidroaviao2.Y3 = 10'b0000000011;
+	defparam	b2v_hidroaviao2.Y4 = 10'b0000000100;
+	defparam	b2v_hidroaviao2.Y5 = 10'b0000000101;
+	defparam	b2v_hidroaviao2.Y6 = 10'b0000000110;
+	defparam	b2v_hidroaviao2.Y7 = 10'b0000000111;
+	defparam	b2v_hidroaviao2.Y8 = 10'b0000001000;
 
 
 Colisor	b2v_inst(
-	.enable(SYNTHESIZED_WIRE_0),
-	.jogadorAtirador(SYNTHESIZED_WIRE_163),
+	.enable(SYNTHESIZED_WIRE_25),
+	.jogadorAtirador(SYNTHESIZED_WIRE_167),
 	.clk(clk),
-	.memoriaP1(SYNTHESIZED_WIRE_164),
-	.memoriaP2(SYNTHESIZED_WIRE_164),
-	.x(SYNTHESIZED_WIRE_4),
-	.y(SYNTHESIZED_WIRE_5),
+	.memoriaP1(SYNTHESIZED_WIRE_168),
+	.memoriaP2(SYNTHESIZED_WIRE_168),
+	.x(SYNTHESIZED_WIRE_29),
+	.y(SYNTHESIZED_WIRE_30),
 	.ready(SYNTHESIZED_WIRE_172),
-	.hit(SYNTHESIZED_WIRE_7),
-	.wrep1(SYNTHESIZED_WIRE_80),
-	.wrep2(SYNTHESIZED_WIRE_81),
-	.jogadorAlvo(SYNTHESIZED_WIRE_82),
-	.addr(SYNTHESIZED_WIRE_90),
-	.clear(SYNTHESIZED_WIRE_91)
+	.hit(SYNTHESIZED_WIRE_32),
+	.wrep1(SYNTHESIZED_WIRE_55),
+	.wrep2(SYNTHESIZED_WIRE_56),
+	.jogadorAlvo(SYNTHESIZED_WIRE_57),
+	.addr(SYNTHESIZED_WIRE_65),
+	.clear(SYNTHESIZED_WIRE_66)
 	);
 
 
 ExecutandoJogo	b2v_inst1(
-	.enable(SYNTHESIZED_WIRE_165),
+	.enable(SYNTHESIZED_WIRE_169),
 	.reset(reset),
 	.enter(enter),
 	.select(select),
 	.clk(clk),
 	.mode(mode),
-	.acertou_tiro(SYNTHESIZED_WIRE_7),
+	.acertou_tiro(SYNTHESIZED_WIRE_32),
 	
-	.qtd_P1(SYNTHESIZED_WIRE_8),
-	.qtd_P2(SYNTHESIZED_WIRE_9),
-	.ready(SYNTHESIZED_WIRE_166),
-	.jogador(SYNTHESIZED_WIRE_163),
-	.coord_tiroX(SYNTHESIZED_WIRE_4),
-	.coord_tiroY(SYNTHESIZED_WIRE_5));
+	.qtd_P1(SYNTHESIZED_WIRE_33),
+	.qtd_P2(SYNTHESIZED_WIRE_34),
+	.ready(SYNTHESIZED_WIRE_170),
+	.jogador(SYNTHESIZED_WIRE_167),
+	.coord_tiroX(SYNTHESIZED_WIRE_29),
+	.coord_tiroY(SYNTHESIZED_WIRE_30));
 	defparam	b2v_inst1.end_game = 4'b1010;
 	defparam	b2v_inst1.p1_atacandox = 4'b0000;
 	defparam	b2v_inst1.p1_atacandoy = 4'b0001;
@@ -208,75 +343,48 @@ ExecutandoJogo	b2v_inst1(
 
 PLL_clk	b2v_inst10(
 	.inclk0(clk),
-	.c0(SYNTHESIZED_WIRE_168));
+	.c0(SYNTHESIZED_WIRE_163));
 
-assign	SYNTHESIZED_WIRE_11 =  ~SYNTHESIZED_WIRE_166;
+assign	SYNTHESIZED_WIRE_36 =  ~SYNTHESIZED_WIRE_170;
 
-assign	SYNTHESIZED_WIRE_165 = SYNTHESIZED_WIRE_11 & SYNTHESIZED_WIRE_167;
+assign	SYNTHESIZED_WIRE_169 = SYNTHESIZED_WIRE_36 & SYNTHESIZED_WIRE_171;
 
 
 VGA_Mapa	b2v_inst13(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.rgb_r(SYNTHESIZED_WIRE_114),
-	.rgb_g(SYNTHESIZED_WIRE_126),
-	.rgb_b(SYNTHESIZED_WIRE_138));
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.rgb_r(SYNTHESIZED_WIRE_84),
+	.rgb_g(SYNTHESIZED_WIRE_96),
+	.rgb_b(SYNTHESIZED_WIRE_108));
 
+assign	SYNTHESIZED_WIRE_25 = SYNTHESIZED_WIRE_42 & SYNTHESIZED_WIRE_170;
 
-VGA_Submarino	b2v_inst14(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_21),
-	.rgb_r(SYNTHESIZED_WIRE_105),
-	.rgb_g(SYNTHESIZED_WIRE_117),
-	.rgb_b(SYNTHESIZED_WIRE_129));
-	defparam	b2v_inst14.X1 = 10'b0000000001;
-	defparam	b2v_inst14.X2 = 10'b0000000010;
-	defparam	b2v_inst14.X3 = 10'b0000000011;
-	defparam	b2v_inst14.X4 = 10'b0000000100;
-	defparam	b2v_inst14.X5 = 10'b0000000101;
-	defparam	b2v_inst14.X6 = 10'b0000000110;
-	defparam	b2v_inst14.X7 = 10'b0000000111;
-	defparam	b2v_inst14.X8 = 10'b0000001000;
-	defparam	b2v_inst14.Y1 = 10'b0000000001;
-	defparam	b2v_inst14.Y2 = 10'b0000000010;
-	defparam	b2v_inst14.Y3 = 10'b0000000011;
-	defparam	b2v_inst14.Y4 = 10'b0000000100;
-	defparam	b2v_inst14.Y5 = 10'b0000000101;
-	defparam	b2v_inst14.Y6 = 10'b0000000110;
-	defparam	b2v_inst14.Y7 = 10'b0000000111;
-	defparam	b2v_inst14.Y8 = 10'b0000001000;
+assign	SYNTHESIZED_WIRE_42 =  ~SYNTHESIZED_WIRE_172;
 
-assign	SYNTHESIZED_WIRE_0 = SYNTHESIZED_WIRE_22 & SYNTHESIZED_WIRE_166;
-
-assign	SYNTHESIZED_WIRE_22 =  ~SYNTHESIZED_WIRE_172;
-
-assign	SYNTHESIZED_WIRE_155 =  ~SYNTHESIZED_WIRE_173;
+assign	SYNTHESIZED_WIRE_125 =  ~SYNTHESIZED_WIRE_173;
 
 
 Pontuacao	b2v_inst18(
-	.enable(SYNTHESIZED_WIRE_26),
+	.enable(SYNTHESIZED_WIRE_46),
 	.clk(clk),
 	.reset(reset),
-	.jogadorIn(SYNTHESIZED_WIRE_163),
-	.memoria(SYNTHESIZED_WIRE_28),
+	.jogadorIn(SYNTHESIZED_WIRE_167),
+	.memoria(SYNTHESIZED_WIRE_48),
 	.ready(SYNTHESIZED_WIRE_174),
-	.jogadorOut(SYNTHESIZED_WIRE_84),
-	.addr(SYNTHESIZED_WIRE_94),
+	.jogadorOut(SYNTHESIZED_WIRE_59),
+	.addr(SYNTHESIZED_WIRE_69),
 	
 	
-	.qtdP1(SYNTHESIZED_WIRE_8),
-	.qtdP2(SYNTHESIZED_WIRE_9));
+	.qtdP1(SYNTHESIZED_WIRE_33),
+	.qtdP2(SYNTHESIZED_WIRE_34));
 	defparam	b2v_inst18.calculandoPontos = 4'b0010;
 	defparam	b2v_inst18.calculandoQtdRestante = 4'b0011;
 	defparam	b2v_inst18.Idle = 4'b0000;
 	defparam	b2v_inst18.lendoMemoria = 4'b0001;
 
-assign	SYNTHESIZED_WIRE_33 =  ~SYNTHESIZED_WIRE_174;
+assign	SYNTHESIZED_WIRE_53 =  ~SYNTHESIZED_WIRE_174;
 
 
 posicionandoPecas	b2v_inst2(
@@ -286,15 +394,15 @@ posicionandoPecas	b2v_inst2(
 	.select(select),
 	.mode(mode),
 	.clk(clk),
-	.conflito(SYNTHESIZED_WIRE_31),
-	.ready(SYNTHESIZED_WIRE_167),
-	.valida(SYNTHESIZED_WIRE_156),
+	.conflito(SYNTHESIZED_WIRE_51),
+	.ready(SYNTHESIZED_WIRE_171),
+	.valida(SYNTHESIZED_WIRE_126),
 	.jogador(SYNTHESIZED_WIRE_176),
-	.direcao(SYNTHESIZED_WIRE_141),
-	.orientacao(SYNTHESIZED_WIRE_142),
-	.tipo(SYNTHESIZED_WIRE_143),
-	.X1(SYNTHESIZED_WIRE_145),
-	.Y1(SYNTHESIZED_WIRE_146));
+	.direcao(SYNTHESIZED_WIRE_111),
+	.orientacao(SYNTHESIZED_WIRE_112),
+	.tipo(SYNTHESIZED_WIRE_113),
+	.X1(SYNTHESIZED_WIRE_115),
+	.Y1(SYNTHESIZED_WIRE_116));
 	defparam	b2v_inst2.armazenaPeca = 4'b0110;
 	defparam	b2v_inst2.defineX = 4'b0011;
 	defparam	b2v_inst2.defineY = 4'b0100;
@@ -302,282 +410,39 @@ posicionandoPecas	b2v_inst2(
 	defparam	b2v_inst2.escolheOrientacao = 4'b0010;
 	defparam	b2v_inst2.verificaConflito = 4'b0101;
 
-assign	SYNTHESIZED_WIRE_26 = SYNTHESIZED_WIRE_165 & SYNTHESIZED_WIRE_33;
-
-
-VGA_Submarino	b2v_inst21(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_38),
-	.rgb_r(SYNTHESIZED_WIRE_104),
-	.rgb_g(SYNTHESIZED_WIRE_116),
-	.rgb_b(SYNTHESIZED_WIRE_128));
-	defparam	b2v_inst21.X1 = 10'b0000000001;
-	defparam	b2v_inst21.X2 = 10'b0000000010;
-	defparam	b2v_inst21.X3 = 10'b0000000011;
-	defparam	b2v_inst21.X4 = 10'b0000000100;
-	defparam	b2v_inst21.X5 = 10'b0000000101;
-	defparam	b2v_inst21.X6 = 10'b0000000110;
-	defparam	b2v_inst21.X7 = 10'b0000000111;
-	defparam	b2v_inst21.X8 = 10'b0000001000;
-	defparam	b2v_inst21.Y1 = 10'b0000000001;
-	defparam	b2v_inst21.Y2 = 10'b0000000010;
-	defparam	b2v_inst21.Y3 = 10'b0000000011;
-	defparam	b2v_inst21.Y4 = 10'b0000000100;
-	defparam	b2v_inst21.Y5 = 10'b0000000101;
-	defparam	b2v_inst21.Y6 = 10'b0000000110;
-	defparam	b2v_inst21.Y7 = 10'b0000000111;
-	defparam	b2v_inst21.Y8 = 10'b0000001000;
-
-
-VGA_Submarino	b2v_inst22(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_43),
-	.rgb_r(SYNTHESIZED_WIRE_103),
-	.rgb_g(SYNTHESIZED_WIRE_115),
-	.rgb_b(SYNTHESIZED_WIRE_127));
-	defparam	b2v_inst22.X1 = 10'b0000000001;
-	defparam	b2v_inst22.X2 = 10'b0000000010;
-	defparam	b2v_inst22.X3 = 10'b0000000011;
-	defparam	b2v_inst22.X4 = 10'b0000000100;
-	defparam	b2v_inst22.X5 = 10'b0000000101;
-	defparam	b2v_inst22.X6 = 10'b0000000110;
-	defparam	b2v_inst22.X7 = 10'b0000000111;
-	defparam	b2v_inst22.X8 = 10'b0000001000;
-	defparam	b2v_inst22.Y1 = 10'b0000000001;
-	defparam	b2v_inst22.Y2 = 10'b0000000010;
-	defparam	b2v_inst22.Y3 = 10'b0000000011;
-	defparam	b2v_inst22.Y4 = 10'b0000000100;
-	defparam	b2v_inst22.Y5 = 10'b0000000101;
-	defparam	b2v_inst22.Y6 = 10'b0000000110;
-	defparam	b2v_inst22.Y7 = 10'b0000000111;
-	defparam	b2v_inst22.Y8 = 10'b0000001000;
-
-
-VGA_Submarino	b2v_inst23(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_48),
-	.rgb_r(SYNTHESIZED_WIRE_108),
-	.rgb_g(SYNTHESIZED_WIRE_120),
-	.rgb_b(SYNTHESIZED_WIRE_132));
-	defparam	b2v_inst23.X1 = 10'b0000000001;
-	defparam	b2v_inst23.X2 = 10'b0000000010;
-	defparam	b2v_inst23.X3 = 10'b0000000011;
-	defparam	b2v_inst23.X4 = 10'b0000000100;
-	defparam	b2v_inst23.X5 = 10'b0000000101;
-	defparam	b2v_inst23.X6 = 10'b0000000110;
-	defparam	b2v_inst23.X7 = 10'b0000000111;
-	defparam	b2v_inst23.X8 = 10'b0000001000;
-	defparam	b2v_inst23.Y1 = 10'b0000000001;
-	defparam	b2v_inst23.Y2 = 10'b0000000010;
-	defparam	b2v_inst23.Y3 = 10'b0000000011;
-	defparam	b2v_inst23.Y4 = 10'b0000000100;
-	defparam	b2v_inst23.Y5 = 10'b0000000101;
-	defparam	b2v_inst23.Y6 = 10'b0000000110;
-	defparam	b2v_inst23.Y7 = 10'b0000000111;
-	defparam	b2v_inst23.Y8 = 10'b0000001000;
-
-
-VGA_Submarino	b2v_inst24(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_53),
-	.rgb_r(SYNTHESIZED_WIRE_107),
-	.rgb_g(SYNTHESIZED_WIRE_119),
-	.rgb_b(SYNTHESIZED_WIRE_131));
-	defparam	b2v_inst24.X1 = 10'b0000000001;
-	defparam	b2v_inst24.X2 = 10'b0000000010;
-	defparam	b2v_inst24.X3 = 10'b0000000011;
-	defparam	b2v_inst24.X4 = 10'b0000000100;
-	defparam	b2v_inst24.X5 = 10'b0000000101;
-	defparam	b2v_inst24.X6 = 10'b0000000110;
-	defparam	b2v_inst24.X7 = 10'b0000000111;
-	defparam	b2v_inst24.X8 = 10'b0000001000;
-	defparam	b2v_inst24.Y1 = 10'b0000000001;
-	defparam	b2v_inst24.Y2 = 10'b0000000010;
-	defparam	b2v_inst24.Y3 = 10'b0000000011;
-	defparam	b2v_inst24.Y4 = 10'b0000000100;
-	defparam	b2v_inst24.Y5 = 10'b0000000101;
-	defparam	b2v_inst24.Y6 = 10'b0000000110;
-	defparam	b2v_inst24.Y7 = 10'b0000000111;
-	defparam	b2v_inst24.Y8 = 10'b0000001000;
-
-
-VGA_Cruzador	b2v_inst25(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_58),
-	.rgb_r(SYNTHESIZED_WIRE_106),
-	.rgb_g(SYNTHESIZED_WIRE_118),
-	.rgb_b(SYNTHESIZED_WIRE_130));
-	defparam	b2v_inst25.X1 = 10'b0000000001;
-	defparam	b2v_inst25.X2 = 10'b0000000010;
-	defparam	b2v_inst25.X3 = 10'b0000000011;
-	defparam	b2v_inst25.X4 = 10'b0000000100;
-	defparam	b2v_inst25.X5 = 10'b0000000101;
-	defparam	b2v_inst25.X6 = 10'b0000000110;
-	defparam	b2v_inst25.X7 = 10'b0000000111;
-	defparam	b2v_inst25.X8 = 10'b0000001000;
-	defparam	b2v_inst25.Y1 = 10'b0000000001;
-	defparam	b2v_inst25.Y2 = 10'b0000000010;
-	defparam	b2v_inst25.Y3 = 10'b0000000011;
-	defparam	b2v_inst25.Y4 = 10'b0000000100;
-	defparam	b2v_inst25.Y5 = 10'b0000000101;
-	defparam	b2v_inst25.Y6 = 10'b0000000110;
-	defparam	b2v_inst25.Y7 = 10'b0000000111;
-	defparam	b2v_inst25.Y8 = 10'b0000001000;
-
-
-VGA_Cruzador	b2v_inst26(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_63),
-	.rgb_r(SYNTHESIZED_WIRE_110),
-	.rgb_g(SYNTHESIZED_WIRE_122),
-	.rgb_b(SYNTHESIZED_WIRE_134));
-	defparam	b2v_inst26.X1 = 10'b0000000001;
-	defparam	b2v_inst26.X2 = 10'b0000000010;
-	defparam	b2v_inst26.X3 = 10'b0000000011;
-	defparam	b2v_inst26.X4 = 10'b0000000100;
-	defparam	b2v_inst26.X5 = 10'b0000000101;
-	defparam	b2v_inst26.X6 = 10'b0000000110;
-	defparam	b2v_inst26.X7 = 10'b0000000111;
-	defparam	b2v_inst26.X8 = 10'b0000001000;
-	defparam	b2v_inst26.Y1 = 10'b0000000001;
-	defparam	b2v_inst26.Y2 = 10'b0000000010;
-	defparam	b2v_inst26.Y3 = 10'b0000000011;
-	defparam	b2v_inst26.Y4 = 10'b0000000100;
-	defparam	b2v_inst26.Y5 = 10'b0000000101;
-	defparam	b2v_inst26.Y6 = 10'b0000000110;
-	defparam	b2v_inst26.Y7 = 10'b0000000111;
-	defparam	b2v_inst26.Y8 = 10'b0000001000;
-
-
-VGA_Hidroaviao	b2v_inst27(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_68),
-	.rgb_r(SYNTHESIZED_WIRE_109),
-	.rgb_g(SYNTHESIZED_WIRE_121),
-	.rgb_b(SYNTHESIZED_WIRE_133));
-	defparam	b2v_inst27.X1 = 10'b0000000001;
-	defparam	b2v_inst27.X2 = 10'b0000000010;
-	defparam	b2v_inst27.X3 = 10'b0000000011;
-	defparam	b2v_inst27.X4 = 10'b0000000100;
-	defparam	b2v_inst27.X5 = 10'b0000000101;
-	defparam	b2v_inst27.X6 = 10'b0000000110;
-	defparam	b2v_inst27.X7 = 10'b0000000111;
-	defparam	b2v_inst27.X8 = 10'b0000001000;
-	defparam	b2v_inst27.Y1 = 10'b0000000001;
-	defparam	b2v_inst27.Y2 = 10'b0000000010;
-	defparam	b2v_inst27.Y3 = 10'b0000000011;
-	defparam	b2v_inst27.Y4 = 10'b0000000100;
-	defparam	b2v_inst27.Y5 = 10'b0000000101;
-	defparam	b2v_inst27.Y6 = 10'b0000000110;
-	defparam	b2v_inst27.Y7 = 10'b0000000111;
-	defparam	b2v_inst27.Y8 = 10'b0000001000;
-
-
-VGA_Hidroaviao	b2v_inst28(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_73),
-	.rgb_r(SYNTHESIZED_WIRE_111),
-	.rgb_g(SYNTHESIZED_WIRE_123),
-	.rgb_b(SYNTHESIZED_WIRE_135));
-	defparam	b2v_inst28.X1 = 10'b0000000001;
-	defparam	b2v_inst28.X2 = 10'b0000000010;
-	defparam	b2v_inst28.X3 = 10'b0000000011;
-	defparam	b2v_inst28.X4 = 10'b0000000100;
-	defparam	b2v_inst28.X5 = 10'b0000000101;
-	defparam	b2v_inst28.X6 = 10'b0000000110;
-	defparam	b2v_inst28.X7 = 10'b0000000111;
-	defparam	b2v_inst28.X8 = 10'b0000001000;
-	defparam	b2v_inst28.Y1 = 10'b0000000001;
-	defparam	b2v_inst28.Y2 = 10'b0000000010;
-	defparam	b2v_inst28.Y3 = 10'b0000000011;
-	defparam	b2v_inst28.Y4 = 10'b0000000100;
-	defparam	b2v_inst28.Y5 = 10'b0000000101;
-	defparam	b2v_inst28.Y6 = 10'b0000000110;
-	defparam	b2v_inst28.Y7 = 10'b0000000111;
-	defparam	b2v_inst28.Y8 = 10'b0000001000;
-
-
-VGA_Encouracado	b2v_inst29(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_78),
-	.rgb_r(SYNTHESIZED_WIRE_113),
-	.rgb_g(SYNTHESIZED_WIRE_125),
-	.rgb_b(SYNTHESIZED_WIRE_137));
-	defparam	b2v_inst29.X1 = 10'b0000000001;
-	defparam	b2v_inst29.X2 = 10'b0000000010;
-	defparam	b2v_inst29.X3 = 10'b0000000011;
-	defparam	b2v_inst29.X4 = 10'b0000000100;
-	defparam	b2v_inst29.X5 = 10'b0000000101;
-	defparam	b2v_inst29.X6 = 10'b0000000110;
-	defparam	b2v_inst29.X7 = 10'b0000000111;
-	defparam	b2v_inst29.X8 = 10'b0000001000;
-	defparam	b2v_inst29.Y1 = 10'b0000000001;
-	defparam	b2v_inst29.Y2 = 10'b0000000010;
-	defparam	b2v_inst29.Y3 = 10'b0000000011;
-	defparam	b2v_inst29.Y4 = 10'b0000000100;
-	defparam	b2v_inst29.Y5 = 10'b0000000101;
-	defparam	b2v_inst29.Y6 = 10'b0000000110;
-	defparam	b2v_inst29.Y7 = 10'b0000000111;
-	defparam	b2v_inst29.Y8 = 10'b0000001000;
+assign	SYNTHESIZED_WIRE_46 = SYNTHESIZED_WIRE_169 & SYNTHESIZED_WIRE_53;
 
 
 ControladoMemoria	b2v_inst3(
 	.clk(clk),
 	.readyColisor(SYNTHESIZED_WIRE_172),
-	.colisor_wrep1(SYNTHESIZED_WIRE_80),
-	.colisor_wrep2(SYNTHESIZED_WIRE_81),
-	.jogadorColisor(SYNTHESIZED_WIRE_82),
+	.colisor_wrep1(SYNTHESIZED_WIRE_55),
+	.colisor_wrep2(SYNTHESIZED_WIRE_56),
+	.jogadorColisor(SYNTHESIZED_WIRE_57),
 	.readyPontuacao(SYNTHESIZED_WIRE_174),
-	.jogadorPontuacao(SYNTHESIZED_WIRE_84),
+	.jogadorPontuacao(SYNTHESIZED_WIRE_59),
 	.readyValidador(SYNTHESIZED_WIRE_173),
-	.validador_wrep1(SYNTHESIZED_WIRE_86),
-	.validador_wrep2(SYNTHESIZED_WIRE_87),
-	.validadorJogador(SYNTHESIZED_WIRE_88),
-	.jogadorVGA(SYNTHESIZED_WIRE_89),
+	.validador_wrep1(SYNTHESIZED_WIRE_61),
+	.validador_wrep2(SYNTHESIZED_WIRE_62),
+	.validadorJogador(SYNTHESIZED_WIRE_63),
+	.jogadorVGA(SYNTHESIZED_WIRE_64),
 	.resetGeral(reset),
-	.colisor_addr(SYNTHESIZED_WIRE_90),
-	.colisor_data(SYNTHESIZED_WIRE_91),
-	.data_memoria_jogadorDois(SYNTHESIZED_WIRE_92),
-	.data_memoria_jogadorUm(SYNTHESIZED_WIRE_93),
-	.pontuacao_addr(SYNTHESIZED_WIRE_94),
-	.validador_addr(SYNTHESIZED_WIRE_95),
-	.validador_data(SYNTHESIZED_WIRE_96),
-	.vga_readAddr(SYNTHESIZED_WIRE_97),
-	.wrenP1(SYNTHESIZED_WIRE_157),
-	.wrenP2(SYNTHESIZED_WIRE_160),
+	.colisor_addr(SYNTHESIZED_WIRE_65),
+	.colisor_data(SYNTHESIZED_WIRE_66),
+	.data_memoria_jogadorDois(SYNTHESIZED_WIRE_67),
+	.data_memoria_jogadorUm(SYNTHESIZED_WIRE_68),
+	.pontuacao_addr(SYNTHESIZED_WIRE_69),
+	.validador_addr(SYNTHESIZED_WIRE_70),
+	.validador_data(SYNTHESIZED_WIRE_71),
+	.vga_readAddr(SYNTHESIZED_WIRE_72),
+	.wrenP1(SYNTHESIZED_WIRE_127),
+	.wrenP2(SYNTHESIZED_WIRE_130),
 	.addr(SYNTHESIZED_WIRE_177),
 	.data(SYNTHESIZED_WIRE_178),
-	.dataReadColisor(SYNTHESIZED_WIRE_164),
-	.dataReadPontuacao(SYNTHESIZED_WIRE_28),
-	.dataReadValidador(SYNTHESIZED_WIRE_144),
-	.dataReadVGA(SYNTHESIZED_WIRE_151));
+	.dataReadColisor(SYNTHESIZED_WIRE_168),
+	.dataReadPontuacao(SYNTHESIZED_WIRE_48),
+	.dataReadValidador(SYNTHESIZED_WIRE_114),
+	.dataReadVGA(SYNTHESIZED_WIRE_121));
 	defparam	b2v_inst3.CalculandoPontuacaoPlayerDois = 4'b0110;
 	defparam	b2v_inst3.CalculandoPontuacaoPlayerUm = 4'b0101;
 	defparam	b2v_inst3.ColidindoPlayerDois = 4'b0100;
@@ -588,59 +453,32 @@ ControladoMemoria	b2v_inst3(
 	defparam	b2v_inst3.ValidandorPlayerDois = 4'b0010;
 	defparam	b2v_inst3.ValidandorPlayerUm = 4'b0001;
 
+assign	rgb_r = SYNTHESIZED_WIRE_73 | SYNTHESIZED_WIRE_74 | SYNTHESIZED_WIRE_75 | SYNTHESIZED_WIRE_76 | SYNTHESIZED_WIRE_77 | SYNTHESIZED_WIRE_78 | SYNTHESIZED_WIRE_79 | SYNTHESIZED_WIRE_80 | SYNTHESIZED_WIRE_81 | SYNTHESIZED_WIRE_82 | SYNTHESIZED_WIRE_83 | SYNTHESIZED_WIRE_84;
 
-VGA_PortaAvioes	b2v_inst30(
-	.clk(SYNTHESIZED_WIRE_168),
-	.areaAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_102),
-	.rgb_r(SYNTHESIZED_WIRE_112),
-	.rgb_g(SYNTHESIZED_WIRE_124),
-	.rgb_b(SYNTHESIZED_WIRE_136));
-	defparam	b2v_inst30.X1 = 10'b0000000001;
-	defparam	b2v_inst30.X2 = 10'b0000000010;
-	defparam	b2v_inst30.X3 = 10'b0000000011;
-	defparam	b2v_inst30.X4 = 10'b0000000100;
-	defparam	b2v_inst30.X5 = 10'b0000000101;
-	defparam	b2v_inst30.X6 = 10'b0000000110;
-	defparam	b2v_inst30.X7 = 10'b0000000111;
-	defparam	b2v_inst30.X8 = 10'b0000001000;
-	defparam	b2v_inst30.Y1 = 10'b0000000001;
-	defparam	b2v_inst30.Y2 = 10'b0000000010;
-	defparam	b2v_inst30.Y3 = 10'b0000000011;
-	defparam	b2v_inst30.Y4 = 10'b0000000100;
-	defparam	b2v_inst30.Y5 = 10'b0000000101;
-	defparam	b2v_inst30.Y6 = 10'b0000000110;
-	defparam	b2v_inst30.Y7 = 10'b0000000111;
-	defparam	b2v_inst30.Y8 = 10'b0000001000;
+assign	rgb_g = SYNTHESIZED_WIRE_85 | SYNTHESIZED_WIRE_86 | SYNTHESIZED_WIRE_87 | SYNTHESIZED_WIRE_88 | SYNTHESIZED_WIRE_89 | SYNTHESIZED_WIRE_90 | SYNTHESIZED_WIRE_91 | SYNTHESIZED_WIRE_92 | SYNTHESIZED_WIRE_93 | SYNTHESIZED_WIRE_94 | SYNTHESIZED_WIRE_95 | SYNTHESIZED_WIRE_96;
 
-assign	rgb_r = SYNTHESIZED_WIRE_103 | SYNTHESIZED_WIRE_104 | SYNTHESIZED_WIRE_105 | SYNTHESIZED_WIRE_106 | SYNTHESIZED_WIRE_107 | SYNTHESIZED_WIRE_108 | SYNTHESIZED_WIRE_109 | SYNTHESIZED_WIRE_110 | SYNTHESIZED_WIRE_111 | SYNTHESIZED_WIRE_112 | SYNTHESIZED_WIRE_113 | SYNTHESIZED_WIRE_114;
-
-assign	rgb_g = SYNTHESIZED_WIRE_115 | SYNTHESIZED_WIRE_116 | SYNTHESIZED_WIRE_117 | SYNTHESIZED_WIRE_118 | SYNTHESIZED_WIRE_119 | SYNTHESIZED_WIRE_120 | SYNTHESIZED_WIRE_121 | SYNTHESIZED_WIRE_122 | SYNTHESIZED_WIRE_123 | SYNTHESIZED_WIRE_124 | SYNTHESIZED_WIRE_125 | SYNTHESIZED_WIRE_126;
-
-assign	rgb_b = SYNTHESIZED_WIRE_127 | SYNTHESIZED_WIRE_128 | SYNTHESIZED_WIRE_129 | SYNTHESIZED_WIRE_130 | SYNTHESIZED_WIRE_131 | SYNTHESIZED_WIRE_132 | SYNTHESIZED_WIRE_133 | SYNTHESIZED_WIRE_134 | SYNTHESIZED_WIRE_135 | SYNTHESIZED_WIRE_136 | SYNTHESIZED_WIRE_137 | SYNTHESIZED_WIRE_138;
+assign	rgb_b = SYNTHESIZED_WIRE_97 | SYNTHESIZED_WIRE_98 | SYNTHESIZED_WIRE_99 | SYNTHESIZED_WIRE_100 | SYNTHESIZED_WIRE_101 | SYNTHESIZED_WIRE_102 | SYNTHESIZED_WIRE_103 | SYNTHESIZED_WIRE_104 | SYNTHESIZED_WIRE_105 | SYNTHESIZED_WIRE_106 | SYNTHESIZED_WIRE_107 | SYNTHESIZED_WIRE_108;
 
 
 Validador	b2v_inst4(
-	.enable(SYNTHESIZED_WIRE_139),
+	.enable(SYNTHESIZED_WIRE_109),
 	.jogador(SYNTHESIZED_WIRE_176),
-	.direcao(SYNTHESIZED_WIRE_141),
+	.direcao(SYNTHESIZED_WIRE_111),
 	.clk(clk),
-	.orientacao(SYNTHESIZED_WIRE_142),
-	.tipo(SYNTHESIZED_WIRE_143),
-	.vetor_leitura(SYNTHESIZED_WIRE_144),
-	.x1(SYNTHESIZED_WIRE_145),
-	.y1(SYNTHESIZED_WIRE_146),
+	.orientacao(SYNTHESIZED_WIRE_112),
+	.tipo(SYNTHESIZED_WIRE_113),
+	.vetor_leitura(SYNTHESIZED_WIRE_114),
+	.x1(SYNTHESIZED_WIRE_115),
+	.y1(SYNTHESIZED_WIRE_116),
 	.ready(SYNTHESIZED_WIRE_173),
 	.conflitoMemoria_out(conflitoMemoria),
 	.conflitoBorda_out(conflitoBorda),
-	.wrep1(SYNTHESIZED_WIRE_86),
-	.wrep2(SYNTHESIZED_WIRE_87),
-	.jogadorOut(SYNTHESIZED_WIRE_88),
-	.conflito(SYNTHESIZED_WIRE_31),
-	.addr(SYNTHESIZED_WIRE_95),
-	.vetor(SYNTHESIZED_WIRE_96));
+	.wrep1(SYNTHESIZED_WIRE_61),
+	.wrep2(SYNTHESIZED_WIRE_62),
+	.jogadorOut(SYNTHESIZED_WIRE_63),
+	.conflito(SYNTHESIZED_WIRE_51),
+	.addr(SYNTHESIZED_WIRE_70),
+	.vetor(SYNTHESIZED_WIRE_71));
 	defparam	b2v_inst4.ConflitoBorda = 3'b010;
 	defparam	b2v_inst4.ConflitoMemoria = 3'b100;
 	defparam	b2v_inst4.CRUZADOR = 3'b011;
@@ -657,64 +495,226 @@ Validador	b2v_inst4(
 VGA_Compositor	b2v_inst5(
 	.clk(clk),
 	.resetGeral(reset),
-	.readyExecutandoJogo(SYNTHESIZED_WIRE_165),
+	.readyExecutandoJogo(SYNTHESIZED_WIRE_169),
 	.readyPosicionandoPecas(SYNTHESIZED_WIRE_175),
-	.jogadorExecutandoJogo(SYNTHESIZED_WIRE_163),
+	.jogadorExecutandoJogo(SYNTHESIZED_WIRE_167),
 	.jogadorPosicionandoPecas(SYNTHESIZED_WIRE_176),
-	.data_memoria(SYNTHESIZED_WIRE_151),
+	.data_memoria(SYNTHESIZED_WIRE_121),
 	
-	.jogadorVGA(SYNTHESIZED_WIRE_89),
-	.addr(SYNTHESIZED_WIRE_97),
-	.dataEmbarcacaoCruzadorDois(SYNTHESIZED_WIRE_63),
-	.dataEmbarcacaoCruzadorUm(SYNTHESIZED_WIRE_58),
-	.dataEmbarcacaoEncouracado(SYNTHESIZED_WIRE_78),
-	.dataEmbarcacaoHidroaviaoDois(SYNTHESIZED_WIRE_73),
-	.dataEmbarcacaoHidroaviaoUm(SYNTHESIZED_WIRE_68),
-	.dataEmbarcacaoPortaAvioes(SYNTHESIZED_WIRE_102),
-	.dataEmbarcacaoSubmarinoCinco(SYNTHESIZED_WIRE_53),
-	.dataEmbarcacaoSubmarinoDois(SYNTHESIZED_WIRE_38),
-	.dataEmbarcacaoSubmarinoQuatro(SYNTHESIZED_WIRE_48),
-	.dataEmbarcacaoSubmarinoTres(SYNTHESIZED_WIRE_43),
-	.dataEmbarcacaoSubmarinoUm(SYNTHESIZED_WIRE_21));
+	.jogadorVGA(SYNTHESIZED_WIRE_64),
+	.addr(SYNTHESIZED_WIRE_72),
+	.dataEmbarcacaoCruzadorDois(SYNTHESIZED_WIRE_9),
+	.dataEmbarcacaoCruzadorUm(SYNTHESIZED_WIRE_4),
+	.dataEmbarcacaoEncouracado(SYNTHESIZED_WIRE_14),
+	.dataEmbarcacaoHidroaviaoDois(SYNTHESIZED_WIRE_24),
+	.dataEmbarcacaoHidroaviaoUm(SYNTHESIZED_WIRE_19),
+	.dataEmbarcacaoPortaAvioes(SYNTHESIZED_WIRE_137),
+	.dataEmbarcacaoSubmarinoCinco(SYNTHESIZED_WIRE_162),
+	.dataEmbarcacaoSubmarinoDois(SYNTHESIZED_WIRE_147),
+	.dataEmbarcacaoSubmarinoQuatro(SYNTHESIZED_WIRE_157),
+	.dataEmbarcacaoSubmarinoTres(SYNTHESIZED_WIRE_152),
+	.dataEmbarcacaoSubmarinoUm(SYNTHESIZED_WIRE_142));
 	defparam	b2v_inst5.ExecutandoJogo = 3'b010;
 	defparam	b2v_inst5.Idle = 3'b000;
 	defparam	b2v_inst5.PosicionandoPecas = 3'b001;
 
-assign	SYNTHESIZED_WIRE_175 = SYNTHESIZED_WIRE_152 & enable;
+assign	SYNTHESIZED_WIRE_175 = SYNTHESIZED_WIRE_122 & enable;
 
-assign	SYNTHESIZED_WIRE_152 =  ~SYNTHESIZED_WIRE_167;
+assign	SYNTHESIZED_WIRE_122 =  ~SYNTHESIZED_WIRE_171;
 
 
 VGASinc	b2v_inst8(
 	.reset(reset),
-	.clk(SYNTHESIZED_WIRE_168),
+	.clk(SYNTHESIZED_WIRE_163),
 	.h_sync(H_SYNC),
 	.v_sync(V_SYNC),
-	.regiaoAtiva(SYNTHESIZED_WIRE_169),
-	.coluna(SYNTHESIZED_WIRE_170),
-	.linha(SYNTHESIZED_WIRE_171));
+	.regiaoAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166));
 	defparam	b2v_inst8.COLUNASATIVAS = 640;
 	defparam	b2v_inst8.LINHASATIVAS = 480;
 	defparam	b2v_inst8.TOTALCOLUNAS = 800;
 	defparam	b2v_inst8.TOTALLINHAS = 524;
 
-assign	SYNTHESIZED_WIRE_139 = SYNTHESIZED_WIRE_155 & SYNTHESIZED_WIRE_156;
+assign	SYNTHESIZED_WIRE_109 = SYNTHESIZED_WIRE_125 & SYNTHESIZED_WIRE_126;
 
 
 memoriaA	b2v_memoriaA(
 	.clock(clk),
-	.wren(SYNTHESIZED_WIRE_157),
+	.wren(SYNTHESIZED_WIRE_127),
 	.address(SYNTHESIZED_WIRE_177),
 	.data(SYNTHESIZED_WIRE_178),
-	.q(SYNTHESIZED_WIRE_93));
+	.q(SYNTHESIZED_WIRE_68));
 
 
 memoriaB	b2v_memoriaB(
 	.clock(clk),
-	.wren(SYNTHESIZED_WIRE_160),
+	.wren(SYNTHESIZED_WIRE_130),
 	.address(SYNTHESIZED_WIRE_177),
 	.data(SYNTHESIZED_WIRE_178),
-	.q(SYNTHESIZED_WIRE_92));
+	.q(SYNTHESIZED_WIRE_67));
+
+
+VGA_PortaAvioes	b2v_portaavioes(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_137),
+	.rgb_r(SYNTHESIZED_WIRE_82),
+	.rgb_g(SYNTHESIZED_WIRE_94),
+	.rgb_b(SYNTHESIZED_WIRE_106));
+	defparam	b2v_portaavioes.X1 = 10'b0000000001;
+	defparam	b2v_portaavioes.X2 = 10'b0000000010;
+	defparam	b2v_portaavioes.X3 = 10'b0000000011;
+	defparam	b2v_portaavioes.X4 = 10'b0000000100;
+	defparam	b2v_portaavioes.X5 = 10'b0000000101;
+	defparam	b2v_portaavioes.X6 = 10'b0000000110;
+	defparam	b2v_portaavioes.X7 = 10'b0000000111;
+	defparam	b2v_portaavioes.X8 = 10'b0000001000;
+	defparam	b2v_portaavioes.Y1 = 10'b0000000001;
+	defparam	b2v_portaavioes.Y2 = 10'b0000000010;
+	defparam	b2v_portaavioes.Y3 = 10'b0000000011;
+	defparam	b2v_portaavioes.Y4 = 10'b0000000100;
+	defparam	b2v_portaavioes.Y5 = 10'b0000000101;
+	defparam	b2v_portaavioes.Y6 = 10'b0000000110;
+	defparam	b2v_portaavioes.Y7 = 10'b0000000111;
+	defparam	b2v_portaavioes.Y8 = 10'b0000001000;
+
+
+VGA_Submarino	b2v_submarino1(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_142),
+	.rgb_r(SYNTHESIZED_WIRE_75),
+	.rgb_g(SYNTHESIZED_WIRE_87),
+	.rgb_b(SYNTHESIZED_WIRE_99));
+	defparam	b2v_submarino1.X1 = 10'b0000000001;
+	defparam	b2v_submarino1.X2 = 10'b0000000010;
+	defparam	b2v_submarino1.X3 = 10'b0000000011;
+	defparam	b2v_submarino1.X4 = 10'b0000000100;
+	defparam	b2v_submarino1.X5 = 10'b0000000101;
+	defparam	b2v_submarino1.X6 = 10'b0000000110;
+	defparam	b2v_submarino1.X7 = 10'b0000000111;
+	defparam	b2v_submarino1.X8 = 10'b0000001000;
+	defparam	b2v_submarino1.Y1 = 10'b0000000001;
+	defparam	b2v_submarino1.Y2 = 10'b0000000010;
+	defparam	b2v_submarino1.Y3 = 10'b0000000011;
+	defparam	b2v_submarino1.Y4 = 10'b0000000100;
+	defparam	b2v_submarino1.Y5 = 10'b0000000101;
+	defparam	b2v_submarino1.Y6 = 10'b0000000110;
+	defparam	b2v_submarino1.Y7 = 10'b0000000111;
+	defparam	b2v_submarino1.Y8 = 10'b0000001000;
+
+
+VGA_Submarino	b2v_submarino2(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_147),
+	.rgb_r(SYNTHESIZED_WIRE_74),
+	.rgb_g(SYNTHESIZED_WIRE_86),
+	.rgb_b(SYNTHESIZED_WIRE_98));
+	defparam	b2v_submarino2.X1 = 10'b0000000001;
+	defparam	b2v_submarino2.X2 = 10'b0000000010;
+	defparam	b2v_submarino2.X3 = 10'b0000000011;
+	defparam	b2v_submarino2.X4 = 10'b0000000100;
+	defparam	b2v_submarino2.X5 = 10'b0000000101;
+	defparam	b2v_submarino2.X6 = 10'b0000000110;
+	defparam	b2v_submarino2.X7 = 10'b0000000111;
+	defparam	b2v_submarino2.X8 = 10'b0000001000;
+	defparam	b2v_submarino2.Y1 = 10'b0000000001;
+	defparam	b2v_submarino2.Y2 = 10'b0000000010;
+	defparam	b2v_submarino2.Y3 = 10'b0000000011;
+	defparam	b2v_submarino2.Y4 = 10'b0000000100;
+	defparam	b2v_submarino2.Y5 = 10'b0000000101;
+	defparam	b2v_submarino2.Y6 = 10'b0000000110;
+	defparam	b2v_submarino2.Y7 = 10'b0000000111;
+	defparam	b2v_submarino2.Y8 = 10'b0000001000;
+
+
+VGA_Submarino	b2v_submarino3(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_152),
+	.rgb_r(SYNTHESIZED_WIRE_73),
+	.rgb_g(SYNTHESIZED_WIRE_85),
+	.rgb_b(SYNTHESIZED_WIRE_97));
+	defparam	b2v_submarino3.X1 = 10'b0000000001;
+	defparam	b2v_submarino3.X2 = 10'b0000000010;
+	defparam	b2v_submarino3.X3 = 10'b0000000011;
+	defparam	b2v_submarino3.X4 = 10'b0000000100;
+	defparam	b2v_submarino3.X5 = 10'b0000000101;
+	defparam	b2v_submarino3.X6 = 10'b0000000110;
+	defparam	b2v_submarino3.X7 = 10'b0000000111;
+	defparam	b2v_submarino3.X8 = 10'b0000001000;
+	defparam	b2v_submarino3.Y1 = 10'b0000000001;
+	defparam	b2v_submarino3.Y2 = 10'b0000000010;
+	defparam	b2v_submarino3.Y3 = 10'b0000000011;
+	defparam	b2v_submarino3.Y4 = 10'b0000000100;
+	defparam	b2v_submarino3.Y5 = 10'b0000000101;
+	defparam	b2v_submarino3.Y6 = 10'b0000000110;
+	defparam	b2v_submarino3.Y7 = 10'b0000000111;
+	defparam	b2v_submarino3.Y8 = 10'b0000001000;
+
+
+VGA_Submarino	b2v_submarino4(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_157),
+	.rgb_r(SYNTHESIZED_WIRE_78),
+	.rgb_g(SYNTHESIZED_WIRE_90),
+	.rgb_b(SYNTHESIZED_WIRE_102));
+	defparam	b2v_submarino4.X1 = 10'b0000000001;
+	defparam	b2v_submarino4.X2 = 10'b0000000010;
+	defparam	b2v_submarino4.X3 = 10'b0000000011;
+	defparam	b2v_submarino4.X4 = 10'b0000000100;
+	defparam	b2v_submarino4.X5 = 10'b0000000101;
+	defparam	b2v_submarino4.X6 = 10'b0000000110;
+	defparam	b2v_submarino4.X7 = 10'b0000000111;
+	defparam	b2v_submarino4.X8 = 10'b0000001000;
+	defparam	b2v_submarino4.Y1 = 10'b0000000001;
+	defparam	b2v_submarino4.Y2 = 10'b0000000010;
+	defparam	b2v_submarino4.Y3 = 10'b0000000011;
+	defparam	b2v_submarino4.Y4 = 10'b0000000100;
+	defparam	b2v_submarino4.Y5 = 10'b0000000101;
+	defparam	b2v_submarino4.Y6 = 10'b0000000110;
+	defparam	b2v_submarino4.Y7 = 10'b0000000111;
+	defparam	b2v_submarino4.Y8 = 10'b0000001000;
+
+
+VGA_Submarino	b2v_submarino5(
+	.clk(SYNTHESIZED_WIRE_163),
+	.areaAtiva(SYNTHESIZED_WIRE_164),
+	.coluna(SYNTHESIZED_WIRE_165),
+	.linha(SYNTHESIZED_WIRE_166),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_162),
+	.rgb_r(SYNTHESIZED_WIRE_77),
+	.rgb_g(SYNTHESIZED_WIRE_89),
+	.rgb_b(SYNTHESIZED_WIRE_101));
+	defparam	b2v_submarino5.X1 = 10'b0000000001;
+	defparam	b2v_submarino5.X2 = 10'b0000000010;
+	defparam	b2v_submarino5.X3 = 10'b0000000011;
+	defparam	b2v_submarino5.X4 = 10'b0000000100;
+	defparam	b2v_submarino5.X5 = 10'b0000000101;
+	defparam	b2v_submarino5.X6 = 10'b0000000110;
+	defparam	b2v_submarino5.X7 = 10'b0000000111;
+	defparam	b2v_submarino5.X8 = 10'b0000001000;
+	defparam	b2v_submarino5.Y1 = 10'b0000000001;
+	defparam	b2v_submarino5.Y2 = 10'b0000000010;
+	defparam	b2v_submarino5.Y3 = 10'b0000000011;
+	defparam	b2v_submarino5.Y4 = 10'b0000000100;
+	defparam	b2v_submarino5.Y5 = 10'b0000000101;
+	defparam	b2v_submarino5.Y6 = 10'b0000000110;
+	defparam	b2v_submarino5.Y7 = 10'b0000000111;
+	defparam	b2v_submarino5.Y8 = 10'b0000001000;
 
 
 endmodule
