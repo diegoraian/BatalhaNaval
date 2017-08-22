@@ -45,6 +45,7 @@ module ControladoMemoria
 	
 	//Input do Validador faz leitura de toda memoria e escreve em uma posição.
 	input readyValidador,
+	input enableValidador,
 	input validador_wrep1,
 	input validador_wrep2,
 	input [63:0] validador_data,
@@ -82,6 +83,7 @@ parameter
 
 reg [3:0]E_A;
 reg [3:0]E_F = Idle;
+reg [5:0] countValida= 0;
 
 always@(posedge clk)
 begin
@@ -110,7 +112,7 @@ begin
 	
 			Idle:begin
 			
-				if(readyValidador)begin
+				if(enableValidador)begin
 				
 					if(!validadorJogador)begin
 						E_F <= ValidandorPlayerUm;
@@ -129,33 +131,31 @@ begin
 			end
 			
 			ValidandorPlayerUm: begin
-			
-				if(readyValidador)begin
-					if(!validadorJogador)
-						E_F <= ValidandorPlayerUm;
-				   else 
-						E_F <= ValidandorPlayerDois;
+				
+				if(readyValidador) begin
+					// Conto um tempo necessário para salvar na memoria
+					E_F <= ValidandorPlayerUm ;
 				end else begin
-					if(!jogadorVGA)
-						E_F<= TransmitindoVgaPlayerUm;
-				   else 
-						E_F <= TransmitindoVgaPlayerDois;
+					if(enableValidador == 1'b1 && countValida< 5'h1f )begin
+						E_F <= ValidandorPlayerUm;
+					end else begin
+						E_A<=Idle;
+					end
 				end
+				
 			
 			end
 			
 			ValidandorPlayerDois: begin
 			
 				if(readyValidador)begin
-					if(!validadorJogador)
-						E_F <= ValidandorPlayerUm;
-					else 
-						E_F <= ValidandorPlayerDois;
+					E_F <= ValidandorPlayerDois;
 				end else begin
-					if(!jogadorVGA)
-						E_F<= TransmitindoVgaPlayerUm;
-					else
-						E_F <= TransmitindoVgaPlayerDois;
+					if(enableValidador == 1'b1 && countValida< 5'h1f )begin
+						E_F <= ValidandorPlayerUm;
+					end else begin
+						E_A<=Idle;
+					end
 				end
 			
 			end
@@ -271,10 +271,11 @@ always@*
 begin
 	case (E_A)
 	
-//		Idle:begin
-//	
-//		
-//		end
+		Idle:begin
+			countValida=0;
+			
+			
+		end
 		
 		ValidandorPlayerUm: begin
 		
@@ -288,7 +289,7 @@ begin
 			end
 	
 			dataReadValidador = data_memoria_jogadorUm;
-		
+			countValida = countValida +1'b1;
 		
 		end
 		
@@ -304,6 +305,7 @@ begin
 			
 	
 			dataReadValidador = data_memoria_jogadorDois;
+			countValida = countValida +1'b1;
 		
 		end
 		
@@ -349,7 +351,6 @@ begin
 		end
 		
 		TransmitindoVgaPlayerUm: begin
-		
 			addr = vga_readAddr;
 		
 			dataReadVGA = data_memoria_jogadorUm;

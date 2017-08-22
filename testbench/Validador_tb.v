@@ -207,7 +207,7 @@ integer size = 0;
 	always
 	begin
 		//faz o papel do controlador de memoria
-		#10
+		#2
 		if(ready && enable ) enable = 0;
 			
 	end
