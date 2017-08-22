@@ -46,7 +46,7 @@ output reg [3:0] Y1    =  3'b000;
 output reg [2:0] tipo  =  3'b000;
 output reg direcao = 1'b0;
 output reg [2:0] orientacao =3'b000;
-output reg ready;
+output reg ready = 1'b0;
 output reg valida;
 output reg jogador = 1'b0;
 output reg estado1 = 1'b0;

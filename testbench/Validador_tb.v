@@ -70,7 +70,8 @@ integer size = 0;
 		//  ******************************************
 
 		//       Inserção Submarino(Jogador Um)
-		#20 enable =0;
+		#200
+		 enable =0;
 		for(qtNavio = 0;qtNavio < 5 ;qtNavio = qtNavio +1)
 		begin
 			tipo = 3'b0;
@@ -79,12 +80,12 @@ integer size = 0;
 
 			geraPosicaoRandomico;
 
-			jogador = 1'b1;
+			jogador = 1'b0;
 		
-			#200
+			#500
 			enable = 1 ;
 
-			#1200 
+			#2500 
 			enable = 0 ;
 
 
@@ -104,16 +105,16 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#200
+			#500
 			enable = 1 ;
 
-			#1200 
+			#2500 
 			enable = 0 ;
 		end
 
 
 		//       Inserção Hidroaviao(Jogador Um)
-		#50 enable =0;
+		#500 enable =0;
 		for(qtNavio = 0;qtNavio < 2 ;qtNavio = qtNavio +1)
 		begin
 			tipo = 3'b010;
@@ -124,10 +125,10 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#200
+			#500
 			enable = 1 ;
 
-			#1200 
+			#2500 
 			enable = 0 ;
 		end
 
