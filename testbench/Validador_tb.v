@@ -203,6 +203,19 @@ integer size = 0;
 
 	end
 	
+
+	always
+	begin
+		//faz o papel do controlador de memoria
+		#10
+		if(ready && enable ) enable = 0;
+			
+	end
+
+
+
+
+
 	task initMemoriaRam;
 	begin
 		for(size = 0;size < 12; size = size +1)

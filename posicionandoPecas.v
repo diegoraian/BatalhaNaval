@@ -141,7 +141,7 @@ begin
         E_F <= armazenaPeca; 
       end else begin
         E_F <= defineX;
-      end;
+      end
 			estado1 = 1'b0;
 			estado2 = 1'b0;
 			estado3 = 1'b0;
