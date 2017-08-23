@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Mon Aug 21 10:45:52 2017"
+// CREATED		"Wed Aug 23 08:50:38 2017"
 
 module TopLevel(
 	ENTER,
@@ -25,7 +25,9 @@ module TopLevel(
 	VGA_CLK,
 	VGA_R,
 	VGA_G,
-	VGA_B
+	VGA_B,
+	H_SYNC,
+	V_SYNC
 );
 
 
@@ -37,6 +39,8 @@ output wire	VGA_CLK;
 output wire	VGA_R;
 output wire	VGA_G;
 output wire	VGA_B;
+output wire	H_SYNC;
+output wire	V_SYNC;
 
 wire	SYNTHESIZED_WIRE_23;
 wire	SYNTHESIZED_WIRE_1;
@@ -74,8 +78,8 @@ assign	VGA_B = SYNTHESIZED_WIRE_1 | SYNTHESIZED_WIRE_2;
 VGASinc	b2v_inst2(
 	.reset(SYNTHESIZED_WIRE_24),
 	.clk(SYNTHESIZED_WIRE_23),
-	
-	
+	.h_sync(H_SYNC),
+	.v_sync(V_SYNC),
 	.regiaoAtiva(SYNTHESIZED_WIRE_25),
 	.coluna(SYNTHESIZED_WIRE_26),
 	.linha(SYNTHESIZED_WIRE_27));
