@@ -36,8 +36,8 @@ initial begin
 end
 
 /*Move embarcação*/
-always@(posedge reset or posedge select or posedge enter) begin 
-//always @ (posedge clk) begin
+//always@(posedge reset or posedge select or posedge enter) begin 
+always @ (posedge clk) begin
 	if(reset) begin							// Reseta as posicoes da embarcaçao
 		X = 7'b0000000;
 		Y = 11'b00000000000;
