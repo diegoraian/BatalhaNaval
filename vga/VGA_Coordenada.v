@@ -6,11 +6,13 @@ module VGA_Coordenada
 				  A embarcacao teste para esse modulo e o SUBMARINO.
 	
 	inputs
-	@reset - sinal de reset para o modulo
+	@param clk - clockdo sistema
+	@param reset - sinal de reset para o modulo
 	@param select - sinal que representa um botao para mover a embarcacao horizontalmente
 	@param enter - sinal que representa um botao para mover a embarcacao verticalmente
 	*/
 	
+	input clk,
 	input reset,
 	input select,
 	input enter,
@@ -28,18 +30,19 @@ reg [10:0] Y;						// Coordenada X da embarcação
 reg [63:0] posicoesEmbarcacaoLocal;	// Para uso localmente no modulo
 
 initial begin
-	posicoesEmbarcacaoLocal = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+	posicoesEmbarcacaoLocal = 64'd0;
 	X = 7'b0000000;
 	Y = 11'b00000000000;
 end
 
 /*Move embarcação*/
-always@(negedge reset or negedge select or negedge enter) begin
-	if(!reset) begin							// Reseta as posicoes da embarcaçao
+always@(posedge reset or posedge select or posedge enter) begin 
+//always @ (posedge clk) begin
+	if(reset) begin							// Reseta as posicoes da embarcaçao
 		X = 7'b0000000;
 		Y = 11'b00000000000;
-		posicoesEmbarcacaoLocal = 64'b0000000000000000000000000000000000000000000000000000000000000000;
-	end else if(!select) begin				// Move Horizontalmente
+		posicoesEmbarcacaoLocal = 64'd0;
+	end else if(select) begin				// Move Horizontalmente
 		if(X == 7'b1111000) begin
 			X = 7'b0001000;					// X = Posicao 1 Horizontal
 		end else begin
