@@ -128,7 +128,7 @@ assign V_localH = (linha == (E+F+G+H)-1) ?  1'b1 : 1'b0 ;
 
 always @(posedge clk)
 begin
-	if(!reset)begin
+	if(reset)begin
 		linha <= 0;
 		coluna <= 0;
 		h_sync_prev <=0;
