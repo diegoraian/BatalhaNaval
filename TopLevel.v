@@ -15,19 +15,19 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Wed Aug 23 08:50:38 2017"
+// CREATED		"Wed Aug 23 11:34:19 2017"
 
 module TopLevel(
 	ENTER,
 	SELECT,
 	RESET,
 	CLK,
-	VGA_CLK,
 	VGA_R,
 	VGA_G,
 	VGA_B,
 	H_SYNC,
-	V_SYNC
+	V_SYNC,
+	VGA_CLK
 );
 
 
@@ -35,23 +35,23 @@ input wire	ENTER;
 input wire	SELECT;
 input wire	RESET;
 input wire	CLK;
-output wire	VGA_CLK;
 output wire	VGA_R;
 output wire	VGA_G;
 output wire	VGA_B;
 output wire	H_SYNC;
 output wire	V_SYNC;
+output wire	VGA_CLK;
 
 wire	SYNTHESIZED_WIRE_23;
 wire	SYNTHESIZED_WIRE_1;
 wire	SYNTHESIZED_WIRE_2;
 wire	SYNTHESIZED_WIRE_24;
-wire	SYNTHESIZED_WIRE_5;
 wire	SYNTHESIZED_WIRE_6;
+wire	SYNTHESIZED_WIRE_7;
 wire	SYNTHESIZED_WIRE_25;
 wire	[9:0] SYNTHESIZED_WIRE_26;
 wire	[9:0] SYNTHESIZED_WIRE_27;
-wire	[63:0] SYNTHESIZED_WIRE_15;
+wire	[63:0] SYNTHESIZED_WIRE_16;
 wire	SYNTHESIZED_WIRE_19;
 wire	SYNTHESIZED_WIRE_20;
 wire	SYNTHESIZED_WIRE_21;
@@ -62,10 +62,10 @@ assign	VGA_CLK = SYNTHESIZED_WIRE_23;
 
 
 
-Debouncer	b2v_inst(
+PushButton_Debouncer	b2v_inst(
 	.clk(SYNTHESIZED_WIRE_23),
-	.psh_btn(ENTER),
-	.psh_stable(SYNTHESIZED_WIRE_20));
+	.push_btn(ENTER),
+	.push_btn_stable(SYNTHESIZED_WIRE_20));
 
 
 PLL_clk	b2v_inst1(
@@ -73,6 +73,12 @@ PLL_clk	b2v_inst1(
 	.c0(SYNTHESIZED_WIRE_23));
 
 assign	VGA_B = SYNTHESIZED_WIRE_1 | SYNTHESIZED_WIRE_2;
+
+
+PushButton_Debouncer	b2v_inst11(
+	.clk(SYNTHESIZED_WIRE_23),
+	.push_btn(RESET),
+	.push_btn_stable(SYNTHESIZED_WIRE_24));
 
 
 VGASinc	b2v_inst2(
@@ -88,7 +94,7 @@ VGASinc	b2v_inst2(
 	defparam	b2v_inst2.TOTALCOLUNAS = 800;
 	defparam	b2v_inst2.TOTALLINHAS = 524;
 
-assign	VGA_R = SYNTHESIZED_WIRE_5 | SYNTHESIZED_WIRE_6;
+assign	VGA_R = SYNTHESIZED_WIRE_6 | SYNTHESIZED_WIRE_7;
 
 
 VGA_Mapa	b2v_inst4(
@@ -96,7 +102,7 @@ VGA_Mapa	b2v_inst4(
 	.areaAtiva(SYNTHESIZED_WIRE_25),
 	.coluna(SYNTHESIZED_WIRE_26),
 	.linha(SYNTHESIZED_WIRE_27),
-	.rgb_r(SYNTHESIZED_WIRE_6),
+	.rgb_r(SYNTHESIZED_WIRE_7),
 	.rgb_g(SYNTHESIZED_WIRE_22),
 	.rgb_b(SYNTHESIZED_WIRE_2));
 
@@ -106,8 +112,8 @@ VGA_Submarino	b2v_inst5(
 	.areaAtiva(SYNTHESIZED_WIRE_25),
 	.coluna(SYNTHESIZED_WIRE_26),
 	.linha(SYNTHESIZED_WIRE_27),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_15),
-	.rgb_r(SYNTHESIZED_WIRE_5),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_16),
+	.rgb_r(SYNTHESIZED_WIRE_6),
 	.rgb_g(SYNTHESIZED_WIRE_21),
 	.rgb_b(SYNTHESIZED_WIRE_1));
 	defparam	b2v_inst5.X1 = 10'b0000000001;
@@ -128,23 +134,18 @@ VGA_Submarino	b2v_inst5(
 	defparam	b2v_inst5.Y8 = 10'b0000001000;
 
 
-Debouncer	b2v_inst6(
+PushButton_Debouncer	b2v_inst6(
 	.clk(SYNTHESIZED_WIRE_23),
-	.psh_btn(SELECT),
-	.psh_stable(SYNTHESIZED_WIRE_19));
-
-
-Debouncer	b2v_inst7(
-	.clk(SYNTHESIZED_WIRE_23),
-	.psh_btn(RESET),
-	.psh_stable(SYNTHESIZED_WIRE_24));
+	.push_btn(SELECT),
+	.push_btn_stable(SYNTHESIZED_WIRE_19));
 
 
 VGA_Coordenada	b2v_inst8(
-	.reset(SYNTHESIZED_WIRE_24),
-	.select(SYNTHESIZED_WIRE_19),
-	.enter(SYNTHESIZED_WIRE_20),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_15));
+	.clk(SYNTHESIZED_WIRE_24),
+	.reset(SYNTHESIZED_WIRE_19),
+	.select(SYNTHESIZED_WIRE_20),
+	
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_16));
 
 assign	VGA_G = SYNTHESIZED_WIRE_21 | SYNTHESIZED_WIRE_22;
 
