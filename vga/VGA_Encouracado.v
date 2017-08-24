@@ -303,170 +303,170 @@ always @ (posedge clk) begin
 	endcase	
 /*Terceira Coordenada X da Embarcaçao*/	
 	case(XC)
-			Y1:
+			X1:
 			begin
-				borderDownA = 10'd16;
+				borderLeftC = 10'd16;
 			end
 
-			Y2:
+			X2:
 			begin
-				borderDownA = 10'd73;
+				borderLeftC = 10'd73;
 			end
 			
-			Y3:
+			X3:
 			begin
-				borderDownA = 10'd130;
+				borderLeftC = 10'd130;
 			end
 			
-			Y4:
+			X4:
 			begin
-				borderDownA = 10'd187;
+				borderLeftC = 10'd187;
 			end
 			
-			Y5:
+			X5:
 			begin
-				borderDownA = 10'd244;
+				borderLeftC = 10'd244;
 			end
 			
-			Y6:
+			X6:
 			begin
-				borderDownA = 10'd301;
+				borderLeftC = 10'd301;
 			end
 			
-			Y7:
+			X7:
 			begin
-				borderDownA = 10'd358;
+				borderLeftC = 10'd358;
 			end
 			
-			Y8:
+			X8:
 			begin
-				borderDownA = 10'd415;
+				borderLeftC = 10'd415;
 			end
 		endcase
 /*Terceira Coordenada Y da Embarcaçao*/	
 	case(YC)
 			Y1:
 			begin
-				borderDownA = 10'd16;
+				borderDownC = 10'd16;
 			end
 
 			Y2:
 			begin
-				borderDownA = 10'd73;
+				borderDownC = 10'd73;
 			end
 			
 			Y3:
 			begin
-				borderDownA = 10'd130;
+				borderDownC = 10'd130;
 			end
 			
 			Y4:
 			begin
-				borderDownA = 10'd187;
+				borderDownC = 10'd187;
 			end
 			
 			Y5:
 			begin
-				borderDownA = 10'd244;
+				borderDownC = 10'd244;
 			end
 			
 			Y6:
 			begin
-				borderDownA = 10'd301;
+				borderDownC = 10'd301;
 			end
 			
 			Y7:
 			begin
-				borderDownA = 10'd358;
+				borderDownC = 10'd358;
 			end
 			
 			Y8:
 			begin
-				borderDownA = 10'd415;
+				borderDownC = 10'd415;
 			end
 		endcase
 /*Quarta Coordenada X da Embarcaçao*/	
 	case(XD)
-			Y1:
+			X1:
 			begin
-				borderDownA = 10'd16;
+				borderLeftD = 10'd16;
 			end
 
-			Y2:
+			X2:
 			begin
-				borderDownA = 10'd73;
+				borderLeftD = 10'd73;
 			end
 			
-			Y3:
+			X3:
 			begin
-				borderDownA = 10'd130;
+				borderLeftD = 10'd130;
 			end
 			
-			Y4:
+			X4:
 			begin
-				borderDownA = 10'd187;
+				borderLeftD = 10'd187;
 			end
 			
-			Y5:
+			X5:
 			begin
-				borderDownA = 10'd244;
+				borderLeftD = 10'd244;
 			end
 			
-			Y6:
+			X6:
 			begin
-				borderDownA = 10'd301;
+				borderLeftD = 10'd301;
 			end
 			
-			Y7:
+			X7:
 			begin
-				borderDownA = 10'd358;
+				borderLeftD = 10'd358;
 			end
 			
-			Y8:
+			X8:
 			begin
-				borderDownA = 10'd415;
+				borderLeftD = 10'd415;
 			end
 		endcase
 /*Quarta Coordenada Y da Embarcaçao*/	
 	case(YD)
 			Y1:
 			begin
-				borderDownA = 10'd16;
+				borderDownD = 10'd16;
 			end
 
 			Y2:
 			begin
-				borderDownA = 10'd73;
+				borderDownD = 10'd73;
 			end
 			
 			Y3:
 			begin
-				borderDownA = 10'd130;
+				borderDownD = 10'd130;
 			end
 			
 			Y4:
 			begin
-				borderDownA = 10'd187;
+				borderDownD = 10'd187;
 			end
 			
 			Y5:
 			begin
-				borderDownA = 10'd244;
+				borderDownD = 10'd244;
 			end
 			
 			Y6:
 			begin
-				borderDownA = 10'd301;
+				borderDownD = 10'd301;
 			end
 			
 			Y7:
 			begin
-				borderDownA = 10'd358;
+				borderDownD = 10'd358;
 			end
 			
 			Y8:
 			begin
-				borderDownA = 10'd415;
+				borderDownD = 10'd415;
 			end
 		endcase
 

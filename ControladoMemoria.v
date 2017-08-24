@@ -71,7 +71,7 @@ module ControladoMemoria
 );
 
 parameter
-			  Idle								  =  4'b0000,
+			  Idle							=  4'b0000,
 			  ValidandorPlayerUm            =  4'b0001,
 			  ValidandorPlayerDois          =  4'b0010,
 			  ColidindoPlayerUm             =  4'b0011,
@@ -139,7 +139,7 @@ begin
 					if(enableValidador == 1'b1 && countValida< 5'h1f )begin
 						E_F <= ValidandorPlayerUm;
 					end else begin
-						E_A<=Idle;
+						E_F<=TransmitindoVgaPlayerUm;
 					end
 				end
 				
@@ -154,7 +154,7 @@ begin
 					if(enableValidador == 1'b1 && countValida< 5'h1f )begin
 						E_F <= ValidandorPlayerUm;
 					end else begin
-						E_A<=Idle;
+						E_F<=TransmitindoVgaPlayerDois;
 					end
 				end
 			

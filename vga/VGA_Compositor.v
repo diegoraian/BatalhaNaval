@@ -178,9 +178,9 @@ begin
 			else jogadorVGA = jogadorExecutandoJogo;
 			
 			exibeMapa = 1'b1;
-			addr = addr + 1;
+			addr = addr + 1'b1;
 		
-			if(addr == 12) addr = 0;
+			if(addr == 4'd12) addr = 1'b0;
 			
 		end
 		
