@@ -62,22 +62,22 @@ reg [9:0] altura = 10'd49;					// Altura de uma celula da embarcacao
 
 /*Parametros para os valores das POSICOES em X e em Y*/
 parameter	X1 = 10'd1,
-			X2 = 10'd2,
-			X3 = 10'd3,
-			X4 = 10'd4,
-			X5 = 10'd5,
-			X6 = 10'd6,
-			X7 = 10'd7,
-			X8 = 10'd8,
+				X2 = 10'd2,
+				X3 = 10'd3,
+				X4 = 10'd4,
+				X5 = 10'd5,
+				X6 = 10'd6,
+				X7 = 10'd7,
+				X8 = 10'd8,
 
-			Y1 = 10'd1,
-			Y2 = 10'd2,
-			Y3 = 10'd3,
-			Y4 = 10'd4,
-			Y5 = 10'd5,
-			Y6 = 10'd6,
-			Y7 = 10'd7,
-			Y8 = 10'd8;
+				Y1 = 10'd1,
+				Y2 = 10'd2,
+				Y3 = 10'd3,
+				Y4 = 10'd4,
+				Y5 = 10'd5,
+				Y6 = 10'd6,
+				Y7 = 10'd7,
+				Y8 = 10'd8;
 
 /* MAPEAMENTO JOGO->VGA */
 /*
@@ -303,46 +303,46 @@ always @ (posedge clk) begin
 	endcase	
 /*Terceira Coordenada X da Embarcaçao*/	
 	case(XC)
-			X1:
-			begin
-				borderLeftC = 10'd16;
-			end
+		X1:
+		begin
+			borderLeftC = 10'd16;
+		end
 
-			X2:
-			begin
-				borderLeftC = 10'd73;
-			end
-			
-			X3:
-			begin
-				borderLeftC = 10'd130;
-			end
-			
-			X4:
-			begin
-				borderLeftC = 10'd187;
-			end
-			
-			X5:
-			begin
-				borderLeftC = 10'd244;
-			end
-			
-			X6:
-			begin
-				borderLeftC = 10'd301;
-			end
-			
-			X7:
-			begin
-				borderLeftC = 10'd358;
-			end
-			
-			X8:
-			begin
-				borderLeftC = 10'd415;
-			end
-		endcase
+		X2:
+		begin
+			borderLeftC = 10'd78;
+		end
+		
+		X3:
+		begin
+			borderLeftC = 10'd140;
+		end
+		
+		X4:
+		begin
+			borderLeftC = 10'd202;
+		end
+		
+		X5:
+		begin
+			borderLeftC = 10'd264;
+		end
+		
+		X6:
+		begin
+			borderLeftC = 10'd326;
+		end
+		
+		X7:
+		begin
+			borderLeftC = 10'd388;	
+		end
+		
+		X8:
+		begin
+			borderLeftC = 10'd450;
+		end
+	endcase
 /*Terceira Coordenada Y da Embarcaçao*/	
 	case(YC)
 			Y1:
@@ -387,46 +387,46 @@ always @ (posedge clk) begin
 		endcase
 /*Quarta Coordenada X da Embarcaçao*/	
 	case(XD)
-			X1:
-			begin
-				borderLeftD = 10'd16;
-			end
+		X1:
+		begin
+			borderLeftD = 10'd16;
+		end
 
-			X2:
-			begin
-				borderLeftD = 10'd73;
-			end
-			
-			X3:
-			begin
-				borderLeftD = 10'd130;
-			end
-			
-			X4:
-			begin
-				borderLeftD = 10'd187;
-			end
-			
-			X5:
-			begin
-				borderLeftD = 10'd244;
-			end
-			
-			X6:
-			begin
-				borderLeftD = 10'd301;
-			end
-			
-			X7:
-			begin
-				borderLeftD = 10'd358;
-			end
-			
-			X8:
-			begin
-				borderLeftD = 10'd415;
-			end
-		endcase
+		X2:
+		begin
+			borderLeftD = 10'd78;
+		end
+		
+		X3:
+		begin
+			borderLeftD = 10'd140;
+		end
+		
+		X4:
+		begin
+			borderLeftD = 10'd202;
+		end
+		
+		X5:
+		begin
+			borderLeftD = 10'd264;
+		end
+		
+		X6:
+		begin
+			borderLeftD = 10'd326;
+		end
+		
+		X7:
+		begin
+			borderLeftD = 10'd388;	
+		end
+		
+		X8:
+		begin
+			borderLeftD = 10'd450;
+		end
+	endcase
 /*Quarta Coordenada Y da Embarcaçao*/	
 	case(YD)
 			Y1:
@@ -486,17 +486,17 @@ end
 
 */
 assign rgb_b =
-					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
-					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
-					((linha > borderDownC && linha < (borderDownC + largura))&& (coluna > borderLeftC && coluna < (borderLeftC + altura)))? 1'b1:
-					((linha > borderDownD && linha < (borderDownD + largura))&& (coluna > borderLeftD && coluna < (borderLeftD + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + altura))&& (coluna > borderLeftA && coluna < (borderLeftA + largura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + altura))&& (coluna > borderLeftB && coluna < (borderLeftB + largura)))? 1'b1:
+					((linha > borderDownC && linha < (borderDownC + altura))&& (coluna > borderLeftC && coluna < (borderLeftC + largura)))? 1'b1:
+					((linha > borderDownD && linha < (borderDownD + altura))&& (coluna > borderLeftD && coluna < (borderLeftD + largura)))? 1'b1:
 					1'b0;
 					
 assign rgb_r =
-					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
-					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
-					((linha > borderDownC && linha < (borderDownC + largura))&& (coluna > borderLeftC && coluna < (borderLeftC + altura)))? 1'b1:
-					((linha > borderDownD && linha < (borderDownD + largura))&& (coluna > borderLeftD && coluna < (borderLeftD + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + altura))&& (coluna > borderLeftA && coluna < (borderLeftA + largura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + altura))&& (coluna > borderLeftB && coluna < (borderLeftB + largura)))? 1'b1:
+					((linha > borderDownC && linha < (borderDownC + altura))&& (coluna > borderLeftC && coluna < (borderLeftC + largura)))? 1'b1:
+					((linha > borderDownD && linha < (borderDownD + altura))&& (coluna > borderLeftD && coluna < (borderLeftD + largura)))? 1'b1:
 					1'b0;
 					
 assign rgb_g = 1'b0;

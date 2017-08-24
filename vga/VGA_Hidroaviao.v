@@ -297,46 +297,46 @@ always @ (posedge clk) begin
 	endcase	
 /*Terceira Coordenada X da Embarcaçao*/	
 	case(XC)
-			X1:
-			begin
-				borderLeftC = 10'd16;
-			end
+		X1:
+		begin
+			borderLeftC = 10'd16;
+		end
 
-			X2:
-			begin
-				borderLeftC = 10'd73;
-			end
-			
-			X3:
-			begin
-				borderLeftC = 10'd130;
-			end
-			
-			X4:
-			begin
-				borderLeftC = 10'd187;
-			end
-			
-			X5:
-			begin
-				borderLeftC = 10'd244;
-			end
-			
-			X6:
-			begin
-				borderLeftC = 10'd301;
-			end
-			
-			X7:
-			begin
-				borderLeftC = 10'd358;
-			end
-			
-			X8:
-			begin
-				borderLeftC = 10'd415;
-			end
-		endcase
+		X2:
+		begin
+			borderLeftC = 10'd78;
+		end
+		
+		X3:
+		begin
+			borderLeftC = 10'd140;
+		end
+		
+		X4:
+		begin
+			borderLeftC = 10'd202;
+		end
+		
+		X5:
+		begin
+			borderLeftC = 10'd264;
+		end
+		
+		X6:
+		begin
+			borderLeftC = 10'd326;
+		end
+		
+		X7:
+		begin
+			borderLeftC = 10'd388;	
+		end
+		
+		X8:
+		begin
+			borderLeftC = 10'd450;
+		end
+	endcase
 /*Terceira Coordenada Y da Embarcaçao*/	
 	case(YC)
 			Y1:
@@ -399,15 +399,15 @@ end
 assign rgb_b = 1'b0;
 					
 assign rgb_r = 
-					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
-					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
-					((linha > borderDownC && linha < (borderDownC + largura))&& (coluna > borderLeftC && coluna < (borderLeftC + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + altura))&& (coluna > borderLeftA && coluna < (borderLeftA + largura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + altura))&& (coluna > borderLeftB && coluna < (borderLeftB + largura)))? 1'b1:
+					((linha > borderDownC && linha < (borderDownC + altura))&& (coluna > borderLeftC && coluna < (borderLeftC + largura)))? 1'b1:
 					1'b0;
 
 assign rgb_g =
-					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
-					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
-					((linha > borderDownC && linha < (borderDownC + largura))&& (coluna > borderLeftC && coluna < (borderLeftC + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + altura))&& (coluna > borderLeftA && coluna < (borderLeftA + largura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + altura))&& (coluna > borderLeftB && coluna < (borderLeftB + largura)))? 1'b1:
+					((linha > borderDownC && linha < (borderDownC + altura))&& (coluna > borderLeftC && coluna < (borderLeftC + largura)))? 1'b1:
 					1'b0;
 
 endmodule

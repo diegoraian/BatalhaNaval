@@ -313,8 +313,8 @@ end
 assign rgb_b = 1'b0;
 					
 assign rgb_r =
-					((linha > borderDownA && linha < (borderDownA + largura))&& (coluna > borderLeftA && coluna < (borderLeftA + altura)))? 1'b1:
-					((linha > borderDownB && linha < (borderDownB + largura))&& (coluna > borderLeftB && coluna < (borderLeftB + altura)))? 1'b1:
+					((linha > borderDownA && linha < (borderDownA + altura))&& (coluna > borderLeftA && coluna < (borderLeftA + largura)))? 1'b1:
+					((linha > borderDownB && linha < (borderDownB + altura))&& (coluna > borderLeftB && coluna < (borderLeftB + largura)))? 1'b1:
 					1'b0
 					;
 
