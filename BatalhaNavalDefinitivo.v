@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Mon Aug 21 01:50:06 2017"
+// CREATED		"Thu Aug 24 00:48:15 2017"
 
 module BatalhaNavalDefinitivo(
 	clk,
@@ -399,6 +399,12 @@ posicionandoPecas	b2v_inst2(
 	.valida(SYNTHESIZED_WIRE_126),
 	.jogador(SYNTHESIZED_WIRE_176),
 	.direcao(SYNTHESIZED_WIRE_111),
+	
+	
+	
+	
+	
+	
 	.orientacao(SYNTHESIZED_WIRE_112),
 	.tipo(SYNTHESIZED_WIRE_113),
 	.X1(SYNTHESIZED_WIRE_115),
@@ -422,6 +428,7 @@ ControladoMemoria	b2v_inst3(
 	.readyPontuacao(SYNTHESIZED_WIRE_174),
 	.jogadorPontuacao(SYNTHESIZED_WIRE_59),
 	.readyValidador(SYNTHESIZED_WIRE_173),
+	
 	.validador_wrep1(SYNTHESIZED_WIRE_61),
 	.validador_wrep2(SYNTHESIZED_WIRE_62),
 	.validadorJogador(SYNTHESIZED_WIRE_63),

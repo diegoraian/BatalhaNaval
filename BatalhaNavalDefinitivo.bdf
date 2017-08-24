@@ -72,7 +72,7 @@ agreement for further details.
 	(input)
 	(rect -712 -208 -544 -192)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "enter" (rect 5 0 30 10)(font "Arial" ))
+	(text "enter" (rect 5 0 32 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -171,7 +171,7 @@ agreement for further details.
 	(output)
 	(rect 416 2200 592 2216)
 	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
-	(text "rgb_r" (rect 90 0 115 10)(font "Arial" ))
+	(text "rgb_r" (rect 90 0 117 10)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -254,8 +254,8 @@ agreement for further details.
 	(port
 		(pt 48 16)
 		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 35 13 49 24)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 35 13 50 24)(font "Courier New" (bold))(invisible))
 		(line (pt 48 16)(pt 35 16))
 	)
 	(port
@@ -280,8 +280,8 @@ agreement for further details.
 	(port
 		(pt 32 0)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 29 2 40 24)(font "Courier New" (bold))(vertical)(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 29 2 40 23)(font "Courier New" (bold))(vertical)(invisible))
 		(line (pt 32 0)(pt 32 14))
 	)
 	(port
@@ -309,12 +309,12 @@ agreement for further details.
 (symbol
 	(rect 688 -328 736 -296)
 	(text "NOT" (rect 27 22 48 31)(font "Arial" (font_size 6)))
-	(text "inst11" (rect 16 -1 45 9)(font "Arial" ))
+	(text "inst11" (rect 16 -1 44 9)(font "Arial" ))
 	(port
 		(pt 48 16)
 		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 35 13 49 24)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 35 13 50 24)(font "Courier New" (bold))(invisible))
 		(line (pt 48 16)(pt 35 16))
 	)
 	(port
@@ -339,8 +339,8 @@ agreement for further details.
 	(port
 		(pt 32 0)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 29 2 40 24)(font "Courier New" (bold))(vertical)(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 29 2 40 23)(font "Courier New" (bold))(vertical)(invisible))
 		(line (pt 32 0)(pt 32 14))
 	)
 	(port
@@ -372,8 +372,8 @@ agreement for further details.
 	(port
 		(pt 48 16)
 		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 35 13 49 24)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 35 13 50 24)(font "Courier New" (bold))(invisible))
 		(line (pt 48 16)(pt 35 16))
 	)
 	(port
@@ -398,8 +398,8 @@ agreement for further details.
 	(port
 		(pt 32 0)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 29 2 40 24)(font "Courier New" (bold))(vertical)(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 29 2 40 23)(font "Courier New" (bold))(vertical)(invisible))
 		(line (pt 32 0)(pt 32 14))
 	)
 	(port
@@ -431,8 +431,8 @@ agreement for further details.
 	(port
 		(pt 32 0)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 29 2 40 24)(font "Courier New" (bold))(vertical)(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 29 2 40 23)(font "Courier New" (bold))(vertical)(invisible))
 		(line (pt 32 0)(pt 32 14))
 	)
 	(port
@@ -464,8 +464,8 @@ agreement for further details.
 	(port
 		(pt 48 16)
 		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 35 13 49 24)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 35 13 50 24)(font "Courier New" (bold))(invisible))
 		(line (pt 48 16)(pt 35 16))
 	)
 	(port
@@ -490,8 +490,8 @@ agreement for further details.
 	(port
 		(pt 64 32)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 41 29 63 40)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 41 29 62 40)(font "Courier New" (bold))(invisible))
 		(line (pt 64 32)(pt 50 32))
 	)
 	(port
@@ -517,14 +517,14 @@ agreement for further details.
 	(rotate180)
 )
 (symbol
-	(rect 216 216 264 248)
+	(rect 224 216 272 248)
 	(text "NOT" (rect 0 1 21 10)(font "Arial" (font_size 6)))
 	(text "inst17" (rect -5 21 26 33)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect -2 8 12 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect -2 8 13 19)(font "Courier New" (bold))(invisible))
 		(line (pt 0 16)(pt 13 16))
 	)
 	(port
@@ -562,8 +562,8 @@ agreement for further details.
 	(port
 		(pt 0 16)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
 		(line (pt 0 16)(pt 13 16))
 	)
 	(port
@@ -583,8 +583,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "IN4" (rect 2 55 24 66)(font "Courier New" (bold))(invisible))
-		(text "IN4" (rect 2 55 24 66)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 23 66)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 23 66)(font "Courier New" (bold))(invisible))
 		(line (pt 0 64)(pt 13 64))
 	)
 	(port
@@ -611,8 +611,8 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "IN11" (rect 2 167 30 178)(font "Courier New" (bold))(invisible))
-		(text "IN11" (rect 2 167 30 178)(font "Courier New" (bold))(invisible))
+		(text "IN11" (rect 2 167 29 178)(font "Courier New" (bold))(invisible))
+		(text "IN11" (rect 2 167 29 178)(font "Courier New" (bold))(invisible))
 		(line (pt 0 176)(pt 13 176))
 	)
 	(port
@@ -667,8 +667,8 @@ agreement for further details.
 	(port
 		(pt 0 16)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
 		(line (pt 0 16)(pt 13 16))
 	)
 	(port
@@ -688,8 +688,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "IN4" (rect 2 55 24 66)(font "Courier New" (bold))(invisible))
-		(text "IN4" (rect 2 55 24 66)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 23 66)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 23 66)(font "Courier New" (bold))(invisible))
 		(line (pt 0 64)(pt 13 64))
 	)
 	(port
@@ -716,8 +716,8 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "IN11" (rect 2 167 30 178)(font "Courier New" (bold))(invisible))
-		(text "IN11" (rect 2 167 30 178)(font "Courier New" (bold))(invisible))
+		(text "IN11" (rect 2 167 29 178)(font "Courier New" (bold))(invisible))
+		(text "IN11" (rect 2 167 29 178)(font "Courier New" (bold))(invisible))
 		(line (pt 0 176)(pt 13 176))
 	)
 	(port
@@ -772,8 +772,8 @@ agreement for further details.
 	(port
 		(pt 0 16)
 		(input)
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
-		(text "IN1" (rect 2 7 24 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
 		(line (pt 0 16)(pt 13 16))
 	)
 	(port
@@ -793,8 +793,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "IN4" (rect 2 55 24 66)(font "Courier New" (bold))(invisible))
-		(text "IN4" (rect 2 55 24 66)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 23 66)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 23 66)(font "Courier New" (bold))(invisible))
 		(line (pt 0 64)(pt 13 64))
 	)
 	(port
@@ -821,8 +821,8 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "IN11" (rect 2 167 30 178)(font "Courier New" (bold))(invisible))
-		(text "IN11" (rect 2 167 30 178)(font "Courier New" (bold))(invisible))
+		(text "IN11" (rect 2 167 29 178)(font "Courier New" (bold))(invisible))
+		(text "IN11" (rect 2 167 29 178)(font "Courier New" (bold))(invisible))
 		(line (pt 0 176)(pt 13 176))
 	)
 	(port
@@ -855,1090 +855,6 @@ agreement for further details.
 		(arc (pt 49 104)(pt 25 93)(rect -6 93 57 156))
 		(arc (pt 25 115)(pt 49 104)(rect -6 53 57 116))
 	)
-)
-(symbol
-	(rect 1040 -184 1264 -8)
-	(text "Colisor" (rect 5 0 39 10)(font "Arial" ))
-	(text "inst" (rect 8 160 25 170)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "enable" (rect 0 0 33 10)(font "Arial" ))
-		(text "enable" (rect 21 27 54 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "x[3..0]" (rect 0 0 29 10)(font "Arial" ))
-		(text "x[3..0]" (rect 21 43 50 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "y[3..0]" (rect 0 0 29 10)(font "Arial" ))
-		(text "y[3..0]" (rect 21 59 50 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "jogadorAtirador" (rect 0 0 74 10)(font "Arial" ))
-		(text "jogadorAtirador" (rect 21 75 95 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 91 35 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "memoriaP1[63..0]" (rect 0 0 83 10)(font "Arial" ))
-		(text "memoriaP1[63..0]" (rect 21 107 104 117)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "memoriaP2[63..0]" (rect 0 0 83 10)(font "Arial" ))
-		(text "memoriaP2[63..0]" (rect 21 123 104 133)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 224 32)
-		(output)
-		(text "ready" (rect 0 0 28 10)(font "Arial" ))
-		(text "ready" (rect 180 27 208 37)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32))
-	)
-	(port
-		(pt 224 48)
-		(output)
-		(text "hit" (rect 0 0 12 10)(font "Arial" ))
-		(text "hit" (rect 193 43 205 53)(font "Arial" ))
-		(line (pt 224 48)(pt 208 48))
-	)
-	(port
-		(pt 224 64)
-		(output)
-		(text "wrep1" (rect 0 0 30 10)(font "Arial" ))
-		(text "wrep1" (rect 179 59 209 69)(font "Arial" ))
-		(line (pt 224 64)(pt 208 64))
-	)
-	(port
-		(pt 224 80)
-		(output)
-		(text "wrep2" (rect 0 0 30 10)(font "Arial" ))
-		(text "wrep2" (rect 178 75 208 85)(font "Arial" ))
-		(line (pt 224 80)(pt 208 80))
-	)
-	(port
-		(pt 224 96)
-		(output)
-		(text "jogadorAlvo" (rect 0 0 57 10)(font "Arial" ))
-		(text "jogadorAlvo" (rect 155 91 212 101)(font "Arial" ))
-		(line (pt 224 96)(pt 208 96))
-	)
-	(port
-		(pt 224 112)
-		(output)
-		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
-		(text "addr[4..0]" (rect 166 107 210 117)(font "Arial" ))
-		(line (pt 224 112)(pt 208 112)(line_width 3))
-	)
-	(port
-		(pt 224 128)
-		(output)
-		(text "clear[63..0]" (rect 0 0 53 10)(font "Arial" ))
-		(text "clear[63..0]" (rect 159 123 212 133)(font "Arial" ))
-		(line (pt 224 128)(pt 208 128)(line_width 3))
-	)
-	(port
-		(pt 224 144)
-		(output)
-		(text "tiro[7..0]" (rect 0 0 38 10)(font "Arial" ))
-		(text "tiro[7..0]" (rect 171 139 209 149)(font "Arial" ))
-		(line (pt 224 144)(pt 208 144)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 208 160))
-	)
-)
-(symbol
-	(rect 584 -184 824 24)
-	(text "ExecutandoJogo" (rect 5 0 85 10)(font "Arial" ))
-	(text "inst1" (rect 8 192 31 202)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "enable" (rect 0 0 33 10)(font "Arial" ))
-		(text "enable" (rect 21 27 54 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "reset" (rect 0 0 24 10)(font "Arial" ))
-		(text "reset" (rect 21 43 45 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "enter" (rect 0 0 25 10)(font "Arial" ))
-		(text "enter" (rect 21 59 46 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "select" (rect 0 0 29 10)(font "Arial" ))
-		(text "select" (rect 21 75 50 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 91 35 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "mode" (rect 0 0 28 10)(font "Arial" ))
-		(text "mode" (rect 21 107 49 117)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "posicao_rnd[3..0]" (rect 0 0 81 10)(font "Arial" ))
-		(text "posicao_rnd[3..0]" (rect 21 123 102 133)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "acertou_tiro" (rect 0 0 57 10)(font "Arial" ))
-		(text "acertou_tiro" (rect 21 139 78 149)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "qtd_P1[3..0]" (rect 0 0 57 10)(font "Arial" ))
-		(text "qtd_P1[3..0]" (rect 21 155 78 165)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "qtd_P2[3..0]" (rect 0 0 57 10)(font "Arial" ))
-		(text "qtd_P2[3..0]" (rect 21 171 78 181)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176)(line_width 3))
-	)
-	(port
-		(pt 240 32)
-		(output)
-		(text "ready" (rect 0 0 28 10)(font "Arial" ))
-		(text "ready" (rect 196 27 224 37)(font "Arial" ))
-		(line (pt 240 32)(pt 224 32))
-	)
-	(port
-		(pt 240 48)
-		(output)
-		(text "coord_tiroX[3..0]" (rect 0 0 77 10)(font "Arial" ))
-		(text "coord_tiroX[3..0]" (rect 154 43 231 53)(font "Arial" ))
-		(line (pt 240 48)(pt 224 48)(line_width 3))
-	)
-	(port
-		(pt 240 64)
-		(output)
-		(text "coord_tiroY[3..0]" (rect 0 0 77 10)(font "Arial" ))
-		(text "coord_tiroY[3..0]" (rect 154 59 231 69)(font "Arial" ))
-		(line (pt 240 64)(pt 224 64)(line_width 3))
-	)
-	(port
-		(pt 240 80)
-		(output)
-		(text "jogador" (rect 0 0 36 10)(font "Arial" ))
-		(text "jogador" (rect 188 75 224 85)(font "Arial" ))
-		(line (pt 240 80)(pt 224 80))
-	)
-	(parameter
-		"p1_atacandox"
-		"0000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"p1_atacandoy"
-		"0001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"verificando_acertop1"
-		"0010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"verificando_acertop2"
-		"0011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"p2_atacandox"
-		"0100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"p2_atacandoy"
-		"0101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"verificando_vidap1"
-		"0110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"verificando_vidap2"
-		"0111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"p1_vencedor"
-		"1000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"p2_vencedor"
-		"1001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"end_game"
-		"1010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 224 192))
-	)
-	(annotation_block (parameter)(rect 592 -224 624 -192))
-)
-(symbol
-	(rect 552 144 768 320)
-	(text "Pontuacao" (rect 5 0 56 10)(font "Arial" ))
-	(text "inst18" (rect 8 160 37 170)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "enable" (rect 0 0 33 10)(font "Arial" ))
-		(text "enable" (rect 21 27 54 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 43 35 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "reset" (rect 0 0 24 10)(font "Arial" ))
-		(text "reset" (rect 21 59 45 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "jogadorIn" (rect 0 0 46 10)(font "Arial" ))
-		(text "jogadorIn" (rect 21 75 67 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "memoria[63..0]" (rect 0 0 70 10)(font "Arial" ))
-		(text "memoria[63..0]" (rect 21 91 91 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "ready" (rect 0 0 28 10)(font "Arial" ))
-		(text "ready" (rect 172 27 200 37)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32))
-	)
-	(port
-		(pt 216 48)
-		(output)
-		(text "jogadorOut" (rect 0 0 54 10)(font "Arial" ))
-		(text "jogadorOut" (rect 150 43 204 53)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48))
-	)
-	(port
-		(pt 216 64)
-		(output)
-		(text "qtdP1[3..0]" (rect 0 0 51 10)(font "Arial" ))
-		(text "qtdP1[3..0]" (rect 152 59 203 69)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 3))
-	)
-	(port
-		(pt 216 80)
-		(output)
-		(text "qtdP2[3..0]" (rect 0 0 51 10)(font "Arial" ))
-		(text "qtdP2[3..0]" (rect 152 75 203 85)(font "Arial" ))
-		(line (pt 216 80)(pt 200 80)(line_width 3))
-	)
-	(port
-		(pt 216 96)
-		(output)
-		(text "pontosP1[4..0]" (rect 0 0 68 10)(font "Arial" ))
-		(text "pontosP1[4..0]" (rect 138 91 206 101)(font "Arial" ))
-		(line (pt 216 96)(pt 200 96)(line_width 3))
-	)
-	(port
-		(pt 216 112)
-		(output)
-		(text "pontosP2[4..0]" (rect 0 0 68 10)(font "Arial" ))
-		(text "pontosP2[4..0]" (rect 138 107 206 117)(font "Arial" ))
-		(line (pt 216 112)(pt 200 112)(line_width 3))
-	)
-	(port
-		(pt 216 128)
-		(output)
-		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
-		(text "addr[4..0]" (rect 158 123 202 133)(font "Arial" ))
-		(line (pt 216 128)(pt 200 128)(line_width 3))
-	)
-	(parameter
-		"Idle"
-		"0000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"lendoMemoria"
-		"0001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"calculandoPontos"
-		"0010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"calculandoQtdRestante"
-		"0011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 200 160))
-	)
-	(annotation_block (parameter)(rect 768 128 784 144))
-)
-(symbol
-	(rect 32 -48 240 208)
-	(text "Validador" (rect 198 5 208 51)(font "Arial" )(vertical))
-	(text "inst4" (rect 6 8 16 31)(font "Arial" )(vertical))
-	(port
-		(pt 176 0)
-		(input)
-		(text "enable" (rect 0 0 33 10)(font "Arial" ))
-		(text "enable" (rect 171 21 181 54)(font "Arial" )(vertical))
-		(line (pt 176 0)(pt 176 16))
-	)
-	(port
-		(pt 160 0)
-		(input)
-		(text "tipo[2..0]" (rect 0 0 41 10)(font "Arial" ))
-		(text "tipo[2..0]" (rect 155 21 165 62)(font "Arial" )(vertical))
-		(line (pt 160 0)(pt 160 16)(line_width 3))
-	)
-	(port
-		(pt 144 0)
-		(input)
-		(text "jogador" (rect 0 0 36 10)(font "Arial" ))
-		(text "jogador" (rect 139 21 149 57)(font "Arial" )(vertical))
-		(line (pt 144 0)(pt 144 16))
-	)
-	(port
-		(pt 128 0)
-		(input)
-		(text "x1[3..0]" (rect 0 0 35 10)(font "Arial" ))
-		(text "x1[3..0]" (rect 123 21 133 56)(font "Arial" )(vertical))
-		(line (pt 128 0)(pt 128 16)(line_width 3))
-	)
-	(port
-		(pt 112 0)
-		(input)
-		(text "y1[3..0]" (rect 0 0 35 10)(font "Arial" ))
-		(text "y1[3..0]" (rect 107 21 117 56)(font "Arial" )(vertical))
-		(line (pt 112 0)(pt 112 16)(line_width 3))
-	)
-	(port
-		(pt 96 0)
-		(input)
-		(text "direcao" (rect 0 0 36 10)(font "Arial" ))
-		(text "direcao" (rect 91 21 101 57)(font "Arial" )(vertical))
-		(line (pt 96 0)(pt 96 16))
-	)
-	(port
-		(pt 80 0)
-		(input)
-		(text "orientacao[2..0]" (rect 0 0 73 10)(font "Arial" ))
-		(text "orientacao[2..0]" (rect 75 21 85 94)(font "Arial" )(vertical))
-		(line (pt 80 0)(pt 80 16)(line_width 3))
-	)
-	(port
-		(pt 64 0)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 59 21 69 35)(font "Arial" )(vertical))
-		(line (pt 64 0)(pt 64 16))
-	)
-	(port
-		(pt 48 0)
-		(input)
-		(text "vetor_leitura[63..0]" (rect 0 0 88 10)(font "Arial" ))
-		(text "vetor_leitura[63..0]" (rect 43 21 53 109)(font "Arial" )(vertical))
-		(line (pt 48 0)(pt 48 16)(line_width 3))
-	)
-	(port
-		(pt 176 256)
-		(output)
-		(text "ready" (rect 0 0 28 10)(font "Arial" ))
-		(text "ready" (rect 171 212 181 240)(font "Arial" )(vertical))
-		(line (pt 176 256)(pt 176 240))
-	)
-	(port
-		(pt 160 256)
-		(output)
-		(text "conflitoMemoria_out" (rect 0 0 96 10)(font "Arial" ))
-		(text "conflitoMemoria_out" (rect 155 154 165 250)(font "Arial" )(vertical))
-		(line (pt 160 256)(pt 160 240))
-	)
-	(port
-		(pt 144 256)
-		(output)
-		(text "conflitoBorda_out" (rect 0 0 83 10)(font "Arial" ))
-		(text "conflitoBorda_out" (rect 139 165 149 248)(font "Arial" )(vertical))
-		(line (pt 144 256)(pt 144 240))
-	)
-	(port
-		(pt 128 256)
-		(output)
-		(text "wrep1" (rect 0 0 30 10)(font "Arial" ))
-		(text "wrep1" (rect 123 211 133 241)(font "Arial" )(vertical))
-		(line (pt 128 256)(pt 128 240))
-	)
-	(port
-		(pt 112 256)
-		(output)
-		(text "wrep2" (rect 0 0 30 10)(font "Arial" ))
-		(text "wrep2" (rect 107 210 117 240)(font "Arial" )(vertical))
-		(line (pt 112 256)(pt 112 240))
-	)
-	(port
-		(pt 96 256)
-		(output)
-		(text "vetor[63..0]" (rect 0 0 53 10)(font "Arial" ))
-		(text "vetor[63..0]" (rect 91 191 101 244)(font "Arial" )(vertical))
-		(line (pt 96 256)(pt 96 240)(line_width 3))
-	)
-	(port
-		(pt 80 256)
-		(output)
-		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
-		(text "addr[4..0]" (rect 75 198 85 242)(font "Arial" )(vertical))
-		(line (pt 80 256)(pt 80 240)(line_width 3))
-	)
-	(port
-		(pt 64 256)
-		(output)
-		(text "jogadorOut" (rect 0 0 54 10)(font "Arial" ))
-		(text "jogadorOut" (rect 59 190 69 244)(font "Arial" )(vertical))
-		(line (pt 64 256)(pt 64 240))
-	)
-	(port
-		(pt 48 256)
-		(output)
-		(text "conflito" (rect 0 0 35 10)(font "Arial" ))
-		(text "conflito" (rect 43 206 53 241)(font "Arial" )(vertical))
-		(line (pt 48 256)(pt 48 240))
-	)
-	(parameter
-		"EstadoInicial"
-		"000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"VerificandoBorda"
-		"001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ConflitoBorda"
-		"010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"VerificandoMemoria"
-		"011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ConflitoMemoria"
-		"100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"SalvandoPeca"
-		"101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PORTA_AVIOES"
-		"000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ENCOURACADO"
-		"001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"HIDROAVIAO"
-		"010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"CRUZADOR"
-		"011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"SUBMARINO"
-		"100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 192 240))
-	)
-	(rotate270)
-	(annotation_block (parameter)(rect 0 176 32 200))
-)
-(symbol
-	(rect -208 -264 -16 -88)
-	(text "posicionandoPecas" (rect 5 0 98 10)(font "Arial" ))
-	(text "inst2" (rect 8 160 31 170)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "enable" (rect 0 0 33 10)(font "Arial" ))
-		(text "enable" (rect 21 27 54 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "reset" (rect 0 0 24 10)(font "Arial" ))
-		(text "reset" (rect 21 43 45 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "enter" (rect 0 0 25 10)(font "Arial" ))
-		(text "enter" (rect 21 59 46 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "select" (rect 0 0 29 10)(font "Arial" ))
-		(text "select" (rect 21 75 50 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "mode" (rect 0 0 28 10)(font "Arial" ))
-		(text "mode" (rect 21 91 49 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 107 35 117)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "conflito" (rect 0 0 35 10)(font "Arial" ))
-		(text "conflito" (rect 21 123 56 133)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 192 32)
-		(output)
-		(text "ready" (rect 0 0 28 10)(font "Arial" ))
-		(text "ready" (rect 148 27 176 37)(font "Arial" ))
-		(line (pt 192 32)(pt 176 32))
-	)
-	(port
-		(pt 192 48)
-		(output)
-		(text "valida" (rect 0 0 29 10)(font "Arial" ))
-		(text "valida" (rect 147 43 176 53)(font "Arial" ))
-		(line (pt 192 48)(pt 176 48))
-	)
-	(port
-		(pt 192 64)
-		(output)
-		(text "tipo[2..0]" (rect 0 0 41 10)(font "Arial" ))
-		(text "tipo[2..0]" (rect 137 59 178 69)(font "Arial" ))
-		(line (pt 192 64)(pt 176 64)(line_width 3))
-	)
-	(port
-		(pt 192 80)
-		(output)
-		(text "jogador" (rect 0 0 36 10)(font "Arial" ))
-		(text "jogador" (rect 140 75 176 85)(font "Arial" ))
-		(line (pt 192 80)(pt 176 80))
-	)
-	(port
-		(pt 192 96)
-		(output)
-		(text "X1[3..0]" (rect 0 0 36 10)(font "Arial" ))
-		(text "X1[3..0]" (rect 141 91 177 101)(font "Arial" ))
-		(line (pt 192 96)(pt 176 96)(line_width 3))
-	)
-	(port
-		(pt 192 112)
-		(output)
-		(text "Y1[3..0]" (rect 0 0 36 10)(font "Arial" ))
-		(text "Y1[3..0]" (rect 141 107 177 117)(font "Arial" ))
-		(line (pt 192 112)(pt 176 112)(line_width 3))
-	)
-	(port
-		(pt 192 128)
-		(output)
-		(text "direcao" (rect 0 0 36 10)(font "Arial" ))
-		(text "direcao" (rect 141 123 177 133)(font "Arial" ))
-		(line (pt 192 128)(pt 176 128))
-	)
-	(port
-		(pt 192 144)
-		(output)
-		(text "orientacao[2..0]" (rect 0 0 73 10)(font "Arial" ))
-		(text "orientacao[2..0]" (rect 110 139 183 149)(font "Arial" ))
-		(line (pt 192 144)(pt 176 144)(line_width 3))
-	)
-	(parameter
-		"escolheDirecao"
-		"0001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"escolheOrientacao"
-		"0010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"defineX"
-		"0011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"defineY"
-		"0100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"verificaConflito"
-		"0101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"armazenaPeca"
-		"0110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 176 160))
-	)
-	(annotation_block (parameter)(rect -160 -288 -128 -264))
-)
-(symbol
-	(rect 896 1064 1008 1248)
-	(text "memoriaA" (rect 0 129 10 178)(font "Arial" )(vertical))
-	(text "memoriaA" (rect 96 126 106 175)(font "Arial" )(vertical))
-	(port
-		(pt 32 184)
-		(input)
-		(text "address[4..0]" (rect 0 0 61 10)(font "Arial" ))
-		(text "address[4..0]" (rect 27 102 37 163)(font "Arial" )(vertical))
-		(line (pt 32 184)(pt 32 168)(line_width 3))
-	)
-	(port
-		(pt 48 184)
-		(input)
-		(text "clock" (rect 0 0 25 10)(font "Arial" ))
-		(text "clock" (rect 43 138 53 163)(font "Arial" )(vertical))
-		(line (pt 48 184)(pt 48 168))
-	)
-	(port
-		(pt 64 184)
-		(input)
-		(text "data[63..0]" (rect 0 0 50 10)(font "Arial" ))
-		(text "data[63..0]" (rect 59 113 69 163)(font "Arial" )(vertical))
-		(line (pt 64 184)(pt 64 168)(line_width 3))
-	)
-	(port
-		(pt 80 184)
-		(input)
-		(text "wren" (rect 0 0 24 10)(font "Arial" ))
-		(text "wren" (rect 75 139 85 163)(font "Arial" )(vertical))
-		(line (pt 80 184)(pt 80 168))
-	)
-	(port
-		(pt 32 0)
-		(output)
-		(text "q[63..0]" (rect 0 0 35 10)(font "Arial" ))
-		(text "q[63..0]" (rect 27 21 37 56)(font "Arial" )(vertical))
-		(line (pt 32 0)(pt 32 16)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 96 168))
-	)
-	(rotate90)
-)
-(symbol
-	(rect 1008 1064 1120 1248)
-	(text "memoriaB" (rect 0 130 10 179)(font "Arial" )(vertical))
-	(text "memoriaB" (rect 96 127 106 176)(font "Arial" )(vertical))
-	(port
-		(pt 32 184)
-		(input)
-		(text "address[4..0]" (rect 0 0 61 10)(font "Arial" ))
-		(text "address[4..0]" (rect 27 102 37 163)(font "Arial" )(vertical))
-		(line (pt 32 184)(pt 32 168)(line_width 3))
-	)
-	(port
-		(pt 48 184)
-		(input)
-		(text "clock" (rect 0 0 25 10)(font "Arial" ))
-		(text "clock" (rect 43 138 53 163)(font "Arial" )(vertical))
-		(line (pt 48 184)(pt 48 168))
-	)
-	(port
-		(pt 64 184)
-		(input)
-		(text "data[63..0]" (rect 0 0 50 10)(font "Arial" ))
-		(text "data[63..0]" (rect 59 113 69 163)(font "Arial" )(vertical))
-		(line (pt 64 184)(pt 64 168)(line_width 3))
-	)
-	(port
-		(pt 80 184)
-		(input)
-		(text "wren" (rect 0 0 24 10)(font "Arial" ))
-		(text "wren" (rect 75 139 85 163)(font "Arial" )(vertical))
-		(line (pt 80 184)(pt 80 168))
-	)
-	(port
-		(pt 32 0)
-		(output)
-		(text "q[63..0]" (rect 0 0 35 10)(font "Arial" ))
-		(text "q[63..0]" (rect 27 21 37 56)(font "Arial" )(vertical))
-		(line (pt 32 0)(pt 32 16)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 96 168))
-	)
-	(rotate90)
-)
-(symbol
-	(rect -912 640 -832 776)
-	(text "PLL_clk" (rect 0 5 10 43)(font "Arial" )(vertical))
-	(text "inst10" (rect 64 8 74 37)(font "Arial" )(vertical))
-	(port
-		(pt 32 0)
-		(input)
-		(text "inclk0" (rect 0 0 28 10)(font "Arial" ))
-		(text "inclk0" (rect 27 21 37 49)(font "Arial" )(vertical))
-		(line (pt 32 0)(pt 32 16))
-	)
-	(port
-		(pt 32 136)
-		(output)
-		(text "c0" (rect 0 0 12 10)(font "Arial" ))
-		(text "c0" (rect 27 105 37 117)(font "Arial" )(vertical))
-		(line (pt 32 136)(pt 32 120))
-	)
-	(drawing
-		(rectangle (rect 16 16 64 120))
-	)
-	(flipy_rotate90)
-)
-(symbol
-	(rect -432 896 -160 1264)
-	(text "VGA_Compositor" (rect 262 5 272 88)(font "Arial" )(vertical))
-	(text "inst5" (rect 6 8 16 31)(font "Arial" )(vertical))
-	(port
-		(pt 240 0)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 235 21 245 35)(font "Arial" )(vertical))
-		(line (pt 240 0)(pt 240 16))
-	)
-	(port
-		(pt 224 0)
-		(input)
-		(text "resetGeral" (rect 0 0 50 10)(font "Arial" ))
-		(text "resetGeral" (rect 219 21 229 71)(font "Arial" )(vertical))
-		(line (pt 224 0)(pt 224 16))
-	)
-	(port
-		(pt 208 0)
-		(input)
-		(text "readyExecutandoJogo" (rect 0 0 107 10)(font "Arial" ))
-		(text "readyExecutandoJogo" (rect 203 21 213 128)(font "Arial" )(vertical))
-		(line (pt 208 0)(pt 208 16))
-	)
-	(port
-		(pt 192 0)
-		(input)
-		(text "readyPosicionandoPecas" (rect 0 0 121 10)(font "Arial" ))
-		(text "readyPosicionandoPecas" (rect 187 21 197 142)(font "Arial" )(vertical))
-		(line (pt 192 0)(pt 192 16))
-	)
-	(port
-		(pt 176 0)
-		(input)
-		(text "jogadorExecutandoJogo" (rect 0 0 115 10)(font "Arial" ))
-		(text "jogadorExecutandoJogo" (rect 171 21 181 136)(font "Arial" )(vertical))
-		(line (pt 176 0)(pt 176 16))
-	)
-	(port
-		(pt 160 0)
-		(input)
-		(text "jogadorPosicionandoPecas" (rect 0 0 129 10)(font "Arial" ))
-		(text "jogadorPosicionandoPecas" (rect 155 21 165 150)(font "Arial" )(vertical))
-		(line (pt 160 0)(pt 160 16))
-	)
-	(port
-		(pt 144 0)
-		(input)
-		(text "data_memoria[63..0]" (rect 0 0 97 10)(font "Arial" ))
-		(text "data_memoria[63..0]" (rect 139 21 149 118)(font "Arial" )(vertical))
-		(line (pt 144 0)(pt 144 16)(line_width 3))
-	)
-	(port
-		(pt 240 368)
-		(output)
-		(text "exibeMapa" (rect 0 0 53 10)(font "Arial" ))
-		(text "exibeMapa" (rect 235 303 245 356)(font "Arial" )(vertical))
-		(line (pt 240 368)(pt 240 352))
-	)
-	(port
-		(pt 224 368)
-		(output)
-		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
-		(text "addr[4..0]" (rect 219 310 229 354)(font "Arial" )(vertical))
-		(line (pt 224 368)(pt 224 352)(line_width 3))
-	)
-	(port
-		(pt 208 368)
-		(output)
-		(text "jogadorVGA" (rect 0 0 59 10)(font "Arial" ))
-		(text "jogadorVGA" (rect 203 297 213 356)(font "Arial" )(vertical))
-		(line (pt 208 368)(pt 208 352))
-	)
-	(port
-		(pt 192 368)
-		(output)
-		(text "dataEmbarcacaoSubmarinoUm[63..0]" (rect 0 0 178 10)(font "Arial" ))
-		(text "dataEmbarcacaoSubmarinoUm[63..0]" (rect 187 197 197 375)(font "Arial" )(vertical))
-		(line (pt 192 368)(pt 192 352)(line_width 3))
-	)
-	(port
-		(pt 176 368)
-		(output)
-		(text "dataEmbarcacaoSubmarinoDois[63..0]" (rect 0 0 182 10)(font "Arial" ))
-		(text "dataEmbarcacaoSubmarinoDois[63..0]" (rect 171 193 181 375)(font "Arial" )(vertical))
-		(line (pt 176 368)(pt 176 352)(line_width 3))
-	)
-	(port
-		(pt 160 368)
-		(output)
-		(text "dataEmbarcacaoSubmarinoTres[63..0]" (rect 0 0 182 10)(font "Arial" ))
-		(text "dataEmbarcacaoSubmarinoTres[63..0]" (rect 155 193 165 375)(font "Arial" )(vertical))
-		(line (pt 160 368)(pt 160 352)(line_width 3))
-	)
-	(port
-		(pt 144 368)
-		(output)
-		(text "dataEmbarcacaoSubmarinoQuatro[63..0]" (rect 0 0 193 10)(font "Arial" ))
-		(text "dataEmbarcacaoSubmarinoQuatro[63..0]" (rect 139 184 149 377)(font "Arial" )(vertical))
-		(line (pt 144 368)(pt 144 352)(line_width 3))
-	)
-	(port
-		(pt 128 368)
-		(output)
-		(text "dataEmbarcacaoSubmarinoCinco[63..0]" (rect 0 0 188 10)(font "Arial" ))
-		(text "dataEmbarcacaoSubmarinoCinco[63..0]" (rect 123 188 133 376)(font "Arial" )(vertical))
-		(line (pt 128 368)(pt 128 352)(line_width 3))
-	)
-	(port
-		(pt 112 368)
-		(output)
-		(text "dataEmbarcacaoCruzadorUm[63..0]" (rect 0 0 169 10)(font "Arial" ))
-		(text "dataEmbarcacaoCruzadorUm[63..0]" (rect 107 204 117 373)(font "Arial" )(vertical))
-		(line (pt 112 368)(pt 112 352)(line_width 3))
-	)
-	(port
-		(pt 96 368)
-		(output)
-		(text "dataEmbarcacaoCruzadorDois[63..0]" (rect 0 0 174 10)(font "Arial" ))
-		(text "dataEmbarcacaoCruzadorDois[63..0]" (rect 91 200 101 374)(font "Arial" )(vertical))
-		(line (pt 96 368)(pt 96 352)(line_width 3))
-	)
-	(port
-		(pt 80 368)
-		(output)
-		(text "dataEmbarcacaoHidroaviaoUm[63..0]" (rect 0 0 177 10)(font "Arial" ))
-		(text "dataEmbarcacaoHidroaviaoUm[63..0]" (rect 75 198 85 375)(font "Arial" )(vertical))
-		(line (pt 80 368)(pt 80 352)(line_width 3))
-	)
-	(port
-		(pt 64 368)
-		(output)
-		(text "dataEmbarcacaoHidroaviaoDois[63..0]" (rect 0 0 181 10)(font "Arial" ))
-		(text "dataEmbarcacaoHidroaviaoDois[63..0]" (rect 59 194 69 375)(font "Arial" )(vertical))
-		(line (pt 64 368)(pt 64 352)(line_width 3))
-	)
-	(port
-		(pt 48 368)
-		(output)
-		(text "dataEmbarcacaoEncouracado[63..0]" (rect 0 0 172 10)(font "Arial" ))
-		(text "dataEmbarcacaoEncouracado[63..0]" (rect 43 202 53 374)(font "Arial" )(vertical))
-		(line (pt 48 368)(pt 48 352)(line_width 3))
-	)
-	(port
-		(pt 32 368)
-		(output)
-		(text "dataEmbarcacaoPortaAvioes[63..0]" (rect 0 0 167 10)(font "Arial" ))
-		(text "dataEmbarcacaoPortaAvioes[63..0]" (rect 27 206 37 373)(font "Arial" )(vertical))
-		(line (pt 32 368)(pt 32 352)(line_width 3))
-	)
-	(parameter
-		"Idle"
-		"000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"PosicionandoPecas"
-		"001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ExecutandoJogo"
-		"010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 256 352))
-	)
-	(rotate270)
-	(annotation_block (parameter)(rect -112 888 -32 936))
-)
-(symbol
-	(rect -808 968 -640 1112)
-	(text "VGASinc" (rect 5 0 49 10)(font "Arial" ))
-	(text "inst8" (rect 8 128 31 138)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "reset" (rect 0 0 24 10)(font "Arial" ))
-		(text "reset" (rect 21 27 45 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 43 35 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 168 32)
-		(output)
-		(text "h_sync" (rect 0 0 35 10)(font "Arial" ))
-		(text "h_sync" (rect 118 27 153 37)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32))
-	)
-	(port
-		(pt 168 48)
-		(output)
-		(text "v_sync" (rect 0 0 34 10)(font "Arial" ))
-		(text "v_sync" (rect 119 43 153 53)(font "Arial" ))
-		(line (pt 168 48)(pt 152 48))
-	)
-	(port
-		(pt 168 64)
-		(output)
-		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
-		(text "linha[9..0]" (rect 109 59 155 69)(font "Arial" ))
-		(line (pt 168 64)(pt 152 64)(line_width 3))
-	)
-	(port
-		(pt 168 80)
-		(output)
-		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
-		(text "coluna[9..0]" (rect 101 75 156 85)(font "Arial" ))
-		(line (pt 168 80)(pt 152 80)(line_width 3))
-	)
-	(port
-		(pt 168 96)
-		(output)
-		(text "regiaoAtiva" (rect 0 0 54 10)(font "Arial" ))
-		(text "regiaoAtiva" (rect 102 91 156 101)(font "Arial" ))
-		(line (pt 168 96)(pt 152 96))
-	)
-	(parameter
-		"TOTALLINHAS"
-		"524"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"LINHASATIVAS"
-		"480"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"TOTALCOLUNAS"
-		"800"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"COLUNASATIVAS"
-		"640"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 152 128))
-	)
-	(annotation_block (parameter)(rect -640 912 -488 968))
 )
 (symbol
 	(rect -840 1208 -672 1320)
@@ -1975,8 +891,8 @@ agreement for further details.
 	(port
 		(pt 168 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 125 27 150 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 125 27 152 37)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32))
 	)
 	(port
@@ -1996,844 +912,6 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 152 96))
 	)
-)
-(symbol
-	(rect 472 912 872 1256)
-	(text "ControladoMemoria" (rect 390 5 400 99)(font "Arial" )(vertical))
-	(text "inst3" (rect 6 8 16 31)(font "Arial" )(vertical))
-	(port
-		(pt 368 0)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 363 21 373 35)(font "Arial" )(vertical))
-		(line (pt 368 0)(pt 368 16))
-	)
-	(port
-		(pt 352 0)
-		(input)
-		(text "data_memoria_jogadorUm[63..0]" (rect 0 0 155 10)(font "Arial" ))
-		(text "data_memoria_jogadorUm[63..0]" (rect 347 21 357 176)(font "Arial" )(vertical))
-		(line (pt 352 0)(pt 352 16)(line_width 3))
-	)
-	(port
-		(pt 336 0)
-		(input)
-		(text "data_memoria_jogadorDois[63..0]" (rect 0 0 160 10)(font "Arial" ))
-		(text "data_memoria_jogadorDois[63..0]" (rect 331 21 341 181)(font "Arial" )(vertical))
-		(line (pt 336 0)(pt 336 16)(line_width 3))
-	)
-	(port
-		(pt 320 0)
-		(input)
-		(text "readyColisor" (rect 0 0 61 10)(font "Arial" ))
-		(text "readyColisor" (rect 315 21 325 82)(font "Arial" )(vertical))
-		(line (pt 320 0)(pt 320 16))
-	)
-	(port
-		(pt 304 0)
-		(input)
-		(text "colisor_wrep1" (rect 0 0 67 10)(font "Arial" ))
-		(text "colisor_wrep1" (rect 299 21 309 88)(font "Arial" )(vertical))
-		(line (pt 304 0)(pt 304 16))
-	)
-	(port
-		(pt 288 0)
-		(input)
-		(text "colisor_wrep2" (rect 0 0 67 10)(font "Arial" ))
-		(text "colisor_wrep2" (rect 283 21 293 88)(font "Arial" )(vertical))
-		(line (pt 288 0)(pt 288 16))
-	)
-	(port
-		(pt 272 0)
-		(input)
-		(text "jogadorColisor" (rect 0 0 69 10)(font "Arial" ))
-		(text "jogadorColisor" (rect 267 21 277 90)(font "Arial" )(vertical))
-		(line (pt 272 0)(pt 272 16))
-	)
-	(port
-		(pt 256 0)
-		(input)
-		(text "colisor_addr[4..0]" (rect 0 0 81 10)(font "Arial" ))
-		(text "colisor_addr[4..0]" (rect 251 21 261 102)(font "Arial" )(vertical))
-		(line (pt 256 0)(pt 256 16)(line_width 3))
-	)
-	(port
-		(pt 240 0)
-		(input)
-		(text "colisor_data[63..0]" (rect 0 0 87 10)(font "Arial" ))
-		(text "colisor_data[63..0]" (rect 235 21 245 108)(font "Arial" )(vertical))
-		(line (pt 240 0)(pt 240 16)(line_width 3))
-	)
-	(port
-		(pt 224 0)
-		(input)
-		(text "readyPontuacao" (rect 0 0 79 10)(font "Arial" ))
-		(text "readyPontuacao" (rect 219 21 229 100)(font "Arial" )(vertical))
-		(line (pt 224 0)(pt 224 16))
-	)
-	(port
-		(pt 208 0)
-		(input)
-		(text "pontuacao_addr[4..0]" (rect 0 0 100 10)(font "Arial" ))
-		(text "pontuacao_addr[4..0]" (rect 203 21 213 121)(font "Arial" )(vertical))
-		(line (pt 208 0)(pt 208 16)(line_width 3))
-	)
-	(port
-		(pt 192 0)
-		(input)
-		(text "jogadorPontuacao" (rect 0 0 87 10)(font "Arial" ))
-		(text "jogadorPontuacao" (rect 187 21 197 108)(font "Arial" )(vertical))
-		(line (pt 192 0)(pt 192 16))
-	)
-	(port
-		(pt 176 0)
-		(input)
-		(text "readyValidador" (rect 0 0 73 10)(font "Arial" ))
-		(text "readyValidador" (rect 171 21 181 94)(font "Arial" )(vertical))
-		(line (pt 176 0)(pt 176 16))
-	)
-	(port
-		(pt 160 0)
-		(input)
-		(text "validador_wrep1" (rect 0 0 79 10)(font "Arial" ))
-		(text "validador_wrep1" (rect 155 21 165 100)(font "Arial" )(vertical))
-		(line (pt 160 0)(pt 160 16))
-	)
-	(port
-		(pt 144 0)
-		(input)
-		(text "validador_wrep2" (rect 0 0 79 10)(font "Arial" ))
-		(text "validador_wrep2" (rect 139 21 149 100)(font "Arial" )(vertical))
-		(line (pt 144 0)(pt 144 16))
-	)
-	(port
-		(pt 128 0)
-		(input)
-		(text "validador_data[63..0]" (rect 0 0 99 10)(font "Arial" ))
-		(text "validador_data[63..0]" (rect 123 21 133 120)(font "Arial" )(vertical))
-		(line (pt 128 0)(pt 128 16)(line_width 3))
-	)
-	(port
-		(pt 112 0)
-		(input)
-		(text "validador_addr[4..0]" (rect 0 0 94 10)(font "Arial" ))
-		(text "validador_addr[4..0]" (rect 107 21 117 115)(font "Arial" )(vertical))
-		(line (pt 112 0)(pt 112 16)(line_width 3))
-	)
-	(port
-		(pt 96 0)
-		(input)
-		(text "validadorJogador" (rect 0 0 82 10)(font "Arial" ))
-		(text "validadorJogador" (rect 91 21 101 103)(font "Arial" )(vertical))
-		(line (pt 96 0)(pt 96 16))
-	)
-	(port
-		(pt 80 0)
-		(input)
-		(text "vga_readAddr[4..0]" (rect 0 0 90 10)(font "Arial" ))
-		(text "vga_readAddr[4..0]" (rect 75 21 85 111)(font "Arial" )(vertical))
-		(line (pt 80 0)(pt 80 16)(line_width 3))
-	)
-	(port
-		(pt 64 0)
-		(input)
-		(text "jogadorVGA" (rect 0 0 59 10)(font "Arial" ))
-		(text "jogadorVGA" (rect 59 21 69 80)(font "Arial" )(vertical))
-		(line (pt 64 0)(pt 64 16))
-	)
-	(port
-		(pt 48 0)
-		(input)
-		(text "resetGeral" (rect 0 0 50 10)(font "Arial" ))
-		(text "resetGeral" (rect 43 21 53 71)(font "Arial" )(vertical))
-		(line (pt 48 0)(pt 48 16))
-	)
-	(port
-		(pt 368 344)
-		(output)
-		(text "dataReadPontuacao[63..0]" (rect 0 0 126 10)(font "Arial" ))
-		(text "dataReadPontuacao[63..0]" (rect 363 217 373 343)(font "Arial" )(vertical))
-		(line (pt 368 344)(pt 368 328)(line_width 3))
-	)
-	(port
-		(pt 352 344)
-		(output)
-		(text "dataReadColisor[63..0]" (rect 0 0 108 10)(font "Arial" ))
-		(text "dataReadColisor[63..0]" (rect 347 232 357 340)(font "Arial" )(vertical))
-		(line (pt 352 344)(pt 352 328)(line_width 3))
-	)
-	(port
-		(pt 336 344)
-		(output)
-		(text "dataReadValidador[63..0]" (rect 0 0 120 10)(font "Arial" ))
-		(text "dataReadValidador[63..0]" (rect 331 222 341 342)(font "Arial" )(vertical))
-		(line (pt 336 344)(pt 336 328)(line_width 3))
-	)
-	(port
-		(pt 320 344)
-		(output)
-		(text "dataReadVGA[63..0]" (rect 0 0 97 10)(font "Arial" ))
-		(text "dataReadVGA[63..0]" (rect 315 241 325 338)(font "Arial" )(vertical))
-		(line (pt 320 344)(pt 320 328)(line_width 3))
-	)
-	(port
-		(pt 304 344)
-		(output)
-		(text "data[63..0]" (rect 0 0 50 10)(font "Arial" ))
-		(text "data[63..0]" (rect 299 281 309 331)(font "Arial" )(vertical))
-		(line (pt 304 344)(pt 304 328)(line_width 3))
-	)
-	(port
-		(pt 288 344)
-		(output)
-		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
-		(text "addr[4..0]" (rect 283 286 293 330)(font "Arial" )(vertical))
-		(line (pt 288 344)(pt 288 328)(line_width 3))
-	)
-	(port
-		(pt 272 344)
-		(output)
-		(text "wrenP1" (rect 0 0 37 10)(font "Arial" ))
-		(text "wrenP1" (rect 267 293 277 330)(font "Arial" )(vertical))
-		(line (pt 272 344)(pt 272 328))
-	)
-	(port
-		(pt 256 344)
-		(output)
-		(text "wrenP2" (rect 0 0 37 10)(font "Arial" ))
-		(text "wrenP2" (rect 251 292 261 329)(font "Arial" )(vertical))
-		(line (pt 256 344)(pt 256 328))
-	)
-	(parameter
-		"Idle"
-		"0000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ValidandorPlayerUm"
-		"0001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ValidandorPlayerDois"
-		"0010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ColidindoPlayerUm"
-		"0011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ColidindoPlayerDois"
-		"0100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"CalculandoPontuacaoPlayerUm"
-		"0101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"CalculandoPontuacaoPlayerDois"
-		"0110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"TransmitindoVgaPlayerUm"
-		"0111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"TransmitindoVgaPlayerDois"
-		"1000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 384 328))
-	)
-	(rotate270)
-	(annotation_block (parameter)(rect 872 928 904 968))
-)
-(symbol
-	(rect -832 1408 -600 1552)
-	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
-	(text "submarino1" (rect 8 128 64 138)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 27 35 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
-		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
-		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
-		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
-		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48))
-	)
-	(port
-		(pt 232 64)
-		(output)
-		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64))
-	)
-	(parameter
-		"X1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 216 128))
-	)
-	(annotation_block (parameter)(rect -592 1368 -488 1392))
-)
-(symbol
-	(rect -832 1592 -600 1736)
-	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
-	(text "submarino2" (rect 8 128 64 138)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 27 35 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
-		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
-		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
-		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
-		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48))
-	)
-	(port
-		(pt 232 64)
-		(output)
-		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64))
-	)
-	(parameter
-		"X1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 216 128))
-	)
-	(annotation_block (parameter)(rect -600 1568 -504 1592))
-)
-(symbol
-	(rect -832 1768 -600 1912)
-	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
-	(text "submarino3" (rect 8 128 64 138)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 27 35 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
-		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
-		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
-		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
-		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48))
-	)
-	(port
-		(pt 232 64)
-		(output)
-		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64))
-	)
-	(parameter
-		"X1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 216 128))
-	)
-	(annotation_block (parameter)(rect -600 1728 -504 1768))
-)
-(symbol
-	(rect -832 1944 -600 2088)
-	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
-	(text "submarino4" (rect 8 128 64 138)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 27 35 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
-		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
-		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
-		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
-		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48))
-	)
-	(port
-		(pt 232 64)
-		(output)
-		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
-		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64))
-	)
-	(parameter
-		"X1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"X8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y1"
-		"0000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y2"
-		"0000000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y3"
-		"0000000011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y4"
-		"0000000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y5"
-		"0000000101"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y6"
-		"0000000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y7"
-		"0000000111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"Y8"
-		"0000001000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 216 128))
-	)
-	(annotation_block (parameter)(rect -600 1920 -520 1936))
 )
 (symbol
 	(rect -832 2120 -600 2264)
@@ -2877,8 +955,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -2982,8 +1060,8 @@ agreement for further details.
 )
 (symbol
 	(rect -832 2320 -600 2464)
-	(text "VGA_Cruzador" (rect 5 0 78 10)(font "Arial" ))
-	(text "cruzador1" (rect 8 128 56 138)(font "Arial" ))
+	(text "VGA_Cruzador" (rect 5 0 79 10)(font "Arial" ))
+	(text "cruzador1" (rect 8 128 55 138)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -3022,8 +1100,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -3127,7 +1205,7 @@ agreement for further details.
 )
 (symbol
 	(rect -832 2504 -600 2648)
-	(text "VGA_Cruzador" (rect 5 0 78 10)(font "Arial" ))
+	(text "VGA_Cruzador" (rect 5 0 79 10)(font "Arial" ))
 	(text "cruzador2" (rect 8 128 56 138)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -3167,8 +1245,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -3312,8 +1390,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -3457,8 +1535,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -3563,7 +1641,7 @@ agreement for further details.
 (symbol
 	(rect -832 3072 -600 3216)
 	(text "VGA_Encouracado" (rect 5 0 97 10)(font "Arial" ))
-	(text "encouracado1" (rect 8 128 76 138)(font "Arial" ))
+	(text "encouracado1" (rect 8 128 75 138)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -3602,8 +1680,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -3747,8 +1825,8 @@ agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "rgb_r" (rect 0 0 25 10)(font "Arial" ))
-		(text "rgb_r" (rect 189 27 214 37)(font "Arial" ))
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
@@ -3849,6 +1927,1977 @@ agreement for further details.
 		(rectangle (rect 16 16 216 128))
 	)
 	(annotation_block (parameter)(rect -600 3224 -472 3232))
+)
+(symbol
+	(rect -832 1408 -600 1552)
+	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
+	(text "submarino1" (rect 8 128 63 138)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 27 35 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
+		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
+		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
+		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
+		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(parameter
+		"X1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 216 128))
+	)
+	(annotation_block (parameter)(rect -592 1368 -488 1392))
+)
+(symbol
+	(rect -832 1592 -600 1736)
+	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
+	(text "submarino2" (rect 8 128 64 138)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 27 35 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
+		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
+		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
+		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
+		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(parameter
+		"X1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 216 128))
+	)
+	(annotation_block (parameter)(rect -600 1568 -504 1592))
+)
+(symbol
+	(rect -832 1768 -600 1912)
+	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
+	(text "submarino3" (rect 8 128 64 138)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 27 35 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
+		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
+		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
+		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
+		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(parameter
+		"X1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 216 128))
+	)
+	(annotation_block (parameter)(rect -600 1728 -504 1768))
+)
+(symbol
+	(rect -832 1944 -600 2088)
+	(text "VGA_Submarino" (rect 5 0 86 10)(font "Arial" ))
+	(text "submarino4" (rect 8 128 64 138)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 27 35 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "areaAtiva" (rect 0 0 46 10)(font "Arial" ))
+		(text "areaAtiva" (rect 21 43 67 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
+		(text "linha[9..0]" (rect 21 59 67 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
+		(text "coluna[9..0]" (rect 21 75 76 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "posicoesEmbarcacao[63..0]" (rect 0 0 130 10)(font "Arial" ))
+		(text "posicoesEmbarcacao[63..0]" (rect 21 91 151 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "rgb_r" (rect 0 0 27 10)(font "Arial" ))
+		(text "rgb_r" (rect 189 27 216 37)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "rgb_g" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_g" (rect 188 43 216 53)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "rgb_b" (rect 0 0 28 10)(font "Arial" ))
+		(text "rgb_b" (rect 188 59 216 69)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(parameter
+		"X1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"X8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y1"
+		"0000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y2"
+		"0000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y3"
+		"0000000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y4"
+		"0000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y5"
+		"0000000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y6"
+		"0000000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y7"
+		"0000000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Y8"
+		"0000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 216 128))
+	)
+	(annotation_block (parameter)(rect -600 1920 -520 1936))
+)
+(symbol
+	(rect 32 -48 240 208)
+	(text "Validador" (rect 198 5 208 52)(font "Arial" )(vertical))
+	(text "inst4" (rect 6 8 16 31)(font "Arial" )(vertical))
+	(port
+		(pt 176 0)
+		(input)
+		(text "enable" (rect 0 0 33 10)(font "Arial" ))
+		(text "enable" (rect 171 21 181 54)(font "Arial" )(vertical))
+		(line (pt 176 0)(pt 176 16))
+	)
+	(port
+		(pt 160 0)
+		(input)
+		(text "tipo[2..0]" (rect 0 0 41 10)(font "Arial" ))
+		(text "tipo[2..0]" (rect 155 21 165 62)(font "Arial" )(vertical))
+		(line (pt 160 0)(pt 160 16)(line_width 3))
+	)
+	(port
+		(pt 144 0)
+		(input)
+		(text "jogador" (rect 0 0 37 10)(font "Arial" ))
+		(text "jogador" (rect 139 21 149 58)(font "Arial" )(vertical))
+		(line (pt 144 0)(pt 144 16))
+	)
+	(port
+		(pt 128 0)
+		(input)
+		(text "x1[3..0]" (rect 0 0 35 10)(font "Arial" ))
+		(text "x1[3..0]" (rect 123 21 133 56)(font "Arial" )(vertical))
+		(line (pt 128 0)(pt 128 16)(line_width 3))
+	)
+	(port
+		(pt 112 0)
+		(input)
+		(text "y1[3..0]" (rect 0 0 35 10)(font "Arial" ))
+		(text "y1[3..0]" (rect 107 21 117 56)(font "Arial" )(vertical))
+		(line (pt 112 0)(pt 112 16)(line_width 3))
+	)
+	(port
+		(pt 96 0)
+		(input)
+		(text "direcao" (rect 0 0 36 10)(font "Arial" ))
+		(text "direcao" (rect 91 21 101 57)(font "Arial" )(vertical))
+		(line (pt 96 0)(pt 96 16))
+	)
+	(port
+		(pt 80 0)
+		(input)
+		(text "orientacao[2..0]" (rect 0 0 73 10)(font "Arial" ))
+		(text "orientacao[2..0]" (rect 75 21 85 94)(font "Arial" )(vertical))
+		(line (pt 80 0)(pt 80 16)(line_width 3))
+	)
+	(port
+		(pt 64 0)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 59 21 69 35)(font "Arial" )(vertical))
+		(line (pt 64 0)(pt 64 16))
+	)
+	(port
+		(pt 48 0)
+		(input)
+		(text "vetor_leitura[63..0]" (rect 0 0 88 10)(font "Arial" ))
+		(text "vetor_leitura[63..0]" (rect 43 21 53 109)(font "Arial" )(vertical))
+		(line (pt 48 0)(pt 48 16)(line_width 3))
+	)
+	(port
+		(pt 176 256)
+		(output)
+		(text "ready" (rect 0 0 28 10)(font "Arial" ))
+		(text "ready" (rect 171 212 181 240)(font "Arial" )(vertical))
+		(line (pt 176 256)(pt 176 240))
+	)
+	(port
+		(pt 160 256)
+		(output)
+		(text "conflitoMemoria_out" (rect 0 0 96 10)(font "Arial" ))
+		(text "conflitoMemoria_out" (rect 155 154 165 250)(font "Arial" )(vertical))
+		(line (pt 160 256)(pt 160 240))
+	)
+	(port
+		(pt 144 256)
+		(output)
+		(text "conflitoBorda_out" (rect 0 0 83 10)(font "Arial" ))
+		(text "conflitoBorda_out" (rect 139 165 149 248)(font "Arial" )(vertical))
+		(line (pt 144 256)(pt 144 240))
+	)
+	(port
+		(pt 128 256)
+		(output)
+		(text "wrep1" (rect 0 0 29 10)(font "Arial" ))
+		(text "wrep1" (rect 123 211 133 240)(font "Arial" )(vertical))
+		(line (pt 128 256)(pt 128 240))
+	)
+	(port
+		(pt 112 256)
+		(output)
+		(text "wrep2" (rect 0 0 30 10)(font "Arial" ))
+		(text "wrep2" (rect 107 210 117 240)(font "Arial" )(vertical))
+		(line (pt 112 256)(pt 112 240))
+	)
+	(port
+		(pt 96 256)
+		(output)
+		(text "vetor[63..0]" (rect 0 0 53 10)(font "Arial" ))
+		(text "vetor[63..0]" (rect 91 191 101 244)(font "Arial" )(vertical))
+		(line (pt 96 256)(pt 96 240)(line_width 3))
+	)
+	(port
+		(pt 80 256)
+		(output)
+		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "addr[4..0]" (rect 75 198 85 242)(font "Arial" )(vertical))
+		(line (pt 80 256)(pt 80 240)(line_width 3))
+	)
+	(port
+		(pt 64 256)
+		(output)
+		(text "jogadorOut" (rect 0 0 54 10)(font "Arial" ))
+		(text "jogadorOut" (rect 59 190 69 244)(font "Arial" )(vertical))
+		(line (pt 64 256)(pt 64 240))
+	)
+	(port
+		(pt 48 256)
+		(output)
+		(text "conflito" (rect 0 0 35 10)(font "Arial" ))
+		(text "conflito" (rect 43 206 53 241)(font "Arial" )(vertical))
+		(line (pt 48 256)(pt 48 240))
+	)
+	(parameter
+		"EstadoInicial"
+		"000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"VerificandoBorda"
+		"001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ConflitoBorda"
+		"010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"VerificandoMemoria"
+		"011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ConflitoMemoria"
+		"100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SalvandoPeca"
+		"101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PORTA_AVIOES"
+		"000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ENCOURACADO"
+		"001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"HIDROAVIAO"
+		"010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CRUZADOR"
+		"011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SUBMARINO"
+		"100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 192 240))
+	)
+	(rotate270)
+	(annotation_block (parameter)(rect 0 176 32 200))
+)
+(symbol
+	(rect 1008 1064 1120 1248)
+	(text "memoriaB" (rect 0 130 10 179)(font "Arial" )(vertical))
+	(text "memoriaB" (rect 96 127 106 176)(font "Arial" )(vertical))
+	(port
+		(pt 32 184)
+		(input)
+		(text "address[4..0]" (rect 0 0 61 10)(font "Arial" ))
+		(text "address[4..0]" (rect 27 102 37 163)(font "Arial" )(vertical))
+		(line (pt 32 184)(pt 32 168)(line_width 3))
+	)
+	(port
+		(pt 48 184)
+		(input)
+		(text "clock" (rect 0 0 25 10)(font "Arial" ))
+		(text "clock" (rect 43 138 53 163)(font "Arial" )(vertical))
+		(line (pt 48 184)(pt 48 168))
+	)
+	(port
+		(pt 64 184)
+		(input)
+		(text "data[63..0]" (rect 0 0 50 10)(font "Arial" ))
+		(text "data[63..0]" (rect 59 113 69 163)(font "Arial" )(vertical))
+		(line (pt 64 184)(pt 64 168)(line_width 3))
+	)
+	(port
+		(pt 80 184)
+		(input)
+		(text "wren" (rect 0 0 24 10)(font "Arial" ))
+		(text "wren" (rect 75 139 85 163)(font "Arial" )(vertical))
+		(line (pt 80 184)(pt 80 168))
+	)
+	(port
+		(pt 32 0)
+		(output)
+		(text "q[63..0]" (rect 0 0 35 10)(font "Arial" ))
+		(text "q[63..0]" (rect 27 21 37 56)(font "Arial" )(vertical))
+		(line (pt 32 0)(pt 32 16)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 168))
+	)
+	(rotate90)
+)
+(symbol
+	(rect 896 1064 1008 1248)
+	(text "memoriaA" (rect 0 129 10 179)(font "Arial" )(vertical))
+	(text "memoriaA" (rect 96 126 106 176)(font "Arial" )(vertical))
+	(port
+		(pt 32 184)
+		(input)
+		(text "address[4..0]" (rect 0 0 61 10)(font "Arial" ))
+		(text "address[4..0]" (rect 27 102 37 163)(font "Arial" )(vertical))
+		(line (pt 32 184)(pt 32 168)(line_width 3))
+	)
+	(port
+		(pt 48 184)
+		(input)
+		(text "clock" (rect 0 0 25 10)(font "Arial" ))
+		(text "clock" (rect 43 138 53 163)(font "Arial" )(vertical))
+		(line (pt 48 184)(pt 48 168))
+	)
+	(port
+		(pt 64 184)
+		(input)
+		(text "data[63..0]" (rect 0 0 50 10)(font "Arial" ))
+		(text "data[63..0]" (rect 59 113 69 163)(font "Arial" )(vertical))
+		(line (pt 64 184)(pt 64 168)(line_width 3))
+	)
+	(port
+		(pt 80 184)
+		(input)
+		(text "wren" (rect 0 0 24 10)(font "Arial" ))
+		(text "wren" (rect 75 139 85 163)(font "Arial" )(vertical))
+		(line (pt 80 184)(pt 80 168))
+	)
+	(port
+		(pt 32 0)
+		(output)
+		(text "q[63..0]" (rect 0 0 35 10)(font "Arial" ))
+		(text "q[63..0]" (rect 27 21 37 56)(font "Arial" )(vertical))
+		(line (pt 32 0)(pt 32 16)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 168))
+	)
+	(rotate90)
+)
+(symbol
+	(rect -432 896 -160 1264)
+	(text "VGA_Compositor" (rect 262 5 272 89)(font "Arial" )(vertical))
+	(text "inst5" (rect 6 8 16 31)(font "Arial" )(vertical))
+	(port
+		(pt 240 0)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 235 21 245 35)(font "Arial" )(vertical))
+		(line (pt 240 0)(pt 240 16))
+	)
+	(port
+		(pt 224 0)
+		(input)
+		(text "resetGeral" (rect 0 0 50 10)(font "Arial" ))
+		(text "resetGeral" (rect 219 21 229 71)(font "Arial" )(vertical))
+		(line (pt 224 0)(pt 224 16))
+	)
+	(port
+		(pt 208 0)
+		(input)
+		(text "readyExecutandoJogo" (rect 0 0 107 10)(font "Arial" ))
+		(text "readyExecutandoJogo" (rect 203 21 213 128)(font "Arial" )(vertical))
+		(line (pt 208 0)(pt 208 16))
+	)
+	(port
+		(pt 192 0)
+		(input)
+		(text "readyPosicionandoPecas" (rect 0 0 121 10)(font "Arial" ))
+		(text "readyPosicionandoPecas" (rect 187 21 197 142)(font "Arial" )(vertical))
+		(line (pt 192 0)(pt 192 16))
+	)
+	(port
+		(pt 176 0)
+		(input)
+		(text "jogadorExecutandoJogo" (rect 0 0 115 10)(font "Arial" ))
+		(text "jogadorExecutandoJogo" (rect 171 21 181 136)(font "Arial" )(vertical))
+		(line (pt 176 0)(pt 176 16))
+	)
+	(port
+		(pt 160 0)
+		(input)
+		(text "jogadorPosicionandoPecas" (rect 0 0 129 10)(font "Arial" ))
+		(text "jogadorPosicionandoPecas" (rect 155 21 165 150)(font "Arial" )(vertical))
+		(line (pt 160 0)(pt 160 16))
+	)
+	(port
+		(pt 144 0)
+		(input)
+		(text "data_memoria[63..0]" (rect 0 0 97 10)(font "Arial" ))
+		(text "data_memoria[63..0]" (rect 139 21 149 118)(font "Arial" )(vertical))
+		(line (pt 144 0)(pt 144 16)(line_width 3))
+	)
+	(port
+		(pt 240 368)
+		(output)
+		(text "exibeMapa" (rect 0 0 53 10)(font "Arial" ))
+		(text "exibeMapa" (rect 235 303 245 356)(font "Arial" )(vertical))
+		(line (pt 240 368)(pt 240 352))
+	)
+	(port
+		(pt 224 368)
+		(output)
+		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "addr[4..0]" (rect 219 310 229 354)(font "Arial" )(vertical))
+		(line (pt 224 368)(pt 224 352)(line_width 3))
+	)
+	(port
+		(pt 208 368)
+		(output)
+		(text "jogadorVGA" (rect 0 0 60 10)(font "Arial" ))
+		(text "jogadorVGA" (rect 203 297 213 357)(font "Arial" )(vertical))
+		(line (pt 208 368)(pt 208 352))
+	)
+	(port
+		(pt 192 368)
+		(output)
+		(text "dataEmbarcacaoSubmarinoUm[63..0]" (rect 0 0 178 10)(font "Arial" ))
+		(text "dataEmbarcacaoSubmarinoUm[63..0]" (rect 187 197 197 375)(font "Arial" )(vertical))
+		(line (pt 192 368)(pt 192 352)(line_width 3))
+	)
+	(port
+		(pt 176 368)
+		(output)
+		(text "dataEmbarcacaoSubmarinoDois[63..0]" (rect 0 0 182 10)(font "Arial" ))
+		(text "dataEmbarcacaoSubmarinoDois[63..0]" (rect 171 193 181 375)(font "Arial" )(vertical))
+		(line (pt 176 368)(pt 176 352)(line_width 3))
+	)
+	(port
+		(pt 160 368)
+		(output)
+		(text "dataEmbarcacaoSubmarinoTres[63..0]" (rect 0 0 182 10)(font "Arial" ))
+		(text "dataEmbarcacaoSubmarinoTres[63..0]" (rect 155 193 165 375)(font "Arial" )(vertical))
+		(line (pt 160 368)(pt 160 352)(line_width 3))
+	)
+	(port
+		(pt 144 368)
+		(output)
+		(text "dataEmbarcacaoSubmarinoQuatro[63..0]" (rect 0 0 193 10)(font "Arial" ))
+		(text "dataEmbarcacaoSubmarinoQuatro[63..0]" (rect 139 184 149 377)(font "Arial" )(vertical))
+		(line (pt 144 368)(pt 144 352)(line_width 3))
+	)
+	(port
+		(pt 128 368)
+		(output)
+		(text "dataEmbarcacaoSubmarinoCinco[63..0]" (rect 0 0 188 10)(font "Arial" ))
+		(text "dataEmbarcacaoSubmarinoCinco[63..0]" (rect 123 188 133 376)(font "Arial" )(vertical))
+		(line (pt 128 368)(pt 128 352)(line_width 3))
+	)
+	(port
+		(pt 112 368)
+		(output)
+		(text "dataEmbarcacaoCruzadorUm[63..0]" (rect 0 0 169 10)(font "Arial" ))
+		(text "dataEmbarcacaoCruzadorUm[63..0]" (rect 107 204 117 373)(font "Arial" )(vertical))
+		(line (pt 112 368)(pt 112 352)(line_width 3))
+	)
+	(port
+		(pt 96 368)
+		(output)
+		(text "dataEmbarcacaoCruzadorDois[63..0]" (rect 0 0 174 10)(font "Arial" ))
+		(text "dataEmbarcacaoCruzadorDois[63..0]" (rect 91 200 101 374)(font "Arial" )(vertical))
+		(line (pt 96 368)(pt 96 352)(line_width 3))
+	)
+	(port
+		(pt 80 368)
+		(output)
+		(text "dataEmbarcacaoHidroaviaoUm[63..0]" (rect 0 0 177 10)(font "Arial" ))
+		(text "dataEmbarcacaoHidroaviaoUm[63..0]" (rect 75 198 85 375)(font "Arial" )(vertical))
+		(line (pt 80 368)(pt 80 352)(line_width 3))
+	)
+	(port
+		(pt 64 368)
+		(output)
+		(text "dataEmbarcacaoHidroaviaoDois[63..0]" (rect 0 0 181 10)(font "Arial" ))
+		(text "dataEmbarcacaoHidroaviaoDois[63..0]" (rect 59 194 69 375)(font "Arial" )(vertical))
+		(line (pt 64 368)(pt 64 352)(line_width 3))
+	)
+	(port
+		(pt 48 368)
+		(output)
+		(text "dataEmbarcacaoEncouracado[63..0]" (rect 0 0 172 10)(font "Arial" ))
+		(text "dataEmbarcacaoEncouracado[63..0]" (rect 43 202 53 374)(font "Arial" )(vertical))
+		(line (pt 48 368)(pt 48 352)(line_width 3))
+	)
+	(port
+		(pt 32 368)
+		(output)
+		(text "dataEmbarcacaoPortaAvioes[63..0]" (rect 0 0 167 10)(font "Arial" ))
+		(text "dataEmbarcacaoPortaAvioes[63..0]" (rect 27 206 37 373)(font "Arial" )(vertical))
+		(line (pt 32 368)(pt 32 352)(line_width 3))
+	)
+	(parameter
+		"Idle"
+		"000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"PosicionandoPecas"
+		"001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ExecutandoJogo"
+		"010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 256 352))
+	)
+	(rotate270)
+	(annotation_block (parameter)(rect -112 888 -32 936))
+)
+(symbol
+	(rect 552 144 768 320)
+	(text "Pontuacao" (rect 5 0 56 10)(font "Arial" ))
+	(text "inst18" (rect 8 160 37 170)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "enable" (rect 0 0 33 10)(font "Arial" ))
+		(text "enable" (rect 21 27 54 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 43 35 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "reset" (rect 0 0 24 10)(font "Arial" ))
+		(text "reset" (rect 21 59 45 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "jogadorIn" (rect 0 0 46 10)(font "Arial" ))
+		(text "jogadorIn" (rect 21 75 67 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "memoria[63..0]" (rect 0 0 70 10)(font "Arial" ))
+		(text "memoria[63..0]" (rect 21 91 91 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "ready" (rect 0 0 28 10)(font "Arial" ))
+		(text "ready" (rect 172 27 200 37)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "jogadorOut" (rect 0 0 54 10)(font "Arial" ))
+		(text "jogadorOut" (rect 150 43 204 53)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "qtdP1[3..0]" (rect 0 0 51 10)(font "Arial" ))
+		(text "qtdP1[3..0]" (rect 152 59 203 69)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64)(line_width 3))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "qtdP2[3..0]" (rect 0 0 51 10)(font "Arial" ))
+		(text "qtdP2[3..0]" (rect 152 75 203 85)(font "Arial" ))
+		(line (pt 216 80)(pt 200 80)(line_width 3))
+	)
+	(port
+		(pt 216 96)
+		(output)
+		(text "pontosP1[4..0]" (rect 0 0 68 10)(font "Arial" ))
+		(text "pontosP1[4..0]" (rect 138 91 206 101)(font "Arial" ))
+		(line (pt 216 96)(pt 200 96)(line_width 3))
+	)
+	(port
+		(pt 216 112)
+		(output)
+		(text "pontosP2[4..0]" (rect 0 0 68 10)(font "Arial" ))
+		(text "pontosP2[4..0]" (rect 138 107 206 117)(font "Arial" ))
+		(line (pt 216 112)(pt 200 112)(line_width 3))
+	)
+	(port
+		(pt 216 128)
+		(output)
+		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "addr[4..0]" (rect 158 123 202 133)(font "Arial" ))
+		(line (pt 216 128)(pt 200 128)(line_width 3))
+	)
+	(parameter
+		"Idle"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lendoMemoria"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"calculandoPontos"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"calculandoQtdRestante"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 200 160))
+	)
+	(annotation_block (parameter)(rect 768 128 784 144))
+)
+(symbol
+	(rect 1040 -184 1264 -8)
+	(text "Colisor" (rect 5 0 40 10)(font "Arial" ))
+	(text "inst" (rect 8 160 25 170)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "enable" (rect 0 0 33 10)(font "Arial" ))
+		(text "enable" (rect 21 27 54 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "x[3..0]" (rect 0 0 29 10)(font "Arial" ))
+		(text "x[3..0]" (rect 21 43 50 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "y[3..0]" (rect 0 0 29 10)(font "Arial" ))
+		(text "y[3..0]" (rect 21 59 50 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "jogadorAtirador" (rect 0 0 75 10)(font "Arial" ))
+		(text "jogadorAtirador" (rect 21 75 96 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 91 35 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "memoriaP1[63..0]" (rect 0 0 83 10)(font "Arial" ))
+		(text "memoriaP1[63..0]" (rect 21 107 104 117)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "memoriaP2[63..0]" (rect 0 0 83 10)(font "Arial" ))
+		(text "memoriaP2[63..0]" (rect 21 123 104 133)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "ready" (rect 0 0 28 10)(font "Arial" ))
+		(text "ready" (rect 180 27 208 37)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "hit" (rect 0 0 12 10)(font "Arial" ))
+		(text "hit" (rect 193 43 205 53)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "wrep1" (rect 0 0 29 10)(font "Arial" ))
+		(text "wrep1" (rect 179 59 208 69)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "wrep2" (rect 0 0 30 10)(font "Arial" ))
+		(text "wrep2" (rect 178 75 208 85)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "jogadorAlvo" (rect 0 0 57 10)(font "Arial" ))
+		(text "jogadorAlvo" (rect 155 91 212 101)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96))
+	)
+	(port
+		(pt 224 112)
+		(output)
+		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "addr[4..0]" (rect 166 107 210 117)(font "Arial" ))
+		(line (pt 224 112)(pt 208 112)(line_width 3))
+	)
+	(port
+		(pt 224 128)
+		(output)
+		(text "clear[63..0]" (rect 0 0 53 10)(font "Arial" ))
+		(text "clear[63..0]" (rect 159 123 212 133)(font "Arial" ))
+		(line (pt 224 128)(pt 208 128)(line_width 3))
+	)
+	(port
+		(pt 224 144)
+		(output)
+		(text "tiro[7..0]" (rect 0 0 38 10)(font "Arial" ))
+		(text "tiro[7..0]" (rect 171 139 209 149)(font "Arial" ))
+		(line (pt 224 144)(pt 208 144)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 160))
+	)
+)
+(symbol
+	(rect 584 -184 824 24)
+	(text "ExecutandoJogo" (rect 5 0 85 10)(font "Arial" ))
+	(text "inst1" (rect 8 192 30 202)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "enable" (rect 0 0 33 10)(font "Arial" ))
+		(text "enable" (rect 21 27 54 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 24 10)(font "Arial" ))
+		(text "reset" (rect 21 43 45 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "enter" (rect 0 0 27 10)(font "Arial" ))
+		(text "enter" (rect 21 59 48 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "select" (rect 0 0 29 10)(font "Arial" ))
+		(text "select" (rect 21 75 50 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 91 35 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "mode" (rect 0 0 28 10)(font "Arial" ))
+		(text "mode" (rect 21 107 49 117)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "posicao_rnd[3..0]" (rect 0 0 81 10)(font "Arial" ))
+		(text "posicao_rnd[3..0]" (rect 21 123 102 133)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "acertou_tiro" (rect 0 0 57 10)(font "Arial" ))
+		(text "acertou_tiro" (rect 21 139 78 149)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "qtd_P1[3..0]" (rect 0 0 57 10)(font "Arial" ))
+		(text "qtd_P1[3..0]" (rect 21 155 78 165)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "qtd_P2[3..0]" (rect 0 0 57 10)(font "Arial" ))
+		(text "qtd_P2[3..0]" (rect 21 171 78 181)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "ready" (rect 0 0 28 10)(font "Arial" ))
+		(text "ready" (rect 196 27 224 37)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "coord_tiroX[3..0]" (rect 0 0 77 10)(font "Arial" ))
+		(text "coord_tiroX[3..0]" (rect 154 43 231 53)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "coord_tiroY[3..0]" (rect 0 0 77 10)(font "Arial" ))
+		(text "coord_tiroY[3..0]" (rect 154 59 231 69)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64)(line_width 3))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "jogador" (rect 0 0 37 10)(font "Arial" ))
+		(text "jogador" (rect 188 75 225 85)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80))
+	)
+	(parameter
+		"p1_atacandox"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"p1_atacandoy"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"verificando_acertop1"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"verificando_acertop2"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"p2_atacandox"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"p2_atacandoy"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"verificando_vidap1"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"verificando_vidap2"
+		"0111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"p1_vencedor"
+		"1000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"p2_vencedor"
+		"1001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"end_game"
+		"1010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 224 192))
+	)
+	(annotation_block (parameter)(rect 592 -224 624 -192))
+)
+(symbol
+	(rect -808 968 -640 1112)
+	(text "VGASinc" (rect 5 0 49 10)(font "Arial" ))
+	(text "inst8" (rect 8 128 31 138)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "reset" (rect 0 0 24 10)(font "Arial" ))
+		(text "reset" (rect 21 27 45 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 43 35 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "h_sync" (rect 0 0 35 10)(font "Arial" ))
+		(text "h_sync" (rect 118 27 153 37)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "v_sync" (rect 0 0 34 10)(font "Arial" ))
+		(text "v_sync" (rect 119 43 153 53)(font "Arial" ))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "linha[9..0]" (rect 0 0 46 10)(font "Arial" ))
+		(text "linha[9..0]" (rect 109 59 155 69)(font "Arial" ))
+		(line (pt 168 64)(pt 152 64)(line_width 3))
+	)
+	(port
+		(pt 168 80)
+		(output)
+		(text "coluna[9..0]" (rect 0 0 55 10)(font "Arial" ))
+		(text "coluna[9..0]" (rect 101 75 156 85)(font "Arial" ))
+		(line (pt 168 80)(pt 152 80)(line_width 3))
+	)
+	(port
+		(pt 168 96)
+		(output)
+		(text "regiaoAtiva" (rect 0 0 54 10)(font "Arial" ))
+		(text "regiaoAtiva" (rect 102 91 156 101)(font "Arial" ))
+		(line (pt 168 96)(pt 152 96))
+	)
+	(parameter
+		"TOTALLINHAS"
+		"524"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"LINHASATIVAS"
+		"480"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TOTALCOLUNAS"
+		"800"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"COLUNASATIVAS"
+		"640"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 152 128))
+	)
+	(annotation_block (parameter)(rect -640 912 -488 968))
+)
+(symbol
+	(rect -912 640 -832 776)
+	(text "PLL_clk" (rect 0 5 10 43)(font "Arial" )(vertical))
+	(text "inst10" (rect 64 8 74 37)(font "Arial" )(vertical))
+	(port
+		(pt 32 0)
+		(input)
+		(text "inclk0" (rect 0 0 28 10)(font "Arial" ))
+		(text "inclk0" (rect 27 21 37 49)(font "Arial" )(vertical))
+		(line (pt 32 0)(pt 32 16))
+	)
+	(port
+		(pt 32 136)
+		(output)
+		(text "c0" (rect 0 0 12 10)(font "Arial" ))
+		(text "c0" (rect 27 105 37 117)(font "Arial" )(vertical))
+		(line (pt 32 136)(pt 32 120))
+	)
+	(drawing
+		(rectangle (rect 16 16 64 120))
+	)
+	(flipy_rotate90)
+)
+(symbol
+	(rect -208 -264 -16 8)
+	(text "posicionandoPecas" (rect 5 0 98 10)(font "Arial" ))
+	(text "inst2" (rect 8 256 31 266)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "enable" (rect 0 0 33 10)(font "Arial" ))
+		(text "enable" (rect 21 27 54 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 24 10)(font "Arial" ))
+		(text "reset" (rect 21 43 45 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "enter" (rect 0 0 27 10)(font "Arial" ))
+		(text "enter" (rect 21 59 48 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "select" (rect 0 0 29 10)(font "Arial" ))
+		(text "select" (rect 21 75 50 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "mode" (rect 0 0 28 10)(font "Arial" ))
+		(text "mode" (rect 21 91 49 101)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 107 35 117)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "conflito" (rect 0 0 35 10)(font "Arial" ))
+		(text "conflito" (rect 21 123 56 133)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 192 32)
+		(output)
+		(text "ready" (rect 0 0 28 10)(font "Arial" ))
+		(text "ready" (rect 148 27 176 37)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "valida" (rect 0 0 29 10)(font "Arial" ))
+		(text "valida" (rect 147 43 176 53)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48))
+	)
+	(port
+		(pt 192 64)
+		(output)
+		(text "tipo[2..0]" (rect 0 0 41 10)(font "Arial" ))
+		(text "tipo[2..0]" (rect 137 59 178 69)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64)(line_width 3))
+	)
+	(port
+		(pt 192 80)
+		(output)
+		(text "jogador" (rect 0 0 37 10)(font "Arial" ))
+		(text "jogador" (rect 140 75 177 85)(font "Arial" ))
+		(line (pt 192 80)(pt 176 80))
+	)
+	(port
+		(pt 192 96)
+		(output)
+		(text "X1[3..0]" (rect 0 0 36 10)(font "Arial" ))
+		(text "X1[3..0]" (rect 141 91 177 101)(font "Arial" ))
+		(line (pt 192 96)(pt 176 96)(line_width 3))
+	)
+	(port
+		(pt 192 112)
+		(output)
+		(text "Y1[3..0]" (rect 0 0 36 10)(font "Arial" ))
+		(text "Y1[3..0]" (rect 141 107 177 117)(font "Arial" ))
+		(line (pt 192 112)(pt 176 112)(line_width 3))
+	)
+	(port
+		(pt 192 128)
+		(output)
+		(text "direcao" (rect 0 0 36 10)(font "Arial" ))
+		(text "direcao" (rect 141 123 177 133)(font "Arial" ))
+		(line (pt 192 128)(pt 176 128))
+	)
+	(port
+		(pt 192 144)
+		(output)
+		(text "orientacao[2..0]" (rect 0 0 73 10)(font "Arial" ))
+		(text "orientacao[2..0]" (rect 110 139 183 149)(font "Arial" ))
+		(line (pt 192 144)(pt 176 144)(line_width 3))
+	)
+	(port
+		(pt 192 160)
+		(output)
+		(text "estado1" (rect 0 0 37 10)(font "Arial" ))
+		(text "estado1" (rect 140 155 177 165)(font "Arial" ))
+		(line (pt 192 160)(pt 176 160))
+	)
+	(port
+		(pt 192 176)
+		(output)
+		(text "estado2" (rect 0 0 38 10)(font "Arial" ))
+		(text "estado2" (rect 139 171 177 181)(font "Arial" ))
+		(line (pt 192 176)(pt 176 176))
+	)
+	(port
+		(pt 192 192)
+		(output)
+		(text "estado3" (rect 0 0 38 10)(font "Arial" ))
+		(text "estado3" (rect 139 187 177 197)(font "Arial" ))
+		(line (pt 192 192)(pt 176 192))
+	)
+	(port
+		(pt 192 208)
+		(output)
+		(text "estado4" (rect 0 0 38 10)(font "Arial" ))
+		(text "estado4" (rect 139 203 177 213)(font "Arial" ))
+		(line (pt 192 208)(pt 176 208))
+	)
+	(port
+		(pt 192 224)
+		(output)
+		(text "estado5" (rect 0 0 38 10)(font "Arial" ))
+		(text "estado5" (rect 139 219 177 229)(font "Arial" ))
+		(line (pt 192 224)(pt 176 224))
+	)
+	(port
+		(pt 192 240)
+		(output)
+		(text "estado6" (rect 0 0 38 10)(font "Arial" ))
+		(text "estado6" (rect 139 235 177 245)(font "Arial" ))
+		(line (pt 192 240)(pt 176 240))
+	)
+	(parameter
+		"escolheDirecao"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"escolheOrientacao"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"defineX"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"defineY"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"verificaConflito"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"armazenaPeca"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 176 256))
+	)
+	(annotation_block (parameter)(rect -160 -288 -128 -264))
+)
+(symbol
+	(rect 472 912 872 1256)
+	(text "ControladoMemoria" (rect 390 5 400 99)(font "Arial" )(vertical))
+	(text "inst3" (rect 6 8 16 31)(font "Arial" )(vertical))
+	(port
+		(pt 368 0)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 363 21 373 35)(font "Arial" )(vertical))
+		(line (pt 368 0)(pt 368 16))
+	)
+	(port
+		(pt 352 0)
+		(input)
+		(text "data_memoria_jogadorUm[63..0]" (rect 0 0 155 10)(font "Arial" ))
+		(text "data_memoria_jogadorUm[63..0]" (rect 347 21 357 176)(font "Arial" )(vertical))
+		(line (pt 352 0)(pt 352 16)(line_width 3))
+	)
+	(port
+		(pt 336 0)
+		(input)
+		(text "data_memoria_jogadorDois[63..0]" (rect 0 0 160 10)(font "Arial" ))
+		(text "data_memoria_jogadorDois[63..0]" (rect 331 21 341 181)(font "Arial" )(vertical))
+		(line (pt 336 0)(pt 336 16)(line_width 3))
+	)
+	(port
+		(pt 320 0)
+		(input)
+		(text "readyColisor" (rect 0 0 62 10)(font "Arial" ))
+		(text "readyColisor" (rect 315 21 325 83)(font "Arial" )(vertical))
+		(line (pt 320 0)(pt 320 16))
+	)
+	(port
+		(pt 304 0)
+		(input)
+		(text "colisor_wrep1" (rect 0 0 66 10)(font "Arial" ))
+		(text "colisor_wrep1" (rect 299 21 309 87)(font "Arial" )(vertical))
+		(line (pt 304 0)(pt 304 16))
+	)
+	(port
+		(pt 288 0)
+		(input)
+		(text "colisor_wrep2" (rect 0 0 67 10)(font "Arial" ))
+		(text "colisor_wrep2" (rect 283 21 293 88)(font "Arial" )(vertical))
+		(line (pt 288 0)(pt 288 16))
+	)
+	(port
+		(pt 272 0)
+		(input)
+		(text "jogadorColisor" (rect 0 0 70 10)(font "Arial" ))
+		(text "jogadorColisor" (rect 267 21 277 91)(font "Arial" )(vertical))
+		(line (pt 272 0)(pt 272 16))
+	)
+	(port
+		(pt 256 0)
+		(input)
+		(text "colisor_addr[4..0]" (rect 0 0 81 10)(font "Arial" ))
+		(text "colisor_addr[4..0]" (rect 251 21 261 102)(font "Arial" )(vertical))
+		(line (pt 256 0)(pt 256 16)(line_width 3))
+	)
+	(port
+		(pt 240 0)
+		(input)
+		(text "colisor_data[63..0]" (rect 0 0 87 10)(font "Arial" ))
+		(text "colisor_data[63..0]" (rect 235 21 245 108)(font "Arial" )(vertical))
+		(line (pt 240 0)(pt 240 16)(line_width 3))
+	)
+	(port
+		(pt 224 0)
+		(input)
+		(text "readyPontuacao" (rect 0 0 79 10)(font "Arial" ))
+		(text "readyPontuacao" (rect 219 21 229 100)(font "Arial" )(vertical))
+		(line (pt 224 0)(pt 224 16))
+	)
+	(port
+		(pt 208 0)
+		(input)
+		(text "pontuacao_addr[4..0]" (rect 0 0 100 10)(font "Arial" ))
+		(text "pontuacao_addr[4..0]" (rect 203 21 213 121)(font "Arial" )(vertical))
+		(line (pt 208 0)(pt 208 16)(line_width 3))
+	)
+	(port
+		(pt 192 0)
+		(input)
+		(text "jogadorPontuacao" (rect 0 0 87 10)(font "Arial" ))
+		(text "jogadorPontuacao" (rect 187 21 197 108)(font "Arial" )(vertical))
+		(line (pt 192 0)(pt 192 16))
+	)
+	(port
+		(pt 176 0)
+		(input)
+		(text "readyValidador" (rect 0 0 74 10)(font "Arial" ))
+		(text "readyValidador" (rect 171 21 181 95)(font "Arial" )(vertical))
+		(line (pt 176 0)(pt 176 16))
+	)
+	(port
+		(pt 160 0)
+		(input)
+		(text "enableValidador" (rect 0 0 79 10)(font "Arial" ))
+		(text "enableValidador" (rect 155 21 165 100)(font "Arial" )(vertical))
+		(line (pt 160 0)(pt 160 16))
+	)
+	(port
+		(pt 144 0)
+		(input)
+		(text "validador_wrep1" (rect 0 0 77 10)(font "Arial" ))
+		(text "validador_wrep1" (rect 139 21 149 98)(font "Arial" )(vertical))
+		(line (pt 144 0)(pt 144 16))
+	)
+	(port
+		(pt 128 0)
+		(input)
+		(text "validador_wrep2" (rect 0 0 79 10)(font "Arial" ))
+		(text "validador_wrep2" (rect 123 21 133 100)(font "Arial" )(vertical))
+		(line (pt 128 0)(pt 128 16))
+	)
+	(port
+		(pt 112 0)
+		(input)
+		(text "validador_data[63..0]" (rect 0 0 99 10)(font "Arial" ))
+		(text "validador_data[63..0]" (rect 107 21 117 120)(font "Arial" )(vertical))
+		(line (pt 112 0)(pt 112 16)(line_width 3))
+	)
+	(port
+		(pt 96 0)
+		(input)
+		(text "validador_addr[4..0]" (rect 0 0 94 10)(font "Arial" ))
+		(text "validador_addr[4..0]" (rect 91 21 101 115)(font "Arial" )(vertical))
+		(line (pt 96 0)(pt 96 16)(line_width 3))
+	)
+	(port
+		(pt 80 0)
+		(input)
+		(text "validadorJogador" (rect 0 0 83 10)(font "Arial" ))
+		(text "validadorJogador" (rect 75 21 85 104)(font "Arial" )(vertical))
+		(line (pt 80 0)(pt 80 16))
+	)
+	(port
+		(pt 64 0)
+		(input)
+		(text "vga_readAddr[4..0]" (rect 0 0 90 10)(font "Arial" ))
+		(text "vga_readAddr[4..0]" (rect 59 21 69 111)(font "Arial" )(vertical))
+		(line (pt 64 0)(pt 64 16)(line_width 3))
+	)
+	(port
+		(pt 48 0)
+		(input)
+		(text "jogadorVGA" (rect 0 0 60 10)(font "Arial" ))
+		(text "jogadorVGA" (rect 43 21 53 81)(font "Arial" )(vertical))
+		(line (pt 48 0)(pt 48 16))
+	)
+	(port
+		(pt 32 0)
+		(input)
+		(text "resetGeral" (rect 0 0 50 10)(font "Arial" ))
+		(text "resetGeral" (rect 27 21 37 71)(font "Arial" )(vertical))
+		(line (pt 32 0)(pt 32 16))
+	)
+	(port
+		(pt 368 344)
+		(output)
+		(text "dataReadPontuacao[63..0]" (rect 0 0 126 10)(font "Arial" ))
+		(text "dataReadPontuacao[63..0]" (rect 363 217 373 343)(font "Arial" )(vertical))
+		(line (pt 368 344)(pt 368 328)(line_width 3))
+	)
+	(port
+		(pt 352 344)
+		(output)
+		(text "dataReadColisor[63..0]" (rect 0 0 108 10)(font "Arial" ))
+		(text "dataReadColisor[63..0]" (rect 347 232 357 340)(font "Arial" )(vertical))
+		(line (pt 352 344)(pt 352 328)(line_width 3))
+	)
+	(port
+		(pt 336 344)
+		(output)
+		(text "dataReadValidador[63..0]" (rect 0 0 120 10)(font "Arial" ))
+		(text "dataReadValidador[63..0]" (rect 331 222 341 342)(font "Arial" )(vertical))
+		(line (pt 336 344)(pt 336 328)(line_width 3))
+	)
+	(port
+		(pt 320 344)
+		(output)
+		(text "dataReadVGA[63..0]" (rect 0 0 97 10)(font "Arial" ))
+		(text "dataReadVGA[63..0]" (rect 315 241 325 338)(font "Arial" )(vertical))
+		(line (pt 320 344)(pt 320 328)(line_width 3))
+	)
+	(port
+		(pt 304 344)
+		(output)
+		(text "data[63..0]" (rect 0 0 50 10)(font "Arial" ))
+		(text "data[63..0]" (rect 299 281 309 331)(font "Arial" )(vertical))
+		(line (pt 304 344)(pt 304 328)(line_width 3))
+	)
+	(port
+		(pt 288 344)
+		(output)
+		(text "addr[4..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "addr[4..0]" (rect 283 286 293 330)(font "Arial" )(vertical))
+		(line (pt 288 344)(pt 288 328)(line_width 3))
+	)
+	(port
+		(pt 272 344)
+		(output)
+		(text "wrenP1" (rect 0 0 36 10)(font "Arial" ))
+		(text "wrenP1" (rect 267 293 277 329)(font "Arial" )(vertical))
+		(line (pt 272 344)(pt 272 328))
+	)
+	(port
+		(pt 256 344)
+		(output)
+		(text "wrenP2" (rect 0 0 37 10)(font "Arial" ))
+		(text "wrenP2" (rect 251 292 261 329)(font "Arial" )(vertical))
+		(line (pt 256 344)(pt 256 328))
+	)
+	(parameter
+		"Idle"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ValidandorPlayerUm"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ValidandorPlayerDois"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ColidindoPlayerUm"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ColidindoPlayerDois"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CalculandoPontuacaoPlayerUm"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CalculandoPontuacaoPlayerDois"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"TransmitindoVgaPlayerUm"
+		"0111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"TransmitindoVgaPlayerDois"
+		"1000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 384 328))
+	)
+	(rotate270)
+	(annotation_block (parameter)(rect 872 928 904 968))
 )
 (connector
 	(pt 504 -304)
@@ -4044,10 +4093,6 @@ agreement for further details.
 	(pt -296 -168)
 )
 (connector
-	(pt 264 232)
-	(pt 264 -208)
-)
-(connector
 	(pt -16 -216)
 	(pt 232 -216)
 )
@@ -4058,14 +4103,6 @@ agreement for further details.
 (connector
 	(pt 248 -208)
 	(pt 248 -192)
-)
-(connector
-	(pt 264 -208)
-	(pt 248 -208)
-)
-(connector
-	(pt 216 232)
-	(pt 208 232)
 )
 (connector
 	(pt -16 -200)
@@ -4128,16 +4165,8 @@ agreement for further details.
 	(pt 240 -48)
 )
 (connector
-	(pt 96 -88)
-	(pt 96 -48)
-)
-(connector
 	(pt -248 -328)
 	(pt -248 -336)
-)
-(connector
-	(pt -328 -400)
-	(pt -328 -152)
 )
 (connector
 	(pt -248 -336)
@@ -4442,56 +4471,12 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 208 208)
-	(pt 208 232)
-)
-(connector
-	(pt 208 232)
-	(pt 208 448)
-)
-(connector
 	(pt 208 448)
 	(pt 648 448)
 )
 (connector
 	(pt 648 448)
 	(pt 648 912)
-)
-(connector
-	(pt 632 464)
-	(pt 160 464)
-)
-(connector
-	(pt 632 464)
-	(pt 632 912)
-)
-(connector
-	(pt 616 480)
-	(pt 144 480)
-)
-(connector
-	(pt 616 480)
-	(pt 616 912)
-)
-(connector
-	(pt 600 496)
-	(pt 128 496)
-	(bus)
-)
-(connector
-	(pt 600 496)
-	(pt 600 912)
-	(bus)
-)
-(connector
-	(pt 584 512)
-	(pt 112 512)
-	(bus)
-)
-(connector
-	(pt 584 512)
-	(pt 584 912)
-	(bus)
 )
 (connector
 	(pt 80 -48)
@@ -4516,22 +4501,6 @@ agreement for further details.
 	(pt 80 208)
 )
 (connector
-	(pt 96 208)
-	(pt 96 528)
-)
-(connector
-	(pt 568 528)
-	(pt 96 528)
-)
-(connector
-	(pt 568 528)
-	(pt 568 912)
-)
-(connector
-	(pt -328 -152)
-	(pt -328 -88)
-)
-(connector
 	(pt -240 -232)
 	(pt -208 -232)
 )
@@ -4545,30 +4514,12 @@ agreement for further details.
 )
 (connector
 	(pt 424 760)
-	(pt 552 760)
-	(bus)
-)
-(connector
-	(pt 552 760)
-	(pt 552 912)
-	(bus)
-)
-(connector
-	(pt 424 760)
 	(pt 424 1320)
 	(bus)
 )
 (connector
 	(pt 456 1296)
 	(pt 456 776)
-)
-(connector
-	(pt 456 776)
-	(pt 536 776)
-)
-(connector
-	(pt 536 776)
-	(pt 536 912)
 )
 (connector
 	(pt -240 -264)
@@ -4597,32 +4548,8 @@ agreement for further details.
 	(pt -224 640)
 )
 (connector
-	(pt -272 -72)
-	(pt -272 896)
-)
-(connector
-	(pt 176 -72)
-	(pt -272 -72)
-)
-(connector
-	(pt -328 -88)
-	(pt -192 -88)
-)
-(connector
-	(pt -192 -88)
-	(pt 96 -88)
-)
-(connector
 	(pt -240 -232)
 	(pt -240 896)
-)
-(connector
-	(pt 176 -184)
-	(pt 176 -72)
-)
-(connector
-	(pt 176 -72)
-	(pt 176 -48)
 )
 (connector
 	(pt -224 640)
@@ -5846,14 +5773,6 @@ agreement for further details.
 	(pt -880 1016)
 )
 (connector
-	(pt -192 -88)
-	(pt -192 584)
-)
-(connector
-	(pt -192 584)
-	(pt -192 896)
-)
-(connector
 	(pt -816 1000)
 	(pt -816 760)
 )
@@ -6037,22 +5956,6 @@ agreement for further details.
 	(pt 552 208)
 )
 (connector
-	(pt 400 -136)
-	(pt 400 208)
-)
-(connector
-	(pt 520 912)
-	(pt 520 904)
-)
-(connector
-	(pt 520 904)
-	(pt 400 904)
-)
-(connector
-	(pt 400 208)
-	(pt 400 904)
-)
-(connector
 	(pt 784 376)
 	(pt 680 376)
 	(bus)
@@ -6183,6 +6086,164 @@ agreement for further details.
 	(pt 1152 1504)
 	(bus)
 )
+(connector
+	(pt 536 760)
+	(pt 424 760)
+	(bus)
+)
+(connector
+	(pt 536 760)
+	(pt 536 912)
+	(bus)
+)
+(connector
+	(pt 456 776)
+	(pt 520 776)
+)
+(connector
+	(pt 520 776)
+	(pt 520 912)
+)
+(connector
+	(pt 400 912)
+	(pt 504 912)
+)
+(connector
+	(pt 400 -136)
+	(pt 400 208)
+)
+(connector
+	(pt 400 208)
+	(pt 400 912)
+)
+(connector
+	(pt 96 208)
+	(pt 96 536)
+)
+(connector
+	(pt 552 536)
+	(pt 96 536)
+)
+(connector
+	(pt 552 536)
+	(pt 552 912)
+)
+(connector
+	(pt 112 512)
+	(pt 568 512)
+	(bus)
+)
+(connector
+	(pt 568 512)
+	(pt 568 912)
+	(bus)
+)
+(connector
+	(pt 128 496)
+	(pt 584 496)
+	(bus)
+)
+(connector
+	(pt 584 496)
+	(pt 584 912)
+	(bus)
+)
+(connector
+	(pt 144 480)
+	(pt 600 480)
+)
+(connector
+	(pt 600 480)
+	(pt 600 912)
+)
+(connector
+	(pt 160 464)
+	(pt 616 464)
+)
+(connector
+	(pt 616 464)
+	(pt 616 912)
+)
+(connector
+	(pt 272 -208)
+	(pt 272 232)
+)
+(connector
+	(pt 248 -208)
+	(pt 272 -208)
+)
+(connector
+	(pt 208 208)
+	(pt 208 232)
+)
+(connector
+	(pt 208 232)
+	(pt 208 448)
+)
+(connector
+	(pt 208 232)
+	(pt 224 232)
+)
+(connector
+	(pt 8 -80)
+	(pt 176 -80)
+)
+(connector
+	(pt 176 -184)
+	(pt 176 -80)
+)
+(connector
+	(pt 176 -80)
+	(pt 176 -48)
+)
+(connector
+	(pt 8 24)
+	(pt 8 -80)
+)
+(connector
+	(pt -272 24)
+	(pt -272 896)
+)
+(connector
+	(pt -272 24)
+	(pt 8 24)
+)
+(connector
+	(pt -192 72)
+	(pt -192 584)
+)
+(connector
+	(pt -192 584)
+	(pt -192 896)
+)
+(connector
+	(pt -328 -400)
+	(pt -328 -152)
+)
+(connector
+	(pt -328 -152)
+	(pt -328 72)
+)
+(connector
+	(pt 96 -96)
+	(pt 96 -48)
+)
+(connector
+	(pt 96 -96)
+	(pt 24 -96)
+)
+(connector
+	(pt 24 72)
+	(pt 24 -96)
+)
+(connector
+	(pt -328 72)
+	(pt -192 72)
+)
+(connector
+	(pt -192 72)
+	(pt 24 72)
+)
 (junction (pt 848 -312))
 (junction (pt 104 -232))
 (junction (pt 496 -152))
@@ -6200,8 +6261,6 @@ agreement for further details.
 (junction (pt 208 232))
 (junction (pt -240 -232))
 (junction (pt 496 128))
-(junction (pt 176 -72))
-(junction (pt -192 -88))
 (junction (pt -192 584))
 (junction (pt -880 832))
 (junction (pt -880 1016))
@@ -6258,3 +6317,5 @@ agreement for further details.
 (junction (pt 800 176))
 (junction (pt 400 -136))
 (junction (pt 400 208))
+(junction (pt 176 -80))
+(junction (pt -192 72))
