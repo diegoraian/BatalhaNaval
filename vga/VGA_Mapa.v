@@ -42,15 +42,15 @@ reg  [9:0] espessura = 10'd4;							// Recebe a espessura da grade/mapa em pixel
 /*  COR DO MAPA = BRANCO */
 assign rgb_b = 
 					/*Linhas Verticais do Mapa*/
-					((coluna > 10'd10 && coluna  < (10'd10 + espessura))   && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd72 && coluna  < (10'd72 + espessura))   && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd134 && coluna < (10'd134 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd196 && coluna < (10'd196 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd258 && coluna < (10'd258 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd320 && coluna < (10'd320 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd382 && coluna < (10'd382 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd444 && coluna < (10'd444 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd506 && coluna < (10'd506 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
+					((coluna > 10'd10 && coluna  < (10'd10 + espessura))   && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd72 && coluna  < (10'd72 + espessura))   && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd134 && coluna < (10'd134 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd196 && coluna < (10'd196 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd258 && coluna < (10'd258 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd320 && coluna < (10'd320 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd382 && coluna < (10'd382 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd444 && coluna < (10'd444 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd506 && coluna < (10'd506 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
 					
 					/*Linhas Horizontais do Mapa*/ 
 					((linha > 10'd10   && linha < (10'd10 + espessura))	&& (coluna > 10'd10 && coluna < 10'd510)) ? 1'b1:
@@ -67,15 +67,15 @@ assign rgb_b =
 					
 assign rgb_r =
 					/*Linhas Verticais do Mapa*/
-					((coluna > 10'd10 && coluna  < (10'd10 + espessura))   && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd72 && coluna  < (10'd72 + espessura))   && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd134 && coluna < (10'd134 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd196 && coluna < (10'd196 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd258 && coluna < (10'd258 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd320 && coluna < (10'd320 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd382 && coluna < (10'd382 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd444 && coluna < (10'd444 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd506 && coluna < (10'd506 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
+					((coluna > 10'd10 && coluna  < (10'd10 + espessura))   && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd72 && coluna  < (10'd72 + espessura))   && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd134 && coluna < (10'd134 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd196 && coluna < (10'd196 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd258 && coluna < (10'd258 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd320 && coluna < (10'd320 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd382 && coluna < (10'd382 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd444 && coluna < (10'd444 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd506 && coluna < (10'd506 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
 					
 					/*Linhas Horizontais do Mapa*/ 
 					((linha > 10'd10   && linha < (10'd10 + espessura))	&& (coluna > 10'd10 && coluna < 10'd510)) ? 1'b1:
@@ -92,15 +92,15 @@ assign rgb_r =
 
 assign rgb_g = 
 					/*Linhas Verticais do Mapa*/
-					((coluna > 10'd10 && coluna  < (10'd10 + espessura))   && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd72 && coluna  < (10'd72 + espessura))   && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd134 && coluna < (10'd134 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd196 && coluna < (10'd196 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd258 && coluna < (10'd258 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd320 && coluna < (10'd320 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd382 && coluna < (10'd382 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd444 && coluna < (10'd444 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
-					((coluna > 10'd506 && coluna < (10'd506 + espessura))  && (linha > 10'd10 && linha < 10'd460 )) ? 1'b1:
+					((coluna > 10'd10 && coluna  < (10'd10 + espessura))   && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd72 && coluna  < (10'd72 + espessura))   && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd134 && coluna < (10'd134 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd196 && coluna < (10'd196 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd258 && coluna < (10'd258 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd320 && coluna < (10'd320 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd382 && coluna < (10'd382 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd444 && coluna < (10'd444 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
+					((coluna > 10'd506 && coluna < (10'd506 + espessura))  && (linha > 10'd10 && linha < 10'd466 )) ? 1'b1:
 					
 					/*Linhas Horizontais do Mapa*/ 
 					((linha > 10'd10   && linha < (10'd10 + espessura))	&& (coluna > 10'd10 && coluna < 10'd510)) ? 1'b1:

@@ -81,6 +81,7 @@ begin
   end else begin
 	if (!reset) begin // Caso reset volte para o estado de direção
       E_A <= escolheDirecao;
+      
    end else begin
       E_A <= E_F;
     end
