@@ -48,7 +48,7 @@ posicionandoPecas DUT(
 			reset = 0;
 			enter = 1;
 			select = 1;
-			forever #25 clk = !clk;
+			forever #10 clk = !clk;
 	end
 	
 	
@@ -90,14 +90,17 @@ posicionandoPecas DUT(
 			ativaEnter;
 
 		// define Y
+			#200
 			ativaSelectRandomico;
 			ativaEnter;
 
 		// Verifica Conflito
+			#200
 		    conflito = 0;
 			ativaEnter;
 
-		// Armazena Peça 
+		// Armazena Peça
+			#200 
 			ativaEnter;
 
 		end
@@ -208,9 +211,9 @@ posicionandoPecas DUT(
 	begin
 		#20
 		enter = 1;
-		#200
+		#20
 		enter = 0;
-		#200
+		#20
 		enter = 1;
 	end
 	endtask
@@ -219,9 +222,9 @@ posicionandoPecas DUT(
 	begin
 		#20
 		select = 1;
-		#200
+		#20
 		select = 0;
-		#200
+		#20
 		select = 1;
 	end
 	endtask

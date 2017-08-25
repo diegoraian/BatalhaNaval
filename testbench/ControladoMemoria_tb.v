@@ -9,7 +9,6 @@ reg [63:0] data_memoria_jogadorDois; //Leitura da memoria jogador 1 ou 2
 
 //reg do Validador faz leitura de toda memoria e escreve em uma posição.
 reg readyValidador;
-reg enableValidador;
 reg validador_wrep1;
 reg validador_wrep2;
 reg validadoJogador;
@@ -55,10 +54,9 @@ ControladoMemoria controladoMemoria(
 	 .data_memoria_jogadorDois(data_memoria_jogadorDois), //Leitura da memoria jogador 1 ou 2
 	
 	 .readyValidador(readyValidador),
-	 .enableValidador(enableValidador),
 	 .validador_wrep1(validador_wrep1),
 	 .validador_wrep2(validador_wrep2),
-	 .validadorJogador(validadoJogador),
+	 .validadoJogador(validadoJogador),
 	 .validador_addr(validador_addr),
 	 .validador_data(validador_data),
 	
@@ -72,8 +70,8 @@ ControladoMemoria controladoMemoria(
 
 	
 	// de Pontuação. Só faz leitura
-	 .readyPontuacao(readyCalculaPontuacao),
-	 .pontuacao_addr(pontuacao_readaddr),
+	 .readyCalculaPontuacao(readyCalculaPontuacao),
+	 .pontuacao_readaddr(pontuacao_readaddr),
 	 .jogadorPontuacao(jogadorPontuacao),
 	
 	// de VGA. Só faz leitura
@@ -165,8 +163,8 @@ endtask
 // criar uma task pra validacao
 task leituraMemoriaValidador;
 	begin
-			enableValidador = 1'b1;
-			readyValidador = 1'b0;
+
+			readyValidador = 1'b1;
 			#10	
 			validadoJogador= 1'b0;
 			for(memoriaInd = 0 ; memoriaInd<12 ; memoriaInd = memoriaInd + 1 )
@@ -177,8 +175,6 @@ task leituraMemoriaValidador;
 				data_memoria_jogadorUm =  memoriaVectorJogadorUm[memoriaInd];
 			end
 
-			readyValidador= 1'b1;
-			#20
 			readyValidador = 1'b0;
 			
 	end

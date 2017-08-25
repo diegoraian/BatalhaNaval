@@ -70,8 +70,7 @@ integer size = 0;
 		//  ******************************************
 
 		//       Inserção Submarino(Jogador Um)
-		#200
-		 enable =0;
+		#20 enable =0;
 		for(qtNavio = 0;qtNavio < 5 ;qtNavio = qtNavio +1)
 		begin
 			tipo = 3'b0;
@@ -80,12 +79,12 @@ integer size = 0;
 
 			geraPosicaoRandomico;
 
-			jogador = 1'b0;
+			jogador = 1'b1;
 		
-			#500
+			#200
 			enable = 1 ;
 
-			#2500 
+			#1200 
 			enable = 0 ;
 
 
@@ -105,16 +104,16 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#500
+			#200
 			enable = 1 ;
 
-			#2500 
+			#1200 
 			enable = 0 ;
 		end
 
 
 		//       Inserção Hidroaviao(Jogador Um)
-		#500 enable =0;
+		#50 enable =0;
 		for(qtNavio = 0;qtNavio < 2 ;qtNavio = qtNavio +1)
 		begin
 			tipo = 3'b010;
@@ -125,10 +124,10 @@ integer size = 0;
 
 			jogador = 1'b0;
 		
-			#500
+			#200
 			enable = 1 ;
 
-			#2500 
+			#1200 
 			enable = 0 ;
 		end
 
@@ -203,19 +202,6 @@ integer size = 0;
 
 	end
 	
-
-	always
-	begin
-		//faz o papel do controlador de memoria
-		#2
-		if(ready && enable ) enable = 0;
-			
-	end
-
-
-
-
-
 	task initMemoriaRam;
 	begin
 		for(size = 0;size < 12; size = size +1)
