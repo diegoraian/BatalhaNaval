@@ -48,6 +48,7 @@ posicionandoPecas DUT(
 			reset = 0;
 			enter = 1;
 			select = 1;
+			mode=0;
 			forever #25 clk = !clk;
 	end
 	
@@ -95,6 +96,8 @@ posicionandoPecas DUT(
 
 		// Verifica Conflito
 		    conflito = 0;
+		    #1000
+
 			ativaEnter;
 
 		// Armazena Peça 

@@ -1168,7 +1168,7 @@ reg [3:0] y;
 			if(memoriaConflito) begin
 				verificandoMemoriaConflito = 1'b0;
 			end else begin
-				if(read_addr == 5'd11) begin
+				if(read_addr == 5'd10) begin
 					verificandoMemoriaConflito = 1'b0;
 				end else begin
 					read_addr = read_addr + 5'd1;
