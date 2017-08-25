@@ -180,7 +180,7 @@ begin
 			exibeMapa = 1'b1;
 			addr = addr + 1'b1;
 		
-			if(addr == 4'd12) addr = 1'b0;
+			if(addr == 4'd11) addr = 1'b0;
 			
 		end
 		
