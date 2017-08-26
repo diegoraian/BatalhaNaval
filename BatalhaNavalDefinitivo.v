@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Thu Aug 24 00:48:15 2017"
+// CREATED		"Thu Aug 24 10:15:14 2017"
 
 module BatalhaNavalDefinitivo(
 	clk,
