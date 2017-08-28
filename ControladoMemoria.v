@@ -65,8 +65,8 @@ module ControladoMemoria
 	output reg [63:0] dataReadVGA,			 //data leitura da VGA
 	output reg [63:0] data,               //conencta com a memoria a e b 
 	output reg [4:0]  addr, 				 //endereço de leitura ou escrita
-	output reg  wrenP1,
-	output reg  wrenP2	
+	output reg  wrenP1 =1'b0,
+	output reg  wrenP2	=1'b0
 
 );
 
