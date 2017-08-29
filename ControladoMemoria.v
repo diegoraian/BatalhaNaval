@@ -83,7 +83,8 @@ parameter
 
 reg [3:0]E_A;
 reg [3:0]E_F = Idle;
-reg [5:0] countValida= 0;
+reg [5:0] countValida= 1'b0;
+reg enableCount = 1'b0;
 
 always@(posedge clk)
 begin
@@ -205,7 +206,7 @@ begin
 			
 			TransmitindoVgaPlayerUm: begin
 			
-				if(readyValidador)begin
+				if(enableValidador)begin
 					if(!validadorJogador)
 						E_F <= ValidandorPlayerUm;
 					else
@@ -231,7 +232,7 @@ begin
 			
 			TransmitindoVgaPlayerDois: begin
 			
-				if(readyValidador)begin
+				if(enableValidador)begin
 					if(!validadorJogador)
 						E_F <= ValidandorPlayerUm;
 					else 
@@ -272,7 +273,8 @@ begin
 	case (E_A)
 	
 		Idle:begin
-			countValida=0;
+			enableCount = 1'b0;
+			
 			
 			
 		end
@@ -289,7 +291,9 @@ begin
 			end
 	
 			dataReadValidador = data_memoria_jogadorUm;
-			countValida = countValida +1'b1;
+			enableCount = 1'b1;
+			//countValida = countValida +1'b1;
+
 		
 		end
 		
@@ -305,7 +309,8 @@ begin
 			
 	
 			dataReadValidador = data_memoria_jogadorDois;
-			countValida = countValida +1'b1;
+			enableCount = 1'b1;
+			//countValida = countValida +1'b1;
 		
 		end
 		
@@ -320,7 +325,7 @@ begin
 				addr = colisor_addr;
 			
 			end
-		
+			enableCount = 1'b0;
 			dataReadColisor  = data_memoria_jogadorUm;	
 		
 		end
@@ -336,7 +341,7 @@ begin
 				addr = colisor_addr;
 			
 			end
-		
+			enableCount = 1'b0;
 			dataReadColisor  = data_memoria_jogadorDois;
 		
 		end
@@ -352,8 +357,10 @@ begin
 		
 		TransmitindoVgaPlayerUm: begin
 			addr = vga_readAddr;
-		
+			enableCount = 1'b0;
+			
 			dataReadVGA = data_memoria_jogadorUm;
+
 		
 		end
 		
@@ -361,8 +368,10 @@ begin
 			//colocar algo para indicar qual memoria(P1 ou P2)
 			
 			addr = vga_readAddr;
-		
+			enableCount = 1'b0;
+			
 			dataReadVGA = data_memoria_jogadorDois;
+
 				
 		end
 		
@@ -371,6 +380,19 @@ begin
 //		end
 		
 	endcase
+end
+
+
+
+always @(posedge clk) begin
+	if(enableCount)begin
+		countValida =  countValida + 1'b1;
+	end else begin
+		if(E_A == TransmitindoVgaPlayerUm || E_A == TransmitindoVgaPlayerUm || E_A == Idle )  countValida =1'b0;
+	end
+
+
+
 end
 
 endmodule
