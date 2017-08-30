@@ -1,7 +1,7 @@
 module posicionandoPecas_tb;
 
 //input
-reg enable,clk,reset,select,enter,mode,conflito;
+reg enable,clk,reset,select,enter,mode,conflito,sw10,sw11,sw12,sw13,sw14,sw15,sw16,sw17;
 reg [2:0] posicaoRandomico;
 reg direcaoRandomico;
 
@@ -19,7 +19,7 @@ wire orientacao;
 integer qtNavio = 5;
 integer CoordenadaRandom;
 
-posicionandoPecas DUT(
+posicionandoPecasSwich DUT(
 	//input
 	 .enable(enable),
 	 .reset(reset),
@@ -28,6 +28,14 @@ posicionandoPecas DUT(
      .mode(mode),
      .clk(clk),
      .conflito(conflito),
+     .sw10(sw10),
+     .sw11(sw11),
+     .sw12(sw12),
+     .sw13(sw13),
+     .sw14(sw14),
+     .sw15(sw15),
+     .sw16(sw16),
+     .sw17(sw17),
 
 	 //output
 	.ready(ready), 

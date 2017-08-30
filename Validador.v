@@ -150,7 +150,13 @@ reg [3:0] y;
 		if(enable)
 			E_F <= SalvandoPeca;
 		else
-			E_F <= EstadoInicial;
+			begin
+				if(salvouMemoria) 
+					E_F <= SalvandoPeca;
+				else begin
+					E_F <= EstadoInicial;
+				end
+			end
 	
 	end
 	endcase
@@ -1166,12 +1172,12 @@ reg [3:0] y;
 			
 			
 			if(memoriaConflito) begin
-				verificandoMemoriaConflito = 1'b0;
+				verificandoMemoriaConflito <= 1'b0;
 			end else begin
 				if(read_addr == 5'd10) begin
 					verificandoMemoriaConflito = 1'b0;
 				end else begin
-					read_addr = read_addr + 5'd1;
+					read_addr <= read_addr + 5'd1;
 				end
 			end
 			
@@ -1191,7 +1197,7 @@ reg [3:0] y;
 
 		ConflitoMemoria:
 		begin
-			conflitoMemoria_out = 1'b1;
+			conflitoMemoria_out <= 1'b1;
 		
 		end
 		
@@ -1234,7 +1240,7 @@ reg [3:0] y;
  
  
  
- 
+
  
  assign conflito = (conflitoBorda_out == 1'b1 || conflitoMemoria_out ==1'b1) ? 1'b1 :1'b0 ;
 
