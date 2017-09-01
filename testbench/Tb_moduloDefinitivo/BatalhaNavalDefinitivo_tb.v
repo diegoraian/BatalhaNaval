@@ -1,3 +1,23 @@
+
+/*
+ enter    m21    key[1] 
+ select   n21    key[2] 
+ enable   ac28   sw[1] 
+ reset    ac26   sw[7] 
+ mode     ac27   sw[2]
+
+
+
+
+
+
+*/
+
+
+
+
+
+
 module BatalhaNavalDefinitivo_tb;
 
 reg clk;
@@ -32,8 +52,8 @@ wire estado3;
 wire estado4;
 wire estado5;
 wire estado6;
-wire wren_p1;
-wire wren_p2;
+wire wren_p1_geral;
+wire wren_p2_geral;
 wire [4:0] addr_memoria;
 wire [63:0] data_memoria_salvar;
 
@@ -73,8 +93,8 @@ BatalhaNavalDefinitivo DUT(
 	.estado4(estado4),
 	.estado5(estado5),
 	.estado6(estado6),
-	.wren_p1(wren_p1),
-	.wren_p2(wren_p1),
+	.wren_p1_geral(wren_p1_geral),
+	.wren_p2_geral(wren_p2_geral),
 	.addr_memoria(addr_memoria),
 	.data_memoria_salvar(data_memoria_salvar)
 );
@@ -127,30 +147,117 @@ integer memoriaInd, size;
 	initial
 	begin
 		initMemoriaRam;
-
-
+		//submarino
+		//direcao
 		#2000
-		ativaEnter;
+		ativaEnter;//1 ->2
+		//orientacao
+		#200
+		ativaEnter;//2->3
+		//x base
+		#50
+		sw10 = 1'b1;
+
+		//confirma x
+		#200
+		ativaEnter;//3->4
+		//retira x
+		#50
+		sw10 = 1'b0;
+		//y base
+		sw15 = 1'b1;
+		//confirmar y base
+		#1000
+		ativaEnter;// 4->5
+		//peça armazenada
+		#5000
+		ativaEnter;// 5->6
+
+		
+		sw10 = 1'b0;
+		sw15 = 1'b0;
+		//nova peça
+		
+			//submarino
+		//direcao
+		//orientacao
+//**************************************************		
 
 		#200
-		ativaEnter;
+		ativaEnter;//6->1
+		//x base
+		//#50
+		//sw10 = 1'b1;
+		
+		//confirma x
+		#200
+		ativaEnter;//1->2
+		//retira x
+		//#50
+		//sw10 = 1'b0;
+		//y base
+		//sw15 = 1'b1;
+		//confirmar y base
 
+		#200
+		ativaEnter;//2->3
 		#50
+		sw15 = 1'b0;
 		sw10 = 1'b1;
 
 
 		#200
-		ativaEnter;
-
+		ativaEnter;//3->4
 		#50
 		sw10 = 1'b0;
-
 		sw15 = 1'b1;
 
+		#200
+		ativaEnter;//4->5
+		
+		
+
+		#2000
+		ativaEnter;//5->3
+		sw10 = 1'b0;
+		sw12 = 1'b1;
+		sw15 = 1'b0;
+		//peça armazenada
+		#200
+		ativaEnter;//3->4
+//***********************************************
+
+		#200
+		ativaEnter;//4->5
+		//retira x
+		//#50
+		//sw10 = 1'b0;
+		//y base
+		//sw15 = 1'b1;
+		//confirmar y base
+
+		#5000
+		ativaEnter;//5->6
+		#50
+		sw15 = 1'b0;
+		sw12 = 1'b1;
 
 
 		#200
-		ativaEnter;
+		ativaEnter;//3->4
+		#50
+		sw12 = 1'b0;
+		sw15 = 1'b1;
+
+		#200
+		ativaEnter;//4->5
+		
+		
+
+		#5000
+		ativaEnter;//5->6
+
+
 
 		//#100
 		//leituramemoriaVga;
@@ -162,11 +269,34 @@ integer memoriaInd, size;
 		//escritaMemoriaValidador;
 
 
+
+
+
+
 	end
 
 
 
 
+
+
+	/*
+	***************************************************
+	*    Always que simula a leitura na memoria       *
+	***************************************************
+	*/
+	always
+	begin
+		#10
+
+		if(!wren_p1_geral && !wren_p2_geral)
+		begin
+			data_memoria_um = memoriaVectorJogadorUm[addr_memoria];
+			data_memoria_dois = memoriaVectorJogadorDois[addr_memoria];
+		end
+		
+		
+	end
 
 
 	/*
@@ -178,47 +308,21 @@ integer memoriaInd, size;
 	begin
 		#10
 
-		if(!wren_p1 && !wren_p2)
+		if(wren_p1_geral)
 		begin
-			data_memoria_um = memoriaVectorJogadorUm[addr_memoria];
-			data_memoria_dois = memoriaVectorJogadorDois[addr_memoria];
+			memoriaVectorJogadorUm[addr_memoria] = data_memoria_salvar;
+		end
+		else begin
+			if(wren_p2_geral)
+			begin
+				memoriaVectorJogadorDois[addr_memoria] = data_memoria_salvar;
+			end
 		end
 		
 		
 	end
 
 
-	// /*
-	// ***************************************************
-	// *    Always que simula a escrita na memoria       *
-	// ***************************************************
-	// */
-	// always
-	// begin
-	// 	#10
-	// 	case ({validador_wrep1,validador_wrep2,colisor_wrep1,colisor_wrep2})
-
-
-	// 	4'b1xxx: memoriaVectorJogadorUm[validador_addr] = validador_data;
-	// 	4'bx1xx: memoriaVectorJogadorDois[validador_addr] = validador_data;
-	// 	4'bxx1x: memoriaVectorJogadorUm[colisor_wrep1] = colisor_data;
-	// 	4'bxxx1: memoriaVectorJogadorDois[colisor_wrep2] = colisor_data;
-
-	// 	endcase
-		
-		
-	// end
-
-
-
-
-//criar uma task pra iniciar leitura vga;
-
-
-
-
-
-// criar uma task pra validacao
 
 
 

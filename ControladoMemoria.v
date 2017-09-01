@@ -66,7 +66,7 @@ module ControladoMemoria
 	output reg [63:0] data,               //conencta com a memoria a e b 
 	output reg [4:0]  addr, 				 //endereço de leitura ou escrita
 	output reg  wrenP1 =1'b0,
-	output reg  wrenP2	=1'b0
+	output reg  wrenP2 =1'b0
 
 );
 
@@ -133,11 +133,11 @@ begin
 			
 			ValidandorPlayerUm: begin
 				
-				if(readyValidador) begin
+				if(readyValidador && countValida < 5'h1f ) begin
 					// Conto um tempo necessário para salvar na memoria
 					E_F <= ValidandorPlayerUm ;
 				end else begin
-					if(enableValidador == 1'b1 && countValida< 5'h1f )begin
+					if(enableValidador == 1'b1 /* && countValida < 5'h1f */ )begin
 						E_F <= ValidandorPlayerUm;
 					end else begin
 						E_F<=TransmitindoVgaPlayerUm;
@@ -152,7 +152,7 @@ begin
 				if(readyValidador)begin
 					E_F <= ValidandorPlayerDois;
 				end else begin
-					if(enableValidador == 1'b1 && countValida< 5'h1f )begin
+					if(enableValidador == 1'b1 /* && countValida< 5'h1f */ )begin
 						E_F <= ValidandorPlayerUm;
 					end else begin
 						E_F<=TransmitindoVgaPlayerDois;
@@ -268,12 +268,14 @@ end
 
 
 //******* decodificador De Saida ********
-always@*
+always@(posedge clk)
 begin
 	case (E_A)
 	
 		Idle:begin
 			enableCount = 1'b0;
+			wrenP1 = 1'b0;
+			wrenP2 = 1'b0;	
 			
 			
 			
@@ -281,7 +283,7 @@ begin
 		
 		ValidandorPlayerUm: begin
 		
-			wrenP1 = validador_wrep1;
+			
 			if(validador_wrep1)begin
 				//salvar na memoria
 				addr = validador_addr;
@@ -289,16 +291,14 @@ begin
 			end else begin
 				addr = validador_addr;
 			end
-	
+			wrenP1 = validador_wrep1;
 			dataReadValidador = data_memoria_jogadorUm;
 			enableCount = 1'b1;
-			//countValida = countValida +1'b1;
 
 		
 		end
 		
 		ValidandorPlayerDois: begin
-			wrenP2 = validador_wrep2;
 			if(validador_wrep2)begin
 				//salvar na memoria
 				addr = validador_addr;
@@ -307,7 +307,7 @@ begin
 				addr = validador_addr;
 			end
 			
-	
+			wrenP2 = validador_wrep2;	
 			dataReadValidador = data_memoria_jogadorDois;
 			enableCount = 1'b1;
 			//countValida = countValida +1'b1;
@@ -315,7 +315,7 @@ begin
 		end
 		
 		ColidindoPlayerUm:begin
-			wrenP1 = colisor_wrep1;
+			//wrenP1 = colisor_wrep1;
 			if(colisor_wrep1)begin
 			
 				addr = colisor_addr;
@@ -331,7 +331,7 @@ begin
 		end
 		
 		ColidindoPlayerDois: begin
-			wrenP2 = colisor_wrep2;
+			//wrenP2 = colisor_wrep2;
 			if(colisor_wrep2)begin
 			
 				addr = colisor_addr;
@@ -356,6 +356,8 @@ begin
 		end
 		
 		TransmitindoVgaPlayerUm: begin
+			wrenP1 = 1'b0;
+			wrenP2 = 1'b0;
 			addr = vga_readAddr;
 			enableCount = 1'b0;
 			
@@ -366,7 +368,8 @@ begin
 		
 		TransmitindoVgaPlayerDois: begin
 			//colocar algo para indicar qual memoria(P1 ou P2)
-			
+			wrenP1 = 1'b0;
+			wrenP2 = 1'b0;
 			addr = vga_readAddr;
 			enableCount = 1'b0;
 			
@@ -391,8 +394,12 @@ always @(posedge clk) begin
 		if(E_A == TransmitindoVgaPlayerUm || E_A == TransmitindoVgaPlayerUm || E_A == Idle )  countValida =1'b0;
 	end
 
-
-
 end
+
+//assign wrenP1 = (validador_wrep1 == 1'b1 && E_A == ValidandorPlayerUm) ?1'b1: 1'b0;
+//assign wrenP1 = 1'b1;
+//assign wrenP2 = 1'b1;
+
+//assign wrenP2 = (validador_wrep2 == 1'b1 && E_A == ValidandorPlayerDois ) ?1'b1: 1'b0;
 
 endmodule

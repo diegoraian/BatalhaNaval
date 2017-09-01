@@ -149,14 +149,8 @@ reg [3:0] y;
 	begin
 		if(enable)
 			E_F <= SalvandoPeca;
-		else
-			begin
-				if(salvouMemoria) 
-					E_F <= SalvandoPeca;
-				else begin
-					E_F <= EstadoInicial;
-				end
-			end
+		else	
+			E_F <= EstadoInicial;
 	
 	end
 	endcase
@@ -205,8 +199,7 @@ reg [3:0] y;
 	begin
 		bordaConflito =1;
 		case(tipo)
-		
-				PORTA_AVIOES:
+				3'b100:
 				begin
 					if(direcao == 0) begin  // Se é Horizontal
 						if(x1 < 5) begin       //verificacao de borda
@@ -215,7 +208,7 @@ reg [3:0] y;
 							y = y1;
 
 
-							vetor[2 -: 3] = PORTA_AVIOES;
+							vetor[2 -: 3] = 3'b100;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -246,7 +239,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = PORTA_AVIOES;
+							vetor[2 -: 3] = 3'b100;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -272,7 +265,7 @@ reg [3:0] y;
 					end
 				end
 				
-				ENCOURACADO:	
+				3'b011:	
 				begin 
 					if(direcao == 0) begin  // Se é Horizontal
 						if(x1 < 6) begin
@@ -280,7 +273,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = ENCOURACADO;
+							vetor[2 -: 3] = 3'b011;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -311,7 +304,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = ENCOURACADO;
+							vetor[2 -: 3] = 3'b011;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -339,7 +332,7 @@ reg [3:0] y;
 					end
 				end
 					
-				HIDROAVIAO:
+				3'b010:
 				begin	//horizontal
 					if(direcao == 0) begin //DIREÇÃO 0 é HORIZONTAL
 						if(orientacao == 0)begin //ORIENTAÇÃO é default(aponta pra cima)
@@ -348,7 +341,7 @@ reg [3:0] y;
 								x = x1;
 								y = y1;
 
-								vetor[2 -: 3] = HIDROAVIAO;
+								vetor[2 -: 3] = 3'b010;
 
 								vetor[6 -: 4]  = x;
 								vetor[10 -: 4] = y;
@@ -379,7 +372,7 @@ reg [3:0] y;
 								x = x1;
 								y = y1;
 
-								vetor[2 -: 3] = HIDROAVIAO;
+								vetor[2 -: 3] = 3'b010;
 
 								vetor[6 -: 4]  = x;
 								vetor[10 -: 4] = y;
@@ -410,7 +403,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = HIDROAVIAO;
+							vetor[2 -: 3] = 3'b010;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -441,7 +434,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = HIDROAVIAO;
+							vetor[2 -: 3] = 3'b010;
 
 							vetor[6 -: 4]  = x; //3
 							vetor[10 -: 4] = y; //3
@@ -468,7 +461,7 @@ reg [3:0] y;
 				end
 			end
 				 
-			CRUZADOR:
+			3'b001:
 				begin
 					if(direcao == 0) begin  // Se é Horizontal
 						if(x1 < 8) begin
@@ -476,7 +469,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = CRUZADOR;
+							vetor[2 -: 3] = 3'b001;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -504,7 +497,7 @@ reg [3:0] y;
 							x = x1;
 							y = y1;
 
-							vetor[2 -: 3] = CRUZADOR;
+							vetor[2 -: 3] = 3'b001;
 
 							vetor[6 -: 4]  = x;
 							vetor[10 -: 4] = y;
@@ -529,13 +522,13 @@ reg [3:0] y;
 					end
 				end
 				
-				SUBMARINO:
+				3'b000:
 				begin
 					vetor = 46'd0;
 					x = x1;
 					y = y1;
 					  
-					vetor[2 -: 3] = SUBMARINO;
+					vetor[2 -: 3] = 3'b000;
 						 
 					vetor[6 -: 4]  = x;
 					vetor[10 -: 4] = y;
@@ -604,7 +597,7 @@ reg [3:0] y;
 		
 			case (vetor[2-:3])			
 					
-					SUBMARINO:
+					3'b000:
 					begin
 					
 						case(vetor[10-:8])
@@ -642,7 +635,7 @@ reg [3:0] y;
 						endcase	
 					end
 					
-					CRUZADOR:
+					3'b001:
 					begin
 					
 						case(vetor[10-:8])
@@ -717,7 +710,7 @@ reg [3:0] y;
 						
 					end
 					
-					HIDROAVIAO:
+					3'b010:
 					begin
 					
 						case(vetor[10-:8])
@@ -827,7 +820,7 @@ reg [3:0] y;
 					
 					end
 					
-					ENCOURACADO:
+					3'b011:
 					begin
 						
 						case(vetor[10-:8])
@@ -974,7 +967,7 @@ reg [3:0] y;
 					
 					end
 					
-					PORTA_AVIOES:
+					3'b1000:
 					begin
 					
 						case(vetor[10-:8])
@@ -1242,10 +1235,10 @@ reg [3:0] y;
  
 
  
- assign conflito = (conflitoBorda_out == 1'b1 || conflitoMemoria_out ==1'b1) ? 1'b1 :1'b0 ;
+ assign conflito = ((conflitoBorda_out == 1'b1 && enable ==1'b1) || (conflitoMemoria_out == 1'b1 &&  enable ==1'b1) ) ? 1'b1 :1'b0 ;
 
 
- assign  ready  = (wrep1 == 1 || wrep2 == 1 )? 1'b1 : 1'b0  ;
+ assign  ready  = ((wrep1 == 1'b1 && enable ==1'b1) || (wrep2 == 1'b1 && enable==1'b1)) ? 1'b1 : 1'b0  ;
 			 
  endmodule
  

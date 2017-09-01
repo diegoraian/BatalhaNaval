@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Wed Aug 30 09:24:00 2017"
+// CREATED		"Thu Aug 31 00:39:55 2017"
 
 module BatalhaNavalDefinitivo(
 	clk,
@@ -49,8 +49,8 @@ module BatalhaNavalDefinitivo(
 	estado4,
 	estado5,
 	estado6,
-	wren_p1,
-	wren_p2,
+	wren_p1_geral,
+	wren_p2_geral,
 	addr_memoria,
 	data_memoria_salvar
 );
@@ -87,22 +87,22 @@ output wire	estado3;
 output wire	estado4;
 output wire	estado5;
 output wire	estado6;
-output wire	wren_p1;
-output wire	wren_p2;
+output wire	wren_p1_geral;
+output wire	wren_p2_geral;
 output wire	[4:0] addr_memoria;
 output wire	[63:0] data_memoria_salvar;
 
 wire	SYNTHESIZED_WIRE_0;
-wire	SYNTHESIZED_WIRE_138;
-wire	[63:0] SYNTHESIZED_WIRE_139;
+wire	SYNTHESIZED_WIRE_135;
+wire	[63:0] SYNTHESIZED_WIRE_136;
 wire	[3:0] SYNTHESIZED_WIRE_4;
 wire	[3:0] SYNTHESIZED_WIRE_5;
-wire	SYNTHESIZED_WIRE_140;
+wire	SYNTHESIZED_WIRE_137;
 wire	SYNTHESIZED_WIRE_7;
 wire	SYNTHESIZED_WIRE_8;
 wire	SYNTHESIZED_WIRE_9;
-wire	SYNTHESIZED_WIRE_141;
-wire	SYNTHESIZED_WIRE_142;
+wire	SYNTHESIZED_WIRE_10;
+wire	SYNTHESIZED_WIRE_138;
 wire	SYNTHESIZED_WIRE_12;
 wire	SYNTHESIZED_WIRE_13;
 wire	SYNTHESIZED_WIRE_14;
@@ -112,32 +112,33 @@ wire	[63:0] SYNTHESIZED_WIRE_17;
 wire	[4:0] SYNTHESIZED_WIRE_18;
 wire	[63:0] SYNTHESIZED_WIRE_19;
 wire	[4:0] SYNTHESIZED_WIRE_20;
-wire	SYNTHESIZED_WIRE_143;
+wire	SYNTHESIZED_WIRE_139;
 wire	SYNTHESIZED_WIRE_22;
 wire	[3:0] SYNTHESIZED_WIRE_23;
 wire	[3:0] SYNTHESIZED_WIRE_24;
-wire	SYNTHESIZED_WIRE_144;
+wire	SYNTHESIZED_WIRE_140;
 wire	SYNTHESIZED_WIRE_26;
-wire	SYNTHESIZED_WIRE_145;
-wire	SYNTHESIZED_WIRE_146;
-wire	[9:0] SYNTHESIZED_WIRE_147;
-wire	[9:0] SYNTHESIZED_WIRE_148;
+wire	SYNTHESIZED_WIRE_141;
+wire	SYNTHESIZED_WIRE_142;
+wire	[9:0] SYNTHESIZED_WIRE_143;
+wire	[9:0] SYNTHESIZED_WIRE_144;
 wire	[63:0] SYNTHESIZED_WIRE_34;
 wire	SYNTHESIZED_WIRE_35;
+wire	SYNTHESIZED_WIRE_38;
 wire	SYNTHESIZED_WIRE_39;
-wire	SYNTHESIZED_WIRE_40;
-wire	SYNTHESIZED_WIRE_42;
-wire	[63:0] SYNTHESIZED_WIRE_46;
-wire	[63:0] SYNTHESIZED_WIRE_50;
-wire	[63:0] SYNTHESIZED_WIRE_54;
-wire	[63:0] SYNTHESIZED_WIRE_58;
-wire	[63:0] SYNTHESIZED_WIRE_62;
-wire	[63:0] SYNTHESIZED_WIRE_66;
-wire	[63:0] SYNTHESIZED_WIRE_70;
-wire	[63:0] SYNTHESIZED_WIRE_74;
-wire	[63:0] SYNTHESIZED_WIRE_78;
-wire	SYNTHESIZED_WIRE_79;
-wire	[63:0] SYNTHESIZED_WIRE_83;
+wire	SYNTHESIZED_WIRE_41;
+wire	[63:0] SYNTHESIZED_WIRE_45;
+wire	[63:0] SYNTHESIZED_WIRE_49;
+wire	[63:0] SYNTHESIZED_WIRE_53;
+wire	[63:0] SYNTHESIZED_WIRE_57;
+wire	[63:0] SYNTHESIZED_WIRE_61;
+wire	[63:0] SYNTHESIZED_WIRE_65;
+wire	[63:0] SYNTHESIZED_WIRE_69;
+wire	[63:0] SYNTHESIZED_WIRE_73;
+wire	[63:0] SYNTHESIZED_WIRE_77;
+wire	SYNTHESIZED_WIRE_78;
+wire	[63:0] SYNTHESIZED_WIRE_82;
+wire	SYNTHESIZED_WIRE_83;
 wire	SYNTHESIZED_WIRE_84;
 wire	SYNTHESIZED_WIRE_85;
 wire	SYNTHESIZED_WIRE_86;
@@ -173,19 +174,16 @@ wire	SYNTHESIZED_WIRE_115;
 wire	SYNTHESIZED_WIRE_116;
 wire	SYNTHESIZED_WIRE_117;
 wire	SYNTHESIZED_WIRE_118;
-wire	SYNTHESIZED_WIRE_119;
-wire	SYNTHESIZED_WIRE_149;
-wire	SYNTHESIZED_WIRE_150;
-wire	[63:0] SYNTHESIZED_WIRE_124;
+wire	SYNTHESIZED_WIRE_145;
+wire	SYNTHESIZED_WIRE_146;
+wire	[63:0] SYNTHESIZED_WIRE_123;
 wire	SYNTHESIZED_WIRE_126;
-wire	SYNTHESIZED_WIRE_127;
 wire	SYNTHESIZED_WIRE_129;
-wire	SYNTHESIZED_WIRE_132;
-wire	[2:0] SYNTHESIZED_WIRE_133;
-wire	[2:0] SYNTHESIZED_WIRE_134;
-wire	[63:0] SYNTHESIZED_WIRE_135;
-wire	[3:0] SYNTHESIZED_WIRE_136;
-wire	[3:0] SYNTHESIZED_WIRE_137;
+wire	[2:0] SYNTHESIZED_WIRE_130;
+wire	[2:0] SYNTHESIZED_WIRE_131;
+wire	[63:0] SYNTHESIZED_WIRE_132;
+wire	[3:0] SYNTHESIZED_WIRE_133;
+wire	[3:0] SYNTHESIZED_WIRE_134;
 
 assign	VGA_CLK = pll_clk;
 
@@ -194,13 +192,13 @@ assign	VGA_CLK = pll_clk;
 
 Colisor	b2v_colisor(
 	.enable(SYNTHESIZED_WIRE_0),
-	.jogadorAtirador(SYNTHESIZED_WIRE_138),
+	.jogadorAtirador(SYNTHESIZED_WIRE_135),
 	.clk(clk),
-	.memoriaP1(SYNTHESIZED_WIRE_139),
-	.memoriaP2(SYNTHESIZED_WIRE_139),
+	.memoriaP1(SYNTHESIZED_WIRE_136),
+	.memoriaP2(SYNTHESIZED_WIRE_136),
 	.x(SYNTHESIZED_WIRE_4),
 	.y(SYNTHESIZED_WIRE_5),
-	.ready(SYNTHESIZED_WIRE_140),
+	.ready(SYNTHESIZED_WIRE_137),
 	.hit(SYNTHESIZED_WIRE_22),
 	.wrep1(SYNTHESIZED_WIRE_7),
 	.wrep2(SYNTHESIZED_WIRE_8),
@@ -212,14 +210,14 @@ Colisor	b2v_colisor(
 
 ControladoMemoria	b2v_controladorMemoria(
 	.clk(clk),
-	.readyColisor(SYNTHESIZED_WIRE_140),
+	.readyColisor(SYNTHESIZED_WIRE_137),
 	.colisor_wrep1(SYNTHESIZED_WIRE_7),
 	.colisor_wrep2(SYNTHESIZED_WIRE_8),
 	.jogadorColisor(SYNTHESIZED_WIRE_9),
 	
 	
-	.readyValidador(SYNTHESIZED_WIRE_141),
-	.enableValidador(SYNTHESIZED_WIRE_142),
+	.readyValidador(SYNTHESIZED_WIRE_10),
+	.enableValidador(SYNTHESIZED_WIRE_138),
 	.validador_wrep1(SYNTHESIZED_WIRE_12),
 	.validador_wrep2(SYNTHESIZED_WIRE_13),
 	.validadorJogador(SYNTHESIZED_WIRE_14),
@@ -233,14 +231,14 @@ ControladoMemoria	b2v_controladorMemoria(
 	.validador_addr(SYNTHESIZED_WIRE_18),
 	.validador_data(SYNTHESIZED_WIRE_19),
 	.vga_readAddr(SYNTHESIZED_WIRE_20),
-	.wrenP1(wren_p1),
-	.wrenP2(wren_p2),
+	.wrenP1(wren_p1_geral),
+	.wrenP2(wren_p2_geral),
 	.addr(addr_memoria),
 	.data(data_memoria_salvar),
-	.dataReadColisor(SYNTHESIZED_WIRE_139),
+	.dataReadColisor(SYNTHESIZED_WIRE_136),
 	
-	.dataReadValidador(SYNTHESIZED_WIRE_135),
-	.dataReadVGA(SYNTHESIZED_WIRE_124));
+	.dataReadValidador(SYNTHESIZED_WIRE_132),
+	.dataReadVGA(SYNTHESIZED_WIRE_123));
 	defparam	b2v_controladorMemoria.CalculandoPontuacaoPlayerDois = 4'b0110;
 	defparam	b2v_controladorMemoria.CalculandoPontuacaoPlayerUm = 4'b0101;
 	defparam	b2v_controladorMemoria.ColidindoPlayerDois = 4'b0100;
@@ -253,7 +251,7 @@ ControladoMemoria	b2v_controladorMemoria(
 
 
 ExecutandoJogo	b2v_executandoJogo(
-	.enable(SYNTHESIZED_WIRE_143),
+	.enable(SYNTHESIZED_WIRE_139),
 	.reset(reset),
 	.enter(enter),
 	.select(select),
@@ -263,8 +261,8 @@ ExecutandoJogo	b2v_executandoJogo(
 	
 	.qtd_P1(SYNTHESIZED_WIRE_23),
 	.qtd_P2(SYNTHESIZED_WIRE_24),
-	.ready(SYNTHESIZED_WIRE_144),
-	.jogador(SYNTHESIZED_WIRE_138),
+	.ready(SYNTHESIZED_WIRE_140),
+	.jogador(SYNTHESIZED_WIRE_135),
 	.coord_tiroX(SYNTHESIZED_WIRE_4),
 	.coord_tiroY(SYNTHESIZED_WIRE_5));
 	defparam	b2v_executandoJogo.end_game = 4'b1010;
@@ -279,30 +277,30 @@ ExecutandoJogo	b2v_executandoJogo(
 	defparam	b2v_executandoJogo.verificando_vidap1 = 4'b0110;
 	defparam	b2v_executandoJogo.verificando_vidap2 = 4'b0111;
 
-assign	SYNTHESIZED_WIRE_26 =  ~SYNTHESIZED_WIRE_144;
+assign	SYNTHESIZED_WIRE_26 =  ~SYNTHESIZED_WIRE_140;
 
-assign	SYNTHESIZED_WIRE_143 = SYNTHESIZED_WIRE_26 & SYNTHESIZED_WIRE_145;
+assign	SYNTHESIZED_WIRE_139 = SYNTHESIZED_WIRE_26 & SYNTHESIZED_WIRE_141;
 
 
 VGA_Mapa	b2v_inst13(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.rgb_r(SYNTHESIZED_WIRE_95),
-	.rgb_g(SYNTHESIZED_WIRE_107),
-	.rgb_b(SYNTHESIZED_WIRE_119));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.rgb_r(SYNTHESIZED_WIRE_94),
+	.rgb_g(SYNTHESIZED_WIRE_106),
+	.rgb_b(SYNTHESIZED_WIRE_118));
 
 
 VGA_Submarino	b2v_inst14(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
 	.posicoesEmbarcacao(SYNTHESIZED_WIRE_34),
-	.rgb_r(SYNTHESIZED_WIRE_86),
-	.rgb_g(SYNTHESIZED_WIRE_98),
-	.rgb_b(SYNTHESIZED_WIRE_110));
+	.rgb_r(SYNTHESIZED_WIRE_85),
+	.rgb_g(SYNTHESIZED_WIRE_97),
+	.rgb_b(SYNTHESIZED_WIRE_109));
 	defparam	b2v_inst14.X1 = 10'b0000000001;
 	defparam	b2v_inst14.X2 = 10'b0000000010;
 	defparam	b2v_inst14.X3 = 10'b0000000011;
@@ -320,37 +318,35 @@ VGA_Submarino	b2v_inst14(
 	defparam	b2v_inst14.Y7 = 10'b0000000111;
 	defparam	b2v_inst14.Y8 = 10'b0000001000;
 
-assign	SYNTHESIZED_WIRE_0 = SYNTHESIZED_WIRE_35 & SYNTHESIZED_WIRE_144;
+assign	SYNTHESIZED_WIRE_0 = SYNTHESIZED_WIRE_35 & SYNTHESIZED_WIRE_140;
 
-assign	SYNTHESIZED_WIRE_35 =  ~SYNTHESIZED_WIRE_140;
-
-assign	SYNTHESIZED_WIRE_126 =  ~SYNTHESIZED_WIRE_141;
+assign	SYNTHESIZED_WIRE_35 =  ~SYNTHESIZED_WIRE_137;
 
 
 ContagemPecas	b2v_inst18(
-	.enable(SYNTHESIZED_WIRE_39),
+	.enable(SYNTHESIZED_WIRE_38),
 	.clk(clk),
 	
 	
-	.ready(SYNTHESIZED_WIRE_40),
+	.ready(SYNTHESIZED_WIRE_39),
 	
 	.qtd_P1(SYNTHESIZED_WIRE_23),
 	.qtd_P2(SYNTHESIZED_WIRE_24));
 
-assign	SYNTHESIZED_WIRE_42 =  ~SYNTHESIZED_WIRE_40;
+assign	SYNTHESIZED_WIRE_41 =  ~SYNTHESIZED_WIRE_39;
 
-assign	SYNTHESIZED_WIRE_39 = SYNTHESIZED_WIRE_143 & SYNTHESIZED_WIRE_42;
+assign	SYNTHESIZED_WIRE_38 = SYNTHESIZED_WIRE_139 & SYNTHESIZED_WIRE_41;
 
 
 VGA_Submarino	b2v_inst21(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_46),
-	.rgb_r(SYNTHESIZED_WIRE_85),
-	.rgb_g(SYNTHESIZED_WIRE_97),
-	.rgb_b(SYNTHESIZED_WIRE_109));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_45),
+	.rgb_r(SYNTHESIZED_WIRE_84),
+	.rgb_g(SYNTHESIZED_WIRE_96),
+	.rgb_b(SYNTHESIZED_WIRE_108));
 	defparam	b2v_inst21.X1 = 10'b0000000001;
 	defparam	b2v_inst21.X2 = 10'b0000000010;
 	defparam	b2v_inst21.X3 = 10'b0000000011;
@@ -371,13 +367,13 @@ VGA_Submarino	b2v_inst21(
 
 VGA_Submarino	b2v_inst22(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_50),
-	.rgb_r(SYNTHESIZED_WIRE_84),
-	.rgb_g(SYNTHESIZED_WIRE_96),
-	.rgb_b(SYNTHESIZED_WIRE_108));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_49),
+	.rgb_r(SYNTHESIZED_WIRE_83),
+	.rgb_g(SYNTHESIZED_WIRE_95),
+	.rgb_b(SYNTHESIZED_WIRE_107));
 	defparam	b2v_inst22.X1 = 10'b0000000001;
 	defparam	b2v_inst22.X2 = 10'b0000000010;
 	defparam	b2v_inst22.X3 = 10'b0000000011;
@@ -398,13 +394,13 @@ VGA_Submarino	b2v_inst22(
 
 VGA_Submarino	b2v_inst23(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_54),
-	.rgb_r(SYNTHESIZED_WIRE_89),
-	.rgb_g(SYNTHESIZED_WIRE_101),
-	.rgb_b(SYNTHESIZED_WIRE_113));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_53),
+	.rgb_r(SYNTHESIZED_WIRE_88),
+	.rgb_g(SYNTHESIZED_WIRE_100),
+	.rgb_b(SYNTHESIZED_WIRE_112));
 	defparam	b2v_inst23.X1 = 10'b0000000001;
 	defparam	b2v_inst23.X2 = 10'b0000000010;
 	defparam	b2v_inst23.X3 = 10'b0000000011;
@@ -425,13 +421,13 @@ VGA_Submarino	b2v_inst23(
 
 VGA_Submarino	b2v_inst24(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_58),
-	.rgb_r(SYNTHESIZED_WIRE_88),
-	.rgb_g(SYNTHESIZED_WIRE_100),
-	.rgb_b(SYNTHESIZED_WIRE_112));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_57),
+	.rgb_r(SYNTHESIZED_WIRE_87),
+	.rgb_g(SYNTHESIZED_WIRE_99),
+	.rgb_b(SYNTHESIZED_WIRE_111));
 	defparam	b2v_inst24.X1 = 10'b0000000001;
 	defparam	b2v_inst24.X2 = 10'b0000000010;
 	defparam	b2v_inst24.X3 = 10'b0000000011;
@@ -452,13 +448,13 @@ VGA_Submarino	b2v_inst24(
 
 VGA_Cruzador	b2v_inst25(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_62),
-	.rgb_r(SYNTHESIZED_WIRE_87),
-	.rgb_g(SYNTHESIZED_WIRE_99),
-	.rgb_b(SYNTHESIZED_WIRE_111));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_61),
+	.rgb_r(SYNTHESIZED_WIRE_86),
+	.rgb_g(SYNTHESIZED_WIRE_98),
+	.rgb_b(SYNTHESIZED_WIRE_110));
 	defparam	b2v_inst25.X1 = 10'b0000000001;
 	defparam	b2v_inst25.X2 = 10'b0000000010;
 	defparam	b2v_inst25.X3 = 10'b0000000011;
@@ -479,13 +475,13 @@ VGA_Cruzador	b2v_inst25(
 
 VGA_Cruzador	b2v_inst26(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_66),
-	.rgb_r(SYNTHESIZED_WIRE_91),
-	.rgb_g(SYNTHESIZED_WIRE_103),
-	.rgb_b(SYNTHESIZED_WIRE_115));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_65),
+	.rgb_r(SYNTHESIZED_WIRE_90),
+	.rgb_g(SYNTHESIZED_WIRE_102),
+	.rgb_b(SYNTHESIZED_WIRE_114));
 	defparam	b2v_inst26.X1 = 10'b0000000001;
 	defparam	b2v_inst26.X2 = 10'b0000000010;
 	defparam	b2v_inst26.X3 = 10'b0000000011;
@@ -506,13 +502,13 @@ VGA_Cruzador	b2v_inst26(
 
 VGA_Hidroaviao	b2v_inst27(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_70),
-	.rgb_r(SYNTHESIZED_WIRE_90),
-	.rgb_g(SYNTHESIZED_WIRE_102),
-	.rgb_b(SYNTHESIZED_WIRE_114));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_69),
+	.rgb_r(SYNTHESIZED_WIRE_89),
+	.rgb_g(SYNTHESIZED_WIRE_101),
+	.rgb_b(SYNTHESIZED_WIRE_113));
 	defparam	b2v_inst27.X1 = 10'b0000000001;
 	defparam	b2v_inst27.X2 = 10'b0000000010;
 	defparam	b2v_inst27.X3 = 10'b0000000011;
@@ -533,13 +529,13 @@ VGA_Hidroaviao	b2v_inst27(
 
 VGA_Hidroaviao	b2v_inst28(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_74),
-	.rgb_r(SYNTHESIZED_WIRE_92),
-	.rgb_g(SYNTHESIZED_WIRE_104),
-	.rgb_b(SYNTHESIZED_WIRE_116));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_73),
+	.rgb_r(SYNTHESIZED_WIRE_91),
+	.rgb_g(SYNTHESIZED_WIRE_103),
+	.rgb_b(SYNTHESIZED_WIRE_115));
 	defparam	b2v_inst28.X1 = 10'b0000000001;
 	defparam	b2v_inst28.X2 = 10'b0000000010;
 	defparam	b2v_inst28.X3 = 10'b0000000011;
@@ -560,13 +556,13 @@ VGA_Hidroaviao	b2v_inst28(
 
 VGA_Encouracado	b2v_inst29(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_78),
-	.rgb_r(SYNTHESIZED_WIRE_94),
-	.rgb_g(SYNTHESIZED_WIRE_106),
-	.rgb_b(SYNTHESIZED_WIRE_118));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_77),
+	.rgb_r(SYNTHESIZED_WIRE_93),
+	.rgb_g(SYNTHESIZED_WIRE_105),
+	.rgb_b(SYNTHESIZED_WIRE_117));
 	defparam	b2v_inst29.X1 = 10'b0000000001;
 	defparam	b2v_inst29.X2 = 10'b0000000010;
 	defparam	b2v_inst29.X3 = 10'b0000000011;
@@ -584,18 +580,18 @@ VGA_Encouracado	b2v_inst29(
 	defparam	b2v_inst29.Y7 = 10'b0000000111;
 	defparam	b2v_inst29.Y8 = 10'b0000001000;
 
-assign	SYNTHESIZED_WIRE_149 = SYNTHESIZED_WIRE_79 & enable;
+assign	SYNTHESIZED_WIRE_145 = SYNTHESIZED_WIRE_78 & enable;
 
 
 VGA_PortaAvioes	b2v_inst30(
 	.clk(pll_clk),
-	.areaAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148),
-	.posicoesEmbarcacao(SYNTHESIZED_WIRE_83),
-	.rgb_r(SYNTHESIZED_WIRE_93),
-	.rgb_g(SYNTHESIZED_WIRE_105),
-	.rgb_b(SYNTHESIZED_WIRE_117));
+	.areaAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144),
+	.posicoesEmbarcacao(SYNTHESIZED_WIRE_82),
+	.rgb_r(SYNTHESIZED_WIRE_92),
+	.rgb_g(SYNTHESIZED_WIRE_104),
+	.rgb_b(SYNTHESIZED_WIRE_116));
 	defparam	b2v_inst30.X1 = 10'b0000000001;
 	defparam	b2v_inst30.X2 = 10'b0000000010;
 	defparam	b2v_inst30.X3 = 10'b0000000011;
@@ -613,40 +609,40 @@ VGA_PortaAvioes	b2v_inst30(
 	defparam	b2v_inst30.Y7 = 10'b0000000111;
 	defparam	b2v_inst30.Y8 = 10'b0000001000;
 
-assign	rgb_r = SYNTHESIZED_WIRE_84 | SYNTHESIZED_WIRE_85 | SYNTHESIZED_WIRE_86 | SYNTHESIZED_WIRE_87 | SYNTHESIZED_WIRE_88 | SYNTHESIZED_WIRE_89 | SYNTHESIZED_WIRE_90 | SYNTHESIZED_WIRE_91 | SYNTHESIZED_WIRE_92 | SYNTHESIZED_WIRE_93 | SYNTHESIZED_WIRE_94 | SYNTHESIZED_WIRE_95;
+assign	rgb_r = SYNTHESIZED_WIRE_83 | SYNTHESIZED_WIRE_84 | SYNTHESIZED_WIRE_85 | SYNTHESIZED_WIRE_86 | SYNTHESIZED_WIRE_87 | SYNTHESIZED_WIRE_88 | SYNTHESIZED_WIRE_89 | SYNTHESIZED_WIRE_90 | SYNTHESIZED_WIRE_91 | SYNTHESIZED_WIRE_92 | SYNTHESIZED_WIRE_93 | SYNTHESIZED_WIRE_94;
 
-assign	rgb_g = SYNTHESIZED_WIRE_96 | SYNTHESIZED_WIRE_97 | SYNTHESIZED_WIRE_98 | SYNTHESIZED_WIRE_99 | SYNTHESIZED_WIRE_100 | SYNTHESIZED_WIRE_101 | SYNTHESIZED_WIRE_102 | SYNTHESIZED_WIRE_103 | SYNTHESIZED_WIRE_104 | SYNTHESIZED_WIRE_105 | SYNTHESIZED_WIRE_106 | SYNTHESIZED_WIRE_107;
+assign	rgb_g = SYNTHESIZED_WIRE_95 | SYNTHESIZED_WIRE_96 | SYNTHESIZED_WIRE_97 | SYNTHESIZED_WIRE_98 | SYNTHESIZED_WIRE_99 | SYNTHESIZED_WIRE_100 | SYNTHESIZED_WIRE_101 | SYNTHESIZED_WIRE_102 | SYNTHESIZED_WIRE_103 | SYNTHESIZED_WIRE_104 | SYNTHESIZED_WIRE_105 | SYNTHESIZED_WIRE_106;
 
-assign	rgb_b = SYNTHESIZED_WIRE_108 | SYNTHESIZED_WIRE_109 | SYNTHESIZED_WIRE_110 | SYNTHESIZED_WIRE_111 | SYNTHESIZED_WIRE_112 | SYNTHESIZED_WIRE_113 | SYNTHESIZED_WIRE_114 | SYNTHESIZED_WIRE_115 | SYNTHESIZED_WIRE_116 | SYNTHESIZED_WIRE_117 | SYNTHESIZED_WIRE_118 | SYNTHESIZED_WIRE_119;
+assign	rgb_b = SYNTHESIZED_WIRE_107 | SYNTHESIZED_WIRE_108 | SYNTHESIZED_WIRE_109 | SYNTHESIZED_WIRE_110 | SYNTHESIZED_WIRE_111 | SYNTHESIZED_WIRE_112 | SYNTHESIZED_WIRE_113 | SYNTHESIZED_WIRE_114 | SYNTHESIZED_WIRE_115 | SYNTHESIZED_WIRE_116 | SYNTHESIZED_WIRE_117 | SYNTHESIZED_WIRE_118;
 
 
 VGA_Compositor	b2v_inst5(
 	.clk(pll_clk),
 	.resetGeral(reset),
-	.readyExecutandoJogo(SYNTHESIZED_WIRE_143),
-	.readyPosicionandoPecas(SYNTHESIZED_WIRE_149),
-	.jogadorExecutandoJogo(SYNTHESIZED_WIRE_138),
-	.jogadorPosicionandoPecas(SYNTHESIZED_WIRE_150),
-	.data_memoria(SYNTHESIZED_WIRE_124),
+	.readyExecutandoJogo(SYNTHESIZED_WIRE_139),
+	.readyPosicionandoPecas(SYNTHESIZED_WIRE_145),
+	.jogadorExecutandoJogo(SYNTHESIZED_WIRE_135),
+	.jogadorPosicionandoPecas(SYNTHESIZED_WIRE_146),
+	.data_memoria(SYNTHESIZED_WIRE_123),
 	
 	.jogadorVGA(SYNTHESIZED_WIRE_15),
 	.addr(SYNTHESIZED_WIRE_20),
-	.dataEmbarcacaoCruzadorDois(SYNTHESIZED_WIRE_66),
-	.dataEmbarcacaoCruzadorUm(SYNTHESIZED_WIRE_62),
-	.dataEmbarcacaoEncouracado(SYNTHESIZED_WIRE_78),
-	.dataEmbarcacaoHidroaviaoDois(SYNTHESIZED_WIRE_74),
-	.dataEmbarcacaoHidroaviaoUm(SYNTHESIZED_WIRE_70),
-	.dataEmbarcacaoPortaAvioes(SYNTHESIZED_WIRE_83),
-	.dataEmbarcacaoSubmarinoCinco(SYNTHESIZED_WIRE_58),
-	.dataEmbarcacaoSubmarinoDois(SYNTHESIZED_WIRE_46),
-	.dataEmbarcacaoSubmarinoQuatro(SYNTHESIZED_WIRE_54),
-	.dataEmbarcacaoSubmarinoTres(SYNTHESIZED_WIRE_50),
+	.dataEmbarcacaoCruzadorDois(SYNTHESIZED_WIRE_65),
+	.dataEmbarcacaoCruzadorUm(SYNTHESIZED_WIRE_61),
+	.dataEmbarcacaoEncouracado(SYNTHESIZED_WIRE_77),
+	.dataEmbarcacaoHidroaviaoDois(SYNTHESIZED_WIRE_73),
+	.dataEmbarcacaoHidroaviaoUm(SYNTHESIZED_WIRE_69),
+	.dataEmbarcacaoPortaAvioes(SYNTHESIZED_WIRE_82),
+	.dataEmbarcacaoSubmarinoCinco(SYNTHESIZED_WIRE_57),
+	.dataEmbarcacaoSubmarinoDois(SYNTHESIZED_WIRE_45),
+	.dataEmbarcacaoSubmarinoQuatro(SYNTHESIZED_WIRE_53),
+	.dataEmbarcacaoSubmarinoTres(SYNTHESIZED_WIRE_49),
 	.dataEmbarcacaoSubmarinoUm(SYNTHESIZED_WIRE_34));
 	defparam	b2v_inst5.ExecutandoJogo = 3'b010;
 	defparam	b2v_inst5.Idle = 3'b000;
 	defparam	b2v_inst5.PosicionandoPecas = 3'b001;
 
-assign	SYNTHESIZED_WIRE_79 =  ~SYNTHESIZED_WIRE_145;
+assign	SYNTHESIZED_WIRE_78 =  ~SYNTHESIZED_WIRE_141;
 
 
 VGASinc	b2v_inst8(
@@ -654,25 +650,23 @@ VGASinc	b2v_inst8(
 	.clk(pll_clk),
 	.h_sync(H_SYNC),
 	.v_sync(V_SYNC),
-	.regiaoAtiva(SYNTHESIZED_WIRE_146),
-	.coluna(SYNTHESIZED_WIRE_147),
-	.linha(SYNTHESIZED_WIRE_148));
+	.regiaoAtiva(SYNTHESIZED_WIRE_142),
+	.coluna(SYNTHESIZED_WIRE_143),
+	.linha(SYNTHESIZED_WIRE_144));
 	defparam	b2v_inst8.COLUNASATIVAS = 640;
 	defparam	b2v_inst8.LINHASATIVAS = 480;
 	defparam	b2v_inst8.TOTALCOLUNAS = 800;
 	defparam	b2v_inst8.TOTALLINHAS = 524;
 
-assign	SYNTHESIZED_WIRE_142 = SYNTHESIZED_WIRE_126 & SYNTHESIZED_WIRE_127;
-
 
 posicionandoPecasSwich	b2v_posicionandoPecas(
-	.enable(SYNTHESIZED_WIRE_149),
+	.enable(SYNTHESIZED_WIRE_145),
 	.reset(reset),
 	.enter(enter),
 	.select(select),
 	.mode(mode),
 	.clk(clk),
-	.conflito(SYNTHESIZED_WIRE_129),
+	.conflito(SYNTHESIZED_WIRE_126),
 	.sw10(sw10),
 	.sw11(sw11),
 	.sw12(sw12),
@@ -681,20 +675,20 @@ posicionandoPecasSwich	b2v_posicionandoPecas(
 	.sw15(sw15),
 	.sw16(sw16),
 	.sw17(sw17),
-	.ready(SYNTHESIZED_WIRE_145),
-	.valida(SYNTHESIZED_WIRE_127),
-	.jogador(SYNTHESIZED_WIRE_150),
-	.direcao(SYNTHESIZED_WIRE_132),
+	.ready(SYNTHESIZED_WIRE_141),
+	.valida(SYNTHESIZED_WIRE_138),
+	.jogador(SYNTHESIZED_WIRE_146),
+	.direcao(SYNTHESIZED_WIRE_129),
 	.estado1(estado1),
 	.estado2(estado2),
 	.estado3(estado3),
 	.estado4(estado4),
 	.estado5(estado5),
 	.estado6(estado6),
-	.orientacao(SYNTHESIZED_WIRE_133),
-	.tipo(SYNTHESIZED_WIRE_134),
-	.X1(SYNTHESIZED_WIRE_136),
-	.Y1(SYNTHESIZED_WIRE_137));
+	.orientacao(SYNTHESIZED_WIRE_130),
+	.tipo(SYNTHESIZED_WIRE_131),
+	.X1(SYNTHESIZED_WIRE_133),
+	.Y1(SYNTHESIZED_WIRE_134));
 	defparam	b2v_posicionandoPecas.armazenaPeca = 4'b0110;
 	defparam	b2v_posicionandoPecas.defineX = 4'b0011;
 	defparam	b2v_posicionandoPecas.defineY = 4'b0100;
@@ -704,22 +698,22 @@ posicionandoPecasSwich	b2v_posicionandoPecas(
 
 
 Validador	b2v_validador(
-	.enable(SYNTHESIZED_WIRE_142),
-	.jogador(SYNTHESIZED_WIRE_150),
-	.direcao(SYNTHESIZED_WIRE_132),
+	.enable(SYNTHESIZED_WIRE_138),
+	.jogador(SYNTHESIZED_WIRE_146),
+	.direcao(SYNTHESIZED_WIRE_129),
 	.clk(clk),
-	.orientacao(SYNTHESIZED_WIRE_133),
-	.tipo(SYNTHESIZED_WIRE_134),
-	.vetor_leitura(SYNTHESIZED_WIRE_135),
-	.x1(SYNTHESIZED_WIRE_136),
-	.y1(SYNTHESIZED_WIRE_137),
-	.ready(SYNTHESIZED_WIRE_141),
+	.orientacao(SYNTHESIZED_WIRE_130),
+	.tipo(SYNTHESIZED_WIRE_131),
+	.vetor_leitura(SYNTHESIZED_WIRE_132),
+	.x1(SYNTHESIZED_WIRE_133),
+	.y1(SYNTHESIZED_WIRE_134),
+	.ready(SYNTHESIZED_WIRE_10),
 	.conflitoMemoria_out(conflitoMemoria),
 	.conflitoBorda_out(conflitoBorda),
 	.wrep1(SYNTHESIZED_WIRE_12),
 	.wrep2(SYNTHESIZED_WIRE_13),
 	.jogadorOut(SYNTHESIZED_WIRE_14),
-	.conflito(SYNTHESIZED_WIRE_129),
+	.conflito(SYNTHESIZED_WIRE_126),
 	.addr(SYNTHESIZED_WIRE_18),
 	.vetor(SYNTHESIZED_WIRE_19));
 	defparam	b2v_validador.ConflitoBorda = 3'b010;

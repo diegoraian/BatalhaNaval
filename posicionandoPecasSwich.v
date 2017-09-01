@@ -77,15 +77,12 @@ parameter
 /* Mudanca de Reg Estado */
 always @(posedge clk or negedge reset or negedge enable) 
 begin
-  if(!enable)begin
-	//ashduahsd
-  end else begin
-	if (!reset) begin // Caso reset volte para o estado de direção
-      E_A <= escolheDirecao;
+	//if (!reset) begin // Caso reset volte para o estado de direção
+   //   E_A <= escolheDirecao;
       
-   end else begin
+   //end else begin
       E_A <= E_F;
-    end
+    //end
   end
 end
   
@@ -216,6 +213,12 @@ begin
         qtd_tipo = 3'd0;
       end
       endcase
+    
+
+    defineX:
+      valida=1'b0;
+
+
     
     verificaConflito:
     begin
