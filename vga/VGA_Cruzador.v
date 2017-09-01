@@ -44,10 +44,10 @@ reg [9:0] YA;										// Recebe a coordenada YA do Cruzador
 reg [9:0] XB;										// Recebe a coordenada XB do Cruzador
 reg [9:0] YB;										// Recebe a coordenada YB do Cruzador
 
-reg [9:0] borderLeftA;							// limite esquerdo da celula A da peca na tela
-reg [9:0] borderDownA;							// limite inferior da celula A da peca na tela
-reg [9:0] borderLeftB;							// limite esquerdo da celula B da peca na tela
-reg [9:0] borderDownB;							// limite inferior da celula B da peca na tela
+reg [9:0] borderLeftA = 10'd800;							// limite esquerdo da celula A da peca na tela
+reg [9:0] borderDownA = 10'd800;							// limite inferior da celula A da peca na tela
+reg [9:0] borderLeftB = 10'd800;							// limite esquerdo da celula B da peca na tela
+reg [9:0] borderDownB = 10'd800;							// limite inferior da celula B da peca na tela
 
 reg [9:0] largura = 10'd54;					// Largura de uma celula da embarcacao
 reg [9:0] altura = 10'd49;						// Altura de uma celula da embarcacao

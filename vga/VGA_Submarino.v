@@ -39,8 +39,8 @@ output rgb_r, rgb_g , rgb_b;
 /*Registradores Internos*/
 reg [9:0] X;										// Recebe a coordenada X do Submarino
 reg [9:0] Y;										// Recebe a coordenada Y do Submarino
-reg [9:0] borderLeft;							// limite esquerdo da imagem da peca na tela
-reg [9:0] borderDown;							// limite inferior da imagem da peca na tela
+reg [9:0] borderLeft =10'd800;							// limite esquerdo da imagem da peca na tela
+reg [9:0] borderDown =10'd800;							// limite inferior da imagem da peca na tela
 reg [9:0] largura = 10'd54;					// Largura de uma celula da embarcacao
 reg [9:0] altura = 10'd49;						// Altura de uma celula da embarcacao
 
